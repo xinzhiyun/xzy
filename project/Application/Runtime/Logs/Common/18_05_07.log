@@ -1,0 +1,54 @@
+[ 2018-05-07T15:57:03+08:00 ] ::1 /dian/project/pages/weui.min.css?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+ERR: 无法加载模块:Pages
+
+[ 2018-05-07T15:57:03+08:00 ] ::1 /dian/project/pages/jquery.min.js?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+ERR: 无法加载模块:Pages
+
+[ 2018-05-07T15:58:00+08:00 ] ::1 /dian/project/Public/pages/jquery.min.js?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载模块:Public
+
+[ 2018-05-07T15:58:00+08:00 ] ::1 /dian/project/pages/weui.min.css?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+ERR: 无法加载模块:Pages
+
+[ 2018-05-07T15:58:06+08:00 ] ::1 /dian/project/pages/weui.min.css?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+ERR: 无法加载模块:Pages
+
+[ 2018-05-07T15:58:39+08:00 ] ::1 /dian/project/pages/weui.min.css?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+ERR: 无法加载模块:Pages
+
+[ 2018-05-07T15:58:39+08:00 ] ::1 /dian/project/Public/Home/js/pages/jquery.min.js?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+ERR: 无法加载模块:Public
+
+[ 2018-05-07T15:59:10+08:00 ] ::1 /dian/project/Public/Home/css/pages/weui.min.css?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+ERR: 无法加载模块:Public
+
+[ 2018-05-07T15:59:10+08:00 ] ::1 /dian/project/Public/Home/js/pages/jquery.min.js?what=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载模块:Public
+
