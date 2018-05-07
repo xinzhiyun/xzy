@@ -1,7 +1,10 @@
 <?php
-class JSSDK {
-  private $appId;
-  private $appSecret;
+namespace Org\Util;
+
+class WeixinJssdk
+{
+  private $appId = 'wx57d57fb99d6d838d';
+  private $appSecret = 'ec36152955830ec4191507724f3377a6';
 
   public function __construct($appId, $appSecret) {
     $this->appId = $appId;
