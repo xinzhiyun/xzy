@@ -5,8 +5,8 @@
     <title>V型知识库原创---www.vxzsk.com 请尊重版权</title>
     <meta name="viewport" content="width=320.1,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> 
     <meta charset='utf-8'>
-	<link rel="stylesheet" href="/dian/project/Public/Home/css/weui.min.css?what=0">
-  <script src="/dian/project/Public/Home/js/jquery.min.js?what=0"> </script>
+	<link rel="stylesheet" href="/xzy/project/Public/Home/css/weui.min.css?what=0">
+  <script src="/xzy/project/Public/Home/js/jquery.min.js?what=0"> </script>
   <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"> </script>
   
 </head>
