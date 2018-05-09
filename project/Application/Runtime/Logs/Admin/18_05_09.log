@@ -952,3 +952,6 @@ ERR: 1054:Unknown column 'status' in 'where clause'
 ERR: 1054:Unknown column 'status' in 'where clause'
  [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
 
+[ 2018-05-09T16:58:03+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'59.41.21.177' (using password: NO)
+
