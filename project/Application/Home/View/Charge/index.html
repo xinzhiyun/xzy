@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充值</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="/resource/amazeui/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="/resource/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/resource/stylesheets/common.css">
+	<script src="/resource/javascripts/vue.min.js"></script>
+	<style>
+		.back2home {display: none !important;}
+		.cTop {
+			width: 100%;
+			position: relative;
+			padding: 4vh 4vw;
+		}
+		.cTop>li {
+			width: 33.33%;
+			text-align: center;
+		}
+		.cTop p {
+			color: #555;
+		}
+		.cTop>li>span {
+			width: 12vmin;
+			height: 12vmin;
+			position: relative;
+			display: inline-block;
+			margin-bottom: 2vh;
+			line-height: 12vmin;
+			border-radius: 50%;
+			font-size: 1.2rem;
+			color: #fff;
+			background: #bbb;
+		}
+		.cTop>li>span::after {
+			content: '';
+			width: 80%;
+			height: 3px;
+			position: absolute;
+			right: -80%;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background: inherit;
+		}
+		.cTop>li:last-child>span::after {
+			left: -80%;
+		}
+		.cTop>li:nth-of-type(2)>span::before {
+			content: '';
+			width: 80%;
+			height: 3px;
+			position: absolute;
+			left: -80%;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background: inherit;
+		}
+		.nextul {
+			display: none;
+		}
+		.roundok {
+			background: #0d94f3 !important;
+		}
+		.cMain {
+			background: #fff;
+		}
+		.cMain>ul {
+			display: none;
+			padding: 2vh 4vw;
+		}
+		.nextul>li {
+			position: relative;
+			padding: 2vmin 0;
+		}
+		.nextul>li:not(:last-child) {
+			border-bottom: 1px solid #eee;
+		}
+
+		.nextul input,
+		.nextul textarea {
+			width: 86%;
+			padding: 2px 4px;
+			border: none;
+		}
+		.meal {
+			width: 72vw;
+			padding: 3vmin 0;
+			margin: 3vh 0;
+			position: relative;
+			left: 50%;
+			margin-left: -36vw;
+			border-radius: 30px;
+			background: #f1f1f1;
+		}
+		.select {
+			color: #fff;
+			background: #0d94f3 !important;
+		}
+		.next {
+			width: 90vw;
+			position: fixed;
+			bottom: 2vh;
+			left: 50%;
+			margin-left: -45vw;
+			padding: 2vmin 0;
+			color: #fff;
+			font-size: .9rem;
+			border-radius: 30px;
+			background: #0d94f3;
+			z-index: 99;
+		}
+		.next:active::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 0;
+			border-radius: 30px;
+			background: rgba(0,0,0,.1);
+		}
+		.money {
+			margin-top: 2vh;
+		}
+		.money>span {
+			padding-left: 10%;
+			color: red;
+		}
+		.addr {
+			width: 62%;
+    		display: inline-block;
+    		padding-left: 4vmin;
+		}
+		.f888 {
+			color: #888;
+		}
+	</style>
+</head>
+<body>
+	<div id='charge'>
+		<ul class='cTop cfix'>
+			<li class='fleft'>
+				<span class='roundok'>1</span>
+				<p>套餐选择</p>
+			</li>
+			<li class='fleft'>
+				<span :class='(mainShow == "info" || mainShow == "done") ? "roundok" : ""'>2</span>
+				<p>信息录入</p>
+			</li>
+			<li class='fleft'>
+				<span :class='mainShow == "done" ? "roundok" : ""'>3</span>
+				<p>完成充值</p>
+			</li>
+		</ul>
+		<div class='cMain'>
+			<!-- 套餐选择 -->
+			<ul v-if='mainShow == "meal"' :style='{display: mainShow == "meal" ? "block" : "none"}'>
+				<p class='tcenter'><label for="">套餐选择</label></p>
+				<li v-for='m in mealList' @click='select_meal' class='meal tcenter' :meal_id='m.meal_id' :money='m.money'>
+					<span v-text='m.content'>套餐</span>
+				</li>
+			</ul>
+			<!-- 信息录入 -->
+			<ul class='nextul' :style='{display: mainShow == "info" ? "block" : "none"}'>
+				<li class='cfix'>
+					<label for="">姓名</label>
+					<input type="text" name='name' class='uname fright' v-model='uname' placeholder="请输入姓名">
+				</li>
+				<li class='cfix'>
+					<label for="">电话</label>
+					<input type="text" name='phone' class='uphone fright' v-model='uphone' placeholder="请输入手机号码">
+				</li>
+				<li class='cfix'>
+					<label for="" style='vertical-align: top;'>地址</label>
+					<span class='addr'></span>
+					<span class='fright f888'>请选择 >&nbsp;</span>
+				</li>
+				<li class='cfix'>
+					<textarea name="addrdetail" class='uaddrdetail fright' cols="30" rows="5" placeholder="请输入详细地址，如道路、门牌号、小区、楼栋号、单元室等" v-model='uaddrdetail'></textarea>
+				</li>
+				<li class='money'>
+					<label for="">金额</label><span><span v-text='money'>300元</span>元</span>
+				</li>
+			</ul>
+			<!-- 完成充值 -->
+			<ul class='nextul' :style='{display: mainShow == "done" ? "block" : "none"}'></ul>
+		</div>
+		<footer class='next tcenter' @click='next'>下一步</footer>
+	</div>
+	<script src="/resource/javascripts/public.js"></script>
+	<script src="/resource/javascripts/jquery.min.js"></script>
+	<script src="/resource/amazeui/js/amazeui.min.js"></script>
+	<script>
+		// 显示loading
+		document.querySelector('.loadingdiv').setAttribute('id','fadeShow');
+	</script>
+	<script>
+		var charge = new Vue({
+			el: '#charge',
+			data() {
+				return {
+					href: location.href,
+					mealList: [],//套餐数据
+					money: '',		// 充值的套餐金额
+					class2: '',		// 流程第二步
+					class3: '',		// 流程第三步（走完）
+					mainShow: 'meal',	// 显示套餐meal，信息info，还是完成done
+					meal_id: '',		// 选择的套餐id
+					uname: '',			//用户名
+					uphone: '',			// 电话
+					uaddr: '',			// 地址
+					uaddrdetail: '',	// 详细地址
+				}
+			},
+			watch: {},
+			methods: {
+				// 选择套餐
+				select_meal: function(e){
+					var ele = e.currentTarget;
+					var meal = document.querySelectorAll('.meal');
+					meal.forEach(function(meal, index){
+						meal.setAttribute('class', 'meal tcenter');
+					});
+					// 获取套餐id
+					this.meal_id = ele.getAttribute('meal_id');
+					// 获取套餐金额
+					this.money = ele.getAttribute('money');
+					ele.setAttribute('class', 'meal tcenter select');
+				},
+				// 下一步
+				next: function(){
+					if(this.mainShow == 'meal'){
+						// 当前为套餐选择界面
+						if(!this.meal_id || !this.money){
+							noticeFn({text: '请选择套餐!'});
+							return
+						}
+						// 下一步为信息录入
+						location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money;
+					}else if(this.mainShow == 'info'){
+						// 当前录入信息界面
+						var origin = location.origin;
+						var pathname = location.pathname;
+						if(!this.uname){
+							noticeFn({text:'请输入用户名!'});
+							$('.uname').css({border: '1px solid red'});
+							return
+						}else if(!nameCheck(trimFn(this.uname))){
+							noticeFn({text:'请输入用户名!'});
+							$('.uname').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uname').css({border: 'none'});
+						}
+						if(!this.uphone){
+							noticeFn({text:'请输入手机号!'});
+							$('.uphone').css({border: '1px solid red'});
+							return
+						}else if(!phoneCheck(trimFn(this.uphone))){
+							noticeFn({text:'请输入正确的手机号!'});
+							$('.uphone').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uphone').css({border: 'none'});
+						}
+						if(!this.uaddr){
+							noticeFn({text:'请选择地址!'});
+							return
+						}
+						if(!this.uaddrdetail){
+							noticeFn({text:'请输入详细地址!'});
+							$('.uaddrdetail').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uaddrdetail').css({border: 'none'});
+						}
+						// 下一步为完成
+						location.href = origin + pathname + '?done';
+					}
+				},
+				// 获取套餐数据
+				getMeal: function(){
+					// 套餐数据
+					this.mealList = [
+						{meal_id: 1, content: '100元/100天', money:'100'},
+						{meal_id: 2, content: '300元/300天', money:'300'},
+						{meal_id: 3, content: '500元/500天', money:'500'}
+					];
+				}
+			},
+			created() {
+				var href = this.href;
+				if(href.indexOf('info') > -1){
+					var moneyindex = href.indexOf('money=')+6;
+					this.money = href.substring(moneyindex);
+					this.mainShow = 'info';		// 信息选择
+
+				}else if(href.indexOf('done') > -1){
+					this.mainShow = 'done';		// 完成选择
+
+				}else if(href.indexOf('meal') > -1){
+					this.mainShow = 'meal';		// 套餐选择
+					this.getMeal();				// 获取套餐信息
+
+				}else{
+					this.mainShow = 'meal';		// 套餐选择
+					this.getMeal();				// 获取套餐信息
+				}
+				
+			},
+			mounted() {
+				// var meal2 = document.querySelectorAll('.meal')[1];
+				// meal2.setAttribute('class', 'meal tcenter select');
+				// // 获取套餐id
+				// this.meal_id = meal2.getAttribute('meal_id');
+			},
+		})
+	</script>
+</body>
+</html>
