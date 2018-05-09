@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!-- header part -->
+<!DOCTYPE HTML>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -106,7 +107,14 @@
             </div>
         </div>
     </div>
+<style>
+    input[type='password'], input[type='email'] {
+        padding: 14px 5px !important;
+    }
+</style>
+<!-- content part -->
 <div class="content">
+    <!-- nav part-->
     <div class="navBox sidebar-collapse fl" id="nav">
     <ul class="nav nav-list">
         <!-- 遍历菜单   开始 -->
@@ -126,53 +134,49 @@
         <!-- 遍历菜单   结束 -->
     </ul>
 </div>
+    <!-- from part-->
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">权限管理/<span>权限组</span></div>
-            
-            <table class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>
-                            用户组名
-                        </th>
-                        <th>
-                            操作
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
-                        <td>
-                            <?php echo ($v['title']); ?>
-                        </td>
-                        <td>
-                            <a href="javascript:;" ruleId="<?php echo ($v['id']); ?>" ruleTitle="<?php echo ($v['title']); ?>" onclick="edit(this)">
-                                修改
-                            </a>
-                            |
-                            <a class="deleteBtn" ruleId="<?php echo ($v['id']); ?>" href="javascript:;">
-                                删除
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/rule_group',array('id'=>$v['id']));?>">
-                                分配权限
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/group_list',array('group_id'=>$v['id']));?>">
-                                成员列表
-                            </a>
-                        </td>
-                    </tr><?php endforeach; endif; ?>
-                </tbody>
-            </table>
-            <div class="text-right">
-                <a href="javascript:;" onclick="add()" class="btn btn-success">添加用户组</a>
+            <div class="titleBar">后台管理/<span>编辑客户</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
+            <div class="formBox">
+                <?php if(is_array($info)): foreach($info as $key=>$vo): ?><form id="form" action="/xzy/project/index.php/Admin/Adminuser/edit" method="post">
+                    <input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>">
+                    <input type="hidden" name="name" value="<?php echo ($vo["name"]); ?>">
+                    <!-- <input type="hidden" name="password" value="<?php echo ($vo["password"]); ?>"> -->
+                    <div class="control-group">
+                        <span>您正在编辑的是</span>
+                        <span style="width:auto;font-size:30px;color:red;"><?php echo ($vo["name"]); ?></span>
+                    </div>
+                    <div class="control-group">
+                        <span>APPID</span>
+                        <input type="text" name="appid" value="<?php echo ($vo["appid"]); ?>">
+                    </div>
+                    <div class="control-group">
+                        <span>APPsecret</span>
+                        <input type="text" name="appsecret" value="<?php echo ($vo["appsecret"]); ?>">
+                    </div>
+                    <div class="control-group">
+                        <span>登录密码</span>
+                        <input type="password" name="password" value="">
+                    </div>  
+                    <div class="control-group">
+                        <span>商户号</span>
+                        <input type="text" name="shopnum" value="<?php echo ($vo["shopnum"]); ?>">
+                    </div>
+                    <div class="control-group">
+                        <span>商户号密码</span>
+                        <input type="text" name="shoppwd" value="<?php echo ($vo["shoppwd"]); ?>">
+                    </div>
+                    <div class="control-group">
+                        <span>公司</span>
+                        <input type="text" name="company" value="<?php echo ($vo["company"]); ?>">
+                    </div>
+                    
+                    <div class="btn-groups">
+                        <button class="subbtn btns btn-primary oddbtn" type="submit">确认</button>
+                    </div>
+                </form><?php endforeach; endif; ?>
             </div>
-            <script>
-                $('.pagination ul a').unwrap('div').wrap('<li></li>');
-                $('.pagination ul span').wrap('<li class="active"></li>')
-            </script>
         </div>
         <!-- footer part -->
             <div class="row-fluid" id="footer">
@@ -324,98 +328,37 @@
 </body>
 </html>
     </div>
-</div>
-<!-- 弹框信息 -->
-<div class="modal fade" id="bjy-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                添加用户组
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/add_group');?>"
-                            method="post">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="15%">
-                                            用户组名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="添加" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="bjy-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                修改规则
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/edit_group');?>"
-                            method="post">
-                                <input type="hidden" name="id">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="12%">
-                                            规则名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="修改" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
- 
+</div> 
 <script>
-    // 添加菜单
-    function add() {
-        $("input[name='title']").val('');
-        $('#bjy-add').modal('show');
-    }
+$(function(){
+    //城市三级联动
+    _init_area();
+    $(".oddbtn").click(function(ev){
+        var idcard = $('input[name="idcard"]').val().trim();
+        var addr = $('textarea[name="addr"]').val().trim();
+        if($('#s_province').val()==""||$('#s_city').val()==""||$('#s_county').val()==""){
+            layuiHint('请选择地址');
+            return
+        }else{
+            $(".addressValue").val($('#s_province').val() + " " + $('#s_city').val() + " " + $('#s_county').val());
+        }
+        if(!addr){
+            layuiHint('请输入详细地址！');
+            return
 
-    // 修改菜单
-    function edit(obj) {
-        var ruleId = $(obj).attr('ruleId');
-        var ruletitle = $(obj).attr('ruletitle');
-        $("input[name='id']").val(ruleId);
-        $("input[name='title']").val(ruletitle);
-        $('#bjy-edit').modal('show');
-    }
-    $(".deleteBtn").click(function(){
-        var id=$(this).attr('ruleId');
-        layui.use('layer', function(){
-            var layer = layui.layer;
-            layer.confirm('确定删除?', {icon: 3, title:'温馨提示'}, function(index){
-                window.location.href='delete_group?id='+id;                
-            });
-        });
+        }else if(!/^[\w\-\u4e00-\u9fa5]{2,255}$/u.test(addr)){
+            layuiHint('地址只能由中文、英文、数字组成！');
+            return
+        }
+        if(!idcard){
+            layuiHint('请输入身份证号码');
+            return
+
+        }else if(!/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|[xX])$/.test(idcard)){
+            layuiHint('请输入正确的身份证号码');
+            return
+        }
+        $('#form').submit();
     });
+})
 </script>

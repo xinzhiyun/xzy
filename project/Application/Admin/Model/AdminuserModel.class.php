@@ -48,10 +48,10 @@ class AdminuserModel extends BaseModel
     {
         $list = $this->select();
 
-        $leavel = array('超级管理员','一级经销商','二级经销商');
-        foreach ($list as $key => $val) {
-            $list[$key]['leavel'] = $leavel[$val['leavel']];
-        }
+        // $leavel = array('超级管理员','一级经销商','二级经销商');
+        // foreach ($list as $key => $val) {
+        //     $list[$key]['leavel'] = $leavel[$val['leavel']];
+        // }
         return $list;
     }
 

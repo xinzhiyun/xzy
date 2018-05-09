@@ -19,13 +19,11 @@ class AdminuserController extends CommonController
         // dump($phpExcel);
         // 搜索功能
         $map = array(
-            'user' => array('like','%'.trim(I('post.user')).'%'),
             'name' => array('like','%'.trim(I('post.name')).'%'),
-            'phone' => array('like','%'.trim(I('post.phone')).'%'),
-            'email' => array('like','%'.trim(I('post.email')).'%'),
-            'address' => array('like','%'.trim(I('post.address')).'%'),
-            'idcard' => array('like','%'.trim(I('post.idcard')).'%'),
-            'leavel' => trim(I('post.leavel')),
+            'appid' => array('like','%'.trim(I('post.appid')).'%'),
+            'appsecret' => array('like','%'.trim(I('post.appsecret')).'%'),
+            'shopnum' => array('like','%'.trim(I('post.shopnum')).'%'),
+            'company' => array('like','%'.trim(I('post.company')).'%'),
         );
         $minaddtime = strtotime(trim(I('post.minaddtime')))?:0;
         $maxaddtime = strtotime(trim(I('post.maxaddtime')))?:-1;
@@ -47,16 +45,15 @@ class AdminuserController extends CommonController
         // PHPExcel 导出数据
         if (I('output') == 1) {
             $data = $user->where($map)
-                        ->field('id,user,name,phone,email,address,idcard,leavel,addtime')
+                        ->field('id,name,appid,appsecret,shopnum,shoppwd,company,addtime')
                         ->select();
             $arr = [
-                'addtime'=>'Y-m-d H:i:s',
-                'leavel' => ['超级管理员','一级经销商','二级经销商']
+                'addtime'=>'Y-m-d H:i:s'
             ];
             replace_value($data,$arr);
-            $filename = '经销商列表数据';
-            $title = '经销商列表';
-            $cellName = ['用户Id','账号','昵称','手机号','邮箱','地址','身份证号','管理级别','最新添加时间'];
+            $filename = '客户列表数据';
+            $title = '客户列表';
+            $cellName = ['客户Id','账号','APPID','APPsecret','商户号','商户号密码','公司','加入时间'];
             // dump($data);die;
             $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
             $myexcel->output();
@@ -71,7 +68,7 @@ class AdminuserController extends CommonController
         $pageButton =$page->show();
 
         $userlist = $user->where($map)->limit($page->firstRow.','.$page->listRows)->order('addtime desc')->getAll();
-
+        // dump($userlist);die;
         $this->assign('list',$userlist);
         $this->assign('button',$pageButton);
         $this->display();
@@ -120,7 +117,7 @@ class AdminuserController extends CommonController
 
             
             //将三级联动地址拼接具体地址再写入数据库
-            $_POST['address'] = $_POST['address'].$_POST['addr'];
+            // $_POST['address'] = $_POST['address'].$_POST['addr'];
 
             // dump($_POST);die;
 
@@ -135,6 +132,7 @@ class AdminuserController extends CommonController
             $userinfo = $user->create();
             if ($userinfo) {
                 $res = $user->save();
+                // echo $user->_sql();die;
                 if($res && $_SESSION['adminuser']['id'] == $_POST['id']) {
                     $this->success('编辑经销商成功啦！！！',U('Login/login'));
                     exit;
@@ -157,19 +155,19 @@ class AdminuserController extends CommonController
     
     /**
      * 删除经销商方法
-     * 需保证其没有下级，没有设备与之挂钩
+     * 需保证其没有套餐，没有套餐与之挂钩
      * @author 潘宏钢 <619328391@qq.com>
      */
     public function del($id)
     {
         $userinfo = M('adminuser')->where("id=".$id)->select();
 
-        if ($userinfo[0]['leavel'] == 0 ) {
+        if ($userinfo[0]['name'] == 'admin' ) {
             $this->error('不能删除超级管理员！');
         }else{
-            $res = M('binding')->where("vid=".$id)->select();
+            $res = M('setmeal')->where("auid=".$id)->select();
             if(!empty($res)){
-                $this->error('已绑定设备，不可删除');
+                $this->error('该客户名下有套餐使用，不可删除');
                 return false;
             }
             // 查

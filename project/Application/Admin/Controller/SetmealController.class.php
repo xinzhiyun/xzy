@@ -13,107 +13,51 @@ class SetmealController extends CommonController
 {
 	/**
      * 套餐列表
-     * 
+     * admin看所有，其他只能看自己设置的
      * @author 潘宏钢 <619328391@qq.com>
      */
     public function index()
     {	
-        /*
-            Excel导出
-         */
-        require_once VENDOR_PATH.'PHPExcel.php';
-        $phpExcel = new \PHPExcel();
-//         dump($_POST);
-        // 搜索功能
-        $map = array(
-            'typename' => trim(I('post.typename')),
-            'remodel' => trim(I('post.remodel')),
-            'flow' => trim(I('post.flow')),
-//
-        );
-        if (trim(I('post.describe'))) {
-            $map['pub_setmeal.describe'] =  array('like','%'.trim(I('post.describe')).'%');
-        }
-        $minmoney = trim(I('post.minmoney'))?:false;
-        $maxmoney = trim(I('post.maxmoney'))?:false;
-        if (is_numeric($maxmoney)) {
-            $map['pub_setmeal.money'][] = array('elt',$maxmoney*100);
-        }
-        if (is_numeric($minmoney)) {
-            $map['pub_setmeal.money'][] = array('egt',$minmoney*100);
-        }
-         $minaddtime = strtotime(trim(I('post.mintime')))?:false;
-         $maxaddtime = strtotime(trim(I('post.maxtime')))?:false;
-         if (is_numeric($maxaddtime)) {
-             $map['pub_setmeal.addtime'][] = array('elt',$maxaddtime);
-         }
-         if (is_numeric($minaddtime)) {
-             $map['pub_setmeal.addtime'][] = array('egt',$minaddtime);
-         }
-        // 删除数组中为空的值
-        $map = array_filter($map, function ($v) {
-            if ($v != "") {
-                return true;
-            }
-            return false;
-        });
+        // 准备用户id
+        $auid = $_SESSION['adminuser']['id'];
+        $setmeal = D('setmeal');
 
-        $type = M('setmeal');
-        // PHPExcel 导出数据 
-        if (I('output') == 1) {
-            $data = $type->where($map)
-                    ->join('pub_device_type ON pub_setmeal.tid = pub_device_type.id')
-                    ->field('pub_setmeal.id,pub_device_type.typename,remodel,money,flow,describe,pub_setmeal.addtime')
-                    ->order('pub_setmeal.addtime desc')
-                    ->select();
-            $filename = '套餐列表';
-            $title = '套餐列表';
-            $cellName = ['id','产品类型','充值模式','套餐金额','套餐量(天)','套餐描述','创建时间'];
+        if ($auid == 1) {
+            // $map 正常做搜索使用
+            $map = '';
+            
+            $list = $setmeal->where($map)
+                            ->alias('s')
+                            ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                            ->field("s.*,admin.name")
+                            ->select(); 
+            // dump($list);die;
 
-            // 数组中枚举数值替换
-            $arr = [
-                'addtime'=>['date','Y-m-d H:i:s'],
-                'remodel'=>[
-                    '0'=>'流量',
-                    '1'=>'时长'
-                ],
-                'money'=>['price']
-            ];
-            $data = replace_array_value($data,$arr);
+        } else {
+            // 只查自己
+            $map['auid'] = $auid;
 
-            // dump($data);die;
-            $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
-            $myexcel->output();
-            return ;
+            $list = $setmeal->where($map)
+                            ->alias('s')
+                            ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                            ->field("s.*,admin.name")
+                            ->select();
+
         }
-//        dump($map);
-     $total =$type->where($map)
-                    ->join('pub_device_type ON pub_setmeal.tid = pub_device_type.id')
-                    ->field('pub_setmeal.*,pub_device_type.typename')
-                    ->count();
-        $page  = new \Think\Page($total,8);
-        D('devices')->getPageConfig($page);
-        $pageButton =$page->show();
 
-        $list = $type->where($map)
-                    ->limit($page->firstRow.','.$page->listRows)
-                    ->join('pub_device_type ON pub_setmeal.tid = pub_device_type.id')
-                    ->field('pub_setmeal.*,pub_device_type.typename')
-                    ->order('pub_setmeal.addtime desc')
-                    ->select();
-//        dump($list);
         $this->assign('list',$list);
-        $this->assign('button',$pageButton);
         $this->display();
+
     }
 
     public function add()
     {
         if (IS_POST) {
-            // dump($_POST);die;
+            // dump($_SESSION);die;
+            $_POST['auid'] = $_SESSION['adminuser']['id'];
             $setmeal = D('setmeal');
             $info = $setmeal->create();
-           
+            
             if($info){
 
                 $res = $setmeal->add();
@@ -129,9 +73,6 @@ class SetmealController extends CommonController
             }
 
         }else{
-            $type = M('device_type');
-            $list = $type->select();
-            $this->assign('list',$list);
             $this->display();
         }
     }

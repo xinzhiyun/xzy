@@ -188,7 +188,7 @@
     <!-- layui.js -->
     <script type="text/javascript" src="/xzy/project/Public/Admin/layui/layui.js"></script>
     <!-- 城市三级联动.js -->
-    <script type="text/javascript" src="/xzy/project/Public/Admin/js/area.js"></script>
+    <!-- <script type="text/javascript" src="/xzy/project/Public/Admin/js/area.js"></script> -->
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>

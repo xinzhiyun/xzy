@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!-- header part -->
+<!DOCTYPE HTML>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -106,7 +107,9 @@
             </div>
         </div>
     </div>
+<!-- content part -->
 <div class="content">
+    <!-- nav part-->
     <div class="navBox sidebar-collapse fl" id="nav">
     <ul class="nav nav-list">
         <!-- 遍历菜单   开始 -->
@@ -126,53 +129,82 @@
         <!-- 遍历菜单   结束 -->
     </ul>
 </div>
+    <!-- from part-->
     <div class="row-fluid fl" id="main">
+    <style type="text/css">
+        .textarea{width: 215px; min-height: 110px; border: 1px solid #ccc;}
+        .textarea p{
+            padding: 0 10px;
+            margin: 5px;
+        }
+        .control-group{position: relative;}
+        .control-group .elected{position: absolute; top: 0;left: 0;}
+        .control-group .textarea{margin-left: 190px;}
+        .btn-groups .btns{
+            margin: 50px 0 50px 90px;
+            padding: 8px 35px;
+            border-radius: 7px;
+        }
+    </style>
         <div class="tableBox">
-            <div class="titleBar">权限管理/<span>权限组</span></div>
-            
-            <table class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>
-                            用户组名
-                        </th>
-                        <th>
-                            操作
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
-                        <td>
-                            <?php echo ($v['title']); ?>
-                        </td>
-                        <td>
-                            <a href="javascript:;" ruleId="<?php echo ($v['id']); ?>" ruleTitle="<?php echo ($v['title']); ?>" onclick="edit(this)">
-                                修改
-                            </a>
-                            |
-                            <a class="deleteBtn" ruleId="<?php echo ($v['id']); ?>" href="javascript:;">
-                                删除
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/rule_group',array('id'=>$v['id']));?>">
-                                分配权限
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/group_list',array('group_id'=>$v['id']));?>">
-                                成员列表
-                            </a>
-                        </td>
-                    </tr><?php endforeach; endif; ?>
-                </tbody>
-            </table>
-            <div class="text-right">
-                <a href="javascript:;" onclick="add()" class="btn btn-success">添加用户组</a>
+            <div class="titleBar">套餐管理/<span>套餐设置</span></div>
+            <div class="formBox">
+                <form class="" action="/xzy/project/index.php/Admin/Setmeal/add" method="post" id="_formTable">
+                    <div class="control-group">
+                        <span>套餐金额<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" class="control" name="money" placeholder="请输入套餐金额..." style="width:210px;"><span id="flow_tip" style="width: 50px;">(元)</span>
+                    </div>
+                    <div class="control-group">
+                        <span>套餐量<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <!-- 输入框太短 -->
+                        <input type="text" class="control" name="days" placeholder="输入数字即可" style="width:210px;"><span id="flow_tip" style="width: 50px;">(天)</span>
+                    </div>
+                    <div class="control-group">
+                        <span>套餐名称<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" class="control" name="describe" placeholder="请输入套餐名称..." style="width:210px;">
+                    </div>
+                    
+
+                    <div class="btn-groups">
+                        <button class="btns reset btn-primary" type="reset">重置</button>
+                        <button class="subbtn btns btn-primary" type="submit">提交</button>
+                    </div>
+                    
+
+                </form>
+                <script type="text/javascript">
+                    $(".model_radio").click(function(){
+                        $("#flow_tip").html($(this).attr('_tip'))
+                    });
+                    $('#_formTable').submit(function(){
+                        var describe = $('input[name=describe]').val().trim()
+                        var money = $('input[name=money]').val().trim()
+                        var flow = $('input[name=flow]').val().trim()
+                        if(money){
+                            if(flow){
+                                if( /^[1-9]\d*$/.test(flow)){
+                                    if(describe){
+                                        if(/\s/.test(describe)){
+                                            layuiHint("套餐名称不能有空格")
+                                        }else{
+                                            return true
+                                        }
+                                    }else{
+                                        layuiHint("套餐名称不能为空")
+                                    }
+                                }else{
+                                    layuiHint("套餐量请输入整数")
+                                }
+                            }else{
+                                layuiHint("套餐量不能为空")
+                            }
+                        }else{
+                            layuiHint("套餐金额不能为空")
+                        }
+                        return false
+                    })
+                </script>
             </div>
-            <script>
-                $('.pagination ul a').unwrap('div').wrap('<li></li>');
-                $('.pagination ul span').wrap('<li class="active"></li>')
-            </script>
         </div>
         <!-- footer part -->
             <div class="row-fluid" id="footer">
@@ -325,97 +357,3 @@
 </html>
     </div>
 </div>
-<!-- 弹框信息 -->
-<div class="modal fade" id="bjy-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                添加用户组
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/add_group');?>"
-                            method="post">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="15%">
-                                            用户组名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="添加" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="bjy-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                修改规则
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/edit_group');?>"
-                            method="post">
-                                <input type="hidden" name="id">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="12%">
-                                            规则名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="修改" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
- 
-<script>
-    // 添加菜单
-    function add() {
-        $("input[name='title']").val('');
-        $('#bjy-add').modal('show');
-    }
-
-    // 修改菜单
-    function edit(obj) {
-        var ruleId = $(obj).attr('ruleId');
-        var ruletitle = $(obj).attr('ruletitle');
-        $("input[name='id']").val(ruleId);
-        $("input[name='title']").val(ruletitle);
-        $('#bjy-edit').modal('show');
-    }
-    $(".deleteBtn").click(function(){
-        var id=$(this).attr('ruleId');
-        layui.use('layer', function(){
-            var layer = layui.layer;
-            layer.confirm('确定删除?', {icon: 3, title:'温馨提示'}, function(index){
-                window.location.href='delete_group?id='+id;                
-            });
-        });
-    });
-</script>

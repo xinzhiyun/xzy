@@ -128,50 +128,187 @@
 </div>
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">权限管理/<span>权限组</span></div>
-            
-            <table class="table table-bordered table-hover">
+            <div class="titleBar">套餐管理/<span>套餐列表</span></div>
+            <form class="form-search" action="/xzy/project/index.php/Admin/Setmeal/index" method="post">
+
+                <span class="select-box">套餐金额:
+                    <input type="text" class="input-medium minmoney" name="minmoney" placeholder="" style="width: 60px;" / > ~ 
+                    <input type="text" class="input-medium maxmoney" name="maxmoney" placeholder="" style="width: 60px;" / >
+                </span>
+                <span class="select-box">套餐量（天）:
+                    <input type="text" class="input-medium flow" name="flow" placeholder="请输入查询条件" style="width: 70px;" / >
+                </span>
+                <span class="select-box">套餐名称:
+                    <input type="text" class="input-medium describe" name="describe" placeholder="请输入查询条件" style="width: 70px;" / >
+                </span>
+                <span class="select-box" style="display: inline-block;position:relative">时间:
+                    <input type="text" id="date-start" class="input-medium form-control" name="mintime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
+                </span>
+                
+                <!-- <span class="select-box">查询条件:
+                    <input type="text" class="input-medium" name="value" placeholder="请输入查询条件" / >
+                </span>
+                <span class="select-box">产品类型:
+                    <select class="select" size="1" name="key" style="width: 100px;">
+                    <option value="1" selected>产品类型</option>
+                    <option value="2">套餐模式</option>
+                    </select>
+                </span>
+                <span class="select-box">查询条件:
+                    <input type="text" class="input-medium" name="value" placeholder="请输入查询条件" / >
+                </span> -->
+                <div class="submitBtn">
+                    <button type="submit" name="output" value="1" class="btn fr mbtn" style="float: left;color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe62f;</i> 导出</button>
+                    <button type="reset" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#x1002;</i> 重置</button>
+                    <button type="submit" name="search" value="1" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe615;</i> 查找</button>
+                </div>               
+            </form>
+
+            <table class="table table-striped table-bordered">
                 <thead>
-                    <tr>
-                        <th>
-                            用户组名
-                        </th>
-                        <th>
-                            操作
-                        </th>
-                    </tr>
+                <tr>
+                    <th>套餐编号</th>
+                    <th>套餐金额（元）</th>
+                    <th>套餐量（天）</th>
+                    <th>套餐名称</th>
+                    <th>设置人</th>
+                    <th>设置时间</th>
+                    <th>操作</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr>
-                        <td>
-                            <?php echo ($v['title']); ?>
-                        </td>
-                        <td>
-                            <a href="javascript:;" ruleId="<?php echo ($v['id']); ?>" ruleTitle="<?php echo ($v['title']); ?>" onclick="edit(this)">
-                                修改
-                            </a>
-                            |
-                            <a class="deleteBtn" ruleId="<?php echo ($v['id']); ?>" href="javascript:;">
-                                删除
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/rule_group',array('id'=>$v['id']));?>">
-                                分配权限
-                            </a>
-                            |
-                            <a href="<?php echo U('Admin/Rule/group_list',array('group_id'=>$v['id']));?>">
-                                成员列表
-                            </a>
-                        </td>
+                    <?php if(!empty($list)): if(is_array($list)): foreach($list as $key=>$vo): ?><tr>
+                        <td><?php echo ($vo["id"]); ?></td>
+                        <td><?php echo ($vo['money']/100); ?></td>
+                        <td><?php echo ($vo["days"]); ?></td>
+                        <td><?php echo ($vo["describe"]); ?></td>
+                        <td><?php echo ($vo["name"]); ?></td>
+                        <td><?php echo (date('Y-m-d H:i:s',$vo["addtime"])); ?></td>
+                        <td><a class="deletBnt" ruleId="<?php echo ($vo['id']); ?>" href="javascript:;">删除</a></td>
                     </tr><?php endforeach; endif; ?>
+                    <?php else: ?>
+                    <tr>
+                        <td colspan="12">查无数据</td>
+                    </tr><?php endif; ?>
                 </tbody>
             </table>
-            <div class="text-right">
-                <a href="javascript:;" onclick="add()" class="btn btn-success">添加用户组</a>
+            <div class="pagination">
+                <ul>
+                    <?php echo ($button); ?>
+                </ul>
             </div>
             <script>
                 $('.pagination ul a').unwrap('div').wrap('<li></li>');
-                $('.pagination ul span').wrap('<li class="active"></li>')
+                $('.pagination ul span').wrap('<li class="active"></li>');
+
+                /**************** 搜索关键字保留 -- 开始 ******************/
+                    var srearchInfo = {};
+                    var type, remodel, minmoney, maxmoney, 
+                        flow, describe, mintime, maxtime;
+                    /**
+                     * type: 产品类型, remodel：套餐模式, 
+                     * minmoney：最小金额, maxmoney：最大金额, 
+                     * flow：套餐量, describe：套餐名称, 
+                     * mintime：开始时间, maxtime：结束时间
+                     */
+                    // 点击搜索
+                    $("button[name='search']").click(function(){
+                        setSearchWord();
+                    })
+                    function setSearchWord(){
+                        sessionStorage.setItem('search', '');
+                        
+                        type = $('.prodtype').val();
+                        if($('select>option:selected').val()){
+                            remodel = Number($('select>option:selected').val())+1;
+                        }
+                        minmoney = $('.minmoney').val();
+                        maxmoney = $('.maxmoney').val();
+                        flow = $('.flow').val();
+                        describe = $('.describe').val();
+                        mintime = $('#date-start').val();
+                        maxtime = $('#date-end').val();
+
+                        srearchInfo['type'] = type;
+                        srearchInfo['remodel'] = remodel;
+                        srearchInfo['minmoney'] = minmoney;
+                        srearchInfo['maxmoney'] = maxmoney;
+                        srearchInfo['flow'] = flow;
+                        srearchInfo['describe'] = describe;
+                        srearchInfo['mintime'] = mintime;
+                        srearchInfo['maxtime'] = maxtime;
+                        sessionStorage.setItem('search', JSON.stringify(srearchInfo));
+                    }
+                    // 搜索关键字保留
+                    if(sessionStorage.getItem('search')){
+                        var srearchInfo = JSON.parse(sessionStorage.getItem('search'));
+                        if($('.form-search').length){
+                            // console.log(srearchInfo)
+                            $('.prodtype').val(srearchInfo['type']);
+                            if(srearchInfo['remodel']){
+                                $('select>option').eq(srearchInfo['remodel'])[0].selected = true;
+                            }
+                            $('.minmoney').val(srearchInfo['minmoney']);
+                            $('.maxmoney').val(srearchInfo['maxmoney']);
+                            $('.flow').val(srearchInfo['flow']);
+                            $('.describe').val(srearchInfo['describe']);
+                            $('#date-start').val(srearchInfo['mintime']);
+                            $('#date-end').val(srearchInfo['maxtime']);
+
+                            setTimeout(function(){
+                                sessionStorage.setItem('search', '');   // 初始化
+                            },500)
+                        }
+                    }
+                    // 重置搜索结果
+                    $('button[type="reset"]').click(function(){
+                        location.href = '<?php echo U("Admin/Setmeal/index");?>';
+
+                    })
+                    
+                /**************** 搜索关键字保留 -- 结束 ******************/
+                
+                $(".deletBnt").click(function(){
+                    var _this=$(this);
+                    var id = $(this).attr('ruleId');
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.confirm('确定删除?', {icon: 3, title:'提示'}, function(index){
+                            window.location.href='<?php echo U("Admin/Setmeal/del","","");?>?id='+id;
+                            layer.close(index);
+                        });
+                    });
+                });   
+
+                $(".outputExcel").click(function(){
+                    var remodel = '<?php echo $_POST["remodel"]; ?>',
+                        typename = '<?php echo $_POST["typename"]; ?>',
+                        minmoney = '<?php echo $_POST["minmoney"]; ?>',
+                        maxmoney = '<?php echo $_POST["maxmoney"]; ?>',
+                        flow = '<?php echo $_POST["flow"]; ?>',
+                        describe = '<?php echo $_POST["describe"]; ?>',
+                        mintime = '<?php echo $_POST["mintime"]; ?>',
+                        maxtime = '<?php echo $_POST["maxtime"]; ?>';
+                    $.ajax({
+                       type: "POST",
+                       url: "index",
+                       async: false,
+                       data: {
+                            'remodel':remodel,
+                            'typename':typename,
+                            'minmoney':minmoney,
+                            'maxmoney':maxmoney,
+                            'flow':flow,
+                            'describe':describe,
+                            'mintime':mintime,
+                            'maxtime':maxtime,
+                            'outputExcel':1
+                       },
+                       success:function(res){
+                            console.log(res);
+                       }        
+                    });
+                })
             </script>
         </div>
         <!-- footer part -->
@@ -325,97 +462,3 @@
 </html>
     </div>
 </div>
-<!-- 弹框信息 -->
-<div class="modal fade" id="bjy-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                添加用户组
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/add_group');?>"
-                            method="post">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="15%">
-                                            用户组名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="添加" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="bjy-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style='width:46%;box-sizing:border-box;padding:0px !important;'>
-                <div class="" style='box-sizing:border-box;padding:5px;margin-left:-10px;'>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                修改规则
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <form id="bjy-form" class="form-inline" action="<?php echo U('Admin/Rule/edit_group');?>"
-                            method="post">
-                                <input type="hidden" name="id">
-                                <table class="table table-striped table-bordered table-hover table-condensed">
-                                    <tr>
-                                        <th width="12%">
-                                            规则名：
-                                        </th>
-                                        <td>
-                                            <input class="input-medium" type="text" name="title">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <input class="btn btn-success" type="submit" value="修改" style='width:20%'>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
- 
-<script>
-    // 添加菜单
-    function add() {
-        $("input[name='title']").val('');
-        $('#bjy-add').modal('show');
-    }
-
-    // 修改菜单
-    function edit(obj) {
-        var ruleId = $(obj).attr('ruleId');
-        var ruletitle = $(obj).attr('ruletitle');
-        $("input[name='id']").val(ruleId);
-        $("input[name='title']").val(ruletitle);
-        $('#bjy-edit').modal('show');
-    }
-    $(".deleteBtn").click(function(){
-        var id=$(this).attr('ruleId');
-        layui.use('layer', function(){
-            var layer = layui.layer;
-            layer.confirm('确定删除?', {icon: 3, title:'温馨提示'}, function(index){
-                window.location.href='delete_group?id='+id;                
-            });
-        });
-    });
-</script>

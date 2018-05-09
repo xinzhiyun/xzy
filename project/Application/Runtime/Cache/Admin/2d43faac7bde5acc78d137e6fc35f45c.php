@@ -99,7 +99,7 @@
                 <span>欢迎您!</span>
             </div>
             <div class="button modifyPassword">
-                <a href="<?php echo U('Vendors/password');?>" style="color: #9d9d9d;;">修改密码</a>
+                <a href="<?php echo U('adminuser/password');?>" style="color: #9d9d9d;;">修改密码</a>
             </div>
             <div class="button bowOut">
                 <a href="javascript:void(0)" url="<?php echo U('Login/logout');?>" style="color: #9d9d9d;;" id="_exit">退出</a>
@@ -191,7 +191,7 @@
     <!-- layui.js -->
     <script type="text/javascript" src="/xzy/project/Public/Admin/layui/layui.js"></script>
     <!-- 城市三级联动.js -->
-    <script type="text/javascript" src="/xzy/project/Public/Admin/js/area.js"></script>
+    <!-- <script type="text/javascript" src="/xzy/project/Public/Admin/js/area.js"></script> -->
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>

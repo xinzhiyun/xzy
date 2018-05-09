@@ -13,7 +13,7 @@ class SetmealModel extends Model
 
     // 自动验证
     protected $_validate = array(
-        array('flow','/^\+?[1-9][0-9]*$/','套餐量请输入正整数',1,'regex'),
+        array('days','/^\+?[1-9][0-9]*$/','套餐量请输入正整数',1,'regex'),
         array('describe','require','套餐名称不能为空'),
         array('describe','/^[a-zA-Z0-9\x{4e00}-\x{9fa5}]{1,660}$/u','套餐名称不能使用特殊字符',1,'regex'),
     );

@@ -12,12 +12,11 @@
     <!-- from part-->
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">后台管理/<span>编辑经销商</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
+            <div class="titleBar">后台管理/<span>编辑客户</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
             <div class="formBox">
                 <foreach name="info" item="vo" key="key">
                 <form id="form" action="__URL__/edit" method="post">
                     <input type="hidden" name="id" value="{{$vo.id}}">
-                    <input type="hidden" name="user" value="{{$vo.user}}">
                     <input type="hidden" name="name" value="{{$vo.name}}">
                     <!-- <input type="hidden" name="password" value="{{$vo.password}}"> -->
                     <div class="control-group">
@@ -25,45 +24,32 @@
                         <span style="width:auto;font-size:30px;color:red;">{{$vo.name}}</span>
                     </div>
                     <div class="control-group">
-                        <span>手机</span>
-                        <input type="text" name="phone" value="{{$vo.phone}}">
+                        <span>APPID</span>
+                        <input type="text" name="appid" value="{{$vo.appid}}">
                     </div>
                     <div class="control-group">
-                        <span>客服电话</span>
-                        <input type="text" name="csphone" value="{{$vo.csphone}}">
+                        <span>APPsecret</span>
+                        <input type="text" name="appsecret" value="{{$vo.appsecret}}">
                     </div>
                     <div class="control-group">
-                        <span>密码</span>
+                        <span>登录密码</span>
                         <input type="password" name="password" value="">
                     </div>  
                     <div class="control-group">
-                        <span>邮箱</span>
-                        <input type="email" name="email" value="{{$vo.email}}">
+                        <span>商户号</span>
+                        <input type="text" name="shopnum" value="{{$vo.shopnum}}">
                     </div>
                     <div class="control-group">
-                        <span>地址</span>
-                        <div class="info">
-                            <select id="s_province" name="s_province"></select>
-                            <select id="s_city" name="s_city" ></select>
-                            <select id="s_county" name="s_county"></select>
-                            <!-- <input type="text" name="address" value="{{$vo.address}}"> -->
-                            <input class="addressValue" type="hidden" name="address" value="" />
-                        </div>
+                        <span>商户号密码</span>
+                        <input type="text" name="shoppwd" value="{{$vo.shoppwd}}">
                     </div>
                     <div class="control-group">
-                        <span>详细地址地址</span>
-                        <div class="info">
-                            <textarea name="addr" id="" cols="30" rows="4"></textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <span>身份证号</span>
-                        <input type="text" name="idcard" value="{{$vo.idcard}}">
+                        <span>公司</span>
+                        <input type="text" name="company" value="{{$vo.company}}">
                     </div>
                     
                     <div class="btn-groups">
-                        <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
+                        <button class="subbtn btns btn-primary oddbtn" type="submit">确认</button>
                     </div>
                 </form>
                 </foreach>
