@@ -115,10 +115,10 @@
 
 
 <div id="myparams">
- <span id="timestamp">1525667740</span>
- <span id="nonceStr">alakhglkabgkjlb</span>
- <span id="signature">29c72eb633d3eda9c4668b986657f4cc7b571d2d</span>
- <span id="appId">wx57d57fb99d6d838d</span>
+ <span id="timestamp"><?php echo ($weixin[0]['timestamp']); ?></span>
+ <span id="nonceStr"><?php echo ($weixin[0]['nonceStr']); ?></span>
+ <span id="signature"><?php echo ($weixin[0]['signature']); ?></span>
+ <span id="appId"><?php echo ($weixin[0]['appId']); ?></span>
 </div>
 </body> 
 <script type="text/javascript">
