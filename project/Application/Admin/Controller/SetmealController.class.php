@@ -27,7 +27,6 @@ class SetmealController extends CommonController
             // 搜索功能
             $map = array(
                 'days' => trim(I('post.days')),
-                'describe' => trim(I('post.describe')),
                 'name' => trim(I('post.name')),
             );
             // dump($map);die;

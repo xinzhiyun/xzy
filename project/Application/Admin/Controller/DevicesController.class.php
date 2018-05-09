@@ -4,132 +4,146 @@ use Admin\Controller\CommonController;
 use Think\Controller;
 
 /**
- * Class DevicesController
- * @package Admin\Controller
- * @author 陈昌平 <chenchangping@foxmail.com>
+ * 设备控制器
+ * 后台用来浏览设备情况的控制器
+ * admin看所有，其他只能看自己的
+ * @author 潘宏钢 <619328391@qq.com>
  */
 class DevicesController extends CommonController
 {
     /**
      * 显示设备列表
      */
-    public function devicesList()
+    public function index()
     {
-        //按设备码查询
-        if(I('post.device_code')){
-            $map['d.device_code']=array('like','%'.trim(I('post.device_code')).'%');
-        }
+        // 准备用户id
+        $auid = $_SESSION['adminuser']['id'];
+        $devices = D('devices');
 
-        //按经销商名查询
-        if(I('post.name')){
-            $map['vendors.name']=array('like','%'.trim(I('post.name')).'%');
-        }
-
-        //按绑定的用户查询
-        if(I('post.dname')){
-            $map['d.name']=array('like','%'.trim(I('post.dname')).'%');
-        }
-
-        //按电话查询
-        if(I('post.phone')){
-            $map['d.phone']=array('like','%'.trim(I('post.phone')).'%');
-        }
-
-        //设备类型(滤芯):
-        if(I('post.typename')){
-            $map['type.typename']=array('like','%'.trim(I('post.typename')).'%');
-        }
-
-        //是否绑定
-        if(I('post.is_bind') == 1){
-            $map['uid'] = array(array('gt',0));
-        }elseif (I('post.is_bind') == 2){
-            $map['uid'] = array('exp','IS NUll');
-        }
-
-        // $this->assign($_POST['is_bing']);
-        //安装设备状态查询
-        if(strlen(I('post.status'))) {
-            if(I('post.status') == 0){
-                $map['statu.AliveStause'] = array('eq',1);
-            } elseif(I('post.status') == 1){
-                $map['_string'] = 'statu.AliveStause != 1 or statu.AliveStause IS NULL';
+        if ($auid == 1) {
+            // $map 正常做搜索使用
+            // 搜索功能
+            $map = array(
+            'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
+            'mac' => array('like','%'.trim(I('post.mac')).'%'),
+            'name' => array('like','%'.trim(I('post.name')).'%'),
+            'username' => array('like','%'.trim(I('post.username')).'%'),
+            'phone' => array('like','%'.trim(I('post.phone')).'%'),
+            'address' => array('like','%'.trim(I('post.address')).'%'),
+            'status' => array('like','%'.trim(I('post.status')).'%'),
+            );
+            // 到期时间
+            $minouttime = strtotime(trim(I('post.minouttime')))?:0;
+            $maxouttime = strtotime(trim(I('post.maxouttime')))?:-1;
+            if (is_numeric($maxouttime)) {
+                $map['outtime'] = array(array('egt',$minouttime),array('elt',$maxouttime));
             }
-        }
-
-        // dump($_POST);die;
-
-        
-        //按时间段查询
-        $minupdatetime = strtotime(trim(I('post.minupdatetime')))?:false;
-        $maxupdatetime = strtotime(trim(I('post.maxupdatetime')))?:false;
-
-        /* 修改 处理时间区间搜索  2018年03月21日 李振东 */
-        $updatetime_arr=[];
-        if($maxupdatetime){
-            $updatetime_arr[]=array('elt',$maxupdatetime);
-        }
-        if($minupdatetime){
-            $updatetime_arr[]=array('egt',$minupdatetime);
-        }
-        if(!empty($updatetime_arr)){
-            $map['statu.updatetime']=$updatetime_arr;
-        }
-
-
-
-        // 删除数组中为空的值
-        $map = array_filter($map, function ($v) {
-            if ($v != "") {
-                return true;
+            if ($maxouttime < 0) {
+                $map['outtime'] = array(array('egt',$minouttime));
             }
-            return false;
-        });
-
-        if($this->get_level()){
-            $map['vendors.id'] = $_SESSION['adminuser']['id'];
-        }
-        $user = D('Devices');
-        // PHPExcel 导出数据
-        if (I('output') == 1) {
-            $data = $user
-                ->where($map)
-                ->alias('d')
-                ->join("__DEVICES_STATU__ statu ON d.device_code=statu.DeviceID", 'LEFT')
-                ->join("__BINDING__ bind ON d.id=bind.did", 'LEFT')
-                ->join("__VENDORS__ vendors ON bind.vid=vendors.id", 'LEFT')
-                ->join("__DEVICE_TYPE__ type ON d.type_id=type.id", 'LEFT')
-                ->field("d.device_code,vendors.name vname,statu.iccid,d.name,d.phone,d.address,statu.leasingmode,statu.reday,statu.reflow,statu.devicestause,statu.NetStause,statu.filtermode,type.typename,statu.updatetime")
-                ->order('d.id asc')
-                ->select();
-            foreach ($data as $key=>$val) {
-                array_unshift($data[$key],$key+1);
+            // 最后访问时间
+            $minlasttime = strtotime(trim(I('post.minlasttime')))?:0;
+            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:-1;
+            if (is_numeric($maxlasttime)) {
+                $map['outtime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
             }
-            $arr = [
-                'leasingmode' => ['零售型','按流量计费','按时间计费','时长和流量套餐'],
-                'devicestause' => ['制水','冲洗','水满','缺水','漏水','检修','欠费停机','关机','开机'],
-                'netstause'=>['断开','连接中'],
-                'filtermode' => ['按时长','按流量','时长和流量'],
-                'updatetime'=>['date','Y-m-d H:i:s']               
-            ];
-            $data = replace_array_value($data,$arr);
-            $filename = '设备列表数据';
-            $title = '设备列表';
-            $cellName = ['编号','设备编号','经销商名称','ICCID','绑定的用户','电话','地址','计费模式','剩余天数','剩余流量','工作状态','网络状态','滤芯模式','设备类型(滤芯)','最近更新时间'];
-            // dump($data);
-            $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
-            $myexcel->output();
-            return ;
+            if ($maxlasttime < 0) {
+                $map['outtime'] = array(array('egt',$minlasttime));
+            }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$devices->where($map)
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field("d.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $devices->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field("d.*,admin.name")
+                            ->order('d.outtime desc')
+                            ->select(); 
+            // dump($list);die;
+
+
+        } else {
+            // 只查自己
+            // $map['auid'] = $auid;
+
+            // 搜索功能
+            $map = array(
+            'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
+            'mac' => array('like','%'.trim(I('post.mac')).'%'),
+            'name' => array('like','%'.trim(I('post.name')).'%'),
+            'username' => array('like','%'.trim(I('post.username')).'%'),
+            'phone' => array('like','%'.trim(I('post.phone')).'%'),
+            'address' => array('like','%'.trim(I('post.address')).'%'),
+            'status' => array('like','%'.trim(I('post.status')).'%'),
+            'auid' => $auid,
+            );
+            // 到期时间
+            $minouttime = strtotime(trim(I('post.minouttime')))?:0;
+            $maxouttime = strtotime(trim(I('post.maxouttime')))?:-1;
+            if (is_numeric($maxouttime)) {
+                $map['outtime'] = array(array('egt',$minouttime),array('elt',$maxouttime));
+            }
+            if ($maxouttime < 0) {
+                $map['outtime'] = array(array('egt',$minouttime));
+            }
+            // 最后访问时间
+            $minlasttime = strtotime(trim(I('post.minlasttime')))?:0;
+            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:-1;
+            if (is_numeric($maxlasttime)) {
+                $map['outtime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
+            }
+            if ($maxlasttime < 0) {
+                $map['outtime'] = array(array('egt',$minlasttime));
+            }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$devices->where($map)
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field("d.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $devices->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field("d.*,admin.name")
+                            ->order('d.outtime desc')
+                            ->select();
+
         }
 
-        $devices = D('Devices')->getDevicesInfo($map);
-        
-
-        $assign = [
-            'deviceInfo' => $devices,
-        ];
-        $this->assign($assign);
-        $this->display('devicesList');
+        $this->assign('list',$list);
+        $this->assign('button',$pageButton);
+        $this->display();       
     }
 
     public function userBindDvice()
