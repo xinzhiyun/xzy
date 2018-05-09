@@ -955,3 +955,97 @@ ERR: 1054:Unknown column 'status' in 'where clause'
 [ 2018-05-09T16:58:03+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
 ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'59.41.21.177' (using password: NO)
 
+[ 2018-05-09T17:52:38+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index
+ERR: 1054:Unknown column 'pub_setmeal.describe' in 'where clause'
+ [ SQL语句 ] : SELECT s.*,admin.name FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  WHERE `days` = '100' AND `describe` = '100' AND pub_setmeal.describe LIKE '%100%' 
+
+[ 2018-05-09T17:58:31+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: Call to a member function where() on null
+
+[ 2018-05-09T17:59:14+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: Call to a member function where() on null
+
+[ 2018-05-09T17:59:37+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: Call to a member function where() on null
+
+[ 2018-05-09T18:00:00+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: Call to a member function where() on null
+
+[ 2018-05-09T18:03:15+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0429s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='2' and g.status='1' )  [ RunTime:0.0425s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0428s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('55','56','57','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0425s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0431s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0427s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0434s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-09T18:03:16+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0433s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='2' and g.status='1' )  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0433s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('55','56','57','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0427s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0434s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0431s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0429s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-09T18:03:17+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+ERR: syntax error, unexpected ';', expecting ')'
+
+[ 2018-05-09T18:04:14+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0419s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0407s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0405s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0408s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-09T18:04:14+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0431s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0429s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0432s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0429s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0435s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0428s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0428s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-09T18:04:31+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index
+ERR: Call to undefined function Admin\Controller\replace_value()
+
