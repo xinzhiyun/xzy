@@ -16,7 +16,7 @@
 			<p><b>设备<span v-text='index+1'></span></b></p>
 			<div class='cfix'>
 				<p class='fleft' v-text='d.device_id'></p>
-				<span :device_id='d.device_id' @click='unbind(d.device_id)' class='fright unbind'>解绑</span>
+				<span :device_id='d.device_id' @click='unbind(d.device_id)' class='fright unbind'><small>解绑</small></span>
 			</div>
 		</li>
 	</ul>
@@ -24,7 +24,9 @@
 	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
+		var vconsole = new VConsole();
 		//微信接口
 		wx.config({
 			debug: false,
@@ -65,8 +67,8 @@
 			created() {
 				this.deviceList = [
 					{device_id: '34536456447'},
-					{device_id: '34536456447'},
-					{device_id: '34536456447'},
+					{device_id: '89754561232'},
+					{device_id: '45689712136'},
 				]
 			},
 			mounted() {},

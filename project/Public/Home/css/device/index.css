@@ -11,10 +11,11 @@ body {
 }
 .item>p>b {
 	position: relative;
+	font-size: .6rem;
 }
 .item>p>b::before {
 	content: '';
-	width: 2vw;
+	width: 6px;
 	height: 80%;
 	position: absolute;
 	left: -4vw;
@@ -31,14 +32,14 @@ body {
 }
 .item>div>p {
 	width: 70%;
-	padding: 2vh 0;
+	padding: 2vw 0;
+	border-right: 1px solid #eee;
 }
 .unbind {
 	width: 30%;
 	display: inline-block;
-	padding: 2vh 0;
+	padding: 2vw 0;
 	text-align: center;
-	border-left: 1px solid #eee;
 	color: #ff7777;
 }
 .unbind:active {

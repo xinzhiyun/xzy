@@ -98,7 +98,9 @@
 	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jquery.citys.js"></script>
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
+		var vconsole = new VConsole();
 
 		//微信接口
 		wx.config({
@@ -146,12 +148,12 @@
 
 		                // 取消付款
 		                // 跳转到待付款订单页面
-		                // location.href = "{{:U('Home/PaymentSystem/paytofailed')}}";
+		                // location.href = "{{:U('Home/PaymentSystem/paytofail')}}";
 		            }else{
 		                // 付款失败
-						callback({status: 'failed'});
+						callback({status: 'fail'});
 		                // 跳转到待付款订单页面
-		                // location.href = "{{:U('Home/PaymentSystem/paytofailed')}}";
+		                // location.href = "{{:U('Home/PaymentSystem/paytofail')}}";
 		            }
 		        }
 		    );

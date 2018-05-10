@@ -4,7 +4,7 @@
 */
 var openWXDeviceLib = function (){
     var x = 0; 
-    WeixinJSBridge.invoke('openWXDeviceLib', {}, 
+    wx.invoke('openWXDeviceLib', {}, 
     function(res){
         if(res.err_msg=='openWXDeviceLib:ok') {
             if(res.bluetoothState == 'off'){    
@@ -26,14 +26,37 @@ var openWXDeviceLib = function (){
     });
     return x;  //0表示成功 1表示失败
 }
+/**
+ * [closeWXDeviceLib 关闭设备库]
+ * @return {[type]} [description]
+ */
+var closeWXDeviceLib = function(callback){
+    var obj = {};
+    wx.invoke('closeWXDeviceLib', {}, 
+    function(res){
+        if(res.err_msg == 'closeWXDeviceLib:ok') {
+            // 成功
+            obj.res = 'ok';
 
+        }else if(res.err_msg == 'closeWXDeviceLib:fail'){
+            // 失败
+            obj.res = 'fail';
+
+        }else{
+            // 未知问题
+            obj.res = null;
+        }
+        // 回调
+        callback(obj);
+    });
+}
 
 /**
 * 接收到数据事件
 */ 
-var ReceiveData = function (){ 
-    WeixinJSBridge.on('onReceiveDataFromWXDevice', function(argv) {
-       alert("接收硬件返回的数据"+argv.base64Data);
+var ReceiveData = function (callback){
+    wx.on('onReceiveDataFromWXDevice', function(rec) {
+        callback({data: rec.base64Data})
         
 	});
 }
@@ -43,18 +66,21 @@ var ReceiveData = function (){
 * 回调：返回一个已经链接的设备的ID
 */
 var getWXDeviceInfos = function (callback){
-   
-    WeixinJSBridge.invoke('getWXDeviceInfos', {}, function(res){
-        var len=res.deviceInfos.length;  //绑定设备总数量
-		for(i=0; i<=len-1;i++){
-           //alert(i + ' ' + res.deviceInfos[i].deviceId + ' ' +res.deviceInfos[i].state); 
-           if(res.deviceInfos[i].state==="connected"){
-              
-              // C_DEVICEID = res.deviceInfos[i].deviceId;
-              callback(res.deviceInfos[i].deviceId);
-              break;   
-            }  
+    var arr = [];
+    wx.invoke('getWXDeviceInfos', {}, function(res){
+        var len = res.deviceInfos.length;  //绑定设备总数量
+		for(i=0; i<=len-1; i++){
+            arr[i] = {};
+            arr[i]['deviceId'] = res.deviceInfos[i].deviceId;
+            arr[i]['state'] = res.deviceInfos[i].state;
+            // alert(i + ' ' + res.deviceInfos[i].deviceId + ' ' +res.deviceInfos[i].state); 
+            // if(res.deviceInfos[i].state === "connected"){
+            //     C_DEVICEID = res.deviceInfos[i].deviceId;
+            //     break;   
+            // }  
         }
+        // 回调
+        callback(arr);
     }); 
 }
 
@@ -111,27 +137,102 @@ var bytes_array_to_base64 = function (array) {
 
 /**
  * 发送数据函数
- * @param {string} [cmdBytes] [需要发送的命令字节]
- * @param {string} [selDeviceID] [设备ID]
+ * @param {string} [data] [需要发送的命令字节]
+ * @param {string} [deviceId] [设备ID]
  * 返回参数：1表示发送成功；0表示发送失败
 */
-var senddataBytes = function (cmdBytes, selDeviceID, callbcak){
-    // 如果输入的参数长度为零，或设备id为空，则直接退出
-    if(cmdBytes.length <= 0 || selDeviceID.length <= 0){
+var sendData = function (deviceId, data, callbcak){
+    var obj = {};
+    // 如果待发送的数据长度为零，或设备id为空，则直接退出
+    if( deviceId.length <= 0 ){
+        obj.status = '设备号不能为空！';
         return
-    };
-    cmdBytes = bytes_array_to_base64(cmdBytes);
+    }
+    if( data.length <= 0 ){
+        obj.status = '发送的数据不能为空！';
+        return
+    }
     // 发送数据
-    WeixinJSBridge.invoke('sendDataToWXDevice', {
-    	"deviceId": selDeviceID, 
-    	"base64Data": cmdBytes
+    wx.invoke('sendDataToWXDevice', {
+    	"deviceId": deviceId, 
+    	"base64Data": bytes_array_to_base64(data)
+
     },function(res){
     	if(res.err_msg=='sendDataToWXDevice:ok'){
             // 成功
-            callbcak({res: 1});
+            obj.res = 1;
         } else {
             // 失败
-            callbcak({res: 0});
-        } 
+            obj.res = 0;
+        }
+        // 回调
+        callbcak(obj); 
     });  
+}
+
+/**
+ * [scanWXDevice 扫描设备]
+ * @param  {Function} callback [回调函数]
+ * @return {[type]}            [description]
+ */
+var scanWXDevice = function(callback){
+    var obj = {};
+    wx.invoke('startScanWXDevice', {}, function(res) {
+        console.log('startScanWXDevice',res);
+        if(res.err_msg == 'startScanWXDevice:ok'){
+            // 成功
+            obj['res'] = 'ok';
+
+        }else if(res.err_msg == 'startScanWXDevice:fail'){
+            // 失败
+            obj['res'] = 'fail';
+
+        }
+        callback(obj);
+    });
+}
+
+/**
+ * [stopScan 停止扫描设备]
+ * @param  {Function} callback [回调函数]
+ * @return {[type]}            [description]
+ */
+var stopScan = function(callback){
+    var obj = {};
+    wx.invoke('stopScanWXDevice', {}, function(res) {
+        console.log('startScanWXDevice',res);
+        if(res.err_msg == 'stopScanWXDevice:ok'){
+            // 成功
+            obj['res'] = 'ok';
+
+        }else if(res.err_msg == 'stopScanWXDevice:fail'){
+            // 失败
+            obj['res'] = 'fail';
+
+        }
+        callback(obj);
+    });
+}
+
+/**
+ * [connectWXDevice 连接设备]
+ * @param  {[type]}   deviceId [设备id]
+ * @param  {Function} callback [回调函数]
+ * @return {[type]}            [description]
+ */
+var connectWXDevice = function(deviceId, callback){
+    var obj = {};
+    wx.invoke('stopScanWXDevice', {'deviceId':deviceId, 'connType':'lan'}, function(res) {
+        console.log('startScanWXDevice',res);
+        if(res.err_msg == 'connectWXDevice:ok'){
+            // 成功
+            obj['res'] = 'ok';
+
+        }else if(res.err_msg == 'connectWXDevice:fail'){
+            // 失败
+            obj['res'] = 'fail';
+
+        }
+        callback(obj);
+    });
 }
