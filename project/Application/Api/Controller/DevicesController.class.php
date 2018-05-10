@@ -25,7 +25,7 @@ class DevicesController extends Controller
             $data['product_id'] = $_POST['id'];
 
             //查看数据库是否已存在该设备
-            $info = $device->where('mac='.$mac)->find();
+            $info = $device->where("mac='{$mac}'")->find();
 
             if ($info) {
                 //存在返回信息
