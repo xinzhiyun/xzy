@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的设备</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="__PUBLIC__/Home/amazeui/assets/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/common.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/device/index.css">
+	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
+</head>
+<body>
+	<ul id='device'>
+		<li class='item' v-for='(d, index) in deviceList'>
+			<p><b>设备<span v-text='index+1'></span></b></p>
+			<div class='cfix'>
+				<p class='fleft' v-text='d.device_id'></p>
+				<span :device_id='d.device_id' @click='unbind(d.device_id)' class='fright unbind'>解绑</span>
+			</div>
+		</li>
+	</ul>
+	<script src="__PUBLIC__/Home/js/public.js"></script>
+	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script>
+		//微信接口
+		wx.config({
+			debug: false,
+			appId: '{{$weixin["appId"]}}',
+			timestamp: '{{$weixin["timestamp"]}}',
+			nonceStr: '{{$weixin["nonceStr"]}}',
+			signature: '{{$weixin["signature"]}}',
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'chooseWXPay',
+		        'openWXDeviceLib',
+		        'closeWXDeviceLib',
+		        'getWXDeviceInfos',
+		        'getWXDeviceBindTicket',
+		        'getWXDeviceUnbindTicket',
+		        'startScanWXDevice',
+		        'stopScanWXDevice',
+		        'connectWXDevice',
+		        'disconnectWXDevice',
+		        'sendDataToWXDevice',
+		        'onWXDeviceBindStateChange',
+		        'onWXDeviceStateChange',
+		        'onScanWXDeviceResult',
+		        'onReceiveDataFromWXDevice',
+		        'onWXDeviceBluetoothStateChange',
+			]
+		});
+	</script>
+	<script src='__PUBLIC__/Home/js/index/wxhard.js'></script>
+	<script>
+		var device = new Vue({
+			el: '#device',
+			data() {
+				return {
+					deviceList: [],		// 设备列表
+				}
+			},
+			created() {
+				this.deviceList = [
+					{device_id: '34536456447'},
+					{device_id: '34536456447'},
+					{device_id: '34536456447'},
+				]
+			},
+			mounted() {},
+			methods: {
+				// 解绑
+				unbind: function(device_id){
+					confirmFn('是否解绑<br />'+device_id, function(res){
+						if(res){
+							// 确定
+							console.log('确定');
+						}else{
+							// 取消
+							console.log('取消');
+						}
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>
