@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Administrator
+ * User: 梁康伦
  * Date: 2017/10/20/0020
  * Time: 9:28
  */
@@ -10,7 +10,10 @@ use Think\Controller;
 
 class LoginController extends Controller
 {   
-      // 登录方法
+    /**
+     * [login 登录接口Api]
+     * @return [type] [description]
+     */
     public function login()
     {
 
@@ -24,6 +27,7 @@ class LoginController extends Controller
                     // $_SESSION['adminuser'] = $info;
 
                     //验证成功
+                    $_SESSION['apiuser'] = $info;
                     $this->ajaxReturn(array('msg'=>'登录成功','code'=>'200'));
 
                 } else {
