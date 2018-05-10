@@ -1,148 +1,116 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head> 
-    <title>V型知识库原创---www.vxzsk.com 请尊重版权</title>
-    <meta name="viewport" content="width=320.1,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> 
-    <meta charset='utf-8'>
-	<link rel="stylesheet" href="__PUBLIC__/Home/css/weui.min.css?what=0">
-  <script src="__PUBLIC__/Home/js/jquery.min.js?what=0"> </script>
-  <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"> </script>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充值</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="__PUBLIC__/Home/amazeui/assets/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/common.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index/index.css">
+	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
 </head>
-<body ontouchstart>
+<body>
+	<div id='charge'>
+		<ul class='cTop cfix'>
+			<li class='fleft'>
+				<span class='roundok'>1</span>
+				<p>套餐选择</p>
+			</li>
+			<li class='fleft'>
+				<span :class='(mainShow == "info" || mainShow == "done") ? "roundok" : ""'>2</span>
+				<p>信息录入</p>
+			</li>
+			<li class='fleft'>
+				<span :class='mainShow == "done" ? "roundok" : ""'>3</span>
+				<p>完成充值</p>
+			</li>
+		</ul>
+		<div class='cMain'>
+			<!-- 套餐选择 -->
+			<ul v-if='mainShow == "meal"' :style='{display: mainShow == "meal" ? "block" : "none"}'>
+				<p class='tcenter'><label for="">套餐选择</label></p>
+				<li v-for='m in mealList' @click='select_meal' class='meal tcenter' :meal_id='m.meal_id' :money='m.money'>
+					<span v-text='m.content'>套餐</span>
+				</li>
+			</ul>
+			<!-- 信息录入 -->
+			<ul class='nextul' :style='{display: mainShow == "info" ? "block" : "none"}'>
+				<li class='cfix'>
+					<label for="">姓名</label>
+					<input type="text" name='name' class='uname fright f888' v-model='uname' placeholder="请输入姓名">
+				</li>
+				<li class='cfix'>
+					<label for="">电话</label>
+					<input type="text" name='phone' class='uphone fright f888' v-model='uphone' placeholder="请输入手机号码">
+				</li>
+				<li class='cfix'>
+					<label for="" style='vertical-align: top;'>地址</label>
+					<span class='uaddr areabtn f888'></span>
+					<span class='fright f888 areabtn'>请选择 >&nbsp;</span>
+				</li>
+				<li class='cfix'>
+					<textarea name="addrdetail" class='uaddrdetail fright f888' cols="30" rows="5" placeholder="请输入详细地址，如道路、门牌号、小区、楼栋号、单元室等" v-model='uaddrdetail'></textarea>
+				</li>
+				<li class='money'>
+					<label for="">金额</label><span><span v-text='money'>300元</span>元</span>
+				</li>
+			</ul>
+			<!-- 完成充值 -->
+			<ul class='nextul done' :style='{display: mainShow == "done" ? "block" : "none"}'>
+				<li class='tcenter'>
+					<span class='iconfont icon-chenggong'></span>
+					<p class='f888'>恭喜，你已充值成功</p>
+				</li>
+			</ul>
+		</div>
+		<footer class='next tcenter' @click='next'>下一步</footer>
+		<div id="areaChoose" class="citys">
+			<div class="areaChoosebg">&emsp;</div>
+	        <div class="areaDiv">
+	        	<div class='atop'>
+	        		<p>&emsp;</p>
+		        	<h2 class='am-h2 am-text-center'>所在地区</h2>
+		        	<button type="button" class="am-close close">&times;</button>
+				</div>
+				<div>
+					<div>
+						<p class='ptext ltext fblue'>请选择&nbsp;</p>
+						<div class='province areadiv' value="440000" data-code="440000"></div>
+					</div>
+					<div>
+						<p class='ctext ltext fblue'>&nbsp;</p>
+						<div class="city areadiv" value="440100" data-code="440100"></div>
+					</div>
+					<div>
+						<p class='atext ltext fblue'>&nbsp;</p>
+						<div class="area areadiv" value="440103" data-code="440103"></div>
+					</div>
+				</div>
+	    	</div>
+	    	<div id="confirmAreaChoose">
+	    		<div>确定</div>
+	    	</div>
+		</div>
+	</div>
+	<script src="__PUBLIC__/Home/js/public.js"></script>
+	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="__PUBLIC__/Home/js/index/index.js"></script>
+	<script src="__PUBLIC__/Home/js/jquery.citys.js"></script>
+	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script>
 
-<!--标题行 V型知识库 www.vxzsk.com-->
-<h1 style="color: white;background-color: green;text-align: center;background-position: center;">V型知识库-微信硬件蓝牙jsapi示例</h1>
-  
-
-<div class="page">
-    <div class="bd spacing">
-        <div class="weui_cells weui_cells_form">
-             	<input type="hidden" id="BLEState" value=""></input>
-	            <input type="hidden" id="open-id" value=""></input> 
-        	 
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label" style="width: auto;">当前设备:&nbsp</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                   <label id="lbdeviceid" class="weui_label" style="width: auto;"></label>
-                </div>
-            </div>
-           
-          
-        </div>
-    	<div class="weui_btn_area weui_btn_area_inline">
-	        <button class="weui_btn weui_btn weui_btn_warn" id="CallGetWXrefresh">获取设备DeviceId</button>
-	        <button class="weui_btn  weui_btn_primary" id="CallGetBalance">发送指令并接收硬件返回数据</button>
-            
-        </div>
-        
-        
-    </div>
-    
-    
-    <div class="weui_dialog_alert" id="Mydialog" style="display: none;">
-    <div class="weui_mask"></div>
-    <div class="weui_dialog">
-        <div class="weui_dialog_hd" id="dialogTitle"><strong class="weui_dialog_title">着急啦</strong></div>
-        <div class="weui_dialog_bd" id="dialogContent">亲,使用本功能,请先打开手机蓝牙！</div>
-        <div class="weui_dialog_ft">
-            <a href="#" class="weui_btn_dialog primary">确定</a>
-        </div>
-    </div>
-    </div>
-    
-    
-    <!--BEGIN toast-->
-    <div id="toast" style="display: none;">
-        <div class="weui_mask_transparent"></div>
-        <div class="weui_toast">
-            <i class="weui_icon_toast"></i>
-            <p class="weui_toast_content" id="toast_msg">已完成</p>
-        </div>
-    </div>
-    <!--end toast-->
-
-    <!-- loading toast -->
-    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
-        <div class="weui_mask_transparent"></div>
-        <div class="weui_toast">
-            <div class="weui_loading">
-                <div class="weui_loading_leaf weui_loading_leaf_0"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_1"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_2"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_3"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_4"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_5"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_6"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_7"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_8"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_9"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_10"></div>
-                <div class="weui_loading_leaf weui_loading_leaf_11"></div>
-            </div>
-            <p class="weui_toast_content" id="loading_toast_msg">数据加载中</p>
-        </div>
-    </div>
-    <!-- End loading toast -->
-    
-    <!--BEGIN dialog1-->
-    <div class="weui_dialog_confirm" id="dialog1" style="display: none;">
-        <div class="weui_mask"></div>
-        <div class="weui_dialog">
-            <div class="weui_dialog_hd"><strong class="weui_dialog_title">弹窗标题</strong></div>
-            <div class="weui_dialog_bd">自定义弹窗内容，居左对齐显示，告知需要确认的信息等</div>
-            <div class="weui_dialog_ft">
-                <a href="javascript:;" class="weui_btn_dialog default" id="qxBtn">取消</a>
-                <a href="javascript:;" class="weui_btn_dialog primary" id="okBtn">确定</a>
-            </div>
-        </div>
-    </div>
-    <!--END dialog1-->
-    <!--BEGIN dialog2-->
-    <div class="weui_dialog_alert" id="dialog2" style="display: none;">
-        <div class="weui_mask"></div>
-        <div class="weui_dialog">
-            <div class="weui_dialog_hd"><strong class="weui_dialog_title">弹窗标题</strong></div>
-            <div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
-            <div class="weui_dialog_ft">
-                <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
-            </div>
-        </div>
-    </div>
-    <!--END dialog2-->
-</div>
-
-
-<div id="myparams">
- <span id="timestamp">{$weixin[0]['timestamp']}</span>
- <span id="nonceStr">{$weixin[0]['nonceStr']}</span>
- <span id="signature">{$weixin[0]['signature']}</span>
- <span id="appId">{$weixin[0]['appId']}</span>
-</div>
-</body> 
-<script type="text/javascript">
-var C_DEVICEID=null;
-
-/***
- * 初始化硬件库
- */
-function loadXMLDoc()
-{
-	//var url = window.location.href;
-	var appId =jQuery("#appId").text();
-	var timestamp=jQuery("#timestamp").text();
-	var nonceStr =jQuery("#nonceStr").text();
-	var signature=jQuery("#signature").text();
-	alert("appId:"+appId);
-               wx.config({
-		 	  beta: true,
-		      debug: false,
-		      appId: appId, //'wx1704xabcd569oiu0',
-		      timestamp: timestamp,
-		      nonceStr: nonceStr,
-		      signature: signature,
-		      jsApiList: [
+		//微信接口
+		wx.config({
+			debug: false,
+			appId: '{{$weixin["appId"]}}',
+			timestamp: '{{$weixin["timestamp"]}}',
+			nonceStr: '{{$weixin["nonceStr"]}}',
+			signature: '{{$weixin["signature"]}}',
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'chooseWXPay',
 		        'openWXDeviceLib',
 		        'closeWXDeviceLib',
 		        'getWXDeviceInfos',
@@ -158,231 +126,244 @@ function loadXMLDoc()
 		        'onScanWXDeviceResult',
 		        'onReceiveDataFromWXDevice',
 		        'onWXDeviceBluetoothStateChange',
-		      ]
-		  });
-              alert("初始化库结束");
-	
-}
+			]
+		});
+		// 微信支付方法
+		var weixinPay = function (res, callback){
+			var type = Object.prototype.toString.call(res);
+			if(type === '[object Object]'){
+				res = JSON.stringify(res);
+			}
+			WeixinJSBridge.invoke(
+				'getBrandWCPayRequest',
+				JSON.parse(res),
+				function(res){
+					if (res.err_msg.substr(-2) == 'ok') {
+						callback({status: 'ok'});
+		                // 付款成功，跳转前台主页
+		                // location.href = "{{:U('Home/PaymentSystem/paytosuccess_cz')}}";
+		            } else if (res.err_msg.substr(-6) == 'cancel') {
+						callback({status: 'cancel'});
 
-/*********************************************************
-* 打开微信设备
-* 作者：V型知识库 www.vxzsk.com 2017-05-27
-* my_openWXDeviceLib
-* 入口参数：无
-* 出口参数：0表示打开成功；1表示打开失败
-*********************************************************/
-function my_openWXDeviceLib(){
-   var x=0; 
-   WeixinJSBridge.invoke('openWXDeviceLib', {}, 
-   function(res){
-      if(res.err_msg=='openWXDeviceLib:ok')
-        {
-          if(res.bluetoothState=='off')
-            {    
-              alert("太着急啦亲,使用前请先打开手机蓝牙！");  
-             
-              x=1;
-            };
-          if(res.bluetoothState=='unauthorized')
-            {
-              alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");    
-             
-              x=1;
-            }; 
-          if(res.bluetoothState=='on')
-            {
-              alert("1.蓝牙已打开");
-              
-              x=0;
-            };      
-        }
-      else
-        {
-          alert("1.微信蓝牙打开失败");
-          x=1;  
-        }
-    });
-   return x;  //0表示成功 1表示失败
-}
+		                // 取消付款
+		                // 跳转到待付款订单页面
+		                // location.href = "{{:U('Home/PaymentSystem/paytofailed')}}";
+		            }else{
+		                // 付款失败
+						callback({status: 'failed'});
+		                // 跳转到待付款订单页面
+		                // location.href = "{{:U('Home/PaymentSystem/paytofailed')}}";
+		            }
+		        }
+		    );
+		};	
+	</script>
+	<script>
+		var charge = new Vue({
+			el: '#charge',
+			data() {
+				return {
+					href: location.href,
+					mealList: [],		//套餐数据
+					money: '',			// 充值的套餐金额
+					class2: '',			// 流程第二步
+					class3: '',			// 流程第三步（走完）
+					mainShow: 'meal',	// 显示套餐meal，信息info，还是完成done
+					meal_id: '',		// 选择的套餐id
+					uname: '',			//用户名
+					uphone: '',			// 电话
+					uaddr: '',			// 地址
+					uaddrdetail: '',	// 详细地址
+				}
+			},
+			watch: {},
+			methods: {
+				// 选择套餐
+				select_meal: function(e){
+					var ele = e.currentTarget;
+					var meal = document.querySelectorAll('.meal');
+					meal.forEach(function(meal, index){
+						meal.setAttribute('class', 'meal tcenter');
+					});
+					// 获取套餐id
+					this.meal_id = ele.getAttribute('meal_id');
+					// 获取套餐金额
+					this.money = ele.getAttribute('money');
+					ele.setAttribute('class', 'meal tcenter select');
+				},
+				// 下一步
+				next: function(){
+					var that = this;
+					if(this.mainShow == 'meal'){
+						// 当前为套餐选择界面
+						if(!this.meal_id || !this.money){
+							noticeFn({text: '请选择套餐!'});
+							return
+						}
+						// 下一步为信息录入
+						location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money;
+					}else if(this.mainShow == 'info'){
+						var buyinfo = {};
+						buyinfo['meal_id'] = this.meal_id;
+						buyinfo['money'] = this.money;
+						buyinfo['name'] = this.uname;
+						buyinfo['phone'] = this.uphone;
+						buyinfo['addr'] = this.uaddr;
+						buyinfo['addrdetail'] = this.uaddrdetail;
 
+						// 当前录入信息界面
+						var origin = location.origin;
+						var pathname = location.pathname;
+						if(!this.uname){
+							noticeFn({text:'请输入用户名!'});
+							$('.uname').css({border: '1px solid red'});
+							return
+						}else if(!nameCheck(trimFn(this.uname))){
+							noticeFn({text:'请输入用户名!'});
+							$('.uname').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uname').css({border: 'none'});
+						}
+						if(!this.uphone){
+							noticeFn({text:'请输入手机号!'});
+							$('.uphone').css({border: '1px solid red'});
+							return
+						}else if(!phoneCheck(trimFn(this.uphone))){
+							noticeFn({text:'请输入正确的手机号!'});
+							$('.uphone').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uphone').css({border: 'none'});
+						}
+						if(!this.uaddr){
+							noticeFn({text:'请选择地址!'});
+							return
+						}
+						if(!this.uaddrdetail){
+							noticeFn({text:'请输入详细地址!'});
+							$('.uaddrdetail').css({border: '1px solid red'});
+							return
+						}else{
+							$('.uaddrdetail').css({border: 'none'});
+						}
+						// 发送客户信息和订单信息，让后台生成订单号
+						that.getOrderid(buyinfo, function(orderid){
+							// 订单生成成功
+							if(orderid){
+								// 查询订单信息是否保存, 并接收后台返回的用于 支付的数据
+								that.checkOrderid(orderid, function(res){
+									if(res == -1){
+										noticeFn({text: '支付出错， 请稍后再试！'});
+									}else{
+										// 微信支付
+										weixinPay(res, function(res){
+											if(res.status === 'ok'){
+												// 支付成功
+											}else if(res.status === 'cancel'){
+												// 取消支付
+											}else if(res.status === 'failed'){
+												// 支付失败
+											}
+										})
+									}
+								})
+							}
+							// 下一步为完成
+							location.href = origin + pathname + '?done';
+						})
+					}
+				},
+				// 获取套餐数据
+				getMeal: function(){
+					// 套餐数据
+					this.mealList = [
+						{meal_id: 1, content: '100元/100天', money:'100'},
+						{meal_id: 2, content: '300元/300天', money:'300'},
+						{meal_id: 3, content: '500元/500天', money:'500'}
+					];
+				},
+				// 获取订单号（后台生成，用于微信支付）
+				getOrderid: function(buyinfo, callback){
+					$.ajax({
+						url: '',
+						type: 'post',
+						data: buyinfo,
+						success: function(res){
+							console.log('res: ',res);
+							callback(res.orderid);
+						},
+						error: function(err){
+							console.log('err: ',err);
+							callback(err);
+						}
+					})
+				},
+				// 查询订单信息
+				checkOrderid: function(orderid, callback){}
+			},
+			created() {
+				var href = this.href;
+				if(href.indexOf('info') > -1){
+					var moneyindex = href.indexOf('money=')+6;
+					this.money = href.substring(moneyindex);
+					this.mainShow = 'info';		// 信息选择
 
-/*********************************************************
-* 接收到数据事件
-* 作者：V型知识库 www.vxzsk.com 2016-04-04
-* my_onReceiveDataFromWXDevice
-* 入口参数：无
-* 出口参数：无
-*********************************************************/ 
-function my_onReceiveDataFromWXDevice(){ 
-    WeixinJSBridge.on('onReceiveDataFromWXDevice', function(argv) {
-       alert("接收硬件返回的数据"+argv.base64Data);
-    
-	  });
-}
+				}else if(href.indexOf('done') > -1){
+					this.mainShow = 'done';		// 完成选择
+					$('.next').hide();
 
-/**********************************************
-* 取得微信设备信息
-* 作者：V型知识库 www.vxzsk.com 2016-04-04
-* my_getWXDeviceInfos
-* 入口参数：无
-* 出口参数：返回一个已经链接的设备的ID
-**********************************************/
-function my_getWXDeviceInfos(){
-   
-    WeixinJSBridge.invoke('getWXDeviceInfos', {}, function(res){
-        var len=res.deviceInfos.length;  //绑定设备总数量
-		for(i=0; i<=len-1;i++)
-         {
-           //alert(i + ' ' + res.deviceInfos[i].deviceId + ' ' +res.deviceInfos[i].state); 
-           if(res.deviceInfos[i].state==="connected")
-            {
-              
-              C_DEVICEID = res.deviceInfos[i].deviceId;
-              alert("2.设备已成功连接");
-              jQuery("#lbdeviceid").text(C_DEVICEID);
-              
-              break;   
-            }  
-         }
-         	
-    }); 
-  return;    
-}
+				}else if(href.indexOf('meal') > -1){
+					this.mainShow = 'meal';		// 套餐选择
+					this.getMeal();				// 获取套餐信息
 
+				}else{
+					this.mainShow = 'meal';		// 套餐选择
+					this.getMeal();				// 获取套餐信息
+				}
+				
+			},
+			mounted() {
+				// var meal2 = document.querySelectorAll('.meal')[1];
+				// meal2.setAttribute('class', 'meal tcenter select');
+				// // 获取套餐id
+				// this.meal_id = meal2.getAttribute('meal_id');
+			},
+		})
+	</script>
+	<script>
+		
+		// 选择地区
+		$(".areabtn").on("click", function(){
+			$("#areaChoose").fadeIn('fast');
+		});
 
-/**
- *  Byte数组转Base64字符,原理同上 
- *	@Param [0x00,0x00]
- *	@return Base64字符串
- **/
-function bytes_array_to_base64(array) {
-	if (array.length == 0) {
-		return "";
-	}
-	var b64Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-	var result = "";
-	// 给末尾添加的字符,先计算出后面的字符
-	var d3 = array.length % 3;
-	var endChar = "";
-	if (d3 == 1) {
-		var value = array[array.length - 1];
-		endChar = b64Chars.charAt(value >> 2);
-		endChar += b64Chars.charAt((value << 4) & 0x3F);
-		endChar += "==";
-	} else if (d3 == 2) {
-		var value1 = array[array.length - 2];
-		var value2 = array[array.length - 1];
-		endChar = b64Chars.charAt(value1 >> 2);
-		endChar += b64Chars.charAt(((value1 << 4) & 0x3F) + (value2 >> 4));
-		endChar += b64Chars.charAt((value2 << 2) & 0x3F);
-		endChar += "=";
-	}
+		// 关闭地区选择，并显示到对应区域
+		$(".area").on("click", 'p', function(){
+			
+			var province = $('.ptext').text(),
+				city = $('.ctext').text(),
+				area = $(this).text();
 
-	var times = array.length / 3;
-	var startIndex = 0;
-	// 开始计算
-	for (var i = 0; i < times - (d3 == 0 ? 0 : 1); i++) {
-		startIndex = i * 3;
+			if(province && area){
+				$('.areabtn').eq(1).hide();
+			}else {
+				$(".uaddr").text('');
+				$('.areabtn').eq(1).show();
+			}
+			charge.uaddr = province + ' ' + city + ' ' + area;
+			$(".uaddr").text( (!province && !city && !area) ? '请选择' : province + ' ' + city + ' ' + area);
+			$(".uaddr").css({display:'inline-block'});
+			// console.log($(this).text().indexOf('请选择'));
+			if($(this).text().indexOf('请选择') == -1){
+				setTimeout(function(){
+					$("#areaChoose").fadeOut('fast');
+					$('.choosebtn').hide();
 
-		var S1 = array[startIndex + 0];
-		var S2 = array[startIndex + 1];
-		var S3 = array[startIndex + 2];
+				},300);
+			}
 
-		var s1 = b64Chars.charAt(S1 >> 2);
-		var s2 = b64Chars.charAt(((S1 << 4) & 0x3F) + (S2 >> 4));
-		var s3 = b64Chars.charAt(((S2 & 0xF) << 2) + (S3 >> 6));
-		var s4 = b64Chars.charAt(S3 & 0x3F);
-		// 添加到结果字符串中
-		result += (s1 + s2 + s3 + s4);
-	}
-
-	return result + endChar;
-}
-
-
-/*******************************************************************
- * 发送数据函数
- * 作者：
- * 入口参数：
- *     cmdBytes: 需要发送的命令字节
- *     selDeviceID: 选择的需要发送设备的ID 
- * 出口参数：
- *     返回: 0表示发送成功；1表示发送失败
- *     如果成功，则接收事件应该能够收到相应的数据
-*******************************************************************/
-function senddataBytes(cmdBytes,selDeviceID){
-  //1. 如果输入的参数长度为零，则直接退出
-  if(cmdBytes.length<=0){return 1};
-  //1.1 如果设备ID为空，则直接返回
-  if(selDeviceID.length<=0){return 1};
-  //2. 发送数据
-  var x=0;
-  WeixinJSBridge.invoke('sendDataToWXDevice', {
-			"deviceId":selDeviceID, 
-			"base64Data":bytes_array_to_base64(cmdBytes)
-			}, function(res){
-			if(res.err_msg=='sendDataToWXDevice:ok')
-               {
-                 alert("数据发送成功");
-                 x=0;
-               }  
-            else
-               {
-                 alert("数据发送失败");
-                 x=1; 
-               } 
-		});  
-  return x;      
-}
-
- 
-
-
-
-  jQuery(document).ready(function(){
-   loadXMLDoc();
-   $("#CallGetWXrefresh").on("click",function(e){  
-    //showdialog();
-    
-     //1. 打开微信设备 
-     my_openWXDeviceLib();
-     
-    //2. 安装接收到数据事件
-     my_onReceiveDataFromWXDevice();
-     
-     //3. 获取设备信息
-     my_getWXDeviceInfos();
-     
-     
-      
-  });
-  
-  /****
-  发送指令数据并接收硬件返回数据
-  此指令可更换为您开发的硬件烧制的指令
-  ***/
-   $("#CallGetBalance").on("click",function(e){
-	var Bytes=new Array();
-    Bytes[0]=0x09;
-    Bytes[1]=0x00;
-    Bytes[2]=0x01;
-    Bytes[3]=0x33;
-    Bytes[4]=0x06;
-    Bytes[5]=0x22;
-    var x=senddataBytes(Bytes,C_DEVICEID);
-    
-  });
-  
-  
-  });
-
-wx.error(function (res) {
-  alert(res.errMsg);
-});
-
-
-</script>
-
-
-
+		});
+	</script>
+</body>
 </html>

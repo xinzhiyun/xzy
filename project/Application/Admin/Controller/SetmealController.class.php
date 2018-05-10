@@ -24,28 +24,121 @@ class SetmealController extends CommonController
 
         if ($auid == 1) {
             // $map 正常做搜索使用
-            $map = '';
-            
-            $list = $setmeal->where($map)
+            // 搜索功能
+            $map = array(
+                'days' => trim(I('post.days')),
+                'name' => trim(I('post.name')),
+            );
+            // dump($map);die;
+            if (trim(I('post.describe'))) {
+                $map['s.describe'] =  array('like','%'.trim(I('post.describe')).'%');
+            }
+            $minmoney = trim(I('post.minmoney'))?:false;
+            $maxmoney = trim(I('post.maxmoney'))?:false;
+            if (is_numeric($maxmoney)) {
+                $map['s.money'][] = array('elt',$maxmoney*100);
+            }
+            if (is_numeric($minmoney)) {
+                $map['s.money'][] = array('egt',$minmoney*100);
+            }
+             $minaddtime = strtotime(trim(I('post.mintime')))?:false;
+             $maxaddtime = strtotime(trim(I('post.maxtime')))?:false;
+             if (is_numeric($maxaddtime)) {
+                 $map['s.addtime'][] = array('elt',$maxaddtime);
+             }
+             if (is_numeric($minaddtime)) {
+                 $map['s.addtime'][] = array('egt',$minaddtime);
+             }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$setmeal->where($map)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
                             ->field("s.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $setmeal->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('s')
+                            ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                            ->field("s.*,admin.name")
+                            ->order('s.addtime desc')
                             ->select(); 
             // dump($list);die;
 
         } else {
             // 只查自己
-            $map['auid'] = $auid;
+            // $map['auid'] = $auid;
 
-            $list = $setmeal->where($map)
+            // 搜索功能
+            $map = array(
+                'days' => trim(I('post.days')),
+                'describe' => trim(I('post.describe')),
+                'name' => trim(I('post.name')),
+                'auid' => $auid, // 只查自己
+            );
+            // dump($map);die;
+            if (trim(I('post.describe'))) {
+                $map['s.describe'] =  array('like','%'.trim(I('post.describe')).'%');
+            }
+            $minmoney = trim(I('post.minmoney'))?:false;
+            $maxmoney = trim(I('post.maxmoney'))?:false;
+            if (is_numeric($maxmoney)) {
+                $map['s.money'][] = array('elt',$maxmoney*100);
+            }
+            if (is_numeric($minmoney)) {
+                $map['s.money'][] = array('egt',$minmoney*100);
+            }
+             $minaddtime = strtotime(trim(I('post.mintime')))?:false;
+             $maxaddtime = strtotime(trim(I('post.maxtime')))?:false;
+             if (is_numeric($maxaddtime)) {
+                 $map['s.addtime'][] = array('elt',$maxaddtime);
+             }
+             if (is_numeric($minaddtime)) {
+                 $map['s.addtime'][] = array('egt',$minaddtime);
+             }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$setmeal->where($map)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
                             ->field("s.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $setmeal->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('s')
+                            ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                            ->field("s.*,admin.name")
+                            ->order('s.addtime desc')
                             ->select();
 
         }
 
         $this->assign('list',$list);
+        $this->assign('button',$pageButton);
         $this->display();
 
     }

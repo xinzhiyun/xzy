@@ -43,22 +43,22 @@ class AdminuserController extends CommonController
 
         $user = D('adminuser');
         // PHPExcel 导出数据
-        if (I('output') == 1) {
-            $data = $user->where($map)
-                        ->field('id,name,appid,appsecret,shopnum,shoppwd,company,addtime')
-                        ->select();
-            $arr = [
-                'addtime'=>'Y-m-d H:i:s'
-            ];
-            replace_value($data,$arr);
-            $filename = '客户列表数据';
-            $title = '客户列表';
-            $cellName = ['客户Id','账号','APPID','APPsecret','商户号','商户号密码','公司','加入时间'];
-            // dump($data);die;
-            $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
-            $myexcel->output();
-            return ;
-        }
+        // if (I('output') == 1) {
+        //     $data = $user->where($map)
+        //                 ->field('id,name,appid,appsecret,shopnum,shoppwd,company,addtime')
+        //                 ->select();
+        //     $arr = [
+        //         'addtime'=>'Y-m-d H:i:s'
+        //     ];
+        //     replace_value($data,$arr);
+        //     $filename = '客户列表数据';
+        //     $title = '客户列表';
+        //     $cellName = ['客户Id','账号','APPID','APPsecret','商户号','商户号密码','公司','加入时间'];
+        //     // dump($data);die;
+        //     $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
+        //     $myexcel->output();
+        //     return ;
+        // }
 
 
 
