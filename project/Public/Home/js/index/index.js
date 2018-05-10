@@ -94,50 +94,10 @@ var charge = new Vue({
 					noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
 					return
 				}
+
 				// 发送客户信息和订单信息，让后台生成订单号
-				getOrderid(buyinfo, function(orderid){
-					// 订单生成成功
-					if(orderid){
-						// 查询订单信息，支付信息, 用于 微信支付
-						checkOrderid(orderid, function(res){
-							if(res == -1){
-								noticeFn({text: '支付出错， 请稍后再试！'});
-								return
-							}
-							// 微信支付
-							weixinPay(res, function(res){
-								if(res.status === 'ok'){
-									// 发送数据给设备
-									sendData(device.connectid, device.senddata, function(res){
-										if(res.status == 'ok'){
-											// 支付成功
-											location.href = origin + pathname + '?done';
-
-										}else if(res.status == 'fail'){
-											noticeFn({text: '发送数据出错！'});
-
-										}else{
-											// 无设备号，或发送的数据为空
-											noticeFn({text: res.msg});
-										}
-									})
-										
-
-								}else if(res.status === 'cancel'){
-									// 取消支付
-									noticeFn({text: '你取消了支付！'});
-
-								}else if(res.status === 'failed'){
-									// 支付失败
-									noticeFn({text: '支付失败, 请稍后再试！'});
-
-								}
-							})
-							
-						})
-					}
-					
-				})
+				device.goNext();
+				
 			}
 		},
 		// 获取套餐数据
@@ -164,6 +124,51 @@ var charge = new Vue({
 			// 	{meal_id: 2, content: '300元/300天', money:'300'},
 			// 	{meal_id: 3, content: '500元/500天', money:'500'}
 			// ];
+		},
+		goNext: function(){
+			// 发送客户信息和订单信息，让后台生成订单号
+			getOrderid(buyinfo, function(orderid){
+				// 订单生成成功
+				if(orderid){
+					// 查询订单信息，支付信息, 用于 微信支付
+					checkOrderid(orderid, function(res){
+						if(res == -1){
+							noticeFn({text: '支付出错， 请稍后再试！'});
+							return
+						}
+						// 微信支付
+						weixinPay(res, function(res){
+							if(res.status === 'ok'){
+								// 发送数据给设备
+								sendData(device.connectid, device.senddata, function(res){
+									if(res.status === 'ok'){
+										// 支付成功
+										location.href = origin + pathname + '?done';
+
+									}else if(res.status === 'fail'){
+										noticeFn({text: '发送数据出错！'});
+
+									}else{
+										// 无设备号，或发送的数据为空
+										noticeFn({text: res.msg});
+									}
+								})
+								
+							}else if(res.status === 'cancel'){
+								// 取消支付
+								noticeFn({text: '你取消了支付！'});
+
+							}else if(res.status === 'failed'){
+								// 支付失败
+								noticeFn({text: '支付失败, 请稍后再试！'});
+
+							}
+						})
+						
+					})
+				}
+				
+			})
 		}
 	},
 	created() {

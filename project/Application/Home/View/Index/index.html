@@ -140,20 +140,16 @@
 				JSON.parse(res),
 				function(res){
 					if (res.err_msg.substr(-2) == 'ok') {
+		                // 付款成功
 						callback({status: 'ok'});
-		                // 付款成功，跳转前台主页
-		                // location.href = "{{:U('Home/PaymentSystem/paytosuccess_cz')}}";
+						
 		            } else if (res.err_msg.substr(-6) == 'cancel') {
+		                // 取消付款
 						callback({status: 'cancel'});
 
-		                // 取消付款
-		                // 跳转到待付款订单页面
-		                // location.href = "{{:U('Home/PaymentSystem/paytofail')}}";
 		            }else{
 		                // 付款失败
 						callback({status: 'fail'});
-		                // 跳转到待付款订单页面
-		                // location.href = "{{:U('Home/PaymentSystem/paytofail')}}";
 		            }
 		        }
 		    );
