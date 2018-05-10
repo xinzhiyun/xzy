@@ -3,16 +3,19 @@ var charge = new Vue({
 	data() {
 		return {
 			href: location.href,
-			mealList: [],		//套餐数据
+			connectid: '',		// 当前连接的设备
+			mealList: [],		// 套餐数据
 			money: '',			// 充值的套餐金额
 			class2: '',			// 流程第二步
 			class3: '',			// 流程第三步（走完）
 			mainShow: 'meal',	// 显示套餐meal，信息info，还是完成done
 			meal_id: '',		// 选择的套餐id
-			uname: '',			//用户名
+			uname: '',			// 用户名
 			uphone: '',			// 电话
 			uaddr: '',			// 地址
 			uaddrdetail: '',	// 详细地址
+			device_num: '',		// 连接的设备数量
+			senddata: '',		// 要发送的数据
 		}
 	},
 	watch: {},
@@ -86,6 +89,11 @@ var charge = new Vue({
 				}else{
 					$('.uaddrdetail').css({border: 'none'});
 				}
+				// 判断当前连接的设备数量
+				if(charge.device_num >= 2){
+					noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+					return
+				}
 				// 发送客户信息和订单信息，让后台生成订单号
 				getOrderid(buyinfo, function(orderid){
 					// 订单生成成功
@@ -94,19 +102,38 @@ var charge = new Vue({
 						checkOrderid(orderid, function(res){
 							if(res == -1){
 								noticeFn({text: '支付出错， 请稍后再试！'});
-							}else{
-								// 微信支付
-								weixinPay(res, function(res){
-									if(res.status === 'ok'){
-										// 支付成功
-										location.href = origin + pathname + '?done';
-									}else if(res.status === 'cancel'){
-										// 取消支付
-									}else if(res.status === 'failed'){
-										// 支付失败
-									}
-								})
+								return
 							}
+							// 微信支付
+							weixinPay(res, function(res){
+								if(res.status === 'ok'){
+									// 发送数据给设备
+									sendData(device.connectid, device.senddata, function(res){
+										if(res.status == 'ok'){
+											// 支付成功
+											location.href = origin + pathname + '?done';
+
+										}else if(res.status == 'fail'){
+											noticeFn({text: '发送数据出错！'});
+
+										}else{
+											// 无设备号，或发送的数据为空
+											noticeFn({text: res.msg});
+										}
+									})
+										
+
+								}else if(res.status === 'cancel'){
+									// 取消支付
+									noticeFn({text: '你取消了支付！'});
+
+								}else if(res.status === 'failed'){
+									// 支付失败
+									noticeFn({text: '支付失败, 请稍后再试！'});
+
+								}
+							})
+							
 						})
 					}
 					
@@ -115,12 +142,28 @@ var charge = new Vue({
 		},
 		// 获取套餐数据
 		getMeal: function(){
-			// 套餐数据
-			this.mealList = [
-				{meal_id: 1, content: '100元/100天', money:'100'},
-				{meal_id: 2, content: '300元/300天', money:'300'},
-				{meal_id: 3, content: '500元/500天', money:'500'}
-			];
+			$.ajax({
+				url: '',
+				type: 'get',
+				success: function(res){
+					console.log('res: ',res);
+					// 套餐数据
+					this.mealList = [
+						{meal_id: 1, content: '100元/100天', money:'100'},
+						{meal_id: 2, content: '300元/300天', money:'300'},
+						{meal_id: 3, content: '500元/500天', money:'500'}
+					];
+				},
+				error: function(err){
+					console.log('err: ',err);
+				}
+			})
+			// // 套餐数据
+			// this.mealList = [
+			// 	{meal_id: 1, content: '100元/100天', money:'100'},
+			// 	{meal_id: 2, content: '300元/300天', money:'300'},
+			// 	{meal_id: 3, content: '500元/500天', money:'500'}
+			// ];
 		}
 	},
 	created() {
@@ -142,6 +185,39 @@ var charge = new Vue({
 			this.mainShow = 'meal';		// 套餐选择
 			this.getMeal();				// 获取套餐信息
 		}
+
+		// 打开微信设备库,查询蓝牙是否开启
+		openWXDeviceLib(function(res){
+			if(res.status == 'on'){
+
+				// 获取当前连接的设备
+				getWXDeviceInfos(function(arr, connectid){
+					this.connectid = connectid;
+					var num = 0;
+					arr.forEach(function(device, index){
+						if(device.state == 'connected'){
+							++num;
+						}
+						if(num >= 2){
+							noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+							charge.device_num = num;
+							return
+						}
+					})
+				})
+
+			}
+			if(res.status == 'off'){
+				noticeFn({text: '先打开手机蓝牙再使用！'});
+				
+			}else if(res.status == 'unauthorized'){
+				noticeFn({text: '请授权微信蓝牙功能并打开蓝牙！'});
+				
+			}else if(res.status == 'unauthorized'){
+				noticeFn({text: '微信蓝牙打开失败!'});
+				
+			}
+		})
 		
 	},
 	mounted() {

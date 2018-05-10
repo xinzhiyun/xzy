@@ -1,30 +1,33 @@
 
 /**
-* 打开微信设备
+* 打开微信设备库
 */
-var openWXDeviceLib = function (){
-    var x = 0; 
+var openWXDeviceLib = function (callback){
+    var obj = {}; 
     wx.invoke('openWXDeviceLib', {}, 
     function(res){
-        if(res.err_msg=='openWXDeviceLib:ok') {
-            if(res.bluetoothState == 'off'){    
-                alert("先打开手机蓝牙再使用！");  
-                x=1;
-            };
-            if(res.bluetoothState == 'unauthorized'){
-                alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");
-                x=1;
-            };
-            if(res.bluetoothState == 'on'){
-                alert("1.蓝牙已打开");
-                x = 0;
-            };
+        if(res.err_msg == 'openWXDeviceLib:ok') {
+            if(res.bluetoothState == 'off'){   
+                obj['status'] = 'off';
+                // alert("先打开手机蓝牙再使用！");
+                
+            }else if(res.bluetoothState == 'unauthorized'){
+                obj['status'] = 'unauthorized';
+                // alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");
+               
+            }else if(res.bluetoothState == 'on'){
+                obj['status'] = 'on';
+                // console.log("蓝牙已打开");
+                
+            }
         }else{
-            alert("1.微信蓝牙打开失败");
-            x = 1;
+            obj['status'] = 'fail';
+            // alert("微信蓝牙打开失败");
+            
         }
+        // 回调
+        callback(obj);
     });
-    return x;  //0表示成功 1表示失败
 }
 /**
  * [closeWXDeviceLib 关闭设备库]
@@ -51,36 +54,75 @@ var closeWXDeviceLib = function(callback){
     });
 }
 
+/*************************************/
+/********** 查询接收 -- 开始 *********/
+
+/**
+* 蓝牙设备'绑定'状态变化事件
+*/ 
+var bindChange = function (callback){
+    wx.on('onWXDeviceBindStateChange',{
+        deviceId: deviceId,
+        state: state
+    }, function(rec) {
+        // state: bind 绑定，unbind解绑
+        callback({ state: res.state });
+        
+    });
+}
+
+/**
+* 蓝牙设备'连接'状态变化事件
+*/ 
+var stateChange = function (callback){
+    wx.on('onWXDeviceStateChange', function(rec) {
+        callback({
+            deviceId: res.deviceId,
+            data: rec.base64Data
+        });
+        
+    });
+}
+
+/**
+* 扫描到某个设备
+*/ 
+var scanResult = function (callback){
+    wx.on('onScanWXDeviceResult', function(rec) {
+        callback({ devices: res.devices });
+        
+    });
+}
+
 /**
 * 接收到数据事件
 */ 
-var ReceiveData = function (callback){
+var receiveData = function (callback){
     wx.on('onReceiveDataFromWXDevice', function(rec) {
-        callback({data: rec.base64Data})
+        callback({data: rec.base64Data});
         
 	});
 }
 
 /**
-* 取得微信设备信息
+* 获取微信设备信息
 * 回调：返回一个已经链接的设备的ID
 */
 var getWXDeviceInfos = function (callback){
     var arr = [];
+    var connectid = {};
     wx.invoke('getWXDeviceInfos', {}, function(res){
         var len = res.deviceInfos.length;  //绑定设备总数量
-		for(i=0; i<=len-1; i++){
+		for(i=0; i<len; i++){
+            if(res.deviceInfos[i].state == 'connected'){
+                connectid = res.deviceInfos[i].deviceId;
+            }
             arr[i] = {};
             arr[i]['deviceId'] = res.deviceInfos[i].deviceId;
             arr[i]['state'] = res.deviceInfos[i].state;
-            // alert(i + ' ' + res.deviceInfos[i].deviceId + ' ' +res.deviceInfos[i].state); 
-            // if(res.deviceInfos[i].state === "connected"){
-            //     C_DEVICEID = res.deviceInfos[i].deviceId;
-            //     break;   
-            // }  
         }
         // 回调
-        callback(arr);
+        callback(arr, connectid);
     }); 
 }
 
@@ -135,40 +177,6 @@ var bytes_array_to_base64 = function (array) {
 }
 
 
-/**
- * 发送数据函数
- * @param {string} [data] [需要发送的命令字节]
- * @param {string} [deviceId] [设备ID]
- * 返回参数：1表示发送成功；0表示发送失败
-*/
-var sendData = function (deviceId, data, callbcak){
-    var obj = {};
-    // 如果待发送的数据长度为零，或设备id为空，则直接退出
-    if( deviceId.length <= 0 ){
-        obj.status = '设备号不能为空！';
-        return
-    }
-    if( data.length <= 0 ){
-        obj.status = '发送的数据不能为空！';
-        return
-    }
-    // 发送数据
-    wx.invoke('sendDataToWXDevice', {
-    	"deviceId": deviceId, 
-    	"base64Data": bytes_array_to_base64(data)
-
-    },function(res){
-    	if(res.err_msg=='sendDataToWXDevice:ok'){
-            // 成功
-            obj.res = 1;
-        } else {
-            // 失败
-            obj.res = 0;
-        }
-        // 回调
-        callbcak(obj); 
-    });  
-}
 
 /**
  * [scanWXDevice 扫描设备]
@@ -178,14 +186,13 @@ var sendData = function (deviceId, data, callbcak){
 var scanWXDevice = function(callback){
     var obj = {};
     wx.invoke('startScanWXDevice', {}, function(res) {
-        console.log('startScanWXDevice',res);
         if(res.err_msg == 'startScanWXDevice:ok'){
             // 成功
-            obj['res'] = 'ok';
+            obj['status'] = 'ok';
 
         }else if(res.err_msg == 'startScanWXDevice:fail'){
             // 失败
-            obj['res'] = 'fail';
+            obj['status'] = 'fail';
 
         }
         callback(obj);
@@ -200,20 +207,64 @@ var scanWXDevice = function(callback){
 var stopScan = function(callback){
     var obj = {};
     wx.invoke('stopScanWXDevice', {}, function(res) {
-        console.log('startScanWXDevice',res);
         if(res.err_msg == 'stopScanWXDevice:ok'){
             // 成功
-            obj['res'] = 'ok';
+            obj['status'] = 'ok';
 
         }else if(res.err_msg == 'stopScanWXDevice:fail'){
             // 失败
-            obj['res'] = 'fail';
+            obj['status'] = 'fail';
 
         }
         callback(obj);
     });
 }
 
+var blueChange = function(callback){
+    wx.invoke('onWXDeviceBluetoothStateChange', function(res) {
+        // state: on 开启，off 关闭
+        callback({state: res.state});
+    });
+}
+
+/********** 查询接收 -- 结束 *********/
+/*************************************/
+
+/**
+ * 发送数据函数
+ * @param {string} [data] [需要发送的命令字节]
+ * @param {string} [deviceId] [设备ID]
+ * 返回参数：1表示发送成功；0表示发送失败
+*/
+var sendData = function (deviceId, data, callbcak){
+    var obj = {};
+    // 如果待发送的数据长度为零，或设备id为空，则直接退出
+    if( deviceId.length <= 0 ){
+        obj['msg'] = '设备号不能为空！';
+        return
+    }
+    if( data.length <= 0 ){
+        obj['msg'] = '发送的数据不能为空！';
+        return
+    }
+    // 发送数据
+    wx.invoke('sendDataToWXDevice', {
+        "deviceId": deviceId, 
+        "base64Data": bytes_array_to_base64(data)
+
+    },function(res){
+        if(res.err_msg=='sendDataToWXDevice:ok'){
+            // 成功
+            obj['status'] = 'ok';
+        } else {
+            // 失败
+            obj['status'] = 'fail';
+        }
+        // 回调
+        callbcak(obj); 
+    });  
+
+}
 /**
  * [connectWXDevice 连接设备]
  * @param  {[type]}   deviceId [设备id]
@@ -222,17 +273,67 @@ var stopScan = function(callback){
  */
 var connectWXDevice = function(deviceId, callback){
     var obj = {};
-    wx.invoke('stopScanWXDevice', {'deviceId':deviceId, 'connType':'lan'}, function(res) {
-        console.log('startScanWXDevice',res);
+    wx.invoke('connectWXDevice', {'deviceId':deviceId}, function(res) {
         if(res.err_msg == 'connectWXDevice:ok'){
             // 成功
-            obj['res'] = 'ok';
+            obj['status'] = 'ok';
 
         }else if(res.err_msg == 'connectWXDevice:fail'){
             // 失败
-            obj['res'] = 'fail';
+            obj['status'] = 'fail';
 
         }
+        callback(obj);
+    });
+}
+
+/**
+ * [disconnectWXDevice 断开设备连接]
+ * @param  {[type]}   deviceId [设备id]
+ * @param  {Function} callback [回调函数]
+ * @return {[type]}            [description]
+ */
+var disconnectWXDevice = function(deviceId, callback){
+    var obj = {};
+    wx.invoke('disconnectWXDevice', {'deviceId':deviceId}, function(res) {
+        if(res.err_msg == 'disconnectWXDevice:ok'){
+            // 成功
+            obj['status'] = 'ok';
+
+        }else if(res.err_msg == 'disconnectWXDevice:fail'){
+            // 失败
+            obj['status'] = 'fail';
+
+        }
+        callback(obj);
+    });
+}
+
+/**
+ * [getWXDeviceTicket 获取操作凭证]
+ * @param  {[type]}   deviceId [description]
+ * @param  {[type]}   type     [操作类型，1:绑定设备，2：解绑设备]
+ * @param  {Function} callback [回调函数]
+ * @return {[type]}            [description]
+ */
+var getWXDeviceTicket = function(deviceId, type, callback){
+    var obj = {};
+    type = type + '';   // 转为字符串
+    wx.invoke('getWXDeviceTicket', {
+        'deviceId': deviceId,
+        'type': type
+    }, function(res) {
+        obj['ticket'] = res;
+        if(res.err_msg == 'getWXDeviceTicket:ok'){
+            // 成功
+            obj['status'] = 'ok';
+
+        }else if(res.err_msg == 'getWXDeviceTicket:fail'){
+            // 失败
+            obj['status'] = 'fail';
+
+        }
+        // 回调函数
         callback(obj);
     });
 }

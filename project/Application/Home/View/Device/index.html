@@ -65,26 +65,82 @@
 				}
 			},
 			created() {
-				this.deviceList = [
-					{device_id: '34536456447'},
-					{device_id: '89754561232'},
-					{device_id: '45689712136'},
-				]
+				//获取已绑定的设备 
+				getWXDeviceInfos(function(arr, connectid){
+					console.log('arr: ',arr);
+					arr.forEach(function(item, index){
+						this.deviceList.push({device_id: item.device_id})
+					})
+				})
+				// this.deviceList = [
+				// 	{device_id: '34536456447'},
+				// 	{device_id: '89754561232'},
+				// 	{device_id: '45689712136'},
+				// ]
 			},
 			mounted() {},
 			methods: {
 				// 解绑
 				unbind: function(device_id){
+					var type = 2; 	// 1：绑定，2：解绑
+					var openid;		// 公众号openid
 					confirmFn('是否解绑<br />'+device_id, function(res){
 						if(res){
 							// 确定
 							console.log('确定');
+							// 获取操作凭证（绑定，解绑）
+							getWXDeviceTicket(deviceId, type, function(res){
+								if(res.status == 'ok'){
+									// 操作成功
+									// 上传 ticket 到服务器
+									device.upTicket(res.ticket);
+
+								}else if(res.status == 'fail'){
+									console.log('操作失败：', res);
+								}
+							});
+							
 						}else{
 							// 取消
 							console.log('取消');
 						}
 					})
+				},
+				// 上传ticket（解绑操作）
+				upTicket: function(ticket){
+					// 发送 ticket 到后台
+					$.ajax({
+						url: '',
+						type: 'post',
+						data: {ticket: ticket},
+						success: function(res){
+							console.log('res: ',res);
+						},
+						error: function(err){
+							console.log('err: ',err);
+						}
+					})
 				}
+				// // 微信解绑设备
+				// wxunbind: function(ticket, device_id, openid){
+				// 	var option = {
+				// 	    "ticket": ticket,
+				// 	    "device_id": device_id,
+				// 	    "openid": openid
+				// 	};
+				// 	// 发送 ticket 到后台
+				// 	$.ajax({
+				// 		url: '',
+				// 		type: 'post',
+				// 		data: option,
+				// 		success: function(res){
+				// 			console.log('res: ',res);
+				// 		},
+				// 		error: function(err){
+				// 			console.log('err: ',err);
+				// 		}
+				// 	})
+				// }
 			}
 		})
 	</script>
