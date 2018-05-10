@@ -4,7 +4,7 @@ use Think\Controller;
 
 /**
  * 产品控制器
- * 用来配置产品类型，配置滤芯等
+ * 用来配置产品类型
  * 
  * @author 潘宏钢 <619328391@qq.com>
  */
@@ -18,45 +18,105 @@ class ProductController extends CommonController
      */
     public function index()
     {	
-       /*
-            Excel导出
-         */
-        // 搜索功能
-        $map = array(
-            'typename' =>  array('like','%'.trim(I('post.typename')).'%'),
-        );
-        $minaddtime = strtotime(trim(I('post.minaddtime')))?:0;
-        $maxaddtime = strtotime(trim(I('post.maxaddtime')))?:-1;
-        if (is_numeric($maxaddtime)) {
-            $map['addtime'] = array(array('egt',$minaddtime),array('elt',$maxaddtime));
-        }
-        if ($maxaddtime < 0) {
-            $map['addtime'] = array(array('egt',$minaddtime));
+       // 准备用户id
+        $auid = $_SESSION['adminuser']['id'];
+        $product = D('product');
+
+        if ($auid == 1) {
+            // $map 正常做搜索使用
+            // 搜索功能
+            $map = array(
+                'typename' => array('like','%'.trim(I('post.typename')).'%'),
+                'product_id' => array('like','%'.trim(I('post.product_id')).'%'),
+                'name' => array('like','%'.trim(I('post.name')).'%'),
+            );
+            // 时间
+            $minaddtime = strtotime(trim(I('post.mintime')))?:0;
+            $maxaddtime = strtotime(trim(I('post.maxtime')))?:-1;
+            if (is_numeric($maxaddtime)) {
+                $map['time'] = array(array('egt',$minaddtime),array('elt',$maxaddtime));
+            }
+            if ($maxaddtime < 0) {
+                $map['time'] = array(array('egt',$minaddtime));
+            }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$product->where($map)
+                            ->alias('p')
+                            ->join("__ADMINUSER__ admin ON p.auid=admin.id", 'LEFT')
+                            ->field("p.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $product->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('p')
+                            ->join("__ADMINUSER__ admin ON p.auid=admin.id", 'LEFT')
+                            ->field("p.*,admin.name")
+                            ->order('p.time desc')
+                            ->select(); 
+            // dump($list);die;
+
+
+        } else {
+            // 只查自己
+            // $map['auid'] = $auid;
+
+            // 搜索功能
+            $map = array(
+                'typename' => array('like','%'.trim(I('post.typename')).'%'),
+                'product_id' => array('like','%'.trim(I('post.product_id')).'%'),
+                'name' => array('like','%'.trim(I('post.name')).'%'),
+                'auid' => $auid,
+            );
+            // 时间
+            $minaddtime = strtotime(trim(I('post.mintime')))?:0;
+            $maxaddtime = strtotime(trim(I('post.maxtime')))?:-1;
+            if (is_numeric($maxaddtime)) {
+                $map['time'] = array(array('egt',$minaddtime),array('elt',$maxaddtime));
+            }
+            if ($maxaddtime < 0) {
+                $map['time'] = array(array('egt',$minaddtime));
+            }
+            // 删除数组中为空的值
+            $map = array_filter($map, function ($v) {
+                if ($v != "") {
+                    return true;
+                }
+                return false;
+            });
+
+            $total =$product->where($map)
+                            ->alias('p')
+                            ->join("__ADMINUSER__ admin ON p.auid=admin.id", 'LEFT')
+                            ->field("p.*,admin.name")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $product->where($map)
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->alias('p')
+                            ->join("__ADMINUSER__ admin ON p.auid=admin.id", 'LEFT')
+                            ->field("p.*,admin.name")
+                            ->order('p.time desc')
+                            ->select(); 
+
         }
 
-        $type = M('device_type');
-        // PHPExcel 导出数据 
-        if (I('output') == 1) {
-            $data = $type->where($map)->select();
-            $arr = ['addtime'=>'Y-m-d H:i:s'];
-            replace_value($data,$arr);
-            $filename = '产品类型列表数据';
-            $title = '产品类型列表';
-            $cellName = ['id','产品类型','一级滤芯','二级滤芯','三级滤芯','四级滤芯','五级滤芯','六级滤芯','七级滤芯','八级滤芯','添加时间'];
-            // dump($data);die;
-            $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
-            $myexcel->output();
-            return ;
-        }
-
-        
-        $total =$type->where($map)->count();
-        $page  = new \Think\Page($total,8);
-        D('devices')->getPageConfig($page);
-        $pageButton =$page->show();
-
-        $list = $type->where($map)->limit($page->firstRow.','.$page->listRows)->order('addtime desc')->select();
-        // dump($list);
         $this->assign('list',$list);
         $this->assign('button',$pageButton);
         $this->display();
@@ -101,12 +161,14 @@ class ProductController extends CommonController
     public function add()
     {
         if (IS_POST) {
-            $device_type = D('type');
-            $info = $device_type->create();
+            // 准备客户id
+            $_POST['auid'] = $_SESSION['adminuser']['id'];
+            $product = D('product');
+            $info = $product->create();
             
             if($info){
 
-                $res = $device_type->add();
+                $res = $product->add();
                 if ($res) {
                     $this->success('设置类型成功啦！！！',U('Product/index'));
                 } else {
@@ -115,13 +177,11 @@ class ProductController extends CommonController
             
             } else {
                 // getError是在数据创建验证时调用，提示的是验证失败的错误信息
-                $this->error($device_type->getError());
+                $this->error($product->getError());
             }
 
         }else{
-            $filters = M('filters');
-            $info = $filters->select();
-            $this->assign('list',$info);
+            
             $this->display();
         }
     }

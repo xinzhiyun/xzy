@@ -7,26 +7,18 @@
     <!-- from part-->
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">产品管理/<span>产品型号设置</span></div>
+            <div class="titleBar">产品管理/<span>产品设置</span></div>
             <div class="formBox">
                 <form class="form-horizontal " action="__URL__/add" method="post" id="_formTable">
+                    <div class="groupBox control-group">
+                        <span>微信product_id<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" class="control" name="product_id" placeholder="请输入微信product_id" style="width:210px;">
+                    </div>
                     <div class="groupBox control-group">
                         <span>型号名称<sub style="color:red;margin-left: 5px;">*</sub></span>
                         <input type="text" class="control" name="typename" placeholder="请输入型号名称" style="width:210px;">
                     </div>
-                    <div class="groupBox control-group">
-                        <span>请设置滤芯</span>
-                        <input type="text" class="control selects" placeholder="请选择滤芯" />
-                        <div class="selectList">
-                            <foreach name="list" item="vo">
-                                <p>{{$vo.filtername}}-{{$vo.alias}}</p>
-                            </foreach>
-                        </div>
-                    </div>
-                    <div class="groupBox control-group">
-                        <span class="elected" >已选择滤芯</span>
-                        <div class="textareaBox textarea inline"></div>
-                    </div>
+                    
 
                     <div class=" btn-groups">
                         <button class="btns reset btn-primary" type="reset">重置</button>

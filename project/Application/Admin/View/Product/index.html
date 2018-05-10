@@ -3,16 +3,22 @@
     <include file="Public/nav" />
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">产品管理/<span>产品型号列表</span></div>
+            <div class="titleBar">产品管理/<span>产品列表</span></div>
             <form class="form-search" action="__URL__/index" method="post">
-                <span class="select-box">产品型号名称:
+                <span class="select-box">型号名称:
                     <input type="text" class="input-medium typename" name="typename" placeholder="请输入型号名称" style="width: 100px;"/ >
                 </span>
+                <span class="select-box">product_id:
+                    <input type="text" class="input-medium typename" name="product_id" placeholder="请输入微信product_id" style="width: 100px;"/ >
+                </span>
+                <span class="select-box">设置人:
+                    <input type="text" class="input-medium typename" name="name" placeholder="请输入设置人" style="width: 100px;"/ >
+                </span>
                 <span class="select-box" style="display: inline-block;position:relative">时间:
-                    <input type="text" id="date-start" class="input-medium form-control" name="minaddtime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxaddtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
+                    <input type="text" id="date-start" class="input-medium form-control" name="mintime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
                 </span>
                 <div class="submitBtn">
-                    <button type="submit" name="output" value="1" class="btn fr mbtn" style="float: left;color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe62f;</i> 导出</button>
+                    <!-- <button type="submit" name="output" value="1" class="btn fr mbtn" style="float: left;color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe62f;</i> 导出</button> -->
                     <button type="reset" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#x1002;</i> 重置</button>
                     <button type="submit" name="search" value="1" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe615;</i> 查找</button>
                 </div>               
@@ -21,20 +27,12 @@
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th>产品型号ID</th>
-                    <th>产品型号名称</th>
-                    <th>一级滤芯</th>
-                    <th>二级滤芯</th>
-                    <th>三级滤芯</th>
-                    <th>四级滤芯</th>
-                    <th>五级滤芯</th>
-                    <th>六级滤芯</th>
-                    <th>七级滤芯</th>
-                    <th>八级滤芯</th>
+                    <th>编号</th>
+                    <th>微信product_id</th>
+                    <th>型号名称</th>
+                    <th>设置人</th>
                     <th>创建时间</th>
-                    <if condition="$_SESSION['adminuser']['leavel'] lt 1">
-                        <th>操作</th>
-                    </if>
+                    <th>操作</th>
                     
                     <!-- {{:dump($_SESSION['adminuser']['leavel'])}} -->
                 </tr>
@@ -44,20 +42,11 @@
                         <foreach name="list" item="vo" key="key">
                         <tr>
                             <td>{{$vo.id}}</td>
+                            <td>{{$vo.product_id}}</td>
                             <td>{{$vo.typename}}</td>
-                            <td>{{$vo.filter1}}</td>
-                            <td>{{$vo.filter2}}</td>
-                            <td>{{$vo.filter3}}</td>
-                            <td>{{$vo.filter4}}</td>
-                            <td>{{$vo.filter5}}</td>
-                            <td>{{$vo.filter6}}</td>
-                            <td>{{$vo.filter7}}</td>
-                            <td>{{$vo.filter8}}</td>
-                            <td>{{$vo.addtime|date='Y-m-d H:i:s',###}}</td>
-                        <if condition="$_SESSION['adminuser']['leavel'] lt 1">
+                            <td>{{$vo.name}}</td>
+                            <td>{{$vo.time|date='Y-m-d H:i:s',###}}</td>
                             <td><a href="{{:U('Admin/product/edit',array('id'=>$vo['id']))}}">编辑</a></td>
-                        </if>
-                            
                         </tr>
                         </foreach>
                     <else />
