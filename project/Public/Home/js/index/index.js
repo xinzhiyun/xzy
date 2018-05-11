@@ -92,11 +92,27 @@ var charge = new Vue({
 				// 判断当前连接的设备数量
 				if(charge.device_num >= 2){
 					noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+
+				// 获取当前连接的设备
+				getWXDeviceInfos(function(arr, connectid){
+					this.connectid = connectid;
+					var num = 0;
+					arr.forEach(function(device, index){
+						if(device.state == 'connected'){
+							++num;
+						}
+						if(num >= 2){
+							noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+						}
+						charge.device_num = num;
+					})
+				})
 					return
 				}
-
-				// 发送客户信息和订单信息，让后台生成订单号
-				device.goNext();
+				wx.ready(function(){
+					// 发送客户信息和订单信息，让后台生成订单号
+					device.goNext();
+				})
 				
 			}
 		},
@@ -190,38 +206,38 @@ var charge = new Vue({
 			this.mainShow = 'meal';		// 套餐选择
 			this.getMeal();				// 获取套餐信息
 		}
+		wx.ready(function(){
+			// 打开微信设备库,查询蓝牙是否开启
+			openWXDeviceLib(function(res){
+				if(res.status == 'on'){
 
-		// 打开微信设备库,查询蓝牙是否开启
-		openWXDeviceLib(function(res){
-			if(res.status == 'on'){
-
-				// 获取当前连接的设备
-				getWXDeviceInfos(function(arr, connectid){
-					this.connectid = connectid;
-					var num = 0;
-					arr.forEach(function(device, index){
-						if(device.state == 'connected'){
-							++num;
-						}
-						if(num >= 2){
-							noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+					// 获取当前连接的设备
+					getWXDeviceInfos(function(arr, connectid){
+						this.connectid = connectid;
+						var num = 0;
+						arr.forEach(function(device, index){
+							if(device.state == 'connected'){
+								++num;
+							}
+							if(num >= 2){
+								noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+							}
 							charge.device_num = num;
-							return
-						}
+						})
 					})
-				})
 
-			}
-			if(res.status == 'off'){
-				noticeFn({text: '先打开手机蓝牙再使用！'});
-				
-			}else if(res.status == 'unauthorized'){
-				noticeFn({text: '请授权微信蓝牙功能并打开蓝牙！'});
-				
-			}else if(res.status == 'unauthorized'){
-				noticeFn({text: '微信蓝牙打开失败!'});
-				
-			}
+				}
+				if(res.status == 'off'){
+					noticeFn({text: '先打开手机蓝牙再使用！'});
+					
+				}else if(res.status == 'unauthorized'){
+					noticeFn({text: '请授权微信蓝牙功能并打开蓝牙！'});
+					
+				}else if(res.status == 'unauthorized'){
+					noticeFn({text: '微信蓝牙打开失败!'});
+					
+				}
+			})
 		})
 		
 	},
