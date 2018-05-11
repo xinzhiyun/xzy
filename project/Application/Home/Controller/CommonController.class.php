@@ -17,35 +17,47 @@ class CommonController extends Controller
      */
     public function _initialize()
     {	
-        
+        // $_SESSION[];
         // 获取用户信息写入缓存
-        // if(empty($_SESSION['homeuser'])){
+        if(empty($_SESSION['homeuser'])){
             // 实例化微信JSSDK对象
-            $weixin      = new WeixinJssdk("wx57d57fb99d6d838d", "ec36152955830ec4191507724f3377a6");
+            $weixin  = new WeixinJssdk("wx57d57fb99d6d838d", "ec36152955830ec4191507724f3377a6");
             // 获取用户open_id
-            // $openId      = $weixin->GetOpenid();
+            $openId      = $weixin->GetOpenid();
             $openId_ifno = $weixin->getSignPackage();
-            // $openId   = 'oXwY4t-9clttAFWXjCcNRJrvch3w';
-            // $openId   = 'oXwY4t_vkTgtlD0CBTZ-vTbIMWHs';
+
+            /*  微信服务器信息  */
             $weixinInfo = [$openId_ifno];
             session('weixin',$weixinInfo);
+            /*  微信服务器信息  */
 
-            // // 查询用户信息
-            // $info = M('Users')->where("open_id='{$openId}'")->find();
+
+            // dump($openId);die;
+            if (empty($openId)) {
+                redirect(U('/Home/Wechat/follow'), 2, '请先关注微信公众号...');
+
+            }
+            // $openId   = 'oXwY4t-9clttAFWXjCcNRJrvch3w';
+            // $openId   = 'oXwY4t_vkTgtlD0CBTZ-vTbIMWHs';
+            // 查询用户信息
+            $info = M('wechat')->where("open_id='{$openId}'")->find();
             
-            // // 判断用户是否存在
-            // if($info){
-            //     // 用户当前设备
-            //     $info['did'] = M('currentDevices')->where("`uid`={$info['id']}")->field('did')->find()['did'];
-
-            //     $_SESSION['homeuser'] = $info;   
+            // dump($info);die;
+            
+            // 判断用户是否存在
+            if($info){
                 
-        //     }else{
-        //         // 用户不存在
-        //         redirect(U('/Home/Wechat/follow'), 2, '请先关注微信公众号...');
+                $_SESSION['homeuser'] = $info;   
                 
-        //     }
-        // }
+            }else{
+                // 用户不存在
+                // 将用户写入用户表
+                $data['open_id'] = $openId;
+                M('wechat')->add($data);
+                
+            }
+        }      
+            
     }
 
 
