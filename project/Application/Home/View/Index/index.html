@@ -8,10 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/iconfont/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/common.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index/index.css">
-	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
 </head>
 <body>
 	<div id='charge'>
+		<input type="hidden" id='wxinfo' value='{{$weixin|json_encode}}'>
 		<ul class='cTop cfix'>
 			<li class='fleft'>
 				<span class='roundok'>1</span>
@@ -97,26 +97,28 @@
 	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jquery.citys.js"></script>
-	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>	
+	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
 	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
 		var vconsole = new VConsole();
-
+		var wxinfo = JSON.parse($('#wxinfo').val())[0];
+		
 		//微信接口
 		wx.config({
+			beta: true,
 			debug: false,
-			appId: '{{$weixin["appId"]}}',
-			timestamp: '{{$weixin["timestamp"]}}',
-			nonceStr: '{{$weixin["nonceStr"]}}',
-			signature: '{{$weixin["signature"]}}',
+			appId: wxinfo.appId,
+			timestamp: wxinfo.timestamp,
+			nonceStr: wxinfo.nonceStr,
+			signature: wxinfo.signature,
 			jsApiList: [
 				// 所有要调用的 API 都要加到这个列表中
 				'chooseWXPay',
 		        'openWXDeviceLib',
 		        'closeWXDeviceLib',
 		        'getWXDeviceInfos',
-		        'getWXDeviceBindTicket',
-		        'getWXDeviceUnbindTicket',
+		        'getWXDeviceTicket',
 		        'startScanWXDevice',
 		        'stopScanWXDevice',
 		        'connectWXDevice',
@@ -176,7 +178,7 @@
 			$.ajax({
 				url: '',
 				type: 'post',
-				data: orderid,
+				data: {orderid: orderid},
 				success: function(res){
 					console.log('res: ',res);
 					callback(res);
@@ -188,7 +190,7 @@
 			})
 		}
 	</script>
-	<script src="__PUBLIC__/Home/js/index/index.js"></script>
 	<script src='__PUBLIC__/Home/js/index/wxhard.js'></script>
+	<script src="__PUBLIC__/Home/js/index/index.js"></script>
 </body>
 </html>

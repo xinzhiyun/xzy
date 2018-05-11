@@ -4,7 +4,7 @@
 */
 var openWXDeviceLib = function (callback){
     var obj = {}; 
-    wx.invoke('openWXDeviceLib', {}, 
+    wx.invoke('openWXDeviceLib', {'connType':'blue'}, 
     function(res){
         if(res.err_msg == 'openWXDeviceLib:ok') {
             if(res.bluetoothState == 'off'){   
@@ -28,6 +28,7 @@ var openWXDeviceLib = function (callback){
         // 回调
         callback(obj);
     });
+    
 }
 /**
  * [closeWXDeviceLib 关闭设备库]
