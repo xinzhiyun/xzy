@@ -12,6 +12,6 @@ return array(
   	// 'notify_url'	=> 'http://blue.dianqiukj.com/index.php/Home/PaymentSystem/notify.html',
 
   	// 开启layout模板布局
-  	'LAYOUT_ON'=>true,
-	'LAYOUT_NAME'=>'Layout/layout1',
+  // 'LAYOUT_ON'=>true,
+	// 'LAYOUT_NAME'=>'Layout/layout1',
 );
