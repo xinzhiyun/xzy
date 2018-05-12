@@ -92,43 +92,47 @@ var charge = new Vue({
 				// 判断当前连接的设备数量
 				if(charge.device_num >= 2){
 					noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
-
-				// 获取当前连接的设备
-				getWXDeviceInfos(function(arr, connectid){
-					this.connectid = connectid;
-					var num = 0;
-					arr.forEach(function(device, index){
-						if(device.state == 'connected'){
-							++num;
-						}
-						if(num >= 2){
-							noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
-						}
-						charge.device_num = num;
-					})
-				})
 					return
 				}
 				wx.ready(function(){
 					// 发送客户信息和订单信息，让后台生成订单号
-					device.goNext();
+					charge.goNext();
 				})
 				
 			}
 		},
 		// 获取套餐数据
-		getMeal: function(){
+		getMeal: function(connectid){
+			var getSetmeal = getURL('Home', 'Index/getSetmeal');
+			console.log('connectid: ',connectid);
+			if(!connectid){
+				noticeFn({text: '请先连接一个设备, 退出公众号界面再进入即可!'});
+				return
+			}
 			$.ajax({
-				url: '',
-				type: 'get',
+				url: getSetmeal,
+				data: {device_code: connectid},
+				type: 'post',
 				success: function(res){
 					console.log('res: ',res);
-					// 套餐数据
-					this.mealList = [
-						{meal_id: 1, content: '100元/100天', money:'100'},
-						{meal_id: 2, content: '300元/300天', money:'300'},
-						{meal_id: 3, content: '500元/500天', money:'500'}
-					];
+					if(res.code == 200){
+						res.msg.forEach(function(meal, index){
+							// 套餐数据
+							charge.mealList.push({
+								meal_id: meal.auid,
+								describe: meal.describe,
+								money: meal.money
+							});
+						})
+						// 套餐数据
+						// this.mealList = [
+						// 	{meal_id: 1, describe: '100元/100天', money:'100'},
+						// 	{meal_id: 2, describe: '300元/300天', money:'300'},
+						// 	{meal_id: 3, describe: '500元/500天', money:'500'}
+						// ];
+					}else if(res.code == 201){
+						noticeFn({text: res.msg});
+					}
 				},
 				error: function(err){
 					console.log('err: ',err);
@@ -188,32 +192,20 @@ var charge = new Vue({
 		}
 	},
 	created() {
-		var href = this.href;
-		if(href.indexOf('info') > -1){
-			var moneyindex = href.indexOf('money=')+6;
-			this.money = href.substring(moneyindex);
-			this.mainShow = 'info';		// 信息选择
-
-		}else if(href.indexOf('done') > -1){
-			this.mainShow = 'done';		// 完成选择
-			$('.next').hide();
-
-		}else if(href.indexOf('meal') > -1){
-			this.mainShow = 'meal';		// 套餐选择
-			this.getMeal();				// 获取套餐信息
-
-		}else{
-			this.mainShow = 'meal';		// 套餐选择
-			this.getMeal();				// 获取套餐信息
-		}
 		wx.ready(function(){
+			// openWXDeviceLib();
+			// console.log('openWXDeviceLib: ',openWXDeviceLib());
 			// 打开微信设备库,查询蓝牙是否开启
-			openWXDeviceLib(function(res){
-				if(res.status == 'on'){
+			openWXDevice(function(res){
+				console.log('openWXDevice_res: ',res);
+				if(res.status == 'ok'){
 
 					// 获取当前连接的设备
 					getWXDeviceInfos(function(arr, connectid){
+						console.log('getWXDeviceInfos_arr: ',arr);
+						console.log('getWXDeviceInfos_connectid: ',connectid);
 						this.connectid = connectid;
+						charge.getMeal(connectid);		// 获取套餐数据
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
@@ -226,26 +218,35 @@ var charge = new Vue({
 						})
 					})
 
-				}
-				if(res.status == 'off'){
-					noticeFn({text: '先打开手机蓝牙再使用！'});
-					
-				}else if(res.status == 'unauthorized'){
-					noticeFn({text: '请授权微信蓝牙功能并打开蓝牙！'});
-					
-				}else if(res.status == 'unauthorized'){
-					noticeFn({text: '微信蓝牙打开失败!'});
-					
+				}else{
+					noticeFn({text: res.msg});
 				}
 			})
 		})
+		var href = this.href;
+		if(href.indexOf('info') > -1){
+			var moneyindex = href.indexOf('money=')+6;
+			this.money = href.substring(moneyindex);
+			this.mainShow = 'info';		// 信息选择
+
+		}else if(href.indexOf('done') > -1){
+			this.mainShow = 'done';		// 完成选择
+			$('.next').hide();
+
+		}else if(href.indexOf('meal') > -1){
+			this.mainShow = 'meal';		// 套餐选择
+			// 先查询设备数据再把设备id发送过去获取套餐数据
+			// this.getMeal();				// 获取套餐信息
+
+		}else{
+			this.mainShow = 'meal';		// 套餐选择
+			// 先查询设备数据再把设备id发送过去获取套餐数据
+			// this.getMeal();				// 获取套餐信息
+		}
 		
 	},
 	mounted() {
-		// var meal2 = document.querySelectorAll('.meal')[1];
-		// meal2.setAttribute('class', 'meal tcenter select');
-		// // 获取套餐id
-		// this.meal_id = meal2.getAttribute('meal_id');
+		
 	},
 })
 document.onready = function(){
