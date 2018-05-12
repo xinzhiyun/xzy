@@ -2,30 +2,6 @@
 /**
 * 打开微信设备库
 */
-function openWXDeviceLib(){
-    var x = 0; 
-    wx.invoke('openWXDeviceLib', {}, 
-    function(res){
-        if(res.err_msg=='openWXDeviceLib:ok') {
-            if(res.bluetoothState == 'off'){    
-                alert("先打开手机蓝牙再使用！");  
-                x=1;
-            };
-            if(res.bluetoothState == 'unauthorized'){
-                alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");
-                x=1;
-            };
-            if(res.bluetoothState == 'on'){
-                // alert("1.蓝牙已打开");
-                x = 0;
-            };
-        }else{
-            alert("微信蓝牙打开失败");
-            x = 1;
-        }
-    });
-    return x;  //0表示成功 1表示失败
-}
 function openWXDevice(callback){
     var obj = {}; 
     wx.invoke('openWXDeviceLib', {}, function(res){
@@ -351,14 +327,13 @@ var disconnectWXDevice = function(deviceId, callback){
  * @param  {Function} callback [回调函数]
  * @return {[type]}            [description]
  */
-var getWXDeviceTicket = function(deviceId, type, callback){
+var getWXDeviceTicket = function(device_id, type, callback){
     var obj = {};
     type = type + '';   // 转为字符串
     wx.invoke('getWXDeviceTicket', {
-        'deviceId': deviceId,
+        'deviceId': device_id,
         'type': type
     }, function(res) {
-        obj['ticket'] = res;
         if(res.err_msg == 'getWXDeviceTicket:ok'){
             // 成功
             obj['status'] = 'ok';
