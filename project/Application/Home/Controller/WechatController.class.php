@@ -113,7 +113,7 @@ class WechatController extends Controller
             "button":[{
                 "name":"我的设备",
                 "type":"view",
-                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html"
+                "url":"http://blue.dianqiukj.com/index.php/Home/Devices/index.html"
             }], 
            
         }';
