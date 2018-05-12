@@ -9,8 +9,8 @@ class DevicesController extends CommonController
 	 */
     public function index()
     {
-    	echo $_SESSION['homeuser']['open_id'];
-
     	$this->display();
     }
+
+   
 }
