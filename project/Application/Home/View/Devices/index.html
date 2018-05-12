@@ -33,7 +33,7 @@
 		//微信接口
 		wx.config({
 			beta: true,
-			debug: false,
+			debug: true,
 			appId: wxinfo.appId,
 			timestamp: wxinfo.timestamp,
 			nonceStr: wxinfo.nonceStr,
@@ -68,13 +68,24 @@
 				}
 			},
 			created() {
-				//获取已绑定的设备 
-				getWXDeviceInfos(function(arr, connectid){
-					console.log('arr: ',arr);
-					arr.forEach(function(item, index){
-						this.deviceList.push({device_id: item.device_id})
-					})
-				})
+				wx.ready(function(){
+					openWXDevice(function(res){
+						if(res.status == 'ok'){
+							//获取已绑定的设备 
+							getWXDeviceInfos(function(arr, connectid){
+								console.log('arr: ',arr);
+								arr.forEach(function(item, index){
+									this.deviceList.push({device_id: item.device_id})
+								});
+								if(arr.length == 0){
+									noticeFn({text: '请先绑定一个设备！'});
+								}
+							});
+						}else{
+							noticeFn({text: res.msg});
+						}
+					});
+				});
 				// this.deviceList = [
 				// 	{device_id: '34536456447'},
 				// 	{device_id: '89754561232'},

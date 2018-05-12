@@ -31,21 +31,24 @@ function openWXDevice(callback){
     wx.invoke('openWXDeviceLib', {}, function(res){
         obj['res'] = res;
         if(res.err_msg == 'openWXDeviceLib:ok') {
-            if(res.bluetoothState == 'off'){   
-                obj['status'] = 'off';
+            if(res.bluetoothState == 'off'){
+                obj['status'] = 'fail';
+                obj['msg'] = '先打开手机蓝牙再使用！';
                 // alert("先打开手机蓝牙再使用！");
                 
             }else if(res.bluetoothState == 'unauthorized'){
-                obj['status'] = 'unauthorized';
+                obj['status'] = 'fail';
+                obj['msg'] = '请授权微信蓝牙功能并打开蓝牙！';
                 // alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");
                
             }else if(res.bluetoothState == 'on'){
-                obj['status'] = 'on';
+                obj['status'] = 'ok';
                 // console.log("蓝牙已打开");
                 
             }
         }else{
             obj['status'] = 'fail';
+            obj['msg'] = '硬件库初始化失败';
             // alert("硬件库初始化失败");
             
         }

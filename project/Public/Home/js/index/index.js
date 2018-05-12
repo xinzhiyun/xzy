@@ -105,18 +105,34 @@ var charge = new Vue({
 		getMeal: function(connectid){
 			var getSetmeal = getURL('Home', 'Index/getSetmeal');
 			console.log('connectid: ',connectid);
+			if(!connectid){
+				noticeFn({text: '请先连接一个设备, 退出公众号界面再进入即可!'});
+				return
+			}
 			$.ajax({
 				url: getSetmeal,
 				data: {device_code: connectid},
 				type: 'post',
 				success: function(res){
 					console.log('res: ',res);
-					// 套餐数据
-					this.mealList = [
-						{meal_id: 1, content: '100元/100天', money:'100'},
-						{meal_id: 2, content: '300元/300天', money:'300'},
-						{meal_id: 3, content: '500元/500天', money:'500'}
-					];
+					if(res.code == 200){
+						res.msg.forEach(function(meal, index){
+							// 套餐数据
+							charge.mealList.push({
+								meal_id: meal.auid,
+								describe: meal.describe,
+								money: meal.money
+							});
+						})
+						// 套餐数据
+						// this.mealList = [
+						// 	{meal_id: 1, describe: '100元/100天', money:'100'},
+						// 	{meal_id: 2, describe: '300元/300天', money:'300'},
+						// 	{meal_id: 3, describe: '500元/500天', money:'500'}
+						// ];
+					}else if(res.code == 201){
+						noticeFn({text: res.msg});
+					}
 				},
 				error: function(err){
 					console.log('err: ',err);
@@ -182,7 +198,7 @@ var charge = new Vue({
 			// 打开微信设备库,查询蓝牙是否开启
 			openWXDevice(function(res){
 				console.log('openWXDevice_res: ',res);
-				if(res.status == 'on'){
+				if(res.status == 'ok'){
 
 					// 获取当前连接的设备
 					getWXDeviceInfos(function(arr, connectid){
@@ -202,16 +218,8 @@ var charge = new Vue({
 						})
 					})
 
-				}
-				if(res.status == 'off'){
-					noticeFn({text: '请先打开手机蓝牙再使用！'});
-					
-				}else if(res.status == 'unauthorized'){
-					noticeFn({text: '请授权微信蓝牙功能并打开蓝牙！'});
-					
-				}else if(res.status == 'fail'){
-					noticeFn({text: '硬件库初始化失败!'});
-					
+				}else{
+					noticeFn({text: res.msg});
 				}
 			})
 		})
