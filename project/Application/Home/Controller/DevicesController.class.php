@@ -9,6 +9,9 @@ class DevicesController extends CommonController
 	 */
     public function index()
     {
+    	$weixinInfo = $_SESSION['weixin'];
+    	
+    	$this->assign('weixin',$weixinInfo);
     	$this->display();
     }
 
