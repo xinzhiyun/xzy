@@ -12,6 +12,7 @@
 </head>
 <body>
 	<ul id='device'>
+		<input type="hidden" id='wxinfo' value='{{$weixin|json_encode}}'>
 		<li class='item' v-for='(d, index) in deviceList'>
 			<p><b>设备<span v-text='index+1'></span></b></p>
 			<div class='cfix'>
@@ -27,21 +28,23 @@
 	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
 		var vconsole = new VConsole();
+		var wxinfo = JSON.parse($('#wxinfo').val())[1];
+		// console.log(wxinfo);
 		//微信接口
 		wx.config({
+			beta: true,
 			debug: false,
-			appId: '{{$weixin["appId"]}}',
-			timestamp: '{{$weixin["timestamp"]}}',
-			nonceStr: '{{$weixin["nonceStr"]}}',
-			signature: '{{$weixin["signature"]}}',
+			appId: wxinfo.appId,
+			timestamp: wxinfo.timestamp,
+			nonceStr: wxinfo.nonceStr,
+			signature: wxinfo.signature,
 			jsApiList: [
 				// 所有要调用的 API 都要加到这个列表中
 				'chooseWXPay',
 		        'openWXDeviceLib',
 		        'closeWXDeviceLib',
 		        'getWXDeviceInfos',
-		        'getWXDeviceBindTicket',
-		        'getWXDeviceUnbindTicket',
+		        'getWXDeviceTicket',
 		        'startScanWXDevice',
 		        'stopScanWXDevice',
 		        'connectWXDevice',

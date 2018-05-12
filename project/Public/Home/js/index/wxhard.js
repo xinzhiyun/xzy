@@ -2,10 +2,34 @@
 /**
 * 打开微信设备库
 */
-var openWXDeviceLib = function (callback){
-    var obj = {}; 
-    wx.invoke('openWXDeviceLib', {'connType':'blue'}, 
+function openWXDeviceLib(){
+    var x = 0; 
+    wx.invoke('openWXDeviceLib', {}, 
     function(res){
+        if(res.err_msg=='openWXDeviceLib:ok') {
+            if(res.bluetoothState == 'off'){    
+                alert("先打开手机蓝牙再使用！");  
+                x=1;
+            };
+            if(res.bluetoothState == 'unauthorized'){
+                alert("出错啦亲,请授权微信蓝牙功能并打开蓝牙！");
+                x=1;
+            };
+            if(res.bluetoothState == 'on'){
+                // alert("1.蓝牙已打开");
+                x = 0;
+            };
+        }else{
+            alert("微信蓝牙打开失败");
+            x = 1;
+        }
+    });
+    return x;  //0表示成功 1表示失败
+}
+function openWXDevice(callback){
+    var obj = {}; 
+    wx.invoke('openWXDeviceLib', {}, function(res){
+        obj['res'] = res;
         if(res.err_msg == 'openWXDeviceLib:ok') {
             if(res.bluetoothState == 'off'){   
                 obj['status'] = 'off';
@@ -22,7 +46,7 @@ var openWXDeviceLib = function (callback){
             }
         }else{
             obj['status'] = 'fail';
-            // alert("微信蓝牙打开失败");
+            // alert("硬件库初始化失败");
             
         }
         // 回调
@@ -50,6 +74,7 @@ var closeWXDeviceLib = function(callback){
             // 未知问题
             obj.res = null;
         }
+        obj['res'] = res;
         // 回调
         callback(obj);
     });
@@ -65,9 +90,9 @@ var bindChange = function (callback){
     wx.on('onWXDeviceBindStateChange',{
         deviceId: deviceId,
         state: state
-    }, function(rec) {
+    }, function(res) {
         // state: bind 绑定，unbind解绑
-        callback({ state: res.state });
+        callback({ state: res.state ,res: res});
         
     });
 }
@@ -76,10 +101,11 @@ var bindChange = function (callback){
 * 蓝牙设备'连接'状态变化事件
 */ 
 var stateChange = function (callback){
-    wx.on('onWXDeviceStateChange', function(rec) {
+    wx.on('onWXDeviceStateChange', function(res) {
         callback({
+            res: res,
             deviceId: res.deviceId,
-            data: rec.base64Data
+            data: res.base64Data
         });
         
     });
@@ -90,7 +116,7 @@ var stateChange = function (callback){
 */ 
 var scanResult = function (callback){
     wx.on('onScanWXDeviceResult', function(rec) {
-        callback({ devices: res.devices });
+        callback({ devices: res.devices, res: res });
         
     });
 }
@@ -99,8 +125,8 @@ var scanResult = function (callback){
 * 接收到数据事件
 */ 
 var receiveData = function (callback){
-    wx.on('onReceiveDataFromWXDevice', function(rec) {
-        callback({data: rec.base64Data});
+    wx.on('onReceiveDataFromWXDevice', function(res) {
+        callback({data: rec.base64Data, res: res });
         
 	});
 }
@@ -123,7 +149,7 @@ var getWXDeviceInfos = function (callback){
             arr[i]['state'] = res.deviceInfos[i].state;
         }
         // 回调
-        callback(arr, connectid);
+        callback(arr, connectid, res);
     }); 
 }
 
@@ -196,6 +222,7 @@ var scanWXDevice = function(callback){
             obj['status'] = 'fail';
 
         }
+        obj['res'] = res;
         callback(obj);
     });
 }
@@ -217,6 +244,7 @@ var stopScan = function(callback){
             obj['status'] = 'fail';
 
         }
+        obj['res'] = res;
         callback(obj);
     });
 }
@@ -224,7 +252,7 @@ var stopScan = function(callback){
 var blueChange = function(callback){
     wx.invoke('onWXDeviceBluetoothStateChange', function(res) {
         // state: on 开启，off 关闭
-        callback({state: res.state});
+        callback({state: res.state, res: res});
     });
 }
 
@@ -261,6 +289,7 @@ var sendData = function (deviceId, data, callbcak){
             // 失败
             obj['status'] = 'fail';
         }
+        obj['res'] = res;
         // 回调
         callbcak(obj); 
     });  
@@ -284,6 +313,7 @@ var connectWXDevice = function(deviceId, callback){
             obj['status'] = 'fail';
 
         }
+        obj['res'] = res;
         callback(obj);
     });
 }
@@ -306,6 +336,7 @@ var disconnectWXDevice = function(deviceId, callback){
             obj['status'] = 'fail';
 
         }
+        obj['res'] = res;
         callback(obj);
     });
 }
@@ -334,6 +365,7 @@ var getWXDeviceTicket = function(deviceId, type, callback){
             obj['status'] = 'fail';
 
         }
+        obj['res'] = res;
         // 回调函数
         callback(obj);
     });
