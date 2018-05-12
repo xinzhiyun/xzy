@@ -3,6 +3,7 @@ var charge = new Vue({
 	data() {
 		return {
 			href: location.href,
+			urlparam: getQuery(),
 			connectid: '',		// 当前连接的设备
 			mealList: [],		// 套餐数据
 			money: '',			// 充值的套餐金额
@@ -43,7 +44,7 @@ var charge = new Vue({
 					return
 				}
 				// 下一步为信息录入
-				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money;
+				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money + '&connectid=' + this.connectid;
 			}else if(this.mainShow == 'info'){
 				var buyinfo = {};		// 发送给后台生成订单号的数据
 				buyinfo['meal_id'] = this.meal_id;
@@ -100,50 +101,6 @@ var charge = new Vue({
 				})
 				
 			}
-		},
-		// 获取套餐数据
-		getMeal: function(connectid){
-			var getSetmeal = getURL('Home', 'Index/getSetmeal');
-			console.log('connectid: ',connectid);
-			if(!connectid){
-				noticeFn({text: '请先连接一个设备, 退出公众号界面再进入即可!'});
-				return
-			}
-			$.ajax({
-				url: getSetmeal,
-				data: {device_code: connectid},
-				type: 'post',
-				success: function(res){
-					console.log('res: ',res);
-					if(res.code == 200){
-						res.msg.forEach(function(meal, index){
-							// 套餐数据
-							charge.mealList.push({
-								meal_id: meal.auid,
-								describe: meal.describe,
-								money: meal.money
-							});
-						})
-						// 套餐数据
-						// this.mealList = [
-						// 	{meal_id: 1, describe: '100元/100天', money:'100'},
-						// 	{meal_id: 2, describe: '300元/300天', money:'300'},
-						// 	{meal_id: 3, describe: '500元/500天', money:'500'}
-						// ];
-					}else if(res.code == 201){
-						noticeFn({text: res.msg});
-					}
-				},
-				error: function(err){
-					console.log('err: ',err);
-				}
-			})
-			// // 套餐数据
-			// this.mealList = [
-			// 	{meal_id: 1, content: '100元/100天', money:'100'},
-			// 	{meal_id: 2, content: '300元/300天', money:'300'},
-			// 	{meal_id: 3, content: '500元/500天', money:'500'}
-			// ];
 		},
 		goNext: function(){
 			// 发送客户信息和订单信息，让后台生成订单号
@@ -204,8 +161,8 @@ var charge = new Vue({
 					getWXDeviceInfos(function(arr, connectid){
 						console.log('getWXDeviceInfos_arr: ',arr);
 						console.log('getWXDeviceInfos_connectid: ',connectid);
-						this.connectid = connectid;
-						charge.getMeal(connectid);		// 获取套餐数据
+						charge.connectid = connectid;
+						getMeal(connectid);		// 获取套餐数据
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
@@ -213,6 +170,9 @@ var charge = new Vue({
 							}
 							if(num >= 2){
 								noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+							}
+							if(num == 0){
+								noticeFn({text: '请先连接设备!'});
 							}
 							charge.device_num = num;
 						})
@@ -225,8 +185,7 @@ var charge = new Vue({
 		})
 		var href = this.href;
 		if(href.indexOf('info') > -1){
-			var moneyindex = href.indexOf('money=')+6;
-			this.money = href.substring(moneyindex);
+			this.money = getQuery().money;
 			this.mainShow = 'info';		// 信息选择
 
 		}else if(href.indexOf('done') > -1){
