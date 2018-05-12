@@ -60,6 +60,8 @@
                         <td>
                             <a href="__URL__/edit/id/{{$vo.id}}">编辑</a>
                             <a href="javascript:void(0)" url="__URL__/del/id/{{$vo.id}}" class="_del">删除</a>
+                            <a href="javascript:void(0)" appid="{{$vo.appid}}" appsecret="{{$vo.appsecret}}" class="makeMenu">生成微信菜单</a>
+
                         </td>
                     </tr>
                     </foreach>
@@ -178,6 +180,26 @@
                     })
                     
                 /**************** 搜索关键字保留 -- 结束 ******************/
+
+                /* 生成微信菜单 */
+                $(".makeMenu").click(function(){
+                    var appid = $(this).attr('appid');
+                    var appsecret = $(this).attr('appsecret');
+                    
+                    $.ajax({
+                        url:"{{:U('Home/Wechat/create_menu')}}",
+                        type:"post",
+                        data:{appid:appid,appsecret:appsecret},
+                        success:function(res){
+                            alert('生成成功');
+                        },
+
+                        error:function(res){
+                            alert('生成失败');
+                        }
+                    });
+    
+                });
 
             </script>
         </div>
