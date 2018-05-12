@@ -114,7 +114,7 @@ class DevicesController extends Controller
     public function getProduct()
     {
         if (IS_GET) {
-            $productList = M('product')->select();
+            $productList = M('product')->where("auid=".$_SESSION['apiuser']['id'])->select();
             $this->ajaxReturn(array('msg'=>$productList,'code'=>'200'));
         } else {
             $this->ajaxReturn(array('msg'=>'请求方式有误','code'=>'201'));
