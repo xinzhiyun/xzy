@@ -7,7 +7,8 @@ class IndexController extends CommonController {
     	// dump($_SESSION);
     	$weixinInfo = $_SESSION['weixin'];
     	// dump($weixinInfo);
+    	// die;
     	$this->assign('weixin',$weixinInfo);
-        $this->display();
+        // $this->display();
     }
 }

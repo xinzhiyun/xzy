@@ -1,6 +1,8 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use \Org\Util\WeixinJssdk;
+
 // 引入微信事件接收类
 // use Home\Controller\WeixinEventController;
 
@@ -16,7 +18,7 @@ class WechatController extends Controller
         $openid = $openid;
 
         // 实例化微信JSSDK类对象
-        $wxJSSDK = new \Org\Util\WeixinJssdk;
+        $wxJSSDK = new \Org\Util\WeixinJssdk('wx57d57fb99d6d838d', 'ec36152955830ec4191507724f3377a6');
         // 调用获取公众号的全局唯一接口调用凭据
         $accessToken = $wxJSSDK->getAccessToken();
         //show($accessToken);die;
@@ -71,6 +73,57 @@ class WechatController extends Controller
         $this->display();
     }
 
+
+    /**
+     * 生成自定义菜单
+     * @return bool true or false
+     */
+    public function create_menu()
+    {
+        // $appid = C('APPID');
+        // $appsecret = C('APPSECRET');
+        // $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$appid&secret=$appsecret";
+
+        // $output = $this->https_request($url);
+        // $jsoninfo = json_decode($output, true);
+
+        // $access_token = $jsoninfo["access_token"];
+        // 
+        // 实例化微信JSSDK类对象
+        $weixin  = new WeixinJssdk('wx57d57fb99d6d838d', 'ec36152955830ec4191507724f3377a6');
+        // 调用获取公众号的全局唯一接口调用凭据
+        $access_token = $weixin->getAccessToken();
+
+
+        $jsonmenu = '{
+
+            "button":[{
+                "name":"充值",
+                "type":"view",
+                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html"
+            }],
+
+            "button":[{
+                "name":"查询",
+                "type":"view",
+                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html"
+                
+            }],
+
+            "button":[{
+                "name":"我的设备",
+                "type":"view",
+                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html"
+            }], 
+           
+        }';
+
+
+        $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
+        $result = $this->https_request($url, $jsonmenu);
+        var_dump($result);
+
+    }
 
     /**
      * CURL使用
