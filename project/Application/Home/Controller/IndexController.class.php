@@ -1,6 +1,8 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use \Org\Util\WeixinJssdk;
+
 class IndexController extends CommonController 
 {
 	/**
@@ -9,10 +11,20 @@ class IndexController extends CommonController
 	 */
     public function index()
     {
-    
-    	$weixinInfo = $_SESSION['weixin'];
-    	
-    	$this->assign('weixin',$weixinInfo);
+        //在充值处获取客户id
+        $auid = $_GET['auid'];
+
+        // 根据客户id获取客户微信公众号信息
+        $info = M('adminuser')->where('id='.$auid)->find();
+
+        $appid = $info['appid'];
+        $appsecret = $info['appsecret'];
+
+        $weixin  = new WeixinJssdk($appid, $appsecret);
+
+        $openId_ifno = $weixin->getSignPackage();
+
+    	$this->assign('weixin',$openId_ifno);
         $this->display();
     }
 

@@ -60,7 +60,7 @@
                         <td>
                             <a href="__URL__/edit/id/{{$vo.id}}">编辑</a>
                             <a href="javascript:void(0)" url="__URL__/del/id/{{$vo.id}}" class="_del">删除</a>
-                            <a href="javascript:void(0)" appid="{{$vo.appid}}" appsecret="{{$vo.appsecret}}" class="makeMenu">生成微信菜单</a>
+                            <a href="javascript:void(0)" appid="{{$vo.appid}}" appsecret="{{$vo.appsecret}}" auid="{{$vo.id}}" class="makeMenu">生成微信菜单</a>
 
                         </td>
                     </tr>
@@ -185,11 +185,12 @@
                 $(".makeMenu").click(function(){
                     var appid = $(this).attr('appid');
                     var appsecret = $(this).attr('appsecret');
+                    var auid = $(this).attr('auid');
                     
                     $.ajax({
                         url:"{{:U('Home/Wechat/create_menu')}}",
                         type:"post",
-                        data:{appid:appid,appsecret:appsecret},
+                        data:{appid:appid,appsecret:appsecret,auid:auid},
                         success:function(res){
                             alert('生成成功');
                         },

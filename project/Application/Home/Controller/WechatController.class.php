@@ -82,6 +82,7 @@ class WechatController extends Controller
     {
         $appid = $_POST['appid'];
         $appsecret = $_POST['appsecret'];
+        $auid = $_POST['auid'];
         // $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$appid&secret=$appsecret";
 
         // $output = $this->https_request($url);
@@ -100,7 +101,7 @@ class WechatController extends Controller
             "button":[{
                 "name":"充值",
                 "type":"view",
-                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html"
+                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html?auid='.$auid.'"
             }],
 
             "button":[{
@@ -113,7 +114,7 @@ class WechatController extends Controller
             "button":[{
                 "name":"我的设备",
                 "type":"view",
-                "url":"http://blue.dianqiukj.com/index.php/Home/Devices/index.html"
+                "url":"http://blue.dianqiukj.com/index.php/Home/Devices/index.html?auid='.$auid.'"
             }], 
            
         }';

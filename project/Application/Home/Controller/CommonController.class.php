@@ -17,7 +17,7 @@ class CommonController extends Controller
      */
     public function _initialize()
     {	
-        $_SESSION = [];
+        // $_SESSION = [];
         // 获取用户信息写入缓存
         if(empty($_SESSION['homeuser'])){
             // 实例化微信JSSDK对象
@@ -25,9 +25,11 @@ class CommonController extends Controller
             // 获取用户open_id
             $openId      = $weixin->GetOpenid();
 
-            // dump($openId);die;
+            
     
             $openId_ifno = $weixin->getSignPackage();
+
+            // dump($openId_ifno);die;
 
             /*  微信服务器信息  */
             $weixinInfo = [$openId,$openId_ifno];
