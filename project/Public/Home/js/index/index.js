@@ -12,6 +12,7 @@ var charge = new Vue({
 			class3: '',			// 流程第三步（走完）
 			mainShow: 'meal',	// 显示套餐meal，信息info，还是完成done
 			meal_id: '',		// 选择的套餐id
+			buyinfo: {},		// 发送给后台生成订单号的数据
 			uname: '',			// 用户名
 			uphone: '',			// 电话
 			uaddr: '',			// 地址
@@ -42,13 +43,12 @@ var charge = new Vue({
 				// 下一步为信息录入
 				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money + '&connectid=' + this.connectid;
 			}else if(this.mainShow == 'info'){
-				var buyinfo = {};		// 发送给后台生成订单号的数据
-				buyinfo['meal_id'] = this.meal_id;
-				buyinfo['money'] = this.money;
-				buyinfo['name'] = this.uname;
-				buyinfo['phone'] = this.uphone;
-				buyinfo['addr'] = this.uaddr;
-				buyinfo['addrdetail'] = this.uaddrdetail;
+				charge.buyinfo['meal_id'] = this.meal_id;
+				charge.buyinfo['money'] = this.money;
+				charge.buyinfo['name'] = this.uname;
+				charge.buyinfo['phone'] = this.uphone;
+				charge.buyinfo['addr'] = this.uaddr;
+				charge.buyinfo['addrdetail'] = this.uaddrdetail;
 
 				// 当前录入信息界面
 				var origin = location.origin;
@@ -100,7 +100,7 @@ var charge = new Vue({
 		},
 		goNext: function(){
 			// 发送客户信息和订单信息，让后台生成订单号
-			getOrderid(buyinfo, function(orderid){
+			getOrderid(charge.buyinfo, function(orderid){
 				// 订单生成成功
 				if(orderid){
 					// 查询订单信息，支付信息, 用于 微信支付
@@ -159,10 +159,6 @@ var charge = new Vue({
 						console.log('getWXDeviceInfos_arr: ',arr);
 						console.log('getWXDeviceInfos_connectid: ',connectid);
 						charge.connectid = connectid;
-						// 获取套餐数据(在套餐选择页面获取)
-						if(href.indexOf('?info') == -1 && href.indexOf('&done') == -1){
-							getMeal(connectid);		
-						}
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
@@ -173,9 +169,14 @@ var charge = new Vue({
 							}
 							if(num == 0){
 								noticeFn({text: '请先连接设备!'});
+								return
 							}
 							charge.device_num = num;
 						})
+						// 获取套餐数据(在套餐选择页面获取)
+						if(href.indexOf('?info') == -1 && href.indexOf('&done') == -1 && charge.device_num == 1){
+							getMeal(connectid);		
+						}
 					})
 
 				}else{
