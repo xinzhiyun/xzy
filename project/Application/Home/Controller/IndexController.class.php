@@ -113,23 +113,40 @@ class IndexController extends Controller
     public function makeOrder()
     {
         //接收充值前的地址信息
-        // dump($_POST);
+        // dump($_POST);die;
         
-        //获取充值天数
+        //获取要充值的设备id
+        $deviceCode = $_POST['deviceId'];
+
+        //查询该设备的剩余时间
+        $outtime = M('devices')->where("device_code='{$deviceCode}'")->find()['outtime'];
+
+        //设备初始化时间
+        $inittime = M('devices')->where("device_code='{$deviceCode}'")->find()['inittime'];
+
+        if (is_null($outtime)) {
+            //如果为空则将  当前时间戳+充值套餐时间+初始化时间
+            //获取充值天数
+            $meal_id = $_POST['meal_id'];
+            $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 + $inittime;
+        } else {
+            //如果不为空  充值套餐时间戳+设备剩余时间
+            $meal_id = $_POST['meal_id'];
+            $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 + $outtime;
+        }
 
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
         $data['username'] = $_POST['name'];
         $data['phone'] = $_POST['phone'];
 
-        $deviceCode = $_POST['deviceId'];
-
         //充值成功后修改设备表数据
         $res = M('devices')->where("device_code='{$deviceCode}'")->save($data);
 
-
         if ($res) {
             //更改设备在微信服务器的信息
-            
+            //将设备到期时间给前端
+        } else {
+
         }
 
 
@@ -160,8 +177,8 @@ class IndexController extends Controller
         $input = new \WxPayUnifiedOrder();
         // 产品内容
         $input->SetBody("碧水蓝天设备-充值");
-        // 用户ID
-        $input->SetAttach($_SESSION['homeuser']['id']);
+        // 设备id
+        $input->SetAttach(I('post.deviceId'));
         // 设置商户系统内部的订单号,32个字符内、可包含字母, 其他说明见商户订单号
         $input->SetOut_trade_no(\WxPayConfig::MCHID.date("YmdHis").mt_rand(0,9999));
         // 产品金额单位为分

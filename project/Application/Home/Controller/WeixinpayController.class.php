@@ -17,83 +17,34 @@ class WeixinpayController extends Controller
         if($xml){
         	//解析微信返回数据数组格式
         	$result = $this->notifyData($xml);
-            file_put_contents('./xml.txt',$xml."\r\n", FILE_APPEND);
+            // file_put_contents('./xml.txt',$xml."\r\n", FILE_APPEND);
 	    	// 如果订单号不为空
         	if(!empty($result['out_trade_no'])){
-        		// file_put_contents('./wx_notifyNOnull.txt','不为空', FILE_APPEND);
-		    	// 查询数据库
-		    	$model = M('Flow');
-	    		// $map['ordernumber'] = array('eq', $result['out_trade_no']);
-		    	$map['ordernumber'] = array('eq', $result['out_trade_no']);
-	    		//查询IC号是否存在
-	    		$res = $model->where($map)->find();
+        		file_put_contents('./wx_notifyNOnull.txt','不为空', FILE_APPEND);
 
-	    		if(!$res){
-	    			// 用户ID号
-	    			$data['uid'] = $result['attach'];
-	    			// 商户订单
-	    			$data['ordernumber'] = $result['out_trade_no'];
-	    			// 金额
-	    			$data['money'] = $result['total_fee'];
-                    // 读取用户余额
-                    $user = M('users')->where('id='.$data['uid'])->find();
-                    // 用户余额
-                    $money = (int) $user['balance'];
-                    // 用户当前余额
-                    $data['currentbalance'] = $money + $data['money'];
-	    			// 充值类型
-	    			$data['mode'] = 1;
+                //返回的随机订单号
+                $orderid = $result['out_trade_no'];
 
-                    //押金类型充值
-                    $data['type'] = 2;
-                    
-	    			// 充值时间
-	    			$data['time'] = time();
-	    			// 写入数据库
-	    			$msg = $model->add($data);
+                //查库是否存在订单号
+                $order = M('flow')->where("orderid='{$orderid}'")->find();
 
-	    			// 更新用户余额
-    				// 更新用户余额
-    				$data['balance'] = $money + $data['money'];
-
-    				$data['addtime'] = time();
-
-    				$mes = M('users')->where('id='.$data['uid'])->save($data);
-
-    				if($mes){
-	    				// 写更新日志
-	    				//file_put_contents('./log/wxgxY_log.txt','余额更新成功', FILE_APPEND);
-
-                        // 用户名
-                        $username = $user['name'];
-                        $content = $username . '：您于'.date('Y年m月d日 h时i分s秒',$data['addtime']).'成功冲值'.($data['money']/100).'元';
-                        $phone = $user['phone'];
-                        //file_put_contents('./log/wxgxY_log.txt',$content.' '.$phone, FILE_APPEND);
-                        // 开始接口代码
-                        $sms = new \Org\Util\SmsDemo;
-                        $response = $sms::sendSms(
-                            "阿里云短信测试专用", // 短信签名
-                            "SMS_112475574", // 短信模板编号
-                            $phone, // 短信接收者
-                            Array(  // 短信模板中字段的值
-                                "content"=>$content,
-                                "product"=>"dsd"
-                            ),
-                            "123"   // 流水号,选填
-                        );
-
-                        // 信息推送状态判断
-                        if($response->Code=='OK'){
-                            $this->error('消息推送成功！');
-                        }else{
-                            $this->error('消息推送失败，错误码：' . $response->Code);
-                        }
-
-
-	    			}else{
-	    				// 写更新日志
-	    				//file_put_contents('./log/wxgxN_log.txt','更新失败', FILE_APPEND);
-	    			}
+                //不存在则存库
+                if (!$order) {
+                    // 查询数据库
+                    $model = M('flow');
+                    // 用户ID号
+                    $data['open_id'] = $result['openid'];
+                    $data['device_code'] = $result['attach'];
+                    $data['orderid'] = $orderid;
+                    // 金额
+                    $data['money'] = $result['total_fee'];
+                    // 充值时间
+                    $data['addtime'] = time();
+                    // 写入数据库
+                    $msg = $model->add($data);
+                }
+		    	
+	
 
 	    		}else{
 	    		 	//file_put_contents('./wx_notifyres.txt','订单已经存在', FILE_APPEND);
@@ -101,8 +52,6 @@ class WeixinpayController extends Controller
 	    		}
         	}
         }
-
-    }
 
     
 
