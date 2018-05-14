@@ -104,6 +104,7 @@
 		var vconsole = new VConsole();
 		var wxinfo = JSON.parse('{{$weixin|json_encode}}');
 		var openId = '{{$openid}}';
+		console.log('openId: ',openId);
 		// console.log(wxinfo);
 		//微信接口
 		wx.config({
@@ -142,6 +143,7 @@
 				'getBrandWCPayRequest',
 				JSON.parse(res),
 				function(res){
+					console.log('payres: ', res);
 					if (res.err_msg.substr(-2) == 'ok') {
 		                // 付款成功
 						callback({status: 'ok'});
@@ -158,15 +160,15 @@
 		    );
 		};
 
-		// 获取订单号（后台生成，用于微信支付）
-		function getOrderid(buyinfo, callback){
+		// 提交订单数据（微信支付成功之后）
+		function upLoadInfo(buyinfo, callback){
 			$.ajax({
 				url: '{{:U("Home/Index/makeOrder")}}',
 				type: 'post',
 				data: buyinfo,
 				success: function(res){
 					console.log('res: ',res);
-					callback(res.orderid);
+					callback(res);
 				},
 				error: function(err){
 					console.log('err: ',err);
@@ -174,7 +176,7 @@
 				}
 			})
 		}
-		// 查询订单信息，支付信息
+		// 获取支付信息, 用于 微信支付
 		function prePay(obj, callback){
 			$.ajax({
 				url: '{{:U("Home/Index/uniformOrder")}}',

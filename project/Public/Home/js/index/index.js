@@ -99,54 +99,51 @@ var charge = new Vue({
 			}
 		},
 		goNext: function(){
-			var obj = {
-				openId: openId,
-				money: getQuery().money,
-				deviceId: getQuery().connectid
-			}
-			// 发送客户信息和订单信息，让后台生成订单号
-			// getOrderid(charge.buyinfo, function(orderid){
-				// 订单生成成功
-				// if(orderid){
-					// 查询订单信息，支付信息, 用于 微信支付
-					prePay(obj, function(res){
-						if(res == -1){
-							noticeFn({text: '支付出错， 请稍后再试！'});
-							return
-						}
-						// 微信支付
-						weixinPay(res, function(res){
-							if(res.status === 'ok'){
-								// 发送数据给设备
-								sendData(device.connectid, device.senddata, function(res){
-									if(res.status === 'ok'){
-										// 支付成功
-										location.href = origin + pathname + '?done';
+			
+			charge.buyinfo['openId'] = openId;
+			charge.buyinfo['money'] = getQuery().money;
+			charge.buyinfo['deviceId'] = getQuery().connectid;
 
-									}else if(res.status === 'fail'){
-										noticeFn({text: '发送数据出错！'});
+			// 获取支付信息, 用于 微信支付
+			prePay(charge.buyinfo, function(res){
+				if(res == -1){
+					noticeFn({text: '支付出错， 请稍后再试！'});
+					return
+				}
+				// 微信支付
+				weixinPay(res, function(res){
+					if(res.status === 'ok'){
+						// 把数据发送到后台保存
+						upLoadInfo(charge.buyinfo, function(res){
+							// 发送数据给设备
+							sendData(charge.connectid, charge.senddata, function(res){
+								if(res.status === 'ok'){
+									// 支付成功
+									location.href = origin + pathname + '?done';
 
-									}else{
-										// 无设备号，或发送的数据为空
-										noticeFn({text: res.msg});
-									}
-								})
-								
-							}else if(res.status === 'cancel'){
-								// 取消支付
-								noticeFn({text: '你取消了支付！'});
+								}else if(res.status === 'fail'){
+									noticeFn({text: '发送数据出错！'});
 
-							}else if(res.status === 'failed'){
-								// 支付失败
-								noticeFn({text: '支付失败, 请稍后再试！'});
-
-							}
+								}else{
+									// 无设备号，或发送的数据为空
+									noticeFn({text: res.msg});
+								}
+							})
 						})
 						
-					})
-				// }
+					}else if(res.status === 'cancel'){
+						// 取消支付
+						noticeFn({text: '你取消了支付！'});
+
+					}else if(res.status === 'failed'){
+						// 支付失败
+						noticeFn({text: '支付失败, 请稍后再试！'});
+
+					}
+				})
 				
-			// })
+			})
+
 		}
 	},
 	created() {
