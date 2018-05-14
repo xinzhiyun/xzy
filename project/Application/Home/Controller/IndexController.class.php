@@ -112,7 +112,7 @@ class IndexController extends Controller
      */
     public function makeOrder()
     {
-        //接收充值钱的地址信息
+        //接收充值前的地址信息
         dump($_POST);
         $data['address'] = $_POST[''];
         $data['username'] = $_POST[''];
@@ -129,7 +129,7 @@ class IndexController extends Controller
     public function uniformOrder()
     {
         // 将金额强转换整数
-        $money = I('money') * 100;
+        $money = I('post.money') * 100;
         // 冲值测试额1分钱
         $money = 1;
         // 用户在公众号的唯一ID
@@ -157,7 +157,7 @@ class IndexController extends Controller
         // $input->SetTime_expire(date("YmdHis", time() + 300));
         // $input->SetGoods_tag("test");
         // 支付成功的回调地址xinpin.dianqiukj.com
-        $input->SetNotify_url("http://xinpin.dianqiukj.com/index.php/Home/Weixinpay/dnotify.html");
+        $input->SetNotify_url("http://blue.dianqiukj.com/index.php/Home/Weixinpay/notify.html");
         // $input->SetNotify_url("http://wuzhibin.cn/Home/Weixinpay/notify.html");
         // 支付方式 JS-SDK 类型是：JSAPI
         $input->SetTrade_type("JSAPI");
