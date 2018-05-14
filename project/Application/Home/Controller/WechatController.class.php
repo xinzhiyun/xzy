@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 use \Org\Util\WeixinJssdk;
+use Think\Log;
 
 // 引入微信事件接收类
 // use Home\Controller\WeixinEventController;
@@ -95,6 +96,8 @@ class WechatController extends Controller
 
         // 调用获取公众号的全局唯一接口调用凭据
         $access_token = $weixin->getAccessToken();
+
+        // Log::write($access_token, '伦伦');
 
         $jsonmenu = '{
 

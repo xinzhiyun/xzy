@@ -26,7 +26,7 @@ class IndexController extends Controller
 
         $openId_ifno = $weixin->getSignPackage();
         
-
+        // dump($openId_ifno);
         $openid = $weixin->GetOpenid();
 
         if (empty($_SESSION['openid'])) {
