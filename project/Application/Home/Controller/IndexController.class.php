@@ -113,10 +113,25 @@ class IndexController extends Controller
     public function makeOrder()
     {
         //接收充值前的地址信息
-        dump($_POST);
-        $data['address'] = $_POST[''];
-        $data['username'] = $_POST[''];
-        $data['phone'] = $_POST[''];
+        // dump($_POST);
+        
+        //获取充值天数
+
+        $data['address'] = $_POST['addr'].$_POST['addrdetail'];
+        $data['username'] = $_POST['name'];
+        $data['phone'] = $_POST['phone'];
+
+        $deviceCode = $_POST['deviceId'];
+
+        //充值成功后修改设备表数据
+        $res = M('devices')->where("device_code='{$deviceCode}'")->save($data);
+
+
+        if ($res) {
+            //更改设备在微信服务器的信息
+            
+        }
+
 
 
     }

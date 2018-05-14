@@ -17,7 +17,7 @@ class WeixinpayController extends Controller
         if($xml){
         	//解析微信返回数据数组格式
         	$result = $this->notifyData($xml);
-            // file_put_contents('./xml.txt',$xml."\r\n", FILE_APPEND);
+            file_put_contents('./xml.txt',$xml."\r\n", FILE_APPEND);
 	    	// 如果订单号不为空
         	if(!empty($result['out_trade_no'])){
         		// file_put_contents('./wx_notifyNOnull.txt','不为空', FILE_APPEND);
@@ -51,16 +51,6 @@ class WeixinpayController extends Controller
 	    			$data['time'] = time();
 	    			// 写入数据库
 	    			$msg = $model->add($data);
-
-
-
-	    			// if($msg){
-	    			// 	// 写充值日志
-	    			// 	file_put_contents('./log/wx_logY.txt','充值成功'.$xml."\r\n", FILE_APPEND);
-	    			// }else{
-	    			// 	// 写充值日志
-	    			// 	file_put_contents('./log/wx_logN.txt','充值失败'.$xml."\r\n", FILE_APPEND);
-	    			// }
 
 	    			// 更新用户余额
     				// 更新用户余额
@@ -110,16 +100,6 @@ class WeixinpayController extends Controller
 	    		 	//echo '订单已经存在';
 	    		}
         	}
-
-
-    		//file_put_contents('./wx_notifyOK.txt','交易成功: '.$result['out_trade_no'], FILE_APPEND);
-
-		    // 获取订单编号
-		    // $data['ordernumber'] = $result['out_trade_no'];
-		    // 获取用户ID
-		    // $data['uid'] = $_SESSION['homeuser']['id'];
-		    // 获取订单金额
-   	
         }
 
     }
