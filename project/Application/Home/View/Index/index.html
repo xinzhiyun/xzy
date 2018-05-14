@@ -181,7 +181,7 @@
 			$.ajax({
 				url: '{{:U("Home/Index/uniformOrder")}}',
 				type: 'post',
-				data: {openId: obj.openId, money: obj.money},
+				data: obj,
 				success: function(res){
 					console.log('res: ',res);
 					callback(res);
