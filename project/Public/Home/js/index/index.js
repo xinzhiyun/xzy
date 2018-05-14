@@ -101,7 +101,8 @@ var charge = new Vue({
 		goNext: function(){
 			var obj = {
 				openId: openId,
-				money: getQuery().money
+				money: getQuery().money,
+				deviceId: getQuery().connectid
 			}
 			// 发送客户信息和订单信息，让后台生成订单号
 			// getOrderid(charge.buyinfo, function(orderid){
