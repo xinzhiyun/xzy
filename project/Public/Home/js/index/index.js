@@ -153,7 +153,7 @@ var charge = new Vue({
 			openWXDevice(function(res){
 				console.log('openWXDevice_res: ',res);
 				if(res.status == 'ok'){
-
+ 
 					// 获取当前连接的设备
 					getWXDeviceInfos(function(arr, connectid){
 						console.log('getWXDeviceInfos_arr: ',arr);
