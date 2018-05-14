@@ -6,6 +6,7 @@ var charge = new Vue({
 			urlparam: getQuery(),
 			connectid: '',		// 当前连接的设备
 			mealList: [],		// 套餐数据
+			active_meal: '',	// 套餐选中
 			money: '',			// 充值的套餐金额
 			class2: '',			// 流程第二步
 			class3: '',			// 流程第三步（走完）
@@ -22,17 +23,12 @@ var charge = new Vue({
 	watch: {},
 	methods: {
 		// 选择套餐
-		select_meal: function(e){
-			var ele = e.currentTarget;
-			var meal = document.querySelectorAll('.meal');
-			meal.forEach(function(meal, index){
-				meal.setAttribute('class', 'meal tcenter');
-			});
+		select_meal: function(meal){
+			this.active_meal = meal;
 			// 获取套餐id
-			this.meal_id = ele.getAttribute('meal_id');
+			this.meal_id = meal.meal_id;
 			// 获取套餐金额
-			this.money = ele.getAttribute('money');
-			ele.setAttribute('class', 'meal tcenter select');
+			this.money = meal.money;
 		},
 		// 下一步
 		next: function(){
@@ -149,6 +145,7 @@ var charge = new Vue({
 		}
 	},
 	created() {
+		var href = this.href;
 		wx.ready(function(){
 			// openWXDeviceLib();
 			// console.log('openWXDeviceLib: ',openWXDeviceLib());
@@ -162,7 +159,10 @@ var charge = new Vue({
 						console.log('getWXDeviceInfos_arr: ',arr);
 						console.log('getWXDeviceInfos_connectid: ',connectid);
 						charge.connectid = connectid;
-						getMeal(connectid);		// 获取套餐数据
+						// 获取套餐数据(在套餐选择页面获取)
+						if(href.indexOf('?info') == -1 && href.indexOf('&done') == -1){
+							getMeal(connectid);		
+						}
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
@@ -183,7 +183,6 @@ var charge = new Vue({
 				}
 			})
 		})
-		var href = this.href;
 		if(href.indexOf('info') > -1){
 			this.money = getQuery().money;
 			this.mainShow = 'info';		// 信息选择

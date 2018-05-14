@@ -29,24 +29,24 @@
 }
 .cTop>li>span::after {
 	content: '';
-	width: 80%;
+	width: 100%;
 	height: 3px;
 	position: absolute;
-	right: -80%;
+	right: -100%;
 	top: 0;
 	bottom: 0;
 	margin: auto 0;
 	background: inherit;
 }
 .cTop>li:last-child>span::after {
-	left: -80%;
+	left: -100%;
 }
 .cTop>li:nth-of-type(2)>span::before {
 	content: '';
-	width: 80%;
+	width: 100%;
 	height: 3px;
 	position: absolute;
-	left: -80%;
+	left: -100%;
 	top: 0;
 	bottom: 0;
 	margin: auto 0;
