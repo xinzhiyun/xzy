@@ -160,7 +160,7 @@
 		// 获取订单号（后台生成，用于微信支付）
 		function getOrderid(buyinfo, callback){
 			$.ajax({
-				url: '',
+				url: '{{:U("Home/Index/makeOrder")}}',
 				type: 'post',
 				data: buyinfo,
 				success: function(res){
