@@ -33,7 +33,8 @@ class IndexController extends Controller
             $_SESSION['openid'] = $openid;
         }
 
-    	$this->assign('weixin',$openId_ifno);
+        $this->assign('weixin',$openId_ifno);
+    	$this->assign('openid',$_SESSION['openid']);
         $this->display();
     }
 
@@ -112,7 +113,12 @@ class IndexController extends Controller
     public function makeOrder()
     {
         //接收充值钱的地址信息
-        
+        dump($_POST);
+        $data['address'] = $_POST[''];
+        $data['username'] = $_POST[''];
+        $data['phone'] = $_POST[''];
+
+
     }
 
 
