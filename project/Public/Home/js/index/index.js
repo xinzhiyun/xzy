@@ -99,12 +99,16 @@ var charge = new Vue({
 			}
 		},
 		goNext: function(){
+			var obj = {
+				openId: openId,
+				money: getQuery().money
+			}
 			// 发送客户信息和订单信息，让后台生成订单号
-			getOrderid(charge.buyinfo, function(orderid){
+			// getOrderid(charge.buyinfo, function(orderid){
 				// 订单生成成功
-				if(orderid){
+				// if(orderid){
 					// 查询订单信息，支付信息, 用于 微信支付
-					checkOrderid(orderid, function(res){
+					prePay(obj, function(res){
 						if(res == -1){
 							noticeFn({text: '支付出错， 请稍后再试！'});
 							return
@@ -139,9 +143,9 @@ var charge = new Vue({
 						})
 						
 					})
-				}
+				// }
 				
-			})
+			// })
 		}
 	},
 	created() {
