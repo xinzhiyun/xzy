@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查询</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="__PUBLIC__/Home/amazeui/assets/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/common.css">
+	<style>
+		body {padding: 0;}
+		#navbar {display: none;}
+		.title {
+			padding: 10px 0;
+			background: #eee;
+			border-bottom: #999;
+		}
+		.title>li,
+		.content>li>div {
+			width: 50%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id='search'>
+		<ul class='cfix title'>
+			<li class='fleft'>设备编码</li>
+			<li class='fright'>剩余天数</li>
+		</ul>
+		<ul class='content'>
+			<li v-for='d in dList' class='cfix'>
+				<div class='fleft'><span v-text='d.deviceid'></span></div>
+				<div class='fright'><span v-text='d.reday'></span></div>
+			</li>
+		</ul>
+	</div>
+	<script src="__PUBLIC__/Home/js/public.js"></script>
+	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
+	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
+	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
+	<script>
+		var vconsole = new VConsole();
+		// var wxinfo = JSON.parse('{{$weixin|json_encode}}');
+		// var openId = '{{$openid}}';
+		// console.log('openId: ',openId);
+		// console.log(wxinfo);
+		//微信接口
+		// wx.config({
+		// 	beta: true,
+		// 	debug: true,
+		// 	appId: wxinfo.appId,
+		// 	timestamp: wxinfo.timestamp,
+		// 	nonceStr: wxinfo.nonceStr,
+		// 	signature: wxinfo.signature,
+		// 	jsApiList: [
+		// 		// 所有要调用的 API 都要加到这个列表中
+		// 		'chooseWXPay',
+		//         'openWXDeviceLib',
+		//         'closeWXDeviceLib',
+		//         'getWXDeviceInfos',
+		//         'getWXDeviceTicket',
+		//         'startScanWXDevice',
+		//         'stopScanWXDevice',
+		//         'connectWXDevice',
+		//         'disconnectWXDevice',
+		//         'sendDataToWXDevice',
+		//         'onWXDeviceBindStateChange',
+		//         'onWXDeviceStateChange',
+		//         'onScanWXDeviceResult',
+		//         'onReceiveDataFromWXDevice',
+		//         'onWXDeviceBluetoothStateChange',
+		// 	]
+		// });
+		var search = new Vue({
+			el: '#search',
+			data(){
+				return {
+					dList: []
+				}
+			},
+			created() {
+				this.dList = [
+					{deviceid: 2342, reday: 23},
+					{deviceid: 1233, reday: 33},
+					{deviceid: 1234, reday: 63},
+				]
+			}
+		})
+	</script>
+</body>
+</html>
