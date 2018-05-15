@@ -37,7 +37,7 @@ class DevicesController extends Controller
                     $product_id  = $_POST['product_id'];
 
                     $data['lasttime'] = time();
-                    $data['inittime'] = 7200;
+                    $data['inittime'] = 7200 * 24;
 
                     //根据登录的经销商获取其对用的设备编码
                     $appId = $_SESSION['apiuser']['appid'];

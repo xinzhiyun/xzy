@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 use \Org\Util\WeixinJssdk;
+use Think\Log;
 
 class IndexController extends Controller 
 {
@@ -128,11 +129,11 @@ class IndexController extends Controller
             //如果为空则将  当前时间戳+充值套餐时间+初始化时间
             //获取充值天数
             $meal_id = $_POST['meal_id'];
-            $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 + $inittime;
+            $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $inittime;
         } else {
             //如果不为空  充值套餐时间戳+设备剩余时间
             $meal_id = $_POST['meal_id'];
-            $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 + $outtime;
+            $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $outtime;
         }
 
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
@@ -141,6 +142,10 @@ class IndexController extends Controller
 
         //充值成功后修改设备表数据
         $res = M('devices')->where("device_code='{$deviceCode}'")->save($data);
+
+        // Log::write('luu', $res);
+
+        // dump($res);
 
         if ($res) {
             //更改设备在微信服务器的信息
