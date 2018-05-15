@@ -119,27 +119,43 @@ class IndexController extends Controller
         //获取要充值的设备id
         $deviceCode = $_POST['deviceId'];
 
+        //套餐id
+        $meal_id = $_POST['meal_id'];
+
         //查询该设备的剩余时间
         $outtime = M('devices')->where("device_code='{$deviceCode}'")->find()['outtime'];
 
         //设备初始化时间
         $inittime = M('devices')->where("device_code='{$deviceCode}'")->find()['inittime'];
 
+
+        Log::write(M('setmeal')->where("id='{$meal_id}'")->find()['days'],'伦哥哥');
+
         if (is_null($outtime)) {
             //如果为空则将  当前时间戳+充值套餐时间+初始化时间
             //获取充值天数
-            $meal_id = $_POST['meal_id'];
             $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $inittime;
+
         } else {
             //如果不为空  充值套餐时间戳+设备剩余时间
-            $meal_id = $_POST['meal_id'];
-            $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $outtime;
+            
+            if ($outtime < time()) {
+                //如果到期时间小于当前时间戳，当前时间戳+充值秒数
+                $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + time();
+                
+
+            } else {
+                //如果还有有效期  到期时间戳+充值秒数
+                $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $outtime;
+
+            }
+            
         }
 
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
         $data['username'] = $_POST['name'];
         $data['phone'] = $_POST['phone'];
-
+        
         //充值成功后修改设备表数据
         $res = M('devices')->where("device_code='{$deviceCode}'")->save($data);
 
@@ -181,6 +197,15 @@ class IndexController extends Controller
 
 
 
+    }
+
+    /**
+     * [getNum 点击查询的时候获取设备剩余天数]
+     * @return [type] [description]
+     */
+    public function getNum()
+    {
+        
     }
 
 
