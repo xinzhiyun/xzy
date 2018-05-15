@@ -150,24 +150,25 @@ class IndexController extends Controller
             $num = $outtime-time();
 
 
-            $arr = array();
+            // $arr = array();
 
-            $arr[0] = 0Xdd;
-            $arr[1] = 0Xaa;
-            $arr[2] = 0X00;
-            $arr[3] = 0X00;
-            $arr[4] = 0X00;
-            $arr[5] = 0X0E;
-            $arr[6] = 0X00;
-            $arr[7] = 0X0A;
-            $arr[8] = ($num>>24)&0XFF;
-            $arr[9] = ($num>>16)&0XFF;
-            $arr[10] = ($num>>8)&0XFF;
-            $arr[11] = ($num>>0)&0XFF;
-            $arr[12] = 0X00;
-            $arr[13] = 0X00;
+            // $arr[0] = 0Xdd;
+            // $arr[1] = 0Xaa;
+            // $arr[2] = 0X00;
+            // $arr[3] = 0X00;
+            // $arr[4] = 0X00;
+            // $arr[5] = 0X0E;
+            // $arr[6] = 0X00;
+            // $arr[7] = 0X0A;
+            // $arr[8] = ($num>>24)&0XFF;
+            // $arr[9] = ($num>>16)&0XFF;
+            // $arr[10] = ($num>>8)&0XFF;
+            // $arr[11] = ($num>>0)&0XFF;
+            // $arr[12] = 0X00;
+            // $arr[13] = 0X00;
 
-            return $arr;
+            $this->ajaxReturn(array('msg'=>$num,'code'=>'200'));
+            
 
         } else {
             $this->ajaxReturn(array('msg'=>'设备更新失败','code'=>'201'));
