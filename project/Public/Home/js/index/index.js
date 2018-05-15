@@ -50,9 +50,6 @@ var charge = new Vue({
 				charge.buyinfo['addr'] = this.uaddr;
 				charge.buyinfo['addrdetail'] = this.uaddrdetail;
 
-				// 当前录入信息界面
-				var origin = location.origin;
-				var pathname = location.pathname;
 				if(!this.uname){
 					noticeFn({text:'请输入用户名!'});
 					$('.uname').css({border: '1px solid red'});
@@ -99,7 +96,9 @@ var charge = new Vue({
 			}
 		},
 		goNext: function(){
-			
+			// 当前录入信息界面
+			var origin = location.origin;
+			var pathname = location.pathname;
 			charge.buyinfo['openId'] = openId;
 			charge.buyinfo['money'] = getQuery().money;
 			charge.buyinfo['deviceId'] = getQuery().connectid;
@@ -115,8 +114,9 @@ var charge = new Vue({
 					if(res.status === 'ok'){
 						// 把数据发送到后台保存
 						upLoadInfo(charge.buyinfo, function(res){
+							console.log('sendres: ',res);
 							// 发送数据给设备
-							sendData(charge.connectid, charge.senddata, function(res){
+							sendData(charge.connectid, res, function(res){
 								if(res.status === 'ok'){
 									// 支付成功
 									location.href = origin + pathname + '?done';
