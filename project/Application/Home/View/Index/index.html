@@ -167,12 +167,38 @@
 				type: 'post',
 				data: buyinfo,
 				success: function(res){
-					console.log('res: ',res);
-					callback(res);
+					console.log('sendres: ',JSON.stringify(res));
+					if(res.code == 200){
+						// 转为8位16进制数
+						var hex8 = get8Hex(Number(res.msg));
+						var Bytes = [];
+						Bytes[0] = 0xdd;
+						Bytes[1] = 0xaa;
+			            Bytes[2] = 0x00;
+			            Bytes[3] = 0x00;
+			            Bytes[4] = 0x00;
+			            Bytes[5] = 0x0E;
+			            Bytes[6] = 0x00;
+			            Bytes[7] = 0x0A;
+			            // 转为8位16进制数
+			            Bytes[8] = hex8[0]-0;
+			            Bytes[9] = hex8[1]-0;
+			            Bytes[10] = hex8[2]-0;
+			            Bytes[11] = hex8[3]-0;
+			            Bytes[12] = 0x00;
+			            Bytes[13] = 0x00;
+
+			            // console.log('hex8: ',hex8);
+						callback(Bytes);
+					}else{
+						// 发送的数据有误
+						noticeFn({text: res.msg});
+					}
 				},
 				error: function(err){
 					console.log('err: ',err);
-					callback(err);
+					// 发送的数据有误
+					noticeFn({text: '发生错误，请稍后再试'});
 				}
 			})
 		}
@@ -231,6 +257,31 @@
 				}
 			})
 		}
+
+		/**
+		 * [get8Hex 8位16进制转换]
+		 * @param  {[type]} num [数字]
+		 * @return {[array]} arr    [8位16进制数]
+		 */
+		function get8Hex(num){
+           	// 转为数字型
+            num = num - 0;
+            var hex;
+            var arr = [];   // 返回值
+            var zero = '0000';
+            var zero8 = '00000000';     // 8位数
+            var len = zero.length - num.length;
+            // 转为16进制数
+            hex = zero.substr(0,len) + num.toString(16);
+            // 转为8位16进制数
+            hex = zero8.substr(0,zero8.length - hex.length) + hex;
+            for(var i=0; i<hex.length+1; i++){
+                arr.push(hex.substr(0, 2));
+                hex = hex.substr(2,);
+            }
+            arr.push(hex.substr(-2));
+            return arr;
+        }
 	</script>
 	<script src='__PUBLIC__/Home/js/index/wxhard.js'></script>
 	<script src="__PUBLIC__/Home/js/index/index.js"></script>
