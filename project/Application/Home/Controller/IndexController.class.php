@@ -230,11 +230,18 @@ class IndexController extends Controller
         }
 
 
-        // dump($_POST);
-
         $this->assign('weixin',$openId_ifno);
         $this->assign('openid',$_SESSION['openid']);
         $this->display();
+    }
+
+    /**
+     * [getSelect 查询剩余天数]
+     * @return [type] [description]
+     */
+    public function getSelect()
+    {
+        dump($_POST);
     }
 
 
