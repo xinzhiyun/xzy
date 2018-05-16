@@ -44,43 +44,45 @@
 	</div>
 	<script src="__PUBLIC__/Home/js/public.js"></script>
 	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
-	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
 	<script src="__PUBLIC__/Home/js/vue.min.js"></script>
 	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
 		var vconsole = new VConsole();
-		// var wxinfo = JSON.parse('{{$weixin|json_encode}}');
-		// var openId = '{{$openid}}';
+		var wxinfo = JSON.parse('{{$weixin|json_encode}}');
+		var openId = '{{$openid}}';
 		// console.log('openId: ',openId);
 		// console.log(wxinfo);
-		//微信接口
-		// wx.config({
-		// 	beta: true,
-		// 	debug: true,
-		// 	appId: wxinfo.appId,
-		// 	timestamp: wxinfo.timestamp,
-		// 	nonceStr: wxinfo.nonceStr,
-		// 	signature: wxinfo.signature,
-		// 	jsApiList: [
-		// 		// 所有要调用的 API 都要加到这个列表中
-		// 		'chooseWXPay',
-		//         'openWXDeviceLib',
-		//         'closeWXDeviceLib',
-		//         'getWXDeviceInfos',
-		//         'getWXDeviceTicket',
-		//         'startScanWXDevice',
-		//         'stopScanWXDevice',
-		//         'connectWXDevice',
-		//         'disconnectWXDevice',
-		//         'sendDataToWXDevice',
-		//         'onWXDeviceBindStateChange',
-		//         'onWXDeviceStateChange',
-		//         'onScanWXDeviceResult',
-		//         'onReceiveDataFromWXDevice',
-		//         'onWXDeviceBluetoothStateChange',
-		// 	]
-		// });
+		// 微信接口
+		wx.config({
+			beta: true,
+			debug: true,
+			appId: wxinfo.appId,
+			timestamp: wxinfo.timestamp,
+			nonceStr: wxinfo.nonceStr,
+			signature: wxinfo.signature,
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'chooseWXPay',
+		        'openWXDeviceLib',
+		        'closeWXDeviceLib',
+		        'getWXDeviceInfos',
+		        'getWXDeviceTicket',
+		        'startScanWXDevice',
+		        'stopScanWXDevice',
+		        'connectWXDevice',
+		        'disconnectWXDevice',
+		        'sendDataToWXDevice',
+		        'onWXDeviceBindStateChange',
+		        'onWXDeviceStateChange',
+		        'onScanWXDeviceResult',
+		        'onReceiveDataFromWXDevice',
+		        'onWXDeviceBluetoothStateChange',
+			]
+		});
+	</script>
+	<script src='__PUBLIC__/Home/js/index/wxhard.js'></script>
+	<script>
 		var select = new Vue({
 			el: '#select',
 			data(){
@@ -89,12 +91,27 @@
 				}
 			},
 			created() {
-				getData(function(res){
-					select.dList.push({
-						deviceid: res.deviceid,
-						reday: res.reday
-					});
+				wx.ready(function(){
+					openWXDevice(function(res){
+						console.log('openWXDevice_res: ',res);
+						if(res.status == 'ok'){
+							// 获取当前连接的设备
+							getWXDeviceInfos(function(arr, connectid){
+								console.log('getWXDeviceInfos_arr: ',arr);
+								select.getData(arr, function(res){
+									console.log('res: ',res);
+									select.dList.push({
+										deviceid: res.deviceid,
+										reday: res.reday
+									});
+								})
+							})
+						}else{
+							noticeFn({text: res.msg})
+						}
+					})
 				})
+				
 				// this.dList = [
 				// 	{deviceid: 2342, reday: 23},
 				// 	{deviceid: 1233, reday: 33},
@@ -102,9 +119,10 @@
 				// ]
 			},
 			methods: {
-				getData: function(callback){
+				getData: function(deviceArr, callback){
 					$.ajax({
-						url: '',
+						url: '{{:U("Home/Index/select")}}',
+						data: deviceArr,
 						type: 'post',
 						success: function(res){
 							console.log('res: ', res);
