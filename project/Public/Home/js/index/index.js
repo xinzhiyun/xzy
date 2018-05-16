@@ -120,7 +120,9 @@ var charge = new Vue({
 								if(res.status === 'ok'){
 									noticeFn({text: '充值成功！'});
 									// 支付成功
-									// location.href = origin + pathname + '?done';
+									setTimeout(function(){
+										location.href = origin + pathname + '?done';
+									},500);
 
 								}else if(res.status === 'fail'){
 									noticeFn({text: '发送数据出错！'});
@@ -150,8 +152,6 @@ var charge = new Vue({
 	created() {
 		var href = this.href;
 		wx.ready(function(){
-			// openWXDeviceLib();
-			// console.log('openWXDeviceLib: ',openWXDeviceLib());
 			// 打开微信设备库,查询蓝牙是否开启
 			openWXDevice(function(res){
 				console.log('openWXDevice_res: ',res);
@@ -162,20 +162,21 @@ var charge = new Vue({
 						console.log('getWXDeviceInfos_arr: ',arr);
 						console.log('getWXDeviceInfos_connectid: ',connectid);
 						charge.connectid = connectid;
-						if(!connectid){
-							noticeFn({text: '请先连接设备!'});
-							return
-						}
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
 								++num;
-							}
-							charge.device_num = num;
-							if(num >= 2){
-								noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+								charge.device_num = num;
+								if(num >= 2){
+									noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
+									return
+								}
 							}
 						})
+						if(num == 0){
+							noticeFn({text: '请先连接设备!'});
+							return
+						}
 						// 获取套餐数据(在套餐选择页面获取)
 						if(href.indexOf('?info') == -1 && href.indexOf('&done') == -1 && charge.device_num == 1){
 							getMeal(connectid);		
@@ -197,11 +198,13 @@ var charge = new Vue({
 
 		}else if(href.indexOf('meal') > -1){
 			this.mainShow = 'meal';		// 套餐选择
+			document.querySelector('#navbar').querySelector('.iconfont').style.opacity = '0';
 			// 先查询设备数据再把设备id发送过去获取套餐数据
 			// this.getMeal();				// 获取套餐信息
 
 		}else{
 			this.mainShow = 'meal';		// 套餐选择
+			document.querySelector('#navbar').querySelector('.iconfont').style.opacity = '0';
 			// 先查询设备数据再把设备id发送过去获取套餐数据
 			// this.getMeal();				// 获取套餐信息
 		}

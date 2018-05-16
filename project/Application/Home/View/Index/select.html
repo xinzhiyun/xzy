@@ -21,6 +21,7 @@
 		.title>li,
 		.content>li>div {
 			width: 50%;
+			padding: 0 4%;
 			text-align: center;
 		}
 		.content>li {
@@ -56,7 +57,7 @@
 		// 微信接口
 		wx.config({
 			beta: true,
-			debug: true,
+			debug: false,
 			appId: wxinfo.appId,
 			timestamp: wxinfo.timestamp,
 			nonceStr: wxinfo.nonceStr,
@@ -87,7 +88,7 @@
 			el: '#select',
 			data(){
 				return {
-					dList: []
+					dList: [{deviceid: '正在查询...', reday: '正在查询...'}]
 				}
 			},
 			created() {
@@ -103,10 +104,11 @@
 								}
 								select.getData(arr, function(res){
 									console.log('res: ',res);
-									res.msg.forEach(function(item, index){
+									select.dList.length = 0;	// 清空数组
+									res.forEach(function(item, index){
 										select.dList.push({
-											deviceid: item.deviceid,
-											reday: item.reday
+											deviceid: item.device_code,
+											reday: item.outtime
 										});
 									})
 								})
@@ -131,12 +133,12 @@
 						type: 'post',
 						success: function(res){
 							console.log('res: ', res);
-							if(res.code == 200){
-								callback(res.msg);
-
-							}else{
-								noticeFn({text: res.msg});
+							if(!res){
+								noticeFn({text: '查无数据'});
+								select.dList: [{deviceid: '查无数据', reday: ''}];
+								return
 							}
+							callback(res);
 						},
 						error: function(err){
 							console.log('err: ',err);
