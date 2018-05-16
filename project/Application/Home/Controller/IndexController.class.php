@@ -128,8 +128,10 @@ class IndexController extends Controller
         //设备初始化时间
         $inittime = M('devices')->where("device_code='{$deviceCode}'")->find()['inittime'];
 
+        // M('setmeal')->where("id='{$meal_id}'")->find()['days'];
 
-        Log::write(M('setmeal')->where("id='{$meal_id}'")->find()['days'],'伦哥哥');
+        // Log::write(M('setmeal')->where("id='{$meal_id}'")->find()['days'],'伦哥哥');
+        // Log::write(M()->getLastSql(),'伦哥哥SQL');
 
         if (is_null($outtime)) {
             //如果为空则将  当前时间戳+充值套餐时间+初始化时间
@@ -205,7 +207,7 @@ class IndexController extends Controller
      */
     public function getNum()
     {
-        
+
     }
 
 
