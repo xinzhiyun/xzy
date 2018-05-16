@@ -12,18 +12,25 @@
 		#navbar {display: none;}
 		.title {
 			padding: 10px 0;
-			background: #eee;
+			background: #e9e9e9;
 			border-bottom: #999;
+		}
+		.content {
+			border-top: 1px solid #e6e6e6;
 		}
 		.title>li,
 		.content>li>div {
 			width: 50%;
 			text-align: center;
 		}
+		.content>li {
+			padding: 10px 0;
+			border-bottom: 1px solid #e1e1e1;
+		}
 	</style>
 </head>
 <body>
-	<div id='search'>
+	<div id='select'>
 		<ul class='cfix title'>
 			<li class='fleft'>设备编码</li>
 			<li class='fright'>剩余天数</li>
@@ -74,19 +81,46 @@
 		//         'onWXDeviceBluetoothStateChange',
 		// 	]
 		// });
-		var search = new Vue({
-			el: '#search',
+		var select = new Vue({
+			el: '#select',
 			data(){
 				return {
 					dList: []
 				}
 			},
 			created() {
-				this.dList = [
-					{deviceid: 2342, reday: 23},
-					{deviceid: 1233, reday: 33},
-					{deviceid: 1234, reday: 63},
-				]
+				getData(function(res){
+					select.dList.push({
+						deviceid: res.deviceid,
+						reday: res.reday
+					});
+				})
+				// this.dList = [
+				// 	{deviceid: 2342, reday: 23},
+				// 	{deviceid: 1233, reday: 33},
+				// 	{deviceid: 1234, reday: 63},
+				// ]
+			},
+			methods: {
+				getData: function(callback){
+					$.ajax({
+						url: '',
+						type: 'post',
+						success: function(res){
+							console.log('res: ', res);
+							if(res.code == 200){
+								callback(res.msg);
+
+							}else{
+								noticeFn({text: res.msg});
+							}
+						},
+						error: function(err){
+							console.log('err: ',err);
+							noticeFn({text: '系统出错，请稍后再试'});
+						}
+					})
+				}
 			}
 		})
 	</script>
