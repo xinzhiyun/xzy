@@ -37,5 +37,15 @@ class DevicesController extends Controller
         $this->display();
     }
 
+
+    /**
+     * [unbind 设备解绑]
+     * @return [type] [description]
+     */
+    public function unbind()
+    {
+        dump($_POST['ticket']);
+    }
+
    
 }
