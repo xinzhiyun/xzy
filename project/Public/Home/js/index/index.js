@@ -161,19 +161,19 @@ var charge = new Vue({
 						console.log('getWXDeviceInfos_arr: ',arr);
 						console.log('getWXDeviceInfos_connectid: ',connectid);
 						charge.connectid = connectid;
+						if(!connectid){
+							noticeFn({text: '请先连接设备!'});
+							return
+						}
 						var num = 0;
 						arr.forEach(function(device, index){
 							if(device.state == 'connected'){
 								++num;
 							}
+							charge.device_num = num;
 							if(num >= 2){
 								noticeFn({text: '请关闭其他设备，只连接当前充值的设备'});
 							}
-							if(num == 0){
-								noticeFn({text: '请先连接设备!'});
-								return
-							}
-							charge.device_num = num;
 						})
 						// 获取套餐数据(在套餐选择页面获取)
 						if(href.indexOf('?info') == -1 && href.indexOf('&done') == -1 && charge.device_num == 1){
