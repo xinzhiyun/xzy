@@ -188,8 +188,8 @@
 			            Bytes[12] = 0x00;
 			            Bytes[13] = 0x00;
 
-			            // console.log('hex8: ',hex8);
-						callback(Bytes);
+			            console.log('hex8: ',hex8);
+						// callback(Bytes);
 					}else{
 						// 发送的数据有误
 						noticeFn({text: res.msg});
@@ -236,7 +236,7 @@
 						res.msg.forEach(function(meal, index){
 							// 套餐数据
 							charge.mealList.push({
-								meal_id: meal.auid,
+								meal_id: meal.id,
 								describe: meal.describe,
 								money: meal.money
 							});
