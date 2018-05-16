@@ -222,12 +222,12 @@ class IndexController extends Controller
 
         $openId_ifno = $weixin->getSignPackage();
         
-        // dump($openId_ifno);
-        $openid = $weixin->GetOpenid();
+        // // dump($openId_ifno);
+        // $openid = $weixin->GetOpenid();
 
-        if (empty($_SESSION['openid'])) {
-            $_SESSION['openid'] = $openid;
-        }
+        // if (empty($_SESSION['openid'])) {
+        //     $_SESSION['openid'] = $openid;
+        // }
 
 
         $this->assign('weixin',$openId_ifno);
