@@ -1,0 +1,1402 @@
+[ 2018-05-14T12:40:25+08:00 ] ::1 /xzy/project/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+
+[ 2018-05-14T12:40:25+08:00 ] ::1 /xzy/project/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2018-05-14T12:40:25+08:00 ] ::1 /xzy/project/index.php/Admin/Login/yzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2018-05-14T12:40:25+08:00 ] ::1 /xzy/project/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-05-14T12:40:25+08:00 ] ::1 /xzy/project/index.php/Admin/Login/yzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2018-05-14T12:40:32+08:00 ] ::1 /xzy/project/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0323s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( name='admin' ) LIMIT 1   [ RunTime:0.0285s ]
+
+[ 2018-05-14T12:40:33+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0394s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0397s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0406s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0399s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2018-05-14T12:40:34+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0401s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0392s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.2782s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0398s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0495s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0532s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0732s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-14T12:40:34+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0296s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0307s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0298s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0290s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0289s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0331s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-14T12:40:37+08:00 ] ::1 /xzy/project/index.php/Admin/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0288s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0336s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0293s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0290s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0296s ]
+SQL: SHOW COLUMNS FROM `pub_product` [ RunTime:0.0477s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_product p LEFT JOIN pub_adminuser admin ON p.auid=admin.id  WHERE `typename` LIKE '%%' AND `product_id` LIKE '%%' AND `name` LIKE '%%' AND ( `time` >= 0  ) LIMIT 1   [ RunTime:0.0309s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0315s ]
+SQL: SELECT p.*,admin.name FROM pub_product p LEFT JOIN pub_adminuser admin ON p.auid=admin.id  WHERE `typename` LIKE '%%' AND `product_id` LIKE '%%' AND `name` LIKE '%%' AND ( `time` >= 0  ) ORDER BY p.time desc LIMIT 0,8   [ RunTime:0.0306s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/34e4b095905075aaede5ee9039415509.php 第 162 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2018-05-14T12:40:39+08:00 ] ::1 /xzy/project/index.php/Admin/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0302s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0319s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0293s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0297s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0293s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0289s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2018-05-14T12:40:40+08:00 ] ::1 /xzy/project/index.php/Admin/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0306s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0291s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0310s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0291s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0290s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0306s ]
+SQL: SHOW COLUMNS FROM `pub_product` [ RunTime:0.0519s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_product p LEFT JOIN pub_adminuser admin ON p.auid=admin.id  WHERE `typename` LIKE '%%' AND `product_id` LIKE '%%' AND `name` LIKE '%%' AND ( `time` >= 0  ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0310s ]
+SQL: SELECT p.*,admin.name FROM pub_product p LEFT JOIN pub_adminuser admin ON p.auid=admin.id  WHERE `typename` LIKE '%%' AND `product_id` LIKE '%%' AND `name` LIKE '%%' AND ( `time` >= 0  ) ORDER BY p.time desc LIMIT 0,8   [ RunTime:0.0391s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/34e4b095905075aaede5ee9039415509.php 第 162 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2018-05-14T12:40:43+08:00 ] ::1 /xzy/project/index.php/Admin/Devices/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0288s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0294s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0314s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0337s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0333s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_devices d LEFT JOIN pub_adminuser admin ON d.auid=admin.id  WHERE `device_code` LIKE '%%' AND `mac` LIKE '%%' AND `name` LIKE '%%' AND `username` LIKE '%%' AND `phone` LIKE '%%' AND `address` LIKE '%%' AND `status` LIKE '%%' AND ( `outtime` >= 0  ) LIMIT 1   [ RunTime:0.0292s ]
+SQL: SELECT d.*,admin.name FROM pub_devices d LEFT JOIN pub_adminuser admin ON d.auid=admin.id  WHERE `device_code` LIKE '%%' AND `mac` LIKE '%%' AND `name` LIKE '%%' AND `username` LIKE '%%' AND `phone` LIKE '%%' AND `address` LIKE '%%' AND `status` LIKE '%%' AND ( `outtime` >= 0  ) ORDER BY d.outtime desc LIMIT 0,8   [ RunTime:0.0348s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Undefined variable: deviceInfo /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/bcfb2f41645ecc39f92305e335d6ec8d.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2018-05-14T12:40:50+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0384s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0379s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0455s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0437s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `pub_setmeal` [ RunTime:0.0511s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  LIMIT 1   [ RunTime:0.0762s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0394s ]
+SQL: SELECT s.*,admin.name FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  ORDER BY s.addtime desc LIMIT 0,8   [ RunTime:0.0423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: remodel /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 275 行.
+NOTIC: [8] Undefined index: typename /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 276 行.
+NOTIC: [8] Undefined index: minmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 277 行.
+NOTIC: [8] Undefined index: maxmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 278 行.
+NOTIC: [8] Undefined index: flow /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 279 行.
+NOTIC: [8] Undefined index: describe /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 280 行.
+NOTIC: [8] Undefined index: mintime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 281 行.
+NOTIC: [8] Undefined index: maxtime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000837s ]
+
+[ 2018-05-14T12:40:54+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0392s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0605s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0393s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0397s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0434s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0428s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0437s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0395s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0411s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2018-05-14T12:42:06+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0398s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0392s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0392s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0419s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0459s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0532s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0406s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0408s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2018-05-14T12:42:23+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/edit/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0284s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0344s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0429s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0286s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0293s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2018-05-14T12:42:30+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0577s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0449s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0654s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0538s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0407s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0423s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0483s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2018-05-14T12:45:44+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0355s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0382s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0353s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0354s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0352s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0356s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0397s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013845s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000905s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000966s ]
+
+[ 2018-05-14T12:46:44+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0303s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0290s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0395s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0283s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0313s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0289s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0289s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2018-05-14T12:46:53+08:00 ] ::1 /xzy/project/index.php/Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+
+[ 2018-05-14T12:46:53+08:00 ] ::1 /xzy/project/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2018-05-14T12:46:53+08:00 ] ::1 /xzy/project/index.php/Admin/Login/yzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2018-05-14T12:47:02+08:00 ] ::1 /xzy/project/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0327s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( name='admin' ) LIMIT 1   [ RunTime:0.0296s ]
+
+[ 2018-05-14T12:47:02+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0396s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0395s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0410s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0388s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2018-05-14T12:47:03+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0487s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0398s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0441s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0410s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0416s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-14T12:47:04+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0302s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0338s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0307s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0314s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0311s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0296s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-14T12:47:10+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0368s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0330s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0443s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0296s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0338s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0436s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0297s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0426s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-05-14T12:47:37+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0304s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0295s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0323s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0318s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0332s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0454s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0301s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2018-05-14T12:47:47+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0416s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0414s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0396s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0402s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0402s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0518s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0584s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0402s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0397s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2018-05-14T12:47:57+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0323s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0391s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0296s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0322s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0303s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0292s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2018-05-14T12:48:02+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0377s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0802s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.1045s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `pub_setmeal` [ RunTime:0.0433s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  LIMIT 1   [ RunTime:0.0393s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0422s ]
+SQL: SELECT s.*,admin.name FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  ORDER BY s.addtime desc LIMIT 0,8   [ RunTime:0.0353s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined index: remodel /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 275 行.
+NOTIC: [8] Undefined index: typename /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 276 行.
+NOTIC: [8] Undefined index: minmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 277 行.
+NOTIC: [8] Undefined index: maxmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 278 行.
+NOTIC: [8] Undefined index: flow /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 279 行.
+NOTIC: [8] Undefined index: describe /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 280 行.
+NOTIC: [8] Undefined index: mintime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 281 行.
+NOTIC: [8] Undefined index: maxtime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-05-14T12:48:18+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0305s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0316s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0319s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0323s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0326s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0307s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0298s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0292s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2018-05-14T12:50:47+08:00 ] ::1 /xzy/project/index.php/Admin/Setmeal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0439s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0439s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0516s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0462s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0428s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `pub_setmeal` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  LIMIT 1   [ RunTime:0.0397s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0419s ]
+SQL: SELECT s.*,admin.name FROM pub_setmeal s LEFT JOIN pub_adminuser admin ON s.auid=admin.id  ORDER BY s.addtime desc LIMIT 0,8   [ RunTime:0.0396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined index: remodel /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 275 行.
+NOTIC: [8] Undefined index: typename /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 276 行.
+NOTIC: [8] Undefined index: minmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 277 行.
+NOTIC: [8] Undefined index: maxmoney /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 278 行.
+NOTIC: [8] Undefined index: flow /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 279 行.
+NOTIC: [8] Undefined index: describe /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 280 行.
+NOTIC: [8] Undefined index: mintime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 281 行.
+NOTIC: [8] Undefined index: maxtime /Applications/MAMP/htdocs/xzy/project/Application/Runtime/Cache/Admin/99b35b70dc26d3d55c6a80bdbc3ca16a.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-05-14T12:50:50+08:00 ] ::1 /xzy/project/index.php/Admin/menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0294s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0285s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0327s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0299s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0284s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0286s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0286s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2018-05-14T12:51:28+08:00 ] ::1 /xzy/project/index.php/Admin/Menu/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0399s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0423s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0616s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0416s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0396s ]
+SQL: INSERT INTO `pub_admin_menu` (`pid`,`name`,`mca`) VALUES ('0','用户管理','Admin/Users') [ RunTime:0.0427s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2018-05-14T12:51:29+08:00 ] ::1 /xzy/project/index.php/Admin/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0298s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0295s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0283s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0294s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0518s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0340s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2018-05-14T12:51:59+08:00 ] ::1 /xzy/project/index.php/Admin/Menu/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0296s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0610s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0504s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0796s ]
+SQL: INSERT INTO `pub_admin_menu` (`pid`,`name`,`mca`) VALUES ('100','用户列表','Admin/Users/index') [ RunTime:0.0308s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2018-05-14T12:52:01+08:00 ] ::1 /xzy/project/index.php/Admin/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0482s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0634s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.1015s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0350s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0347s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0366s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2018-05-14T12:52:14+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0347s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0292s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0340s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0377s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0290s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0297s ]
+SQL: SELECT * FROM `pub_auth_rule` ORDER BY id is null,id  [ RunTime:0.0305s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-05-14T12:52:36+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0353s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0432s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0354s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0398s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0362s ]
+SQL: INSERT INTO `pub_auth_rule` (`pid`,`title`,`name`) VALUES ('0','用户管理','Admin/Users') [ RunTime:0.0362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2018-05-14T12:52:37+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0315s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0294s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0288s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0299s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0365s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0301s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `pub_auth_rule` ORDER BY id is null,id  [ RunTime:0.0317s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-05-14T12:53:03+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0384s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0357s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0361s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0361s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0404s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0358s ]
+SQL: INSERT INTO `pub_auth_rule` (`pid`,`title`,`name`) VALUES ('70','用户列表','Admin/Users/index') [ RunTime:0.0359s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2018-05-14T12:53:04+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0297s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0288s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0318s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0306s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0328s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `pub_auth_rule` ORDER BY id is null,id  [ RunTime:0.0302s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2018-05-14T12:53:10+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0414s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0432s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0392s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0412s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0427s ]
+SQL: SELECT * FROM `pub_auth_group`  [ RunTime:0.0466s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2018-05-14T12:53:13+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/rule_group/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0386s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0284s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0644s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0467s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0524s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0284s ]
+SQL: SELECT * FROM `pub_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0283s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0327s ]
+SQL: SELECT * FROM `pub_auth_rule` ORDER BY id is null,id  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2018-05-14T12:53:16+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/rule_group/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0321s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0510s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0293s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69') AND `type` = 1 AND `status` = 1  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0288s ]
+NOTIC: [2] trim() expects parameter 1 to be string, array given /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/BaseModel.class.php 第 32 行.
+SQL: UPDATE `pub_auth_group` SET `id`='1',`rules`='1,2,54,3,4,55,56,57,58,59,60,61,62,63,64,66,67,68,69,70,71' WHERE `id` = 1 [ RunTime:0.0313s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2018-05-14T12:53:17+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0385s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0385s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0403s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0398s ]
+SQL: SELECT * FROM `pub_auth_group`  [ RunTime:0.0382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2018-05-14T12:53:20+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/rule_group/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0306s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0302s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0288s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0295s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0290s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0288s ]
+SQL: SELECT * FROM `pub_auth_group` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0294s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0467s ]
+SQL: SELECT * FROM `pub_auth_rule` ORDER BY id is null,id  [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2018-05-14T12:53:23+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/rule_group/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0401s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0392s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0388s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0556s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0390s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0426s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0397s ]
+NOTIC: [2] trim() expects parameter 1 to be string, array given /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/BaseModel.class.php 第 32 行.
+SQL: UPDATE `pub_auth_group` SET `id`='8',`rules`='55,56,57,61,62,63,64,66,67,68,69,70,71' WHERE `id` = 8 [ RunTime:0.0393s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2018-05-14T12:53:24+08:00 ] ::1 /xzy/project/index.php/Admin/Rule/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0355s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0352s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0372s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0380s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0439s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group` [ RunTime:0.0352s ]
+SQL: SELECT * FROM `pub_auth_group`  [ RunTime:0.0363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2018-05-14T12:53:30+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0306s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0289s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0297s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0309s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0291s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0294s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/UsersController.class.php 第 44 行.
+NOTIC: [2] array_filter() expects parameter 1 to be array, null given /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/UsersController.class.php 第 49 行.
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/CommonController.class.php 第 58 行.
+ERR: 1146:Table 'bluetooth.pub_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_users`
+ERR: 1146:Table 'bluetooth.pub_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_users`
+
+[ 2018-05-14T12:55:04+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0295s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0292s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0309s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0283s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/UsersController.class.php 第 44 行.
+NOTIC: [2] array_filter() expects parameter 1 to be array, null given /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/UsersController.class.php 第 49 行.
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/CommonController.class.php 第 58 行.
+ERR: 1146:Table 'bluetooth.pub_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_users`
+ERR: 1146:Table 'bluetooth.pub_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_users`
+
+[ 2018-05-14T12:56:17+08:00 ] ::1 /xzy/project/index.php/Admin/Adminuser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0408s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0469s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0396s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0443s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0572s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0442s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) LIMIT 1   [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0423s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE `name` LIKE '%%' AND `appid` LIKE '%%' AND `appsecret` LIKE '%%' AND `shopnum` LIKE '%%' AND `company` LIKE '%%' AND ( `addtime` >= 0  ) ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.0427s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
