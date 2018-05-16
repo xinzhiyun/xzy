@@ -118,8 +118,9 @@ var charge = new Vue({
 							// 发送数据给设备
 							sendData(charge.connectid, res, function(res){
 								if(res.status === 'ok'){
+									noticeFn({text: '充值成功！'});
 									// 支付成功
-									location.href = origin + pathname + '?done';
+									// location.href = origin + pathname + '?done';
 
 								}else if(res.status === 'fail'){
 									noticeFn({text: '发送数据出错！'});

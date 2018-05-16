@@ -189,7 +189,8 @@
 			            Bytes[13] = 0x00;
 
 			            console.log('hex8: ',hex8);
-						// callback(Bytes);
+
+						callback(Bytes);
 					}else{
 						// 发送的数据有误
 						noticeFn({text: res.msg});
@@ -276,10 +277,10 @@
             // 转为8位16进制数
             hex = zero8.substr(0,zero8.length - hex.length) + hex;
             for(var i=0; i<hex.length+1; i++){
-                arr.push(hex.substr(0, 2));
+                arr.push('0x' + hex.substr(0, 2));
                 hex = hex.substr(2,);
             }
-            arr.push(hex.substr(-2));
+            arr.push('0x' + hex.substr(-2));
             return arr;
         }
 	</script>
