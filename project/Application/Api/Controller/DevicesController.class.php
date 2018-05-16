@@ -21,7 +21,7 @@ class DevicesController extends Controller
             //实例化设备表
             $device = M('devices');
             //接受mac数据
-            $data['mac'] = $mac = $_POST['mac'];
+            $data['mac'] = $mac = str_replace(":","",$_POST['mac']);
             $data['product_id'] = $_POST['id'];
 
             //查看数据库是否已存在该设备
@@ -51,8 +51,10 @@ class DevicesController extends Controller
                     //调用微信接口自动生成设备号
                     $url = "https://api.weixin.qq.com/device/getqrcode?access_token=".$access_token."&product_id=".$product_id;
 
+
                     //模拟url请求
                     $result = $this->https_request($url);
+
 
                     //验证是否请求成功
                     if (json_decode($result,true)['base_resp']['errmsg'] == "ok" ) {
@@ -74,21 +76,20 @@ class DevicesController extends Controller
                                 "close_strategy": "1", 
                                 "conn_strategy": "1", 
                                 "crypt_method": "0", 
-                                "auth_ver": "1", 
+                                "auth_ver": "0", 
                                 "manu_mac_pos": "-1", 
                                 "ser_mac_pos": "-2", 
                                 "ble_simple_protocol": "0"
                             }
                         ], 
-                        "op_type": "0", 
-                        "product_id": "'.$product_id.'" 
+                        "op_type": "1", 
                     }';
 
                     //模拟url请求
-                    $res = $this->https_request($url,$body);
+                    $res = $this->https_request($url1,$body);
 
                     //验证是否写入微信服务器
-                    if (json_decode($res,true)['base_resp']['errmsg'] == "ok" ) {
+                    if (json_decode($res,true)['resp'][0]['errmsg'] == "ok" ) {
                         //写入则入库
                         $deviceInfo = $device->add($data);
 
@@ -143,4 +144,5 @@ class DevicesController extends Controller
         curl_close($curl);
         return $output;
     }
+
 }
