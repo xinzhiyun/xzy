@@ -128,7 +128,7 @@
 				upTicket: function(ticket, callback){
 					// 发送 ticket 到后台
 					$.ajax({
-						url: '',
+						url: '{{:U("Home/Devices/unbind")}}',
 						type: 'post',
 						data: {ticket: ticket},
 						success: function(res){
