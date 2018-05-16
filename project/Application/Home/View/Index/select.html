@@ -135,7 +135,7 @@
 							console.log('res: ', res);
 							if(!res){
 								noticeFn({text: '查无数据'});
-								select.dList: [{deviceid: '查无数据', reday: ''}];
+								select.dList = [{deviceid: '查无数据', reday: ''}];
 								return
 							}
 							callback(res);
