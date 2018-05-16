@@ -100,10 +100,12 @@
 								console.log('getWXDeviceInfos_arr: ',arr);
 								select.getData(arr, function(res){
 									console.log('res: ',res);
-									select.dList.push({
-										deviceid: res.deviceid,
-										reday: res.reday
-									});
+									res.msg.forEach(function(item, index){
+										select.dList.push({
+											deviceid: item.deviceid,
+											reday: item.reday
+										});
+									})
 								})
 							})
 						}else{
@@ -121,7 +123,7 @@
 			methods: {
 				getData: function(deviceArr, callback){
 					$.ajax({
-						url: '{{:U("Home/Index/select")}}',
+						url: '{{:U("Home/Index/getSelect")}}',
 						data: {deviceList: deviceArr},
 						type: 'post',
 						success: function(res){
