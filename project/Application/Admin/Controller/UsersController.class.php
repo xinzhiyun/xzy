@@ -32,85 +32,37 @@ class UsersController extends CommonController
      */
     public function index()
     {
-        // 搜索功能
-        if(trim(I('post.address'))){
-            $map['d.address'] = array('like','%'.trim(I('post.address')).'%');
+        if(I('post.open_id')){
+            $map['open_id']=array('like','%'.trim(I('post.open_id')).'%');
         }
-        trim(I('post.nickname')) ? $map['w.nickname'] = array('like','%'.trim(I('post.nickname')).'%'): '';
-        trim(I('post.device_code')) ? $map['d.device_code'] = array('like','%'.trim(I('post.device_code')).'%'): '';
-        trim(I('post.phone')) ? $map['d.phone'] = array('like','%'.trim(I('post.phone')).'%'): '';
-        trim(I('post.login_ip')) ? $map['u.login_ip'] = array('like','%'.trim(I('post.login_ip')).'%'): '';
-        // 删除数组中为空的值
-        $map = array_filter($map, function ($v) {
-            if ($v != "") {
-                return true;
-            }
-            return false;
-        });
-        $minupdatetime = strtotime(trim(I('post.mincreated_at')));
-        $maxupdatetime = strtotime(trim(I('post.maxcreated_at')));
-        if (!empty($maxupdatetime) && !empty($maxupdatetime)) {
-            $map['u.created_at'] = array(array('egt',$minupdatetime),array('elt',$maxupdatetime+24*60*60));
-        }
-        // if (empty($maxupdatetime) && $maxupdatetime < 0) {
-        //     $map['u.created_at'] = array(array('egt',$minupdatetime));
-        // }
-        if($this->get_level()){
-            $map['bd.vid'] = $_SESSION['adminuser']['id'];
 
+        if(I('post.nickname')){
+            $map['nickname']=array('like','%'.trim(I('post.nickname')).'%');
         }
-        $user = D('users');
-        // PHPExcel 导出数据 
-        if (I('output') == 1) {
-            $data = $user
-            ->where($map)
-            ->alias('u')
-            ->join('__WECHAT__ w ON u.open_id=w.open_id', 'LEFT')
-            ->join('__CURRENT_DEVICES__ cd ON u.id=cd.uid', 'LEFT')
-            ->join('__DEVICES__ d ON cd.did=d.id', 'LEFT')
-            ->join('__BINDING__ bd ON d.id = bd.did ', 'LEFT')
-            ->field('u.id,w.nickname,d.device_code,d.phone,d.address,u.login_time,u.login_ip,d.updatetime')
-            ->order('u.created_at desc')
-            ->select();
-            $arr = ['updatetime'=>['date','Y-m-d H:i:s'],'login_time'=>['date','Y-m-d H:i:s']];
-            $data = replace_array_value($data,$arr);
-            $filename = '用户列表数据';
-            $title = '用户列表';
-            $cellName = ['用户id','姓名','当前设备id','手机号','地址','最后登录时间','登录IP','更新日期'];
-            // dump($data);die;
-            $myexcel = new \Org\Util\MYExcel($filename,$title,$cellName,$data);
-            $myexcel->output();
-            return ;
-        }        
 
-        $total = $user
-            ->where($map)
-            ->alias('u')
-            ->join('__WECHAT__ w ON u.open_id=w.open_id', 'LEFT')
-            ->join('__CURRENT_DEVICES__ cd ON u.id=cd.uid', 'LEFT')
-            ->join('__DEVICES__ d ON cd.did=d.id', 'LEFT')
-            ->join('__BINDING__ bd ON d.id = bd.did ', 'LEFT')
-            ->field('d.device_code,d.name,d.address,d.phone,w.*,u.*,cd.uid,cd.did,d.updatetime')
-            ->count();
-        $page  = new \Think\Page($total,10);
+        if(I('post.address')){
+            $map['address']=array('like','%'.trim(I('post.address')).'%');
+        }
+
+        if(I('post.sex')){
+            $map['sex']=array('like','%'.trim(I('post.sex')).'%');
+        }
+
+        $wechat = D('wechat');
+
+        $total =$wechat->where($map)->count();
+
+        $page  = new \Think\Page($total,8);
+        D('devices')->getPageConfig($page);
         $pageButton =$page->show();
 
-        $userlist = $user
-            ->where($map)
-            ->alias('u')
-            ->join('__WECHAT__ w ON u.open_id=w.open_id', 'LEFT')
-            ->join('__CURRENT_DEVICES__ cd ON u.id=cd.uid', 'LEFT')
-            ->join('__DEVICES__ d ON cd.did=d.id', 'LEFT')
-            ->join('__BINDING__ bd ON d.id = bd.did ', 'LEFT')
-            ->field('d.device_code,d.name,d.phone,w.*,u.*,d.address,cd.uid,cd.did,d.updatetime')
-//            ->field('d.device_code,.name,d.address,d.phone,u.*,w.nickname,cd.uid,cd.did,d.updatetime')
-            ->limit($page->firstRow.','.$page->listRows)
-            ->order('u.created_at desc')
-            ->select();
-            // ->getAll();
+        // dump($map);die;
+        $list = $wechat->where($map)
+                        ->order('id desc')
+                        ->limit($page->firstRow.','.$page->listRows)
+                        ->select();
 
-        $this->assign('list',$userlist);
-        $this->assign('button',$pageButton);
+        $this->assign('list',$list);
         $this->display();
     }
 

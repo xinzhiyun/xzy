@@ -5217,3 +5217,51 @@ ERR: 1054:Unknown column 'status' in 'where clause'
 ERR: 1054:Unknown column 'status' in 'where clause'
  [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
 
+[ 2018-05-16T12:54:15+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0432s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0438s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0408s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-16T12:54:16+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0407s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0401s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0408s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0449s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0436s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-16T13:02:03+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+ERR: 1146:Table 'bluetooth.pub_current_devices' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM pub_wechat u LEFT JOIN pub_wechat w ON u.open_id=w.open_id LEFT JOIN pub_current_devices cd ON u.id=cd.uid LEFT JOIN pub_devices d ON cd.did=d.id LEFT JOIN pub_binding bd ON d.id = bd.did   LIMIT 1  
+
+[ 2018-05-16T16:09:51+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+ERR: 1146:Table 'bluetooth.pub_current_devices' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM pub_wechat u LEFT JOIN pub_wechat w ON u.open_id=w.open_id LEFT JOIN pub_current_devices cd ON u.id=cd.uid LEFT JOIN pub_devices d ON cd.did=d.id LEFT JOIN pub_binding bd ON d.id = bd.did   LIMIT 1  
+
+[ 2018-05-16T16:23:42+08:00 ] ::1 /xzy/project/index.php/Admin/Users/user_info?open_id=ofcch1q5apxRnqXifHXaeI8RN6Rw
+ERR: 1146:Table 'bluetooth.pub_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_users`
+
