@@ -23,18 +23,50 @@ class DevicesController extends CommonController
         if ($auid == 1) {
             // $map 正常做搜索使用
             // 搜索功能
-            $map = array(
-            'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
-            'mac' => array('like','%'.trim(I('post.mac')).'%'),
-            'name' => array('like','%'.trim(I('post.name')).'%'),
-            'username' => array('like','%'.trim(I('post.username')).'%'),
-            'phone' => array('like','%'.trim(I('post.phone')).'%'),
-            'address' => array('like','%'.trim(I('post.address')).'%'),
-            'status' => array('like','%'.trim(I('post.status')).'%'),
-            );
+            if(I('post.device_code')){
+                $map['device_code']=array('like','%'.trim(I('post.device_code')).'%');
+            }
+
+            if(I('post.mac')){
+                $map['mac']=array('like','%'.trim(I('post.mac')).'%');
+            }
+
+            if(I('post.name')){
+                $map['name']=array('like','%'.trim(I('post.name')).'%');
+            }
+
+            if(I('post.username')){
+                $map['username']=array('like','%'.trim(I('post.username')).'%');
+            }
+
+            if(I('post.phone')){
+                $map['phone']=array('like','%'.trim(I('post.phone')).'%');
+            }
+
+            if(I('post.address')){
+                $map['address']=array('like','%'.trim(I('post.address')).'%');
+            }
+
+            if(I('post.status')){
+                $map['status']=array('like','%'.trim(I('post.status')).'%');
+            }
+
+            // $map = array(
+            //     'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
+            //     'mac' => array('like','%'.trim(I('post.mac')).'%'),
+            //     'name' => array('like','%'.trim(I('post.name')).'%'),
+            //     'username' => array('like','%'.trim(I('post.username')).'%'),
+            //     'phone' => array('like','%'.trim(I('post.phone')).'%'),
+            //     'address' => array('like','%'.trim(I('post.address')).'%'),
+            //     'status' => array('like','%'.trim(I('post.status')).'%'),
+            // );
+
             // 到期时间
-            $minouttime = strtotime(trim(I('post.minouttime')))?:0;
-            $maxouttime = strtotime(trim(I('post.maxouttime')))?:-1;
+
+            $minouttime = strtotime(trim(I('post.minouttime')))?:false;
+            $maxouttime = strtotime(trim(I('post.maxouttime')))?:false;
+
+
             if (is_numeric($maxouttime)) {
                 $map['outtime'] = array(array('egt',$minouttime),array('elt',$maxouttime));
             }
@@ -42,14 +74,13 @@ class DevicesController extends CommonController
                 $map['outtime'] = array(array('egt',$minouttime));
             }
             // 最后访问时间
-            $minlasttime = strtotime(trim(I('post.minlasttime')))?:0;
-            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:-1;
             if (is_numeric($maxlasttime)) {
-                $map['outtime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
+                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxouttime));
             }
             if ($maxlasttime < 0) {
-                $map['outtime'] = array(array('egt',$minlasttime));
+                $map['lasttime'] = array(array('egt',$minlasttime));
             }
+
             // 删除数组中为空的值
             $map = array_filter($map, function ($v) {
                 if ($v != "") {
@@ -70,33 +101,64 @@ class DevicesController extends CommonController
 
             // dump($map);die;
             $list = $devices->where($map)
-                            ->limit($page->firstRow.','.$page->listRows)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
                             ->field("d.*,admin.name")
                             ->order('d.outtime desc')
+                            ->limit($page->firstRow.','.$page->listRows)
                             ->select(); 
             // dump($list);die;
 
 
         } else {
             // 只查自己
-            // $map['auid'] = $auid;
+            $map['auid'] = $auid;
 
             // 搜索功能
-            $map = array(
-            'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
-            'mac' => array('like','%'.trim(I('post.mac')).'%'),
-            'name' => array('like','%'.trim(I('post.name')).'%'),
-            'username' => array('like','%'.trim(I('post.username')).'%'),
-            'phone' => array('like','%'.trim(I('post.phone')).'%'),
-            'address' => array('like','%'.trim(I('post.address')).'%'),
-            'status' => array('like','%'.trim(I('post.status')).'%'),
-            'auid' => $auid,
-            );
+            if(I('post.device_code')){
+                $map['device_code']=array('like','%'.trim(I('post.device_code')).'%');
+            }
+
+            if(I('post.mac')){
+                $map['mac']=array('like','%'.trim(I('post.mac')).'%');
+            }
+
+            if(I('post.name')){
+                $map['name']=array('like','%'.trim(I('post.name')).'%');
+            }
+
+            if(I('post.username')){
+                $map['username']=array('like','%'.trim(I('post.username')).'%');
+            }
+
+            if(I('post.phone')){
+                $map['phone']=array('like','%'.trim(I('post.phone')).'%');
+            }
+
+            if(I('post.address')){
+                $map['address']=array('like','%'.trim(I('post.address')).'%');
+            }
+
+            if(I('post.status')){
+                $map['status']=array('like','%'.trim(I('post.status')).'%');
+            }
+
+            // $map = array(
+            //     'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
+            //     'mac' => array('like','%'.trim(I('post.mac')).'%'),
+            //     'name' => array('like','%'.trim(I('post.name')).'%'),
+            //     'username' => array('like','%'.trim(I('post.username')).'%'),
+            //     'phone' => array('like','%'.trim(I('post.phone')).'%'),
+            //     'address' => array('like','%'.trim(I('post.address')).'%'),
+            //     'status' => array('like','%'.trim(I('post.status')).'%'),
+            // );
+
             // 到期时间
-            $minouttime = strtotime(trim(I('post.minouttime')))?:0;
-            $maxouttime = strtotime(trim(I('post.maxouttime')))?:-1;
+
+            $minouttime = strtotime(trim(I('post.minouttime')))?:false;
+            $maxouttime = strtotime(trim(I('post.maxouttime')))?:false;
+
+
             if (is_numeric($maxouttime)) {
                 $map['outtime'] = array(array('egt',$minouttime),array('elt',$maxouttime));
             }
@@ -104,14 +166,13 @@ class DevicesController extends CommonController
                 $map['outtime'] = array(array('egt',$minouttime));
             }
             // 最后访问时间
-            $minlasttime = strtotime(trim(I('post.minlasttime')))?:0;
-            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:-1;
             if (is_numeric($maxlasttime)) {
-                $map['outtime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
+                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxouttime));
             }
             if ($maxlasttime < 0) {
-                $map['outtime'] = array(array('egt',$minlasttime));
+                $map['lasttime'] = array(array('egt',$minlasttime));
             }
+
             // 删除数组中为空的值
             $map = array_filter($map, function ($v) {
                 if ($v != "") {
@@ -132,12 +193,13 @@ class DevicesController extends CommonController
 
             // dump($map);die;
             $list = $devices->where($map)
-                            ->limit($page->firstRow.','.$page->listRows)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
                             ->field("d.*,admin.name")
                             ->order('d.outtime desc')
-                            ->select();
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->select(); 
+            // dump($list);die;
 
         }
 
