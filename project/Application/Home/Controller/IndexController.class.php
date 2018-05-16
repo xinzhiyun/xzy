@@ -235,7 +235,6 @@ class IndexController extends Controller
         $this->assign('weixin',$openId_ifno);
         $this->assign('openid',$_SESSION['openid']);
         $this->display();
-        $this->display();
     }
 
 
