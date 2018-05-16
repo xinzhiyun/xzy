@@ -111,7 +111,6 @@ class WechatController extends Controller
                 "name":"查询",
                 "type":"view",
                 "url":"http://blue.dianqiukj.com/index.php/Home/Index/select.html?auid='.$auid.'"
-                
             }],
 
             "button":[{
