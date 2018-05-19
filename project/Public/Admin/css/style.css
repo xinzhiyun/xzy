@@ -20,6 +20,7 @@ html, body {
 .fl{
 	float: left;
 }
+#navbar {display: none;}
 .bodyBg{
 	background: #fff;
 }
