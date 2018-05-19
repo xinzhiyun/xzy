@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/xzy/project/Public/Admin/css/style.css">
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <script type="text/javascript" src="/xzy/project/Public/Admin/js/jquery.min.js"></script>
+    <script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
+    <!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <style type="text/css">
         .logo:link {
             color: #fff;
@@ -131,13 +134,13 @@
             <div class="titleBar">用户管理/<span>用户列表</span></div>
             <form class="form-search" action="/xzy/project/index.php/Admin/Users/index" method="post">
                 <span class="select-box">open_id:
-                    <input type="text" class="input-medium nickname" name="open_id" placeholder="请输入open_id" style="width: 100px;"/ >
+                    <input type="text" class="input-medium open_id" name="open_id" placeholder="请输入open_id" style="width: 100px;"/ >
                 </span>
                 <span class="select-box">微信昵称:
-                    <input type="text" class="input-medium device_code" name="nickname" placeholder="请输入微信昵称" style="width: 100px;"/ >
+                    <input type="text" class="input-medium nickname" name="nickname" placeholder="请输入微信昵称" style="width: 100px;"/ >
                 </span>
                 <span class="select-box">性别:
-                    <select class="select status" size="1" name="sex" style="width: 100px;">
+                    <select class="select sex" size="1" name="sex" style="width: 100px;">
                         <option value="" selected>- 请选择 -</option>
                         <option value="1">男</option>
                         <option value="2">女</option>
@@ -204,12 +207,7 @@
                 
                  /**************** 搜索关键字保留 -- 开始 ******************/
                     var srearchInfo = {};
-                    var nickname, device_code, phone, address, login_ip, date_start,
-                    date_end;
-                    /**
-                     * nickname：昵称, device_code：设备编号, phone：手机号码, address：地址, 
-                     * login_ip：登录IP, date_start：开始时间, date_end：结束时间
-                     */
+                    var nickname, open_id, address, sex;
                     // 点击搜索
                     $("button[name='search']").click(function(){
                         setSearchWord();
@@ -218,20 +216,14 @@
                         sessionStorage.setItem('search', '');   // 初始化
 
                         nickname = $('.nickname').val();
-                        device_code = $('.device_code').val();
-                        phone = $('.phone').val();
+                        open_id = $('.open_id').val();
                         address = $('.address').val();
-                        login_ip = $('.login_ip').val();
-                        date_start = $('#date-start').val();
-                        date_end = $('#date-end').val();
-                        
+                        sex = $('.sex>option:selected').val();
+
                         srearchInfo['nickname'] = nickname;
-                        srearchInfo['device_code'] = device_code;
-                        srearchInfo['phone'] = phone;
+                        srearchInfo['open_id'] = open_id;
                         srearchInfo['address'] = address;
-                        srearchInfo['login_ip'] = login_ip;
-                        srearchInfo['mintime'] = date_start;
-                        srearchInfo['maxtime'] = date_end;
+                        srearchInfo['sex'] = sex;
 
                         sessionStorage.setItem('search', JSON.stringify(srearchInfo));
                     }
@@ -241,13 +233,11 @@
                         if($('.form-search').length){
                             // console.log(srearchInfo)
                             $('.nickname').val(srearchInfo['nickname']);
-                            $('.device_code').val(srearchInfo['device_code']);
-                            $('.phone').val(srearchInfo['phone']);
                             $('.address').val(srearchInfo['address']);
-                            $('.login_ip').val(srearchInfo['login_ip']);
-                            $('#date-start').val(srearchInfo['mintime']);
-                            $('#date-end').val(srearchInfo['maxtime']);
-
+                            $('.open_id').val(srearchInfo['open_id']);
+                            if(srearchInfo['sex']){
+                                $('.sex>option').eq(srearchInfo['sex'])[0].selected = 'true';
+                            }
                             setTimeout(function(){
                                 sessionStorage.setItem('search', '');   // 初始化
                             },500)
@@ -278,9 +268,6 @@
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>
-	<script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
-	<!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <script type="text/javascript"> 
     	var ua = navigator.userAgent;
     	var isOpera = ua.indexOf("Opera") > -1;

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>   <!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -109,6 +109,10 @@
             </div>
         </div>
     </div>
+<style>
+   input[type='password'] {
+    padding: 14px 5px !important; 
+</style>
 <div class="content">
     <div class="navBox sidebar-collapse fl" id="nav">
     <ul class="nav nav-list">
@@ -131,185 +135,53 @@
 </div>
     <div class="row-fluid fl" id="main">
         <div class="tableBox">
-            <div class="titleBar">后台管理/<span>客户列表</span></div>
-            <form class="form-search" action="/xzy/project/index.php/Admin/Adminuser/index" method="post">
-                <span class="select-box">账号:
-                    <input type="text" class="input-medium name" name="name" placeholder="请输入账号" style="width: 100px;"/ >
-                </span>
-                <span class="select-box">APPID:
-                    <input type="text" class="input-medium appid" name="appid" placeholder="请输入APPID" style="width: 100px;"/ >
-                </span>
-                <span class="select-box">APPsecret:
-                    <input type="text" class="input-medium appsecret" name="appsecret" placeholder="请输入APPsecret" style="width: 100px;"/ >
-                </span>
-                <span class="select-box">商户号:
-                    <input type="text" class="input-medium shopnum" name="shopnum" placeholder="请输入商户号" style="width: 100px;"/ >
-                </span>
-                <span class="select-box">公司:
-                    <input type="text" class="input-medium company" name="company" placeholder="请输入公司" style="width: 100px;"/ >
-                </span>             
-                <span class="select-box" style="display: inline-block;position:relative">时间:
-                    <input type="text" id="date-start" class="input-medium form-control" name="minaddtime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxaddtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
-                </span>
-                
-                <div class="submitBtn">
-                    <!-- <button type="submit" name="output" value="1" class="btn fr mbtn" style="float: left;color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe62f;</i> 导出</button> -->
-                    <button type="reset" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#x1002;</i> 重置</button>
-                    <button type="submit" name="search" value="1" class="btn fr mbtn" style="color: #8f0911;background-color: #eee;"><i class="layui-icon">&#xe615;</i> 查找</button>
-                </div>               
-            </form>
-
-            <table class="table table-striped table-bordered">
-                <thead>
-                <tr>
-                    <th>客户ID</th>
-                    <th>账号</th>
-                    <th>APPID</th>
-                    <th>APPsecret</th>
-                    <th>商户号</th>
-                    <th>商户号密码</th>
-                    <th>公司</th>
-                    <th>加入时间</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <?php if(!empty($list)): if(is_array($list)): foreach($list as $key=>$vo): ?><tr>
-                        <td><?php echo ($vo["id"]); ?></td>
-                        <td><?php echo ($vo["name"]); ?></td>
-                        <td><?php echo ($vo["appid"]); ?></td>
-                        <td><?php echo ($vo["appsecret"]); ?></td>
-                        <td><?php echo ($vo["shopnum"]); ?></td>
-                        <td><?php echo ($vo["shoppwd"]); ?></td>
-                        <td><?php echo ($vo["company"]); ?></td>
-                        <td><?php echo (date('Y-m-d H:i:s',$vo["addtime"])); ?></td>
-                        <td>
-                            <a href="/xzy/project/index.php/Admin/Adminuser/edit/id/<?php echo ($vo["id"]); ?>">编辑</a>
-                            <a href="javascript:void(0)" url="/xzy/project/index.php/Admin/Adminuser/del/id/<?php echo ($vo["id"]); ?>" class="_del">删除</a>
-                            <a href="javascript:void(0)" appid="<?php echo ($vo["appid"]); ?>" appsecret="<?php echo ($vo["appsecret"]); ?>" auid="<?php echo ($vo["id"]); ?>" class="makeMenu">生成微信菜单</a>
-
-                        </td>
-                    </tr><?php endforeach; endif; ?>
-                    <?php else: ?>
-                    <tr>
-                        <td colspan="10">查无数据</td>
-                    </tr><?php endif; ?>
-                </tbody>
-            </table>
-            <div class="pagination">
-                <ul>
-                    <?php echo ($button); ?>
-                </ul>
+            <div class="titleBar">后台管理/<span>添加客户</span></div>
+            <div class="formBox">
+                <form class="" action="/xzy/project/index.php/Admin/Adminuser/add" method="post" id="_formTable">
+                    <div class="control-group">
+                        <span>账户名<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="name" placeholder="请输入登录账号...">
+                        <div style="font-size: 12px;text-indent: 38%;margin-top:-10px;color: red">(账户名将不可修改，请确认后再提交)</div>
+                    </div>
+                    <div class="control-group">
+                        <span>密码<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="password" name="password" placeholder="请输入登录密码...">
+                    </div>
+                    <div class="control-group">
+                        <span>确认密码<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="password" name="repassword" placeholder="请再次输入密码...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信APPID<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="appid" placeholder="请输入微信APPID称...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信APPsecret<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="appsecret" placeholder="请输入微信APPsecret...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信商户号<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="shopnum" placeholder="请输入微信商户号...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信商户号密码<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="shoppwd" placeholder="请输入微信商户号密码...">
+                    </div>
+                    <div class="control-group">
+                        <span>公司名称<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="text" name="company" placeholder="请输入公司名称...">
+                    </div>
+                    
+                    
+                    <!-- <div class="btn-groups">
+                        <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
+                    </div> -->
+                    <div>
+                        <input type="submit" name="">
+                    </div>
+                </form>
             </div>
-            <script src="/xzy/project/Public/Home/js/public.js"></script>
-            <script>
-
-                
-                $('.pagination ul a').unwrap('div').wrap('<li></li>');
-                $('.pagination ul span').wrap('<li class="active"></li>')
-
-                if(window.location.search){
-                    $('input[name=name]').val(decodeURI(window.location.search.slice(6)))
-                }
-                //del
-                //提示
-                function tip(tip,title,fn){
-                    layui.use('layer', function(){
-                        var layer = layui.layer;
-                        layer.confirm(tip, {icon: 3, title:title}, function(index){
-                            fn&&fn()                
-                        });
-                    });
-                }
-                $('._del').click(function(){
-                    var This = this
-                    tip('确定删除？','提示',function(){
-                        window.location.href = $(This).attr('url').trim()
-                    })
-                    return false
-                })
-
-                /**************** 搜索关键字保留 -- 开始 ******************/
-                    var srearchInfo = {};
-                    var name, appsecret, shopnum, appid, company,
-                    date_start, date_end;
-                    // 点击搜索
-                    $("button[name='search']").click(function(){
-                        setSearchWord();
-                    })
-                    function setSearchWord(){
-                        sessionStorage.setItem('search', '');   // 初始化
-
-                        shopnum = $('.shopnum').val(),
-                        name = $('.name').val(),
-                        appsecret = $('.appsecret').val(),
-                        appid = $('.appid').val(),
-                        company = $('.company').val(),
-                        date_start = $('#date-start').val(),
-                        date_end = $('#date-end').val();
-
-                        srearchInfo['name'] = name;
-                        srearchInfo['shopnum'] = shopnum;
-                        srearchInfo['appsecret'] = appsecret;
-                        srearchInfo['appid'] = appid;
-                        srearchInfo['company'] = company;
-                        srearchInfo['mintime'] = date_start;
-                        srearchInfo['maxtime'] = date_end;
-                        sessionStorage.setItem('search', JSON.stringify(srearchInfo));
-                    }
-                    // 搜索关键字保留
-                    if(sessionStorage.getItem('search')){
-                        var srearchInfo = JSON.parse(sessionStorage.getItem('search'));
-                        if($('.form-search').length){
-                            // console.log(srearchInfo)
-                            console.log(srearchInfo['mintime']);
-                            console.log(srearchInfo['maxtime']);
-
-                            $('.name').val(srearchInfo['name']);
-                            $('.shopnum').val(srearchInfo['shopnum']);
-                            $('.appsecret').val(srearchInfo['appsecret']);
-                            $('.appid').val(srearchInfo['appid']);
-                            $('.company').val(srearchInfo['company']);
-                            $('#date-start').val(srearchInfo['mintime']);
-                            $('#date-end').val(srearchInfo['maxtime']);
-
-                            setTimeout(function(){
-                                sessionStorage.setItem('search', '');   // 初始化
-                            },500)
-                        }
-                    }
-                    // 重置搜索结果
-                    $('button[type="reset"]').click(function(){
-                        location.href = '<?php echo U("Admin/Adminuser/index");?>';
-
-                    })
-                    
-                /**************** 搜索关键字保留 -- 结束 ******************/
-
-                /* 生成微信菜单 */
-                $(".makeMenu").click(function(){
-                    var appid = $(this).attr('appid');
-                    var appsecret = $(this).attr('appsecret');
-                    var auid = $(this).attr('auid');
-                    
-                    $.ajax({
-                        url:"<?php echo U('Home/Wechat/create_menu');?>",
-                        type:"post",
-                        data:{appid:appid,appsecret:appsecret,auid:auid},
-                        success:function(res){
-                            alert('生成成功');
-                        },
-
-                        error:function(res){
-                            alert('生成失败');
-                        }
-                    });
-    
-                });
-
-            </script>
         </div>
-        <!-- footer part -->
             <div class="row-fluid" id="footer">
         <div class="span8 offset2">
             <p>©2017 - 2018 点球电子 </p>
@@ -457,3 +329,94 @@
 </html>
     </div>
 </div>
+<!-- <script src="/xzy/project/Public/Home/js/public.js"></script>  -->
+<!-- <script>
+$(function(){
+    //验证
+    $('.oddbtn').on('click',function(){
+        var user = $('input[name=user]').val().trim();
+        var name = $('input[name=name]').val().trim();
+        var phone = $('input[name=phone]').val().trim();
+        var csphone = $('input[name="csphone"]').val().trim();
+        var email = $('input[name=email]').val().trim();
+        var address = $('textarea[name="detail"]').val().trim();
+        var idcard = $('input[name=idcard]').val().trim();
+
+        if(!user.trim()){
+            layuiHint('请输入登录账号');
+            return
+
+        }else if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(user)){
+            layuiHint('账户名不能输入特殊字符');
+            return
+        }
+
+        if(!name){
+            layuiHint('请输入昵称');
+            return
+
+        }else if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(name)){
+            layuiHint('用户昵称不能输入特殊字符');
+            return
+        }
+
+        if(!phone){
+            layuiHint('请输入手机号');
+            return
+
+        }else if(!/^1[3,4,5,6,7,8]\d{9}$/.test(phone)){
+            layuiHint('请输入正确的手机号码');
+            return
+        }
+
+        if(!csphone){
+            layuiHint('请输入客服电话');
+            return
+
+        }else if(!/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(csphone)){
+            layuiHint('请输入正确的客服电话');
+            return
+        }
+
+        if(!email){
+            layuiHint('请输入邮箱');
+            return
+
+        }else if(!/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(email.trim())){
+            layuiHint('请输入正确的email');
+            return
+        }
+
+        if($('#s_province').val()==""||$('#s_city').val()==""||$('#s_county').val()==""){
+            layuiHint('请把地址填写完整');    
+            return
+
+        }else{
+            $(".addressValue").val($('#s_province').val() + " " + $('#s_city').val() + " " + $('#s_county').val());
+        }
+
+        if(!address){
+            layuiHint('请输入详细地址！');
+            return
+
+        }else if(!/^[\w\-\u4e00-\u9fa5]{2,255}$/u.test(address.replace(/^(\s)|(\s*)/g,''))){
+            layuiHint('地址只能由中文、英文、数字组成！');
+            return
+        }
+
+        if(!idcard){
+            layuiHint('请输入身份证号码');
+            return
+
+        }else if(!/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|[xX])$/.test(idcard.trim())){
+            layuiHint('请输入正确的身份证号码');
+            return
+        }
+
+        $('#_formTable').submit();
+    })
+    //城市三级联动
+    _init_area();
+
+})
+</script> -->

@@ -1,0 +1,23 @@
+[ 2018-05-17T17:33:24+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=ecea866cf9476d79b05facdfa9131e4fa951b70a&timestamp=1526549604&nonce=869377945&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `pub_wechat` [ RunTime:0.0015s ]
+SQL: SELECT `id` FROM `pub_wechat` WHERE ( `open_id`="ofcch1hNCH9901LTNp7x8W8UAeMI" ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: INSERT INTO `pub_wechat` (`open_id`,`nickname`,`head`,`sex`,`area`,`address`) VALUES ('ofcch1hNCH9901LTNp7x8W8UAeMI','潘潘','http://thirdwx.qlogo.cn/mmopen/H2ibsRe8JzU2VYbsGhkjkUGqdN50QFHH6BvhqKhw8Xq8O0GeXqwR00hcg3okD6yUebianTkec4VSFMePs1uZqLIjYxHMbdDjzm/132','1','湖南','中国 湖南 长沙') [ RunTime:0.0044s ]
+
+[ 2018-05-17T17:33:25+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=17bb080f7675af076e9deb0ac52b5fe326ec6c0d&timestamp=1526549605&nonce=485042176&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
