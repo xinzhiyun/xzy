@@ -168,6 +168,7 @@
                     <th>APPsecret</th>
                     <th>商户号</th>
                     <th>商户号密码</th>
+                    <th>公众号原始ID</th>
                     <th>公司</th>
                     <th>加入时间</th>
                     <th>操作</th>
@@ -181,6 +182,7 @@
                         <td><?php echo ($vo["appsecret"]); ?></td>
                         <td><?php echo ($vo["shopnum"]); ?></td>
                         <td><?php echo ($vo["shoppwd"]); ?></td>
+                        <td><?php echo ($vo["original_id"]); ?></td>
                         <td><?php echo ($vo["company"]); ?></td>
                         <td><?php echo (date('Y-m-d H:i:s',$vo["addtime"])); ?></td>
                         <td>

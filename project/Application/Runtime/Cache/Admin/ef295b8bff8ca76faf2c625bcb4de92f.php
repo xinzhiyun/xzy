@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/xzy/project/Public/Admin/css/style.css">
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <script type="text/javascript" src="/xzy/project/Public/Admin/js/jquery.min.js"></script>
+    <script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
+    <!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <style type="text/css">
         .logo:link {
             color: #fff;
@@ -131,17 +134,17 @@
             <div class="titleBar">充值管理/<span>充值记录</span></div>
             <form class="form-search" action="/xzy/project/index.php/Admin/Flow/index" method="post">
                 <span class="select-box">流水号:
-                    <input type="text" class="input-medium typename" name="orderid" placeholder="请输入流水号" style="width: 100px;"/ >
+                    <input type="text" class="input-medium orderid" name="orderid" placeholder="请输入流水号" style="width: 100px;"/ >
                 </span>
                 <span class="select-box">设备编码:
-                    <input type="text" class="input-medium typename" name="device_code" placeholder="请输入设备编码" style="width: 100px;"/ >
+                    <input type="text" class="input-medium device_code" name="device_code" placeholder="请输入设备编码" style="width: 100px;"/ >
                 </span>
                 <!-- <span class="select-box">充值金额:
                     <input type="text" class="input-medium minmoney" name="minmoney" placeholder="" style="width: 60px;" / > ~ 
                     <input type="text" class="input-medium maxmoney" name="maxmoney" placeholder="" style="width: 60px;" / >
                 </span> -->
                 <span class="select-box">微信昵称:
-                    <input type="text" class="input-medium typename" name="nickname" placeholder="请输入微信昵称" style="width: 100px;"/ >
+                    <input type="text" class="input-medium nickname" name="nickname" placeholder="请输入微信昵称" style="width: 100px;"/ >
                 </span>
                 <span class="select-box" style="display: inline-block;position:relative">充值时间:
                     <input type="text" id="date-start" class="input-medium form-control" name="minaddtime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxaddtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
@@ -192,11 +195,7 @@
 
                  /**************** 搜索关键字保留 -- 开始 ******************/
                     var srearchInfo = {};
-                    var typename, date_start, date_end;
-                    /**
-                     * typename：设备型号,  
-                     * mintime：开始时间, maxtime：结束时间
-                     */
+                    var orderid, device_code, nickname, date_start, date_end;
                     // 点击搜索
                     $("button[name='search']").click(function(){
                         setSearchWord();
@@ -204,11 +203,15 @@
                     function setSearchWord(){
                         sessionStorage.setItem('search', '');   // 初始化
 
-                        typename = $('.typename').val();
+                        orderid = $('.orderid').val();
+                        device_code = $('.device_code').val();
+                        nickname = $('.nickname').val();
                         date_start = $('#date-start').val();
                         date_end = $('#date-end').val();
 
-                        srearchInfo['typename'] = typename;
+                        srearchInfo['orderid'] = orderid;
+                        srearchInfo['device_code'] = device_code;
+                        srearchInfo['nickname'] = nickname;
                         srearchInfo['mintime'] = date_start;
                         srearchInfo['maxtime'] = date_end;
 
@@ -219,7 +222,9 @@
                         var srearchInfo = JSON.parse(sessionStorage.getItem('search'));
                         if($('.form-search').length){
                             // console.log(srearchInfo)
-                            $('.typename').val(srearchInfo['typename']);
+                            $('.orderid').val(srearchInfo['orderid']);
+                            $('.device_code').val(srearchInfo['device_code']);
+                            $('.nickname').val(srearchInfo['nickname']);
                             $('#date-start').val(srearchInfo['mintime']);
                             $('#date-end').val(srearchInfo['maxtime']);
 
@@ -230,7 +235,7 @@
                     }
                     // 重置搜索结果
                     $('button[type="reset"]').click(function(){
-                        location.href = '<?php echo U("Admin/Product/index");?>';
+                        location.href = '<?php echo U("Admin/Flow/index");?>';
 
                     })
                     
@@ -253,9 +258,6 @@
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>
-	<script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
-	<!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <script type="text/javascript"> 
     	var ua = navigator.userAgent;
     	var isOpera = ua.indexOf("Opera") > -1;

@@ -1,0 +1,72 @@
+[ 2018-05-21T10:26:23+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0409s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0406s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0415s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0413s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T10:26:23+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0419s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0416s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0419s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0421s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0462s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T10:26:33+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0418s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0469s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0429s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0426s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0416s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0425s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T10:26:34+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0426s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0414s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0412s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0430s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0413s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0413s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+

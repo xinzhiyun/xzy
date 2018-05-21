@@ -1,0 +1,4 @@
+[ 2018-05-21T10:25:52+08:00 ] ::1 /xzy/project/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+

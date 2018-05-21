@@ -198,9 +198,6 @@
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>
-	<script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
-	<!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <script type="text/javascript"> 
     	var ua = navigator.userAgent;
     	var isOpera = ua.indexOf("Opera") > -1;
