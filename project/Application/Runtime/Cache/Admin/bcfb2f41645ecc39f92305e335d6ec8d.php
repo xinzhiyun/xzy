@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/xzy/project/Public/Admin/css/style.css">
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <script type="text/javascript" src="/xzy/project/Public/Admin/js/jquery.min.js"></script>
+    <script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
+    <!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <style type="text/css">
         .logo:link {
             color: #fff;
@@ -135,26 +138,26 @@
                         <input type="text" class="input-medium device_code" name="device_code" placeholder="请输入设备编码" style="width: 100px;"/ >
                     </span>
                         <span class="select-box">蓝牙Mac地址:
-                        <input type="text" class="input-medium name" name="mac" placeholder="请输入蓝牙Mac地址" style="width: 100px;"/ >
+                        <input type="text" class="input-medium mac" name="mac" placeholder="请输入蓝牙Mac地址" style="width: 100px;"/ >
                     </span>
                     <span class="select-box">运营人:
-                        <input type="text" class="input-medium dname" name="name" placeholder="请输入运营人" style="width: 100px;"/ >
+                        <input type="text" class="input-medium name" name="name" placeholder="请输入运营人" style="width: 100px;"/ >
                     </span>
                     <span class="select-box">用户姓名:
-                        <input type="text" class="input-medium dname" name="username" placeholder="请输入用户姓名" style="width: 100px;"/ >
+                        <input type="text" class="input-medium username" name="username" placeholder="请输入用户姓名" style="width: 100px;"/ >
                     </span>
 
                     <span class="select-box">用户电话:
                         <input type="text" class="input-medium phone" name="phone" placeholder="请输入用户电话" style="width: 100px;"/ >
                     </span>
                     <span class="select-box">用户地址:
-                        <input type="text" class="input-medium typename" name="address" placeholder="请输入用户地址" style="width: 100px;"/ >
+                        <input type="text" class="input-medium address" name="address" placeholder="请输入用户地址" style="width: 100px;"/ >
                     </span>
                     <span class="select-box" style="display: inline-block;position:relative">到期时间:
                         <input type="text" id="date-start" class="input-medium form-control" name="minouttime" placeholder="请选择到期时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxouttime" placeholder="请选择到期时间" style="width:76px;right: 0"/ >
                     </span>
                     <span class="select-box" style="display: inline-block;position:relative">最后访问时间:
-                        <input type="text" id="date-start" class="input-medium form-control" name="minlasttime" placeholder="请选择最后访问时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxlasttime" placeholder="请选择最后访问时间" style="width:76px;right: 0"/ >
+                        <input type="text" id="lasttime" class="input-medium form-control" name="minlasttime" placeholder="请选择最后访问时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="lasttimeend" class="input-medium form-control" name="maxlasttime" placeholder="请选择最后访问时间" style="width:76px;right: 0"/ >
                     </span>
                     <span class="select-box">绑定状态:
                         <select class="select status" size="1" name="status" style="width: 100px;">
@@ -191,7 +194,7 @@
                     <?php if(is_array($list)): foreach($list as $key=>$data): ?><tr>
                                     <td><?php echo ($key+1); ?></td>
                                     <td>
-                                        <a class="btn-link detail" href="/xzy/project/index.php/Admin/Devices/devices_detail.html#<?php echo ($data["device_code"]); ?>"><?php echo ($data["device_code"]); ?>
+                                        <a class="btn-link detail" href="/xzy/project/index.php/Admin/Devices/devices_detail?code=<?php echo ($data["device_code"]); ?>"><?php echo ($data["device_code"]); ?>
                                         </a>
                                     </td>
                                     
@@ -219,16 +222,48 @@
                 </div>
             </div>
             <script>
+                /**************** 按时间搜索 -- 开始 ******************/
+                    var newdate = new Date(),
+                    year = newdate.getFullYear(),
+                    month = (newdate.getMonth()+'').length == 1 
+                              ? '0' + (newdate.getMonth()+1)
+                              : newdate.getMonth()-0+1,
+                    date = (newdate.getDate()+'').length == 1 
+                              ? '0' + newdate.getDate()
+                              : newdate.getDate();
+                    var now = year +'-'+ month +'-'+ date;
+                    // console.log(year, month, date);
+                     // 开始时间
+                    var lasttime = $("#lasttime").datetimepicker({  
+                        format: 'YYYY-MM-DD',  
+                        locale: moment.locale('zh-cn'),
+                    }); 
+                    
+                    //结束时间
+                    var lasttimeend = $("#lasttimeend").datetimepicker({
+                        format: 'YYYY-MM-DD',  
+                        locale: moment.locale('zh-cn')
+                    }); 
+                     //动态设置最小值  
+                    lasttime.on('dp.change', function (e) {  
+                        lasttimeend.data('DateTimePicker').minDate(e.date);
+                        // $('#date-start').val(time);
+
+                    });  
+                    //动态设置最大值  
+                    lasttimeend.on('dp.change', function (e) { 
+                        lasttime.data('DateTimePicker').maxDate(e.date);
+                        // $('#date-end').val(time);  
+                        
+                    });
+                    // $("#date-start").datetimepicker('show');
+                    // $("#date-end").datetimepicker('show');
+
+                /**************** 按时间搜索 -- 结束 ******************/
                 /**************** 搜索关键字保留 -- 开始 ******************/
                     var srearchInfo = {};
-                    var device_code, name, is_bind, dname,phone,
-                    typename, date_start, date_end, status;
-                    /**
-                     * device_code: 设备编号, name：经销商名称, 
-                     * is_bind：是否绑定, dname：绑定的用户, 
-                     * typename：设备类型, status：设备状态, 
-                     * mintime：开始时间, maxtime：结束时间
-                     */
+                    var device_code, name, is_bind, mac, phone, address,
+                    username, date_start, date_end, lasttime, lasttimeend, status;
                     // 点击搜索
                     $("button[name='search']").click(function(){
                         setSearchWord();
@@ -238,27 +273,29 @@
 
                         device_code = $('.device_code').val();
                         name = $('.name').val();
-                        if($('.is_bind>option:selected').val()){
-                            is_bind = Number($('.is_bind>option:selected').val());
-                        }
                         if($('.status>option:selected').val()){
                             status = Number($('.status>option:selected').val())+1;
                         }
                         
-                        dname = $('.dname').val();
+                        mac = $('.mac').val();
+                        address = $('.address').val();
                         phone =$('.phone').val();
-                        typename = $('.typename').val();
+                        username = $('.username').val();
                         date_start = $('#date-start').val();
                         date_end = $('#date-end').val();
+                        lasttime = $('#lasttime').val();
+                        lasttimeend = $('#lasttimeend').val();
 
                         srearchInfo['device_code'] = device_code;
                         srearchInfo['name'] = name;
-                        srearchInfo['is_bind'] = is_bind;
-                        srearchInfo['dname'] = dname;
+                        srearchInfo['mac'] = mac;
+                        srearchInfo['address'] = address;
                         srearchInfo['phone'] = phone;
-                        srearchInfo['typename'] = typename;
+                        srearchInfo['username'] = username;
                         srearchInfo['mintime'] = date_start;
                         srearchInfo['maxtime'] = date_end;
+                        srearchInfo['lasttime'] = lasttime;
+                        srearchInfo['lasttimeend'] = lasttimeend;
                         srearchInfo['status'] = status;
                         sessionStorage.setItem('search', JSON.stringify(srearchInfo));
                     }
@@ -268,20 +305,19 @@
                         if($('.form-search').length){
                             // console.log(srearchInfo)
                             $('.device_code').val(srearchInfo['device_code']);
-                            if(srearchInfo['is_bind']){
-                                $('.is_bind>option').eq(srearchInfo['is_bind'])[0].selected = true;
-                            }
                             if(srearchInfo['status']){
                                 $('.status>option').eq(srearchInfo['status'])[0].selected = true;
                             }
                             
                             $('.name').val(srearchInfo['name']);
-
                             $('.phone').val(srearchInfo['phone']);
-                            $('.dname').val(srearchInfo['dname']);
-                            $('.typename').val(srearchInfo['typename']);
+                            $('.mac').val(srearchInfo['mac']);
+                            $('.address').val(srearchInfo['address']);
+                            $('.username').val(srearchInfo['username']);
                             $('#date-start').val(srearchInfo['mintime']);
                             $('#date-end').val(srearchInfo['maxtime']);
+                            $('#lasttime').val(srearchInfo['lasttime']);
+                            $('#lasttimeend').val(srearchInfo['lasttimeend']);
 
                             setTimeout(function(){
                                 sessionStorage.setItem('search', '');   // 初始化
@@ -290,7 +326,7 @@
                     }
                     // 重置搜索结果
                     $('button[type="reset"]').click(function(){
-                        location.href = '<?php echo U("Admin/Devices/devicesList");?>';
+                        location.href = '<?php echo U("Admin/Devices/index");?>';
 
                     })
                     
@@ -319,9 +355,6 @@
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>
-	<script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
-	<!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <script type="text/javascript"> 
     	var ua = navigator.userAgent;
     	var isOpera = ua.indexOf("Opera") > -1;

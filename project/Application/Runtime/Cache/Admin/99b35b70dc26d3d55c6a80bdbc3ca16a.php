@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/xzy/project/Public/Admin/css/style.css">
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <script type="text/javascript" src="/xzy/project/Public/Admin/js/jquery.min.js"></script>
+    <script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
+    <!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <style type="text/css">
         .logo:link {
             color: #fff;
@@ -136,13 +139,13 @@
                     <input type="text" class="input-medium maxmoney" name="maxmoney" placeholder="" style="width: 60px;" / >
                 </span>
                 <span class="select-box">套餐量（天）:
-                    <input type="text" class="input-medium flow" name="days" placeholder="请输入查询条件" style="width: 70px;" / >
+                    <input type="text" class="input-medium days" name="days" placeholder="请输入查询条件" style="width: 70px;" / >
                 </span>
                 <span class="select-box">套餐名称:
                     <input type="text" class="input-medium describe" name="describe" placeholder="请输入查询条件" style="width: 70px;" / >
                 </span>
                 <span class="select-box">设置人:
-                    <input type="text" class="input-medium describe" name="name" placeholder="请输入查询条件" style="width: 70px;" / >
+                    <input type="text" class="input-medium name" name="name" placeholder="请输入查询条件" style="width: 70px;" / >
                 </span>
                 <span class="select-box" style="display: inline-block;position:relative">时间:
                     <input type="text" id="date-start" class="input-medium form-control" name="minaddtime" placeholder="请选择时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxaddtime" placeholder="请选择时间" style="width:76px;right: 0"/ >
@@ -194,14 +197,8 @@
 
                 /**************** 搜索关键字保留 -- 开始 ******************/
                     var srearchInfo = {};
-                    var type, remodel, minmoney, maxmoney, 
-                        flow, describe, mintime, maxtime;
-                    /**
-                     * type: 产品类型, remodel：套餐模式, 
-                     * minmoney：最小金额, maxmoney：最大金额, 
-                     * flow：套餐量, describe：套餐名称, 
-                     * mintime：开始时间, maxtime：结束时间
-                     */
+                    var days, minmoney, maxmoney, 
+                        name, describe, mintime, maxtime;
                     // 点击搜索
                     $("button[name='search']").click(function(){
                         setSearchWord();
@@ -209,22 +206,18 @@
                     function setSearchWord(){
                         sessionStorage.setItem('search', '');
                         
-                        type = $('.prodtype').val();
-                        if($('select>option:selected').val()){
-                            remodel = Number($('select>option:selected').val())+1;
-                        }
                         minmoney = $('.minmoney').val();
                         maxmoney = $('.maxmoney').val();
-                        flow = $('.flow').val();
+                        days = $('.days').val();
+                        name = $('.name').val();
                         describe = $('.describe').val();
                         mintime = $('#date-start').val();
                         maxtime = $('#date-end').val();
 
-                        srearchInfo['type'] = type;
-                        srearchInfo['remodel'] = remodel;
                         srearchInfo['minmoney'] = minmoney;
                         srearchInfo['maxmoney'] = maxmoney;
-                        srearchInfo['flow'] = flow;
+                        srearchInfo['days'] = days;
+                        srearchInfo['name'] = name;
                         srearchInfo['describe'] = describe;
                         srearchInfo['mintime'] = mintime;
                         srearchInfo['maxtime'] = maxtime;
@@ -235,13 +228,10 @@
                         var srearchInfo = JSON.parse(sessionStorage.getItem('search'));
                         if($('.form-search').length){
                             // console.log(srearchInfo)
-                            $('.prodtype').val(srearchInfo['type']);
-                            if(srearchInfo['remodel']){
-                                $('select>option').eq(srearchInfo['remodel'])[0].selected = true;
-                            }
                             $('.minmoney').val(srearchInfo['minmoney']);
                             $('.maxmoney').val(srearchInfo['maxmoney']);
-                            $('.flow').val(srearchInfo['flow']);
+                            $('.days').val(srearchInfo['days']);
+                            $('.name').val(srearchInfo['name']);
                             $('.describe').val(srearchInfo['describe']);
                             $('#date-start').val(srearchInfo['mintime']);
                             $('#date-end').val(srearchInfo['maxtime']);
@@ -317,9 +307,6 @@
     <!-- 左边导航栏引用 -->
     <script src="/xzy/project/Public/Admin/js/ace.min.js"></script>
     <script src="/xzy/project/Public/Admin/js/adminPublic.js"></script>
-	<script src="/xzy/project/Public/Admin/js/index/moment-with-locales.min.js"></script>
-	<!-- <script src="/xzy/project/Public/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
     <script type="text/javascript"> 
     	var ua = navigator.userAgent;
     	var isOpera = ua.indexOf("Opera") > -1;
