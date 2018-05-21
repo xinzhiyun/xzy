@@ -14,6 +14,7 @@ class ProductModel extends Model
     // 自动验证
     protected $_validate = array(
        array('typename','require','型号名称不能为空'),
+       array('product_id','require','微信product_id不能为空'),
 //        array('typename','/^[a-zA-Z0-9\x{4e00}-\x{9fa5}]{1,660}$/u','类型名称不能使用特殊字符',1,'regex'),
         array('typename','','该型号名称已存在，请换一个试试，如净水器A型',0,'unique',1)
         
