@@ -185,3 +185,12 @@ ERR: 1054:Unknown column 'status' in 'where clause'
 ERR: 1054:Unknown column 'gh_45d2a107fdc9_62c78c00b476d056' in 'where clause'
  [ SQL语句 ] : SELECT * FROM `pub_devices` WHERE ( device_code=gh_45d2a107fdc9_62c78c00b476d056 ) LIMIT 1  
 
+[ 2018-05-21T13:30:09+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+ERR: SQLSTATE[HY000] [2002] Network is unreachable
+
+[ 2018-05-21T13:30:13+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+ERR: SQLSTATE[HY000] [2002] Network is unreachable
+
+[ 2018-05-21T13:30:14+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
+ERR: SQLSTATE[HY000] [2002] Network is unreachable
+

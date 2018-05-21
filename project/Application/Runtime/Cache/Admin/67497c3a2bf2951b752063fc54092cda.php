@@ -180,7 +180,11 @@
                         <td><img src="<?php echo ($vo["head"]); ?>" style="width: 50px"></td>
                         <!-- <td><a href="/xzy/project/index.php/Admin/Users/user_info?open_id=<?php echo ($vo["open_id"]); ?>"><?php echo ($vo["nickname"]); ?></a></td> -->
                         <td><?php echo ($vo["nickname"]); ?></td>
-                        <td><?php echo ($vo["sex"]); ?></td>
+                        <td>
+                            <?php switch($vo["sex"]): case "1": ?>男<?php break;?>
+                                <?php case "2": ?>女<?php break;?>
+                                <?php default: endswitch;?>
+                        </td>
                         <td><?php echo ($vo["address"]); ?></td>
                         <!-- <td><?php echo (date('Y-m-d H:i:s',$vo["login_time"])); ?></td>
                         <td><?php echo ($vo["login_ip"]); ?></td>
