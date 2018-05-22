@@ -157,6 +157,7 @@ class IndexController extends Controller
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
         $data['username'] = $_POST['name'];
         $data['phone'] = $_POST['phone'];
+        $data['status'] = 1;
         
         //充值成功后修改设备表数据
         $res = M('devices')->where("device_code='{$deviceCode}'")->save($data);
@@ -327,6 +328,10 @@ class IndexController extends Controller
         $input->SetBody("碧水蓝天设备-充值");
         // 设备id
         $input->SetAttach(I('post.deviceId'));
+
+        //设置商品详情信息
+        $input->SetDetail("就是牛逼");
+
         // 设置商户系统内部的订单号,32个字符内、可包含字母, 其他说明见商户订单号
         $input->SetOut_trade_no(\WxPayConfig::MCHID.date("YmdHis").mt_rand(0,9999));
         // 产品金额单位为分
@@ -343,6 +348,9 @@ class IndexController extends Controller
         $input->SetTrade_type("JSAPI");
         // 用户在公众号的唯一标识
         $input->SetOpenid($openId);
+
+
+
         // 统一下单 
         $order = \WxPayApi::unifiedOrder($input);
         
