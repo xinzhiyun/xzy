@@ -103,7 +103,7 @@ class WeixinEventController
                                                 "color":"#173177"
                                             },
                                             "keyword3": {
-                                                "value":"哈哈",
+                                                "value":"这是点击查询菜单发送的",
                                                 "color":"#173177"
                                             },
                                             "keyword4": {
@@ -234,6 +234,16 @@ class WeixinEventController
         }
     }
 
+    // 根据客户id查询该客户所有信息
+    public function getauidAll($id)
+    {
+        $info = M('adminuser')->where("id='{$id}'")->select();
+        if ($info) {
+            return $info[0];
+        }else{
+            return false;
+        }
+    }
 
     // 根据公众号原始id到咱们的系统查客户id
     public function getauid($ToUserName)
@@ -241,6 +251,17 @@ class WeixinEventController
         $info = M('adminuser')->where("original_id='{$ToUserName}'")->select();
         if ($info) {
             return $info[0];
+        }else{
+            return false;
+        }
+    }
+
+    // 根据设备编码查客户id
+    public function getauids($device_id)
+    {
+        $info = M('devices')->where("device_code='{$device_id}'")->getField('auid');
+        if ($info) {
+            return $info;
         }else{
             return false;
         }

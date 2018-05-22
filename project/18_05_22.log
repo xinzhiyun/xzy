@@ -1,0 +1,2755 @@
+[ 2018-05-22T09:47:37+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T09:47:37+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526953657' WHERE ( id=1 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-05-22T09:48:46+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T09:48:46+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526953726' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2018-05-22T09:58:57+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T09:58:57+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954337' WHERE ( id=1 ) [ RunTime:0.0122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2018-05-22T09:58:57+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T09:58:57+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954337' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2018-05-22T10:03:12+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:03:12+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954592' WHERE ( id=1 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000436s ]
+
+[ 2018-05-22T10:04:03+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:04:03+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954643' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2018-05-22T10:04:05+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:04:05+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954645' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2018-05-22T10:05:06+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:05:06+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954706' WHERE ( id=1 ) [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2018-05-22T10:05:07+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:05:07+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954707' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-05-22T10:07:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:07:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954842' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2018-05-22T10:08:13+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:08:13+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526954893' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2018-05-22T10:10:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:10:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955022' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T10:10:28+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:10:28+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955028' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2018-05-22T10:10:30+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:10:30+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955030' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2018-05-22T10:10:39+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:10:39+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955039' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-05-22T10:10:42+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:10:42+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955042' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2018-05-22T10:11:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:11:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955060' WHERE ( id=1 ) [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2018-05-22T10:11:02+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:11:02+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955062' WHERE ( id=1 ) [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2018-05-22T10:11:10+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:11:10+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955070' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2018-05-22T10:11:16+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:11:16+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955076' WHERE ( id=1 ) [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2018-05-22T10:13:44+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:13:44+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955224' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2018-05-22T10:15:27+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:15:27+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955327' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2018-05-22T10:17:01+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:17:01+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955421' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2018-05-22T10:25:08+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:25:08+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526955908' WHERE ( id=1 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-05-22T10:32:13+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:32:13+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526956333' WHERE ( id=1 ) [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-05-22T10:42:40+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:42:40+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526956960' WHERE ( id=1 ) [ RunTime:0.0076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2018-05-22T10:50:59+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:50:59+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957459' WHERE ( id=1 ) [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2018-05-22T10:52:35+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:52:35+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957555' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-05-22T10:52:37+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:52:37+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957557' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T10:53:31+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:53:32+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957612' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2018-05-22T10:59:34+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:59:34+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957974' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-05-22T10:59:36+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T10:59:36+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526957976' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2018-05-22T12:52:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T12:52:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526964729' WHERE ( id=1 ) [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2018-05-22T13:07:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:07:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965629' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-05-22T13:10:16+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:10:16+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965816' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2018-05-22T13:10:17+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:10:17+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965817' WHERE ( id=1 ) [ RunTime:0.0122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T13:11:11+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:11:12+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965871' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2018-05-22T13:12:20+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:12:20+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965940' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2018-05-22T13:12:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:12:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526965942' WHERE ( id=1 ) [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2018-05-22T13:17:39+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:17:39+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526966259' WHERE ( id=1 ) [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-05-22T13:23:59+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:23:59+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526966639' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-05-22T13:28:51+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:28:51+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526966931' WHERE ( id=1 ) [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-05-22T13:37:32+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:37:32+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526967452' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000439s ]
+
+[ 2018-05-22T13:51:44+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T13:51:44+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526968304' WHERE ( id=1 ) [ RunTime:0.0539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2018-05-22T14:28:20+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:28:20+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526970500' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2018-05-22T14:28:35+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:28:35+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526970515' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T14:31:28+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:31:28+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526970688' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2018-05-22T14:34:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T14:34:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2018-05-22T14:36:03+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:36:03+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526970963' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2018-05-22T14:36:07+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T14:36:07+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+
+[ 2018-05-22T14:36:19+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T14:36:19+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+
+[ 2018-05-22T14:42:44+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:42:44+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='111111188888888',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971364' WHERE ( id=2 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2018-05-22T14:42:45+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T14:42:45+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2018-05-22T14:43:06+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:06+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='111111188888888',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971386' WHERE ( id=2 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2018-05-22T14:43:08+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:08+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='111111188888888',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971388' WHERE ( id=2 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2018-05-22T14:43:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T14:43:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T14:43:44+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:44+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971424' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2018-05-22T14:43:46+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:46+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971426' WHERE ( id=1 ) [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2018-05-22T14:43:47+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:47+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971427' WHERE ( id=1 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-05-22T14:43:48+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:48+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971428' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-05-22T14:43:54+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:54+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971434' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-05-22T14:43:55+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:55+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971435' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2018-05-22T14:43:57+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:57+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971437' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2018-05-22T14:43:58+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:58+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971438' WHERE ( id=1 ) [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2018-05-22T14:43:59+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:43:59+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971439' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2018-05-22T14:44:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:44:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971440' WHERE ( id=1 ) [ RunTime:0.0037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-05-22T14:44:03+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T14:44:03+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+
+[ 2018-05-22T14:49:56+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T14:49:56+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+
+[ 2018-05-22T14:51:08+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:08+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971868' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2018-05-22T14:51:10+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:10+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971870' WHERE ( id=1 ) [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2018-05-22T14:51:12+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:12+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971872' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2018-05-22T14:51:13+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:13+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971873' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2018-05-22T14:51:15+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:15+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971875' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2018-05-22T14:51:16+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:16+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971876' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2018-05-22T14:51:18+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:18+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971878' WHERE ( id=1 ) [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2018-05-22T14:51:19+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:19+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971879' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2018-05-22T14:51:20+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:20+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971880' WHERE ( id=1 ) [ RunTime:0.0316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2018-05-22T14:51:21+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:21+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971881' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-05-22T14:51:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:51:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971882' WHERE ( id=1 ) [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2018-05-22T14:51:25+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T14:51:25+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+ERR: 1054:Unknown column 'XP01010100000001' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `xp_card` WHERE ( iccard=XP01010100000001 ) LIMIT 1  
+
+[ 2018-05-22T14:52:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:52:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971929' WHERE ( id=1 ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2018-05-22T14:52:33+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:52:33+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971953' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2018-05-22T14:52:37+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:52:37+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971957' WHERE ( id=1 ) [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2018-05-22T14:52:38+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:52:38+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971958' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2018-05-22T14:52:39+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T14:52:39+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526971959' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T14:52:42+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T14:52:42+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2018-05-22T15:15:51+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:15:51+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526973351' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2018-05-22T15:22:53+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"111111188888888","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:22:53+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=111111188888888 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='111111188888888',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526973773' WHERE ( id=2 ) [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-05-22T15:22:54+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:22:54+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2018-05-22T15:26:03+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:26:03+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526973963' WHERE ( id=1 ) [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-05-22T15:26:18+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:26:18+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526973978' WHERE ( id=1 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-05-22T15:26:39+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:26:39+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2018-05-22T15:26:48+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:26:48+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"65535","time":1526974083}
+[ 2018-05-22T15:28:03+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','65535','1526974083')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','65535','1526974083')
+
+[ 2018-05-22T15:28:17+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:28:17+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"65535","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"65535","time":1526974227}
+[ 2018-05-22T15:30:27+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','65535','1526974227')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','65535','1526974227')
+
+[ 2018-05-22T15:30:43+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:30:43+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-05-22T15:30:48+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:30:48+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-05-22T15:30:51+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:30:51+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2018-05-22T15:30:57+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:30:57+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2018-05-22T15:31:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:31:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2018-05-22T15:31:13+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:31:13+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2018-05-22T15:32:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:32:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2018-05-22T15:32:12+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:32:12+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2018-05-22T15:33:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:33:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526974402' WHERE ( id=1 ) [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2018-05-22T15:33:25+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:33:25+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2018-05-22T15:33:27+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:33:27+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-05-22T15:34:34+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:34:34+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2018-05-22T15:34:43+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:34:43+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2018-05-22T15:34:50+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:34:50+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-05-22T15:34:59+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:34:59+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2018-05-22T15:35:25+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:35:25+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2018-05-22T15:35:29+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:35:29+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000432s ]
+
+[ 2018-05-22T15:36:04+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:36:04+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2018-05-22T15:40:25+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:40:25+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526974825' WHERE ( id=1 ) [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2018-05-22T15:40:28+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:40:28+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2018-05-22T15:40:31+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:40:31+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2018-05-22T15:40:58+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:40:58+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2018-05-22T15:41:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:41:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-05-22T15:41:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:41:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T15:42:01+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:42:01+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2018-05-22T15:42:18+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:42:18+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2018-05-22T15:42:18+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:42:18+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2018-05-22T15:43:08+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:43:08+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2018-05-22T15:43:11+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:43:11+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-05-22T15:43:36+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:43:36+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526975077}
+[ 2018-05-22T15:44:37+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975077')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975077')
+
+[ 2018-05-22T15:44:52+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:44:52+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2018-05-22T15:44:57+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:44:57+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T15:45:00+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:45:00+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526975105}
+[ 2018-05-22T15:45:05+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975105')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975105')
+
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526975130}
+[ 2018-05-22T15:45:30+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975130')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975130')
+
+[ 2018-05-22T15:45:37+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"CRCerrPack","soure":"TCP"}
+[ 2018-05-22T15:45:37+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2018-05-22T15:49:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:49:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"400","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"400","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"400","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"400","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"400","time":1526975351}
+[ 2018-05-22T15:49:11+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','400','1526975351')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','400','1526975351')
+
+[ 2018-05-22T15:50:09+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:50:09+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"4369","time":1526975411}
+[ 2018-05-22T15:50:11+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526975411')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526975411')
+
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"4369","time":1526975416}
+[ 2018-05-22T15:50:16+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526975416')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526975416')
+
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526975418}
+[ 2018-05-22T15:50:18+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975418')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975418')
+
+[ 2018-05-22T15:50:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:50:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2018-05-22T15:50:24+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:50:24+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2018-05-22T15:51:13+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"58","DataCmd":"0","Device":"GPRS","PackType":"login","AliveStause":"1","DeviceType":"0","DeviceID":"112233445566778","ICCID":"11223344556677889900","Loaction":"10020\u0000\u0000\u0000\u0000\u0000","CSQ":"90","soure":"TCP"}
+[ 2018-05-22T15:51:13+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE ( device_code=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices_statu` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `xp_devices_statu` WHERE ( DeviceID=112233445566778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `xp_devices_statu` SET `Device`='GPRS',`AliveStause`='1',`DeviceID`='112233445566778',`ICCID`='11223344556677889900',`CSQ`='90',`Loaction`='10020\0\0\0\0\0',`updatetime`='1526975473' WHERE ( id=1 ) [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2018-05-22T15:51:16+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T15:51:16+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526975480}
+[ 2018-05-22T15:51:20+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975480')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526975480')
+
+[ 2018-05-22T15:51:24+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T15:51:24+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-05-22T16:10:22+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T16:10:22+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"4369","time":1526976625}
+[ 2018-05-22T16:10:25+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526976625')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526976625')
+
+[ 2018-05-22T16:10:32+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T16:10:32+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526976634}
+[ 2018-05-22T16:10:34+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526976634')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526976634')
+
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000001","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"1","flow":"4369","time":1526977120}
+[ 2018-05-22T16:18:40+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526977120')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'1','4369','1526977120')
+
+[ 2018-05-22T16:20:06+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"3","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000001","soure":"TCP"}
+[ 2018-05-22T16:20:06+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000001' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+接收停水数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+查询IC卡: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"32","DataCmd":"6","PackType":"Stopwater","water":"4369","iccard":"XP01010100000002","soure":"TCP","DeviceID":"112233445566778"}
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+查询停水设备的数据: null
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+存储停水的数据: {"did":null,"icid":"2","flow":"4369","time":1526977346}
+[ 2018-05-22T16:22:26+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE `iccard` = 'XP01010100000002' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_devices` [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `xp_devices` WHERE `device_code` = '112233445566778' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `xp_consume` [ RunTime:0.0003s ]
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526977346')
+ERR: 1048:Column 'did' cannot be null
+ [ SQL语句 ] : INSERT INTO `xp_consume` (`did`,`icid`,`flow`,`time`) VALUES (NULL,'2','4369','1526977346')
+
+[ 2018-05-22T16:28:39+08:00 ] 120.79.0.105 /api/action/receive
+接收数据: {"Header":"56746","PackNum":"0","Vison":"0","Lenth":"30","DataCmd":"5","PackType":"Requestwater","iccard":"XP01010100000002","soure":"TCP"}
+[ 2018-05-22T16:28:39+08:00 ] 120.79.0.105 /api/action/receive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `xp_card` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xp_card` WHERE ( iccard='XP01010100000002' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xp_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xp_users` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+

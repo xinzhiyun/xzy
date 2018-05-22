@@ -194,3 +194,1018 @@ ERR: SQLSTATE[HY000] [2002] Network is unreachable
 [ 2018-05-21T13:30:14+08:00 ] ::1 /xzy/project/index.php/Admin/Users/index.html
 ERR: SQLSTATE[HY000] [2002] Network is unreachable
 
+[ 2018-05-21T15:35:55+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T15:36:07+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0479s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0493s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0434s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0532s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0877s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0569s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T15:36:08+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0487s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0416s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0704s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.1141s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0531s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0436s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 33 行.
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T15:36:16+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  ) AND ( `status` = '1' ) 
+
+[ 2018-05-21T15:46:16+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-05-21T15:46:46+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-05-21T15:56:39+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0431s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0434s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0444s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0435s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0499s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0434s ]
+SQL: SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  )  [ RunTime:0.0456s ]
+NOTIC: [8] Undefined offset: 14 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+
+[ 2018-05-21T15:56:39+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0415s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0411s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0413s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0665s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0428s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0522s ]
+SQL: SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  )  [ RunTime:0.0446s ]
+NOTIC: [8] Undefined offset: 14 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+
+[ 2018-05-21T15:56:44+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0424s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0399s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0412s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0402s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0412s ]
+SQL: SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  )  [ RunTime:0.0416s ]
+NOTIC: [8] Undefined offset: 14 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+
+[ 2018-05-21T15:56:44+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0411s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0408s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0404s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.1317s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('1','2','54','3','4','55','56','57','58','59','60','61','62','63','64','66','67','68','69','70','71','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0439s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0408s ]
+SQL: SELECT * FROM `pub_flow` WHERE ( `addtime` > 1525104000 AND `addtime` < 1527782400  )  [ RunTime:0.0418s ]
+NOTIC: [8] Undefined offset: 14 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 69 行.
+
+[ 2018-05-21T15:57:55+08:00 ] ::1 /xzy/project/index.php/admin
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:24:49+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:25:48+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:26:11+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:26:39+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:27:13+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:27:55+08:00 ] ::1 /xzy/project/index.php/Admin/
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:28:39+08:00 ] ::1 /xzy/project/admin
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:28:49+08:00 ] ::1 /xzy/project/admin
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:29:03+08:00 ] ::1 /xzy/project/admin/device
+ERR: 无法加载控制器:Device
+
+[ 2018-05-21T16:29:18+08:00 ] ::1 /xzy/project/admin
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:29:21+08:00 ] ::1 /xzy/project/index.php/Admin/index/index.html
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:30:25+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T16:30:59+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+
+[ 2018-05-21T18:49:39+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0436s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='2' and g.status='1' )  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0413s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('55','56','57','61','62','63','64','66','67','68','69','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0441s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0407s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0409s ]
+SQL: SELECT * FROM pub_flow f LEFT JOIN pub_devices d on f.device_code = d.device_code  WHERE ( f.addtime > 1525104000 AND f.addtime < 1527782400  ) AND d.auid = '2'  [ RunTime:0.0415s ]
+NOTIC: [8] Undefined offset: 15 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0435s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 109 行.
+SQL: SELECT * FROM `pub_devices`  [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/IndexController.class.php 第 13 行.
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Common/functions.php:850) /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Library/Think/Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Common/functions.php:850) /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Library/Think/Think.class.php 第 230 行.
+
+[ 2018-05-21T18:49:40+08:00 ] ::1 /xzy/project/index.php/Admin/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `pub_auth_group_access` [ RunTime:0.0412s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM pub_auth_group_access a INNER JOIN pub_auth_group g on a.group_id=g.id  WHERE ( a.uid='2' and g.status='1' )  [ RunTime:0.0413s ]
+SQL: SHOW COLUMNS FROM `pub_auth_rule` [ RunTime:0.0411s ]
+SQL: SELECT `condition`,`name` FROM `pub_auth_rule` WHERE `id` IN ('55','56','57','61','62','63','64','66','67','68','69','72','73') AND `type` = 1 AND `status` = 1  [ RunTime:0.0410s ]
+NOTIC: [2] Declaration of Admin\Model\AdminMenuModel::getTreeData($type = 'tree', $order = '') should be compatible with Admin\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/AdminMenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `pub_admin_menu` [ RunTime:0.0429s ]
+SQL: SELECT * FROM `pub_admin_menu` ORDER BY order_number is null,order_number,id  [ RunTime:0.0409s ]
+SQL: SHOW COLUMNS FROM `pub_flow` [ RunTime:0.0409s ]
+SQL: SELECT * FROM pub_flow f LEFT JOIN pub_devices d on f.device_code = d.device_code  WHERE ( f.addtime > 1525104000 AND f.addtime < 1527782400  ) AND d.auid = '2'  [ RunTime:0.0426s ]
+NOTIC: [8] Undefined offset: 15 /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: count /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 67 行.
+NOTIC: [8] Undefined index: money /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/FlowModel.class.php 第 68 行.
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0409s ]
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 109 行.
+SQL: SELECT * FROM `pub_devices`  [ RunTime:0.0426s ]
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: addtime /Applications/MAMP/htdocs/xzy/project/Application/Admin/Model/DevicesModel.class.php 第 143 行.
+NOTIC: [8] Undefined index: leavel /Applications/MAMP/htdocs/xzy/project/Application/Admin/Controller/IndexController.class.php 第 13 行.
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+ERR: 1146:Table 'bluetooth.pub_orders' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pub_orders`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Common/functions.php:850) /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Library/Think/Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Common/functions.php:850) /Applications/MAMP/htdocs/xzy/project/ThinkPHP/Library/Think/Think.class.php 第 230 行.
+

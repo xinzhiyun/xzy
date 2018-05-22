@@ -1,0 +1,2517 @@
+[ 2018-05-22T01:16:33+08:00 ] 106.11.225.142 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T07:16:30+08:00 ] 106.11.222.86 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T08:48:50+08:00 ] 120.55.36.14 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0037s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T08:48:51+08:00 ] 120.55.36.14 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T08:48:53+08:00 ] 120.55.36.14 /?c=4e5e5d7364f443e28fbf0d3ae744a59a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+
+[ 2018-05-22T09:24:46+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=190a40b3ad4295b38246c3ae74f6ad5e5543ee0f&timestamp=1526952286&nonce=8808239&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2018-05-22T09:24:46+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+
+[ 2018-05-22T09:24:47+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=071oZKcl2TdRRF0tzFdl2Wmqcl2oZKcy&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-05-22T09:24:54+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=071oZKcl2TdRRF0tzFdl2Wmqcl2oZKcy&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined index: openid /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 216 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2018-05-22T09:26:37+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=5b2dee0606957a3d56f6d7d9082419e7b5c6f3b6&timestamp=1526952396&nonce=2117430826&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0017s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2018-05-22T09:26:37+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=0a9e526504dec98c3bfa18839f1a2e019d4951d3&timestamp=1526952397&nonce=2067011428&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-05-22T10:01:14+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=938a7571ea6408e7bcc9b766b42da3ee6a4551c1&timestamp=1526954474&nonce=1898764141&openid=ofcch1gHhwro1-felpzOLzFqPRw8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2018-05-22T10:01:15+08:00 ] 113.111.181.233 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T10:01:16+08:00 ] 113.111.181.233 /index.php/Home/Index/index.html?auid=1auid=1&code=021nOYLG0QS2Qj2l8KIG0fmjMG0nOYLR&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-05-22T10:01:18+08:00 ] 113.111.181.233 /index.php/Home/Index/getSetmeal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_setmeal` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_setmeal` WHERE ( auid=1 )  [ RunTime:0.0010s ]
+
+[ 2018-05-22T10:01:26+08:00 ] 113.111.181.233 /index.php/Home/Index/index.html?auid=1auid=1&code=021nOYLG0QS2Qj2l8KIG0fmjMG0nOYLR&state=STATE?info&meal_id=77&money=1000&connectid=gh_45d2a107fdc9_62c78c00b476d056
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined index: openid /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 216 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2018-05-22T10:05:57+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=20ec9897f6c6798438f74b88e3ef19a8bfe0d50f&timestamp=1526954757&nonce=1591917135&openid=ofcch1gHhwro1-felpzOLzFqPRw8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2018-05-22T10:05:57+08:00 ] 113.111.181.233 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T10:05:58+08:00 ] 113.111.181.233 /index.php/Home/Index/index.html?auid=1auid=1&code=0617fEhg1ddJgA0JK7hg10dUhg17fEh0&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2018-05-22T10:06:00+08:00 ] 113.111.181.233 /index.php/Home/Index/getSetmeal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_setmeal` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `pub_setmeal` WHERE ( auid=1 )  [ RunTime:0.0010s ]
+
+[ 2018-05-22T10:07:21+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=ab5b3553641d89aa1dfec8fbb166860af9e2a3d3&timestamp=1526954841&nonce=992318743&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2018-05-22T10:07:22+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T10:07:26+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=0713Du9k1RN7Yl0ajx8k1Pol9k13Du9D&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-05-22T10:07:38+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=82fb9f7f7ba1a03629cc9afd27e5c1c9392da34b&timestamp=1526954857&nonce=142347937&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-05-22T10:08:43+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=2158abf4bb686c13bd8faf398b2bdc6ed775d844&timestamp=1526954923&nonce=114263873&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2018-05-22T10:08:44+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T10:08:45+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=001bWmPA0bIy8g2ED4OA0NJ4PA0bWmPK&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2018-05-22T10:08:50+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=001bWmPA0bIy8g2ED4OA0NJ4PA0bWmPK&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined index: openid /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 216 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-05-22T11:38:14+08:00 ] 47.92.124.187 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T13:21:30+08:00 ] 61.129.6.110 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=e8e675b9d345cce79c85e0c6fccf0cd81d7ffb54&timestamp=1526966490&nonce=2023467977&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+
+[ 2018-05-22T13:21:33+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=9c047e8effc855e2ee0c51591924b9ce64a04e9a&timestamp=1526966491&nonce=204023671&openid=ofcch1hoNgWntLOlxkYRD3c80hu4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0009s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2018-05-22T13:21:33+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=ba670005f105497d453b8f04135acdc4985eedca&timestamp=1526966493&nonce=195958727&openid=ofcch1hoNgWntLOlxkYRD3c80hu4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2018-05-22T13:23:13+08:00 ] 61.129.6.110 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=6b14834aa13a6a74410f50619f66eb2a135799f2&timestamp=1526966593&nonce=2021989457&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+
+[ 2018-05-22T13:23:18+08:00 ] 58.247.206.147 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=b82c5be570466a1e75e868eb3916b928d3f98a0e&timestamp=1526966598&nonce=714191086&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+
+[ 2018-05-22T13:47:08+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=42cbf8944f9535c11818efbb3e31c11acfe1b170&timestamp=1526968028&nonce=1566988276&openid=ofcch1hoNgWntLOlxkYRD3c80hu4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2018-05-22T13:47:09+08:00 ] 14.16.110.232 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+
+[ 2018-05-22T13:47:09+08:00 ] 14.16.110.232 /index.php/Home/Index/index.html?auid=1auid=1&code=061Z8dKb2UOqAO0oVyIb2TIgKb2Z8dKm&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2018-05-22T13:47:35+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=cc0c3149d36d351d0213e6f6362dec03c561bde3&timestamp=1526968055&nonce=1244460567&openid=ofcch1hoNgWntLOlxkYRD3c80hu4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2018-05-22T13:47:35+08:00 ] 14.16.110.232 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T13:47:36+08:00 ] 14.16.110.232 /index.php/Home/Devices/index.html?auid=1auid=1&code=081L0Lxw0WnWmj13c2xw0eTJxw0L0LxW&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-05-22T13:51:24+08:00 ] 58.247.206.144 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=77ad36dca7b95bd7f68060b7b71ec239cedbc459&timestamp=1526968284&nonce=1427454336&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+
+[ 2018-05-22T14:05:49+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=db24980dd05b1a3e00c09d98853793bb3defb894&timestamp=1526969149&nonce=286034677&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2018-05-22T14:05:49+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T14:05:50+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=0017Siz91VsBAP1Yy7z91schz917Sizm&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2018-05-22T14:07:58+08:00 ] 61.129.6.110 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=dea56426b55e227502a3edd4f2115892c1a7a538&timestamp=1526969278&nonce=1106828067&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [2] unpack(): Type C: not enough input, need 1, have 0 /www/xzy/Application/Home/Controller/WeixinDeviceEventController.class.php 第 51 行.
+
+[ 2018-05-22T14:08:03+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=27ccdca3d1cb092309b217f16a7dd461c0e5cb60&timestamp=1526969283&nonce=1800558798&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2018-05-22T14:08:03+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T14:08:04+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=071NEsfT1p0rr61nKOfT1t1SfT1NEsfp&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2018-05-22T14:08:10+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=627dc1f46d7c92ffb6d94e3a9fe695ff1e25e7eb&timestamp=1526969288&nonce=1831582094&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2018-05-22T14:08:10+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=9220566cbff1506b986aacf3059ba17d8e419ce7&timestamp=1526969290&nonce=1944130231&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2018-05-22T14:08:13+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=7eeae40e877e0b7fc767648b72a5e386ea70e079&timestamp=1526969293&nonce=1905371526&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2018-05-22T14:08:13+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T14:08:14+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=021UhRq81Nr1JQ12meq81tCbr81UhRqm&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2018-05-22T14:41:47+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2018-05-22T14:41:47+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=011cwlQC1hncl40DerRC1benQC1cwlQM&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2018-05-22T14:41:47+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=030ec2894d2a9c2b947f29ac7c3e0a4ad4eb2ac1&timestamp=1526971307&nonce=500731153&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2018-05-22T14:41:52+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=1d8e8f164cad97cda3ef5a4ccfdc45e42728a224&timestamp=1526971312&nonce=2062480953&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2018-05-22T14:41:52+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T14:41:53+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=001oMAy70nlZlI1Em7z70YTEy70oMAyh&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2018-05-22T14:41:57+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=39c26e3d2fab6384546e95ccbad3186fb9feaf1f&timestamp=1526971316&nonce=1023872211&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2018-05-22T14:41:57+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=1004adb7bab397116fb7a522c1e84dd32d9c0a21&timestamp=1526971317&nonce=175148512&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2018-05-22T14:44:59+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=547bef043b5ccb1c3213e67a3755bc8a61c3a460&timestamp=1526971499&nonce=1454175152&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2018-05-22T14:45:00+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T14:45:00+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=061UfZ4c18baNt0fgc4c1Qgf5c1UfZ4U&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2018-05-22T14:45:03+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=91ceaa7104120226bddf631c499dc1090d2a44ec&timestamp=1526971503&nonce=1858547998&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2018-05-22T14:45:03+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T14:45:05+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=081fI8yF03s5Tk2XY7zF0S7hyF0fI8y6&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-05-22T15:13:00+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=dab04a39d8d9892c160fe3550d181e1db92c95a9&timestamp=1526973180&nonce=363526023&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2018-05-22T15:13:01+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=37fbb72335386277b203edde05e80ec314524f09&timestamp=1526973178&nonce=236783923&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2018-05-22T15:13:01+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=472d3f302920566dfe3d7897e6036a20eae645a8&timestamp=1526973181&nonce=928314543&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2018-05-22T15:17:24+08:00 ] 58.247.206.157 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=10885fde31c956940f39a9859cf7be409a75a6b9&timestamp=1526973444&nonce=1515386447&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+
+[ 2018-05-22T15:17:31+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=3627310ae69fa7d587d3c7ca96782cf794b3f1d9&timestamp=1526973451&nonce=885061818&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2018-05-22T15:17:31+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2018-05-22T15:17:32+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=011YSxgZ0w4aZ127LfgZ0PlcgZ0YSxgS&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2018-05-22T15:17:37+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=cfe6379beba6f1c04d346942f65fd3ae6aabc74d&timestamp=1526973457&nonce=1330195080&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2018-05-22T15:17:38+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=272187f541d429031ec14081d8c1fdc3c12f22ce&timestamp=1526973455&nonce=1033306136&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0018s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2018-05-22T15:17:38+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=f9faecb59e3366dfbef5fb781cfd2b68e1676bd3&timestamp=1526973458&nonce=904250217&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2018-05-22T15:32:43+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=17747575e50c494c08f883fd5cbe7027c16785ca&timestamp=1526974363&nonce=1231281843&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2018-05-22T15:32:44+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=8bb9382a63212d52ccdc6dd6abb90b1c608a015e&timestamp=1526974362&nonce=1501205367&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2018-05-22T15:32:45+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=7f9627738eb1e0f3deba35f42fb45657eb7cae77&timestamp=1526974365&nonce=1586544627&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2018-05-22T15:32:57+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=4a4dd463748518b682971da3796b10e560c76fe9&timestamp=1526974377&nonce=1410921246&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2018-05-22T15:32:58+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=5433533a6ada4122f99c4ed110139a374a0cca30&timestamp=1526974375&nonce=1891009691&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-05-22T15:32:58+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=d7111e02c60937d075595a7d15ffd230123d9529&timestamp=1526974378&nonce=680796189&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2018-05-22T15:33:16+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=2622b373ef65da10dc36f2ac835eb3213864fe7c&timestamp=1526974396&nonce=1519555554&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-05-22T15:33:17+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=a408d6c3b5d8ba0762e964c4b1a96352591dd453&timestamp=1526974395&nonce=1404939756&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2018-05-22T15:33:17+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=bb560d87cffdc7b198fc9e6d394cea2ade18d39f&timestamp=1526974397&nonce=417785377&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2018-05-22T15:34:13+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=3ee64419a1b9a16f225d2a36f5f0ed1d1b5977eb&timestamp=1526974453&nonce=810858073&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2018-05-22T15:34:14+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:35:06+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T15:35:06+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=7a2db69448185d9d37a6bffa0062066182f4f02c&timestamp=1526974506&nonce=1251309090&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2018-05-22T15:35:07+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=001LGDp90Gr6zw1yi9r90ijEp90LGDpM&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003900s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2018-05-22T15:35:17+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=6fba34233bcdd5c906dfc375a78c03c971a5b41d&timestamp=1526974517&nonce=820157199&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2018-05-22T15:35:18+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:35:18+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=001Sm0Ua2GNT1Q0FgYUa261STa2Sm0Ue&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2018-05-22T15:35:28+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=e6f9b07731958e478869b99c7fe52e95f0336dca&timestamp=1526974528&nonce=90366257&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2018-05-22T15:35:28+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:35:29+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=001XxT992Mc3xQ0yyE9921cE992XxT9-&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2018-05-22T15:35:40+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:35:41+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=5aa87509fe210d2e22263416d49dd9b54dad6cc4&timestamp=1526974541&nonce=1410949040&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2018-05-22T15:35:41+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=011VsaS00ACLcG1MueS00EfkS00VsaSL&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2018-05-22T15:35:55+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=6b3a2e1687981474951e834371a7e6d3956d3a66&timestamp=1526974555&nonce=1224385005&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2018-05-22T15:35:55+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:35:56+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=081Qfjx52Tv6EK07Zrz52LDax52Qfjx5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-05-22T15:36:01+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=0e2228fc7b32581ff76e82690900c23b6804c3bc&timestamp=1526974561&nonce=1485871264&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2018-05-22T15:36:02+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:36:03+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=0117yutj18mpEw0Skvtj1Suztj17yutX&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2018-05-22T15:36:04+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=7209caf2ab18cea1f7238934183e50dce32b0eb6&timestamp=1526974564&nonce=1405849310&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2018-05-22T15:36:04+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T15:36:05+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=081GeBnc20fbSD0PTmkc2tVtnc2GeBnv&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2018-05-22T15:36:20+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=800ef6eef093e990a31236d47505be94fd4c6add&timestamp=1526974579&nonce=492052423&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2018-05-22T15:36:21+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=eea66c5ffc02ec4b61508ab809e14406081d3176&timestamp=1526974578&nonce=580242743&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_5ad6cbe47f8646b4' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2018-05-22T15:36:21+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=0c33e662b8461ef39b66aec1238a94ea0d0f2409&timestamp=1526974581&nonce=331879942&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2018-05-22T16:04:14+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=cf8d231b7dbfa99989adddf205eb1c11c6b8fc3d&timestamp=1526976254&nonce=1736284198&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2018-05-22T16:04:15+08:00 ] 113.96.219.247 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+
+[ 2018-05-22T16:04:16+08:00 ] 113.96.219.247 /index.php/Home/Devices/index.html?auid=1auid=1&code=061qY32o1QJN2j0RdI1o1txZ1o1qY32v&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2018-05-22T16:04:29+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=267f0cee28401044ea5dd6043e06e760aa4839af&timestamp=1526976269&nonce=1096539712&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2018-05-22T16:04:29+08:00 ] 113.96.219.247 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2018-05-22T16:04:30+08:00 ] 113.96.219.247 /index.php/Home/Devices/index.html?auid=1auid=1&code=021ewbGs0z43ed1Q5cIs0HywGs0ewbGI&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2018-05-22T16:04:43+08:00 ] 113.96.219.247 /index.php/Home/Devices/unbind.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined index: ticket /www/xzy/Application/Home/Controller/DevicesController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2018-05-22T16:04:47+08:00 ] 113.96.219.247 /index.php/Home/Devices/unbind.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined index: ticket /www/xzy/Application/Home/Controller/DevicesController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2018-05-22T16:04:54+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=d5d27e7d3ff7bc94e43ad558dda244ee4399b73f&timestamp=1526976293&nonce=279937885&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2018-05-22T16:04:55+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=21601a1bd9d83ebcbd0ae6f25f3997f3d28ca271&timestamp=1526976295&nonce=29144936&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2018-05-22T16:04:56+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=0790d8844ba055be30b1aca072734283313eb8bd&timestamp=1526976296&nonce=734130107&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2018-05-22T16:04:57+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:04:57+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=001QXCHq1Xu2Yn0RaxGq1bluHq1QXCHs&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2018-05-22T16:05:30+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=85b5ce1f60af15ea86cc0c5126e685a499d74bb2&timestamp=1526976328&nonce=2055516473&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0014s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-05-22T16:05:30+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=d298f1ae8604c57f6949708d72316b7bd8eb981f&timestamp=1526976330&nonce=1774663966&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
+
+[ 2018-05-22T16:05:41+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=a130c61fdbd19f1e6cbe7c0d959d9a23db6bd007&timestamp=1526976341&nonce=603164968&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2018-05-22T16:05:41+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:05:42+08:00 ] 113.96.219.247 /index.php/Home/Index/index.html?auid=1auid=1&code=081wbFDI1IqeQ70R0pDI1MYjDI1wbFDa&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2018-05-22T16:06:06+08:00 ] 140.207.54.80 /index.php/Home/WeixinEvent/getEventData?signature=68612d9535ce8e101540aa4d4aa6bd7d83a25979&timestamp=1526976365&nonce=1384314193&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2018-05-22T16:06:07+08:00 ] 140.207.54.79 /index.php/Home/WeixinEvent/getEventData?signature=2d49ff263c28a97fe04738ad1c0a6d0a9e106f19&timestamp=1526976367&nonce=266698796&openid=ofcch1rI6zQbdW8Fymut8tmL8Bo8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2018-05-22T16:07:12+08:00 ] 106.11.242.23 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T16:17:12+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=97f69ef4ecd1e251f059aac851cac9f7b27ab883&timestamp=1526977032&nonce=319730878&openid=ofcch1tjrnPkamUUxu0YPcB2zJNk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `pub_wechat` [ RunTime:0.0015s ]
+SQL: SELECT `id` FROM `pub_wechat` WHERE ( `open_id`="ofcch1tjrnPkamUUxu0YPcB2zJNk" ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: INSERT INTO `pub_wechat` (`open_id`,`nickname`,`head`,`sex`,`area`,`address`) VALUES ('ofcch1tjrnPkamUUxu0YPcB2zJNk','红尘曲谱','http://thirdwx.qlogo.cn/mmopen/TzELNCSNibTPiaicD0mCsrDh1cM5xdW3j7LJU0eLIu0qCYVTKQbribnAtXl9DzlMaTaTVr1Ym5m26hS4Dh0CBFZGjUZoTgVpgqvia/132','0','云南','中国 云南 昆明') [ RunTime:0.0043s ]
+
+[ 2018-05-22T16:17:22+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=731b0c6acc92fbe99df2e87096419e7d1ef007c2&timestamp=1526977042&nonce=270056155&openid=ofcch1tjrnPkamUUxu0YPcB2zJNk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-05-22T16:17:23+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:17:23+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1auid=1&code=081td2MT0IMNtW1GLfKT0k6aMT0td2Mt&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2018-05-22T16:17:30+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=44b5000383d264500cd7322ccdbd45005f9f0a51&timestamp=1526977050&nonce=2028264718&openid=ofcch1tjrnPkamUUxu0YPcB2zJNk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2018-05-22T16:17:30+08:00 ] 113.96.219.250 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:17:31+08:00 ] 113.96.219.250 /index.php/Home/Index/index.html?auid=1auid=1&code=061nRlid0wPGDt15RTid0ldfid0nRlii&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2018-05-22T16:17:35+08:00 ] 113.96.219.250 /index.php/Home/Index/index.html?auid=1auid=1&code=061nRlid0wPGDt15RTid0ldfid0nRlii&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined index: openid /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 216 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2018-05-22T16:24:26+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=3dd46d5157e651a69360de082cd657cfccd25a79&timestamp=1526977466&nonce=1351319706&openid=ofcch1tjrnPkamUUxu0YPcB2zJNk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2018-05-22T16:24:27+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:24:27+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1auid=1&code=001mDgPN0R3na42Ac9PN0VjGPN0mDgPE&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2018-05-22T16:25:11+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=fdf1d73043c70a64691769c0504a55f540894e71&timestamp=1526977511&nonce=1984266605&openid=ofcch1tjrnPkamUUxu0YPcB2zJNk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2018-05-22T16:25:12+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:25:14+08:00 ] 113.96.219.250 /index.php/Home/Devices/index.html?auid=1auid=1&code=021VYRuw1saZk90C1zvw1TbXuw1VYRuc&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2018-05-22T16:40:18+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=f4d4829a1d9ad242b8a3c8e43bda0a2b98584148&timestamp=1526978416&nonce=62627517&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2018-05-22T16:40:18+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=3c04a5b0fa668314a28c3ed77bf613480e70be28&timestamp=1526978418&nonce=822977429&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2018-05-22T16:40:24+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=104bb1174ac8310fc90bd3f74dfa616c3ea6d747&timestamp=1526978424&nonce=331041843&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2018-05-22T16:40:24+08:00 ] 113.96.218.50 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:40:25+08:00 ] 113.96.218.50 /index.php/Home/Index/index.html?auid=1auid=1&code=011i4LPb2g1MFO0gcnSb2TTRPb2i4LPz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-22T16:40:37+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=b133cc855f45c51b35f56ff6cd7a800367a8675f&timestamp=1526978437&nonce=306135638&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2018-05-22T16:40:37+08:00 ] 113.96.218.50 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:40:38+08:00 ] 113.96.218.50 /index.php/Home/Devices/index.html?auid=1auid=1&code=071gGjPj2jPSMG0mC2Mj2kjCPj2gGjPn&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000379s ]
+
+[ 2018-05-22T16:41:05+08:00 ] 113.111.183.200 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined index: auid /www/xzy/Application/Home/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pub_adminuser` WHERE ( id= ) LIMIT 1  
+
+[ 2018-05-22T16:51:00+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=e85fda2c230e84613c348cf4fdaa1eb30750c31a&timestamp=1526979060&nonce=939598760&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2018-05-22T16:51:00+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T16:51:01+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=061NKaBa2VcmJP0pS8za28heBa2NKaBB&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-05-22T16:51:48+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-05-22T16:51:49+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=ca9b35f0f8515a49b66247cb96cc4574509ad2e8&timestamp=1526979109&nonce=1241697246&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2018-05-22T16:51:49+08:00 ] 113.111.183.200 /index.php/Home/Index/index.html?auid=1auid=1&code=001Ob3Eu0pOEVc1UbXDu0A03Eu0Ob3E1&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2018-05-22T17:05:22+08:00 ] 58.247.206.157 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=3f1e88647a6fd38242a4951e2f691f610c5d70ab&timestamp=1526979921&nonce=1992368547&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T17:06:55+08:00 ] 58.247.206.154 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=293d8cc4941213a96bc6a5777f3f7eed09fa4c6e&timestamp=1526980015&nonce=1487760245&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T17:12:00+08:00 ] 58.247.206.142 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=ce49ccd0ec1bf9206dc8a90afded7a0f4f684af3&timestamp=1526980320&nonce=1750869561&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `pub_linklog` [ RunTime:0.0013s ]
+SQL: INSERT INTO `pub_linklog` (`device_id`,`device_type`,`create_time`,`open_id`,`auid`) VALUES ('gh_45d2a107fdc9_62c78c00b476d056','gh_45d2a107fdc9','1526980320','ofcch1hNCH9901LTNp7x8W8UAeMI','2') [ RunTime:0.0035s ]
+
+[ 2018-05-22T17:39:27+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=45c1d35f81e0bd57dc283adf056f1e0fdcbca3b6&timestamp=1526981965&nonce=25799649&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( original_id='gh_45d2a107fdc9' )  [ RunTime:0.0010s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2018-05-22T17:39:27+08:00 ] 140.207.54.76 /index.php/Home/WeixinEvent/getEventData?signature=5d35599034819d01ce030be3721b6b0ca92e5dfb&timestamp=1526981967&nonce=1896041175&openid=ofcch1uJaJBJ66T0j2yDjUOnOinw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2018-05-22T17:47:47+08:00 ] 140.207.54.75 /index.php/Home/WeixinEvent/getEventData?signature=ce6d472a86a36ef4f071fd018c5606c8f5b4d7cd&timestamp=1526982467&nonce=2020766456&openid=ofcch1hNCH9901LTNp7x8W8UAeMI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2018-05-22T17:47:48+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-05-22T17:47:50+08:00 ] 113.111.183.200 /index.php/Home/Devices/index.html?auid=1auid=1&code=001HFOTH1okR770qu5UH17NwTH1HFOTV&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined property: Org\Util\WeixinJssdk::$curl_timeout /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 200 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_HOST /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+NOTIC: [8] Undefined variable: CURL_PROXY_PORT /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-05-22T17:48:07+08:00 ] 58.247.206.142 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=b113e1d76c2c626346ca21c54e44900f9b4502a9&timestamp=1526982486&nonce=861696909&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0016s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_linklog` [ RunTime:0.0012s ]
+SQL: INSERT INTO `pub_linklog` (`device_id`,`device_type`,`create_time`,`open_id`,`auid`) VALUES ('gh_45d2a107fdc9_62c78c00b476d056','gh_45d2a107fdc9','1526982486','ofcch1hNCH9901LTNp7x8W8UAeMI','2') [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id='2' )  [ RunTime:0.0010s ]
+NOTIC: [2] file_get_contents(/www/xzy/ThinkPHP/Library/Org/Util/weixin/123_access_token.php): failed to open stream: No such file or directory /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 75 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 80 行.
+ERR: Call to undefined method Home\Controller\WeixinDeviceEventController::getday()
+
+[ 2018-05-22T17:49:47+08:00 ] 58.247.206.144 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=f291a2d24815b2e8d22044f6839f72badf76249d&timestamp=1526982585&nonce=1879265264&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0014s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_linklog` [ RunTime:0.0012s ]
+SQL: INSERT INTO `pub_linklog` (`device_id`,`device_type`,`create_time`,`open_id`,`auid`) VALUES ('gh_45d2a107fdc9_62c78c00b476d056','gh_45d2a107fdc9','1526982585','ofcch1hNCH9901LTNp7x8W8UAeMI','2') [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id='2' )  [ RunTime:0.0009s ]
+NOTIC: [2] file_get_contents(/www/xzy/ThinkPHP/Library/Org/Util/weixin/123_access_token.php): failed to open stream: No such file or directory /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 75 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 99 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /www/xzy/ThinkPHP/Library/Org/Util/WeixinJssdk.class.php 第 80 行.
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: openid /www/xzy/Application/Home/Controller/WeixinDeviceEventController.class.php 第 79 行.
+
+[ 2018-05-22T17:50:47+08:00 ] 61.129.6.110 /index.php/Home/WeixinDeviceEvent/DeviceEvent?id=1&signature=9cfda5473fff3384c1bda9b3351429c2ca28cad0&timestamp=1526982646&nonce=1914355174&appid=wx57d57fb99d6d838d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `pub_devices` [ RunTime:0.0015s ]
+SQL: SELECT `auid` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pub_linklog` [ RunTime:0.0014s ]
+SQL: INSERT INTO `pub_linklog` (`device_id`,`device_type`,`create_time`,`open_id`,`auid`) VALUES ('gh_45d2a107fdc9_62c78c00b476d056','gh_45d2a107fdc9','1526982645','ofcch1hNCH9901LTNp7x8W8UAeMI','1') [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `pub_adminuser` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `pub_adminuser` WHERE ( id='1' )  [ RunTime:0.0010s ]
+SQL: SELECT `outtime` FROM `pub_devices` WHERE ( device_code='gh_45d2a107fdc9_62c78c00b476d056' ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: openid /www/xzy/Application/Home/Controller/WeixinDeviceEventController.class.php 第 79 行.
+
