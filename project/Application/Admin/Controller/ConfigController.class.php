@@ -82,6 +82,7 @@ class AdminuserController extends CommonController
     {
         if(IS_POST){
 
+            
             //将三级联动地址拼接具体地址再写入数据库
             // $_POST['address'] = $_POST['address'].$_POST['detail'];
             

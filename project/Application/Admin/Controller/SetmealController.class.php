@@ -41,8 +41,8 @@ class SetmealController extends CommonController
             if (is_numeric($minmoney)) {
                 $map['s.money'][] = array('egt',$minmoney*100);
             }
-             $minaddtime = strtotime(trim(I('post.mintime')))?:false;
-             $maxaddtime = strtotime(trim(I('post.maxtime')))?:false;
+             $minaddtime = strtotime(trim(I('post.minaddtime')))?:false;
+             $maxaddtime = strtotime(trim(I('post.maxaddtime')))?:false;
              if (is_numeric($maxaddtime)) {
                  $map['s.addtime'][] = array('elt',$maxaddtime);
              }

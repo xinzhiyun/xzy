@@ -14,6 +14,11 @@ class AdminuserModel extends BaseModel
     protected $_validate = array(
         array('name','require','账户名不能为空'),
         array('password','require','密码不能为空'),
+        array('appid','require','appid不能为空'),
+        array('appsecret','require','appsecret不能为空'),
+        array('shopnum','require','商户号不能为空'),
+        array('shoppwd','require','商户号密码不能为空'),
+        array('original_id','require','公众号原始ID不能为空'),
         array('company','require','公司不能为空'),
         // array('password','checkPwd','密码格式不正确',self::EXISTS_VALIDATE,'callback',self::MODEL_INSERT), // 自定义函数验证密码格式
         // array('user','((?=[\x21-\x7e]+)[^A-Za-z0-9])','登陆帐号不可以使用特殊字符'),

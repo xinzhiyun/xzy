@@ -255,44 +255,53 @@ class DevicesController extends CommonController
     }
 
     // 设备详情
-    public function deviceDetail()
+    public function devices_detail()
     {
-        $map['device_code'] = I('get.code');
-        // 状态信息
-        $data['statu'] = D('devices')
-            ->where($map)
-            ->alias('d')
-            ->join("__DEVICES_STATU__ statu ON d.device_code=statu.DeviceID", 'LEFT')
-            ->join("__BINDING__ bind ON d.id=bind.did", 'LEFT')
-            ->join("__VENDORS__ vendors ON bind.vid=vendors.id", 'LEFT')
-            ->join("__DEVICE_TYPE__ type ON d.type_id=type.id", 'LEFT')
-            ->field("statu.*,bind.*,vendors.*,type.*,d.*")
-            ->find();
+        $this->display();
+    }
 
-        // 滤芯信息
-        $filter = D('devices')
-            ->where($map)
-            ->alias('d')
-            ->join("__DEVICE_TYPE__ type ON d.type_id=type.id", 'LEFT')
-            ->field('type.*') 
-            ->find();
-        $data['filterInfo'] = $this->getFilterDetail($filter);
+    // 根据设备编码获取用户
+    public function getUsers($code)
+    {
+        $info = M('Devices')->where("device_code='{$code}'")
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field('admin.*,d.device_code')
+                            ->find();
 
-        // 获取经销商信息
-        $data['vendor'] = D('devices')
-            ->where($map)
-            ->alias('d')
-            ->join('__BINDING__ bind ON d.id=bind.did', 'LEFT')
-            ->join('__VENDORS__ v ON bind.vid=v.id', 'LEFT')
-            ->field('v.*')
-            ->find();
-        // 获取使用记录
-        // $data['list'] = D('devices')
-        //     ->where($map)
-        //     ->alias('d')
-        //     ->join('__CONSUME__ c ON d.id=c.did', 'LEFT')
-        //     ->select();
-        $this->ajaxReturn($data);
+        if ($info) {
+            if ($info['appid']) {
+                if ($info['appsecret']) {
+                    if ($info['original_id']) {
+                        // 万事大吉
+                        $appId = $info['appid'];
+                        $appSecret = $info['appsecret'];
+                        $device_type = $info['original_id'];
+                        // 调接口查询该用户绑定的设备
+                        // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
+                        $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
+                        // 调用获取公众号的全局唯一接口调用凭据
+                        $access_token = $wxJSSDK->getAccessToken();
+                        // dump($access_token);die;
+                        //调用微信接口查看用户绑定的设备
+                        $url = "https://api.weixin.qq.com/device/get_openid?access_token=".$access_token."&device_type=".$device_type."&device_id=".$code;
+
+                        //模拟url请求
+                        $result = $this->https_request($url);
+
+                    }else{
+                        $this->ajaxReturn(array('msg'=>'您尚未填写公众号原始ID，无法查询','code'=>'204'));
+                    }
+                }else{
+                    $this->ajaxReturn(array('msg'=>'您尚未填写APPsecret，无法查询','code'=>'203'));
+                }
+            }else{
+                $this->ajaxReturn(array('msg'=>'您尚未填写APPID，无法查询','code'=>'202'));
+            }
+        }else{
+            $this->ajaxReturn(array('msg'=>'设备编码错误，该设备不存在','code'=>'201'));
+        }
+        $this->ajaxReturn($result);
     }
 
     // 查询滤芯详情
@@ -471,6 +480,27 @@ class DevicesController extends CommonController
         if(!$data) $this->error('解绑失败');
         $this->success('解绑成功');
 
+    }
+
+    /**
+     * CURL使用
+     * @param  string $url  URL地址
+     * @param  Array $data 传递数据
+     * @return string  $output     传递数据时返回的结果
+     */
+    public function https_request($url,$data = null){
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        if (!empty($data)){
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        }
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $output = curl_exec($curl);
+        curl_close($curl);
+        return $output;
     }
 
 }
