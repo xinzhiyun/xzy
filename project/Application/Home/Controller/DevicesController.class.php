@@ -44,16 +44,42 @@ class DevicesController extends Controller
      */
     public function unbind()
     {
-        dump($_POST['ticket']);
+        $ticket = $_POST['ticket'];
+        $device_id = $_POST['device_id'];
+        $openid = $_SESSION['openid'];
+
+
+        // 根据客户id获取客户微信公众号信息
+        $info = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+
+        $appid = $info['appid'];
+        $appsecret = $info['appsecret'];
+
+        $weixin  = new WeixinJssdk($appid, $appsecret);
+
+        $access_token = $weixin->getAccessToken();
+
+
+        $url = "https://api.weixin.qq.com/device/unbind?access_token=".$access_token;
 
         $data = '
             {
-                "ticket": "TICKET",
-                "device_id": "DEVICEID",
-                "openid": " OPENID"
+                "ticket": "'.$ticket.'",
+                "device_id": "'.$device_id.'",
+                "openid": "'.$openid.'"
             }
         ';
 
+        $result = $this->https_request($url,$data);
+
+        $bool = json_decode($result,true)['base_resp']['errmsg'];
+
+        if ($bool == 'ok') {
+            $this->ajaxReturn(array('msg'=>'解绑成功','code'=>'200'));
+        } else {
+            $this->ajaxReturn(array('msg'=>'解绑失败','code'=>'201'));
+
+        }
 
 
     }
