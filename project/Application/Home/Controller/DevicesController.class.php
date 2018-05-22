@@ -45,7 +45,37 @@ class DevicesController extends Controller
     public function unbind()
     {
         dump($_POST['ticket']);
+
+        $data = '
+            {
+                "ticket": "TICKET",
+                "device_id": "DEVICEID",
+                "openid": " OPENID"
+            }
+        ';
+
+
+
     }
 
-   
+    /**
+     * CURL使用
+     * @param  string $url  URL地址
+     * @param  Array $data 传递数据
+     * @return string  $output     传递数据时返回的结果
+     */
+    public function https_request($url,$data = null){
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        if (!empty($data)){
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        }
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $output = curl_exec($curl);
+        curl_close($curl);
+        return $output;
+    } 
 }
