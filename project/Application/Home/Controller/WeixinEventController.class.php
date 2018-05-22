@@ -67,6 +67,7 @@ class WeixinEventController
                         $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
                         // 调用获取公众号的全局唯一接口调用凭据
                         $access_token = $wxJSSDK->getAccessToken();
+                        file_put_contents('./phg.txt', $access_token);
 
                         //调用微信接口查看用户绑定的设备
                         $url = "https://api.weixin.qq.com/device/get_bind_device?access_token=".$access_token."&openid=".$openid;
@@ -75,47 +76,87 @@ class WeixinEventController
                         $result = $this->https_request($url);
 
                         $data = json_decode($result,true)['device_list'];
+                        $count = count(json_decode($result,true)['device_list']);
+
                         // file_put_contents('./data.txt', $data[0]['device_id']);
-                        if ($data[0]['device_id']) {
+                        if ($count) {
                             // 根据设备编码查天数
-                            $day = $this->getday($data[0]['device_id']);
-                            // file_put_contents('./result.txt', $day);
-                            // 调用微信模板消息回复
-                            $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
+                            foreach ($data as $key => $value) {
+                                $day = $this->getday($value['device_id']);
+                                // 调用微信模板消息回复
+                                $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
 
-                            $datas = '{
-                                "touser":"'.$openid.'",
-                                "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
-                                "data":{
-                                        "first": {
-                                            "value":"您的设备'.$data[0]['device_id'].'",
-                                            "color":"#173177"
-                                        },
-                                        "keyword1":{
-                                            "value":"剩余天数",
-                                            "color":"#173177"
-                                        },
-                                        "keyword2": {
-                                            "value":"'.$day.'",
-                                            "color":"#173177"
-                                        },
-                                        "keyword3": {
-                                            "value":"哈哈",
-                                            "color":"#173177"
-                                        },
-                                        "keyword4": {
-                                            "value":"哈哈哈",
-                                            "color":"#173177"
-                                        },
-                                        "remark":{
-                                            "value":"芯智云科技",
-                                            "color":"#173177"
-                                        }
-                                }
-                            }';
+                                $datas = '{
+                                    "touser":"'.$openid.'",
+                                    "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                                    "data":{
+                                            "first": {
+                                                "value":"您的设备'.$value['device_id'].'",
+                                                "color":"#173177"
+                                            },
+                                            "keyword1":{
+                                                "value":"剩余天数",
+                                                "color":"#173177"
+                                            },
+                                            "keyword2": {
+                                                "value":"'.$day.'",
+                                                "color":"#173177"
+                                            },
+                                            "keyword3": {
+                                                "value":"哈哈",
+                                                "color":"#173177"
+                                            },
+                                            "keyword4": {
+                                                "value":"哈哈哈",
+                                                "color":"#173177"
+                                            },
+                                            "remark":{
+                                                "value":"芯智云科技",
+                                                "color":"#173177"
+                                            }
+                                    }
+                                }';
 
-                            $result = $this->https_request($url, $datas);
-                            file_put_contents('./result.txt', $result);
+                                $result = $this->https_request($url, $datas);
+                            }
+                            // $day = $this->getday($data[0]['device_id']);
+                            // // file_put_contents('./result.txt', $day);
+                            // // 调用微信模板消息回复
+                            // $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
+
+                            // $datas = '{
+                            //     "touser":"'.$openid.'",
+                            //     "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                            //     "data":{
+                            //             "first": {
+                            //                 "value":"您的设备'.$data[0]['device_id'].'",
+                            //                 "color":"#173177"
+                            //             },
+                            //             "keyword1":{
+                            //                 "value":"剩余天数",
+                            //                 "color":"#173177"
+                            //             },
+                            //             "keyword2": {
+                            //                 "value":"'.$day.'",
+                            //                 "color":"#173177"
+                            //             },
+                            //             "keyword3": {
+                            //                 "value":"哈哈",
+                            //                 "color":"#173177"
+                            //             },
+                            //             "keyword4": {
+                            //                 "value":"哈哈哈",
+                            //                 "color":"#173177"
+                            //             },
+                            //             "remark":{
+                            //                 "value":"芯智云科技",
+                            //                 "color":"#173177"
+                            //             }
+                            //     }
+                            // }';
+
+                            // $result = $this->https_request($url, $datas);
+                            // file_put_contents('./result.txt', $result);
 
                         }else{
                             // 没有设备
