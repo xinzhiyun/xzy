@@ -107,7 +107,7 @@
 								if(res.status == 'ok'){
 										
 									// 上传 ticket 到服务器
-									device.upTicket(res.ticket, function(){
+									device.upTicket(res.ticket, device_id, function(){
 										// 操作成功
 										noticeFn({text: '解绑成功!'});
 									});
@@ -125,12 +125,12 @@
 					})
 				},
 				// 上传ticket（解绑操作）
-				upTicket: function(ticket, callback){
+				upTicket: function(ticket, device_id, callback){
 					// 发送 ticket 到后台
 					$.ajax({
 						url: '{{:U("Home/Devices/unbind")}}',
 						type: 'post',
-						data: {ticket: ticket},
+						data: {ticket: ticket, device_id: device_id},
 						success: function(res){
 							console.log('res: ',res);
 							if(res.code == 200){

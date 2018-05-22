@@ -41,7 +41,7 @@ var charge = new Vue({
 					return
 				}
 				// 下一步为信息录入
-				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + this.money + '&connectid=' + this.connectid;
+				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + Number(this.money)/100 + '&connectid=' + this.connectid;
 			}else if(this.mainShow == 'info'){
 				charge.buyinfo['meal_id'] = getQuery().meal_id;
 				charge.buyinfo['money'] = getQuery().money;

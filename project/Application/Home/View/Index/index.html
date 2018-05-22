@@ -30,8 +30,8 @@
 			<ul v-if='mainShow == "meal"' :style='{display: mainShow == "meal" ? "block" : "none"}'>
 				<p class='tcenter'><label for="">套餐选择</label></p>
 				<li v-for='meal in mealList' @click='select_meal(meal)' class='meal tcenter' :class='{select : active_meal == meal}' :meal_id='meal.meal_id' :money='meal.money'>
-					<span v-text='meal.describe'>套餐</span>/
-					<span v-text='meal.money'></span>
+					<span v-text='meal.describe'>套餐</span><!-- /
+					<span v-text='meal.money'></span> -->
 				</li>
 			</ul>
 			<!-- 信息录入 -->
