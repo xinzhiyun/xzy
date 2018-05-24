@@ -28,21 +28,21 @@ class FlowModel extends Model
         $lastat = strtotime($lastDayOfMonth) + 24*60*60;
 
         $map['addtime'] = array(array('gt',$firstat),array('lt',$lastat), 'and');
-        $map['_query'] = "status=1";
+        // $map['_query'] = "status=1";
+        $auid = $_SESSION['adminuser']['id'];
 
-        if($_SESSION['adminuser']['leavel']>0){
+        if($auid==1){
+            $data = $this->where($map)->select();
+        }else{
             $map=[
                 'f.addtime' => array(array('gt',$firstat),array('lt',$lastat), 'and'),
-                'f.status' => "1",
+                'd.auid' =>$_SESSION['adminuser']['id'],
             ];
-            $map['b.vid']=$_SESSION['adminuser']['id'];
             $data = $this
                 ->where($map)
                 ->alias('f')
-                ->join('__BINDING__ b on f.did = b.did','LEFT')
+                ->join('__DEVICES__ d on f.device_code = d.device_code','LEFT')
                 ->select();
-        }else{
-            $data = $this->where($map)->select();
         }
 
         return $data;
@@ -62,11 +62,10 @@ class FlowModel extends Model
 
         for ($i=0; $i < $maxDayOfMonth; $i++) { 
           foreach ($data as $key => $value) {
+            // dump($value);die;
             if ($value['addtime'] >= $startat && $value['addtime'] <= $startat+24*60*60) {
               $result["$i"+1]['count'] += 1;
               $result["$i"+1]['money'] += $value['money'];
-              $result["$i"+1]['num']  += $value['num'];
-              $result["$i"+1]['flow'] += $value['currentflow'];            
             }else{
               if (!array_key_exists($i+1,$result)) {
                 $result["$i"+1] = null;
@@ -77,4 +76,28 @@ class FlowModel extends Model
         }
         return $result;
     }
+
+    // 统计历史订单总金额
+    public function getOrderMoneyAll()
+    {
+        $info = $this->sum('money');
+        if ($info) {
+            return $info;
+        }else{
+            return false;
+        }
+    }
+
+    // 统计历史订单总数量
+    public function getOrderCount()
+    {
+        $info = $this->count();
+        if ($info) {
+            return $info;
+        }else{
+            return false;
+        }
+    }
+
+
 }
