@@ -16,7 +16,7 @@
 			<p><b>设备<span v-text='index+1'></span></b></p>
 			<div class='cfix'>
 				<p class='fleft' v-text='d.device_id'></p>
-				<span :device_id='d.device_id' @click='unbind(d.device_id)' class='fright unbind'><small>解绑</small></span>
+				<span :device_id='d.device_id' @touchend='unbind($event, d.device_id)' class='fright unbind'><small>解绑</small></span>
 			</div>
 		</li>
 	</ul>
@@ -94,7 +94,8 @@
 			mounted() {},
 			methods: {
 				// 解绑
-				unbind: function(device_id){
+				unbind: function(e,device_id){
+					var el = e.currentTarget.parentNode.parentNode;
 					var type = 2; 	// 1：绑定，2：解绑
 					var openid;		// 公众号openid
 					confirmFn('是否解绑<br />'+device_id, function(res){
@@ -110,6 +111,8 @@
 									device.upTicket(res.res.ticket, device_id, function(){
 										// 操作成功
 										noticeFn({text: '解绑成功!'});
+										// 移除元素
+										el.parentNode.removeChild(el);
 									});
 
 								}else if(res.status == 'fail'){
@@ -143,26 +146,7 @@
 						}
 					})
 				}
-				// // 微信解绑设备
-				// wxunbind: function(ticket, device_id, openid){
-				// 	var option = {
-				// 	    "ticket": ticket,
-				// 	    "device_id": device_id,
-				// 	    "openid": openid
-				// 	};
-				// 	// 发送 ticket 到后台
-				// 	$.ajax({
-				// 		url: '',
-				// 		type: 'post',
-				// 		data: option,
-				// 		success: function(res){
-				// 			console.log('res: ',res);
-				// 		},
-				// 		error: function(err){
-				// 			console.log('err: ',err);
-				// 		}
-				// 	})
-				// }
+
 			}
 		})
 	</script>
