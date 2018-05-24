@@ -16,7 +16,9 @@ html, body {
 }
 .content .nav-list>li .submenu {
     color: #fafafa;
-	background-color: #6d8198;
+    border-top: none;
+	/*background-color: #6d8198;*/
+	background-color: #53657A;
 }
 .content .nav-list>li.open>a {
     color: #fafafa;
@@ -57,6 +59,10 @@ ul li{
 .navBox ul li ul {
 	display: none;
 }
+.navBox .glyphicon {
+	display: inline-block !important;
+	background-color: rgba(0,0,0,0) !important;
+}
 
 #nav.navBox li {
 	border: none;
@@ -68,10 +74,9 @@ ul li{
 #nav.navBox a.item {
 	padding: 10px 0;
 	color: #ddd !important;
-	background-color: #6d8198;
+	/*background-color: #6d8198;*/
 }
-.nav-list>li>.submenu {
-}
+
 .nav-list>li>.submenu::before {
 	border: none !important;
 }
@@ -191,6 +196,7 @@ ul li{
 	color: #44BEFE;
     top: 50%;
     position: relative;
+    margin-left: 4%;
     transform: translateY(-50%);
     font-size: 36px;
 }
@@ -221,6 +227,7 @@ ul li{
 	width: 85%;
 	float: right;
     top: 0;
+    padding: 0 10px;
     margin-top: 70px;
 }
 .content #main .titleBar{font-family: "黑体"; font-size: 20px; padding: 15px 0;}
@@ -251,12 +258,14 @@ ul li{
 /*footer part css*/
 .content #footer{ 
 	width: 85%;
-	background:#F5F5F5; 
+	/*background:#F5F5F5; */
 	border-top:1px solid #E5E5E5; 
 	color:#999999; 
 	text-align:center; 
 	position: fixed;
-	bottom: 0 ;left: 15%;  
+	bottom: 0;
+	left: 15%; 
+	z-index: 99999;
 }
 .content #footer p{ padding:10px 20px;}
  
