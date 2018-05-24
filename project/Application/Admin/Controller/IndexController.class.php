@@ -5,53 +5,20 @@ use Admin\Controller\CommonController;
 class IndexController extends CommonController {
     public function index(){
     	if (IS_AJAX) {
-    		// 充值数额统计数量 （本月列表显示）
+    		// 本月每天充值次数及金额
 	    	$flows = D('Flow')->getTotalByEveryDay();
-
-			$devices = D('Devices')->getTotalByEveryDay();
-	    	// 滤芯订单数量（已发货及未发货数量->以发货及未发货列表）
-            if($_SESSION['adminuser']['leavel']>0){
-                $map['b.vid'] = $_SESSION['adminuser']['id'];
-                $order_filters = D('Orders')
-                    ->where($map)
-                    ->alias('o')
-                    ->join('pub_binding b on o.device_id = b.did','LEFT')
-                    ->field('distinct(order_id)')
-                    ->select();
-                $order_filter['total'] = count($order_filters);
-
-                // 保修数量统计->保修列表
-                $repairs['total'] = D('Repair')
-                    ->where($map)
-                    ->alias('r')
-                    ->join('__BINDING__ b on r.did = b.did','LEFT')
-                    ->count();
-
-                // 建议数量统计->建议列表
-                $feeds['total'] = D('Feeds')
-                    ->where($map)
-                    ->alias('f')
-                    ->join('__BINDING__ b on f.did = b.did','LEFT')
-                    ->count();
-            } else {
-                $order_filters = D('Orders')
-                    ->field('distinct(order_id)')
-                    ->select();
-
-                $order_filter['total'] = count($order_filters);
-
-                // 保修数量统计->保修列表
-                $repairs['total'] = D('Repair')->count();
-
-                // 建议数量统计->建议列表
-                $feeds['total'] = D('Feeds')->count();
-            }
+            // 历史订单总金额
+            $money = D('Flow')->getOrderMoneyAll();
+            // 历史订单总次数
+            $count = D('Flow')->getOrderCount();
+            // 本周每一天连接次数
+            $week = D('Linklog')->getLinkByEveryDay();
+            
 	    	$data = [
 				'flows' => $flows,
-				'devices'=> $devices,
-	    		'order_filters' => $order_filter,
-	    		'repairs' => $repairs,
-	    		'feeds' => $feeds
+				'money'=> $money,
+	    		'count' => $count,
+	    		'week' => $week
 	    	];
 	    	$this->ajaxReturn($data);
     	}
