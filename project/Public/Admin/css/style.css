@@ -14,6 +14,17 @@ html, body {
     font-family:'Open Sans',"微软雅黑","黑体";
     height: 100%;
 }
+.content .nav-list>li .submenu {
+    color: #fafafa;
+	background-color: #6d8198;
+}
+.content .nav-list>li.open>a {
+    color: #fafafa;
+    background-color: #53657A;
+}
+/*.content .item {
+	color: #fafafa;
+}*/
 .fr{ 
 	float:right;
 }
@@ -39,17 +50,44 @@ ul li{
     }
 }
 /*nav part css*/
-.navBox{
-	width: 15%; 
-	position: fixed;
-	padding: 0;
-	top: 0;
-	margin-top: 70px;
+
+.content .navBox>ul {
+	background-color: #53657A;
 }
-.navBox ul li ul{
+.navBox ul li ul {
 	display: none;
 }
-.navBox ul li.active ul{
+
+#nav.navBox li {
+	border: none;
+	margin: 10px 0;
+}
+#nav.navBox a:hover {
+	background-color: #4f5e6f !important;
+}
+#nav.navBox a.item {
+	padding: 10px 0;
+	color: #ddd !important;
+	background-color: #6d8198;
+}
+.nav-list>li>.submenu {
+}
+.nav-list>li>.submenu::before {
+	border: none !important;
+}
+.nav-list>li>.submenu::after {
+	border: none !important;
+}
+#nav.navBox li,
+#nav.navBox a {
+	color: #eee;
+	border: none;
+	background-color: #53657A;
+}
+#nav.navBox>ul>li>a {
+	background-color: inherit;
+} 
+.navBox ul li.active ul {
 	display: block;
 	background: #333;
 }
@@ -135,22 +173,30 @@ ul li{
 	font-size: 40px;
 }
 /*header part css*/
-#header{ 
+#header{
 	height: 70px;
     width: 100%;
     position: fixed;
     line-height: 70px;
-    background: #222;
+    background: #fff;
     font-size: 14px;
-    color: #fff;
+    color: #333;
     z-index: 1000000;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
 #header .welcomeText .currentAccount{
 	font-size: 20px;
 }
+#header>.logot {
+	color: #44BEFE;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    font-size: 36px;
+}
 #header .headerLeft{
 	font-size: 25px;
-	margin-left: 70px;
+	padding: 0 30px;
 }
 #header .headerRight{
 	height: 70px;
