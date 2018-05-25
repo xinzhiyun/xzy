@@ -32,37 +32,83 @@ class UsersController extends CommonController
      */
     public function index()
     {
-        if(I('post.open_id')){
-            $map['open_id']=array('like','%'.trim(I('post.open_id')).'%');
+        // 客户id
+        $auid = $_SESSION['adminuser']['id'];
+        $wechat = D('Users');
+
+        if ($auid == 1) {
+
+            if(I('post.open_id')){
+                $map['open_id']=array('like','%'.trim(I('post.open_id')).'%');
+            }
+
+            if(I('post.nickname')){
+                $map['nickname']=array('like','%'.trim(I('post.nickname')).'%');
+            }
+
+            if(I('post.address')){
+                $map['address']=array('like','%'.trim(I('post.address')).'%');
+            }
+
+            if(I('post.sex')){
+                $map['sex']=array('like','%'.trim(I('post.sex')).'%');
+            }
+
+
+            $total =$wechat->where($map)->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            // dump($map);die;
+            $list = $wechat->where($map)
+                            ->order('id desc')
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->select();
+        }else{
+
+            if(I('post.open_id')){
+                $map['open_id']=array('like','%'.trim(I('post.open_id')).'%');
+            }
+
+            if(I('post.nickname')){
+                $map['nickname']=array('like','%'.trim(I('post.nickname')).'%');
+            }
+
+            if(I('post.address')){
+                $map['address']=array('like','%'.trim(I('post.address')).'%');
+            }
+
+            if(I('post.sex')){
+                $map['sex']=array('like','%'.trim(I('post.sex')).'%');
+            }
+            $map['auid'] = $auid;
+
+            $total =$wechat->where($map)
+                            ->alias('w')
+                            ->join("__BINDING__ b ON w.open_id=b.open_id",'LEFT')
+                            ->join("__DEVICES__ d ON b.device_id=d.device_code",'LEFT')
+                            ->field("w.*")
+                            ->count();
+
+            $page  = new \Think\Page($total,8);
+            D('devices')->getPageConfig($page);
+            $pageButton =$page->show();
+
+            $list = $wechat->where($map)
+                            ->alias('w')
+                            ->join("__BINDING__ b ON w.open_id=b.open_id",'LEFT')
+                            ->join("__DEVICES__ d ON b.device_id=d.device_code",'LEFT')
+                            ->field("w.*")
+                            ->order('w.id desc')
+                            ->limit($page->firstRow.','.$page->listRows)
+                            ->select();
         }
-
-        if(I('post.nickname')){
-            $map['nickname']=array('like','%'.trim(I('post.nickname')).'%');
-        }
-
-        if(I('post.address')){
-            $map['address']=array('like','%'.trim(I('post.address')).'%');
-        }
-
-        if(I('post.sex')){
-            $map['sex']=array('like','%'.trim(I('post.sex')).'%');
-        }
-
-        $wechat = D('wechat');
-
-        $total =$wechat->where($map)->count();
-
-        $page  = new \Think\Page($total,8);
-        D('devices')->getPageConfig($page);
-        $pageButton =$page->show();
-
-        // dump($map);die;
-        $list = $wechat->where($map)
-                        ->order('id desc')
-                        ->limit($page->firstRow.','.$page->listRows)
-                        ->select();
 
         $this->assign('list',$list);
+        $this->assign('button',$pageButton);
+
         $this->display();
     }
 

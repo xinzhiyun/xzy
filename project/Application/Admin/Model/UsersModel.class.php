@@ -10,6 +10,7 @@ use Think\Model;
  */
 class UsersModel extends Model
 {   
+    protected $tableName = 'wechat';
     // 自动验证
     protected $_validate = array(
         array('name','require','账户名不能为空'),
@@ -41,5 +42,24 @@ class UsersModel extends Model
             $list[$key]['status'] = $status[$val['status']];
         }
         return $list;
+    }
+
+    // 统计用户数量
+    public function getUserCount()
+    {
+        // 客户id
+        $auid = $_SESSION['adminuser']['id'];
+        if ($auid == 1) {
+            $usercount = $this->count();
+        }else{
+            $map['auid'] = $auid;
+            $usercount = $this->where($map)
+                              ->alias('w')
+                              ->join("__BINDING__ b ON w.open_id=b.open_id",'LEFT')
+                              ->join("__DEVICES__ d ON b.device_id=d.device_code",'LEFT')
+                              ->field("w.*")
+                              ->count();
+        }
+        return $usercount;
     }
 }

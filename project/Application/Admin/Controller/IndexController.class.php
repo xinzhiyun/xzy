@@ -13,7 +13,8 @@ class IndexController extends CommonController {
             $count = D('Flow')->getOrderCount();
             // 本周每一天连接次数
             $week = D('Linklog')->getLinkByEveryDay();
-            
+            // 统计用户总数
+            $usercount = D('Users')->getUserCount();
             // 自定义时间段字段
             $fieldname = 'create_time';
             // 自定义时间段一
@@ -30,13 +31,14 @@ class IndexController extends CommonController {
             $linkcount3 = D('Linklog')->getTimeSlotData($fieldname,$starttime3,$endtime3);
 
 	    	$data = [
-				'flows' => $flows,
-				'money'=> $money,
-	    		'count' => $count,
-	    		'week' => $week,
-                'linkcount1' =>$linkcount1,
-                'linkcount2' =>$linkcount2,
-                'linkcount3' =>$linkcount3
+				'flows'      => $flows,
+				'money'      => $money,
+	    		'count'      => $count,
+	    		'week'       => $week,
+                'linkcount1' => $linkcount1,
+                'linkcount2' => $linkcount2,
+                'linkcount3' => $linkcount3,
+                'usercount'  => $usercount
 	    	];
 	    	$this->ajaxReturn($data);
     	}
