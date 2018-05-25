@@ -19,6 +19,11 @@ class CommonController extends Controller
     {	
     	// 登录检测
     	if(empty($_SESSION['adminuser'])) $this->redirect('Login/login');
+        // 加载一下用户配置 2018-5-25 潘
+        $system_config = M('system_config')->where('auid='.$_SESSION['adminuser']['id'])->find();
+        if ($system_config) {
+            $_SESSION['adminuser']['system_config'] = $system_config;
+        }
 
         $bool = $this->rule_check(session('adminuser.id'));
         if(!$bool){

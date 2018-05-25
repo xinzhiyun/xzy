@@ -14,15 +14,33 @@ class IndexController extends CommonController {
             // 本周每一天连接次数
             $week = D('Linklog')->getLinkByEveryDay();
             
+            // 自定义时间段字段
+            $fieldname = 'create_time';
+            // 自定义时间段一
+            $starttime1 = $_SESSION['adminuser']['system_config']['starttime1'];
+            $endtime1   = $_SESSION['adminuser']['system_config']['endtime1'];
+            $linkcount1 = D('Linklog')->getTimeSlotData($fieldname,$starttime1,$endtime1);
+            // 自定义时间段二
+            $starttime2 = $_SESSION['adminuser']['system_config']['starttime2'];
+            $endtime2   = $_SESSION['adminuser']['system_config']['endtime2'];
+            $linkcount2 = D('Linklog')->getTimeSlotData($fieldname,$starttime2,$endtime2);
+            // 自定义时间段三
+            $starttime3 = $_SESSION['adminuser']['system_config']['starttime3'];
+            $endtime3   = $_SESSION['adminuser']['system_config']['endtime3'];
+            $linkcount3 = D('Linklog')->getTimeSlotData($fieldname,$starttime3,$endtime3);
+
 	    	$data = [
 				'flows' => $flows,
 				'money'=> $money,
 	    		'count' => $count,
-	    		'week' => $week
+	    		'week' => $week,
+                'linkcount1' =>$linkcount1,
+                'linkcount2' =>$linkcount2,
+                'linkcount3' =>$linkcount3
 	    	];
 	    	$this->ajaxReturn($data);
     	}
-
+        
         $this->display('index');
 
     }

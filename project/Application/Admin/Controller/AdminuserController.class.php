@@ -91,10 +91,13 @@ class AdminuserController extends CommonController
             if($info){
 
                 $res = $user->add();
+
                 if ($res) {
-                    $this->success('添加经销商成功啦！！！',U('adminuser/index'));
+                    $data['auid'] = $res;
+                    $system_config = M('system_config')->add($data);
+                    $this->success('添加客户成功啦！！！',U('adminuser/index'));
                 } else {
-                    $this->error('添加经销商失败啦！');
+                    $this->error('添加客户失败啦！');
                 }
             
             } else {
@@ -133,13 +136,13 @@ class AdminuserController extends CommonController
                 $res = $user->save();
                 // echo $user->_sql();die;
                 if($res && $_SESSION['adminuser']['id'] == $_POST['id']) {
-                    $this->success('编辑经销商成功啦！！！',U('Login/login'));
+                    $this->success('编辑客户成功啦！！！',U('Login/login'));
                     exit;
                 }
                 if ($res) {
-                    $this->success('编辑经销商成功啦！！！',U('adminuser/index'));
+                    $this->success('编辑客户成功啦！！！',U('adminuser/index'));
                 } else {
-                    $this->error('编辑经销商失败啦！');
+                    $this->error('编辑客户失败啦！');
                 }                
             }else{
                 $this->error($user->getError());
@@ -179,6 +182,8 @@ class AdminuserController extends CommonController
 
         }
     }
+
+    
 
     /**
      * 机组绑定经销商方法

@@ -77,4 +77,30 @@ class LinklogModel extends Model
         }
         return $result;
     }
+
+    /**
+     * 获取某时间段内的数据量
+     * fieldname string,
+       starttime int(0-24),
+       endtime int(0-24)
+     * @author 潘宏钢 <619328391@qq.com>
+     */
+    public function getTimeSlotData($fieldname,$starttime,$endtime)
+    {
+        // SELECT * from pub_linklog WHERE((create_time/3600+8)%24 >8)AND((create_time/3600+8)%24 <11);
+
+        $map['_string'] = "($fieldname/3600+8)%24 >$starttime AND ($fieldname/3600+8)%24 < $endtime";
+
+        $auid = $_SESSION['adminuser']['id'];
+        
+        if ($auid == 1) {
+            $info = $this->where($map)->count();
+            return $info;
+        }else{
+            $map['auid'] = $auid;
+            $info = $this->where($map)->count();
+            return $info;
+        }
+
+    }
 }
