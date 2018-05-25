@@ -63,53 +63,62 @@ function BinToStr($str){
                     $linklog = M('linklog');
                     $info = $linklog->add($data);
                     if ($info) {
+
+                      $binding = M('binding');
+                      // 先查询是否存在绑定关系
+                      $map['open_id'] = $data['open_id'];
+                      $map['device_id'] = $data['device_id'];
+                      $res = $binding->where($map)->find();
+                      // 没有存储，存绑定关系
+                      if (!$res) {$result = $binding->add($map);}
+                      
                       // 存库成功，发一个消息！！！！！
-                      $auser = $WeixinEvent->getauidAll($auid);
-                      if ($auser) {
-                        $appId = $auser['appid'];
-                        $appSecret = $auser['appsecret'];
-                        // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
-                        $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
-                        // 调用获取公众号的全局唯一接口调用凭据
-                        $access_token = $wxJSSDK->getAccessToken();
-                        // 剩余天数
-                        $day = $WeixinEvent->getday($data['device_id']);
-                        // 调用微信模板消息回复
-                        $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
+                        $auser = $WeixinEvent->getauidAll($auid);
+                        if ($auser) {
+                          $appId = $auser['appid'];
+                          $appSecret = $auser['appsecret'];
+                          // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
+                          $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
+                          // 调用获取公众号的全局唯一接口调用凭据
+                          $access_token = $wxJSSDK->getAccessToken();
+                          // 剩余天数
+                          $day = $WeixinEvent->getday($data['device_id']);
+                          // 调用微信模板消息回复
+                          $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
 
-                        $datas = '{
-                          "touser":"'.$data['open_id'].'",
-                          "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
-                          "data":{
-                              "first": {
-                                "value":"您的设备'.$data['device_id'].'",
-                                "color":"#173177"
-                              },
-                              "keyword1":{
-                                "value":"剩余天数",
-                                "color":"#173177"
-                              },
-                              "keyword2": {
-                                "value":"'.$day.'",
-                                "color":"#173177"
-                              },
-                              "keyword3": {
-                                "value":"这是设备连接上就发送的",
-                                "color":"#173177"
-                              },
-                              "keyword4": {
-                                "value":"哈哈哈",
-                                "color":"#173177"
-                              },
-                              "remark":{
-                                "value":"芯智云科技",
-                                "color":"#173177"
-                              }
-                          }
-                        }';
+                          $datas = '{
+                            "touser":"'.$data['open_id'].'",
+                            "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                            "data":{
+                                "first": {
+                                  "value":"您的设备'.$data['device_id'].'",
+                                  "color":"#173177"
+                                },
+                                "keyword1":{
+                                  "value":"剩余天数",
+                                  "color":"#173177"
+                                },
+                                "keyword2": {
+                                  "value":"'.$day.'",
+                                  "color":"#173177"
+                                },
+                                "keyword3": {
+                                  "value":"这是设备连接上就发送的",
+                                  "color":"#173177"
+                                },
+                                "keyword4": {
+                                  "value":"哈哈哈",
+                                  "color":"#173177"
+                                },
+                                "remark":{
+                                  "value":"芯智云科技",
+                                  "color":"#173177"
+                                }
+                            }
+                          }';
 
-                        $result = $WeixinEvent->https_request($url, $datas);
-                      }
+                          $result = $WeixinEvent->https_request($url, $datas);
+                        }
                     }
                   }
             break;
