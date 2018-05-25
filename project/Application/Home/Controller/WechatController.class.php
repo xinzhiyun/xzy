@@ -98,19 +98,34 @@ class WechatController extends Controller
         $access_token = $weixin->getAccessToken();
 
         // Log::write($access_token, '伦伦');
-
+        // "button":[{
+        //         "name":"查询",
+        //         "type":"click",
+        //         "key":"chaxunday"
+        //     }],
         $jsonmenu = '{
 
-            "button":[{
-                "name":"充值",
-                "type":"view",
-                "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html?auid='.$auid.'"
+            "button":[
+            {   
+                "name":"充值及查询",
+                "sub_button":[
+                    {
+                        "type":"view",
+                        "name":"充值",
+                        "url":"http://blue.dianqiukj.com/index.php/Home/Index/index.html?auid='.$auid.'"
+                    },
+                    {
+                        "type": "click", 
+                        "name": "查询", 
+                        "key": "chaxunday"
+                    } 
+                ]
             }],
 
             "button":[{
-                "name":"查询",
-                "type":"click",
-                "key":"chaxunday"
+                "name":"商城",
+                "type":"view",
+                "url":"https://free.modao.cc/app/zJGun4GZlAuU2FMxs7fTYfuiyGgtHef#screen=s17BEEE18DC1522732497678"
             }],
 
             "button":[{
