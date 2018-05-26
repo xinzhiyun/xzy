@@ -304,6 +304,38 @@ class DevicesController extends CommonController
         $this->ajaxReturn($result);
     }
 
+    // 根据设备编码获取用户数据
+    public function getUsersInfo($code)
+    {
+        if (IS_AJAX) {
+            $info = M('Devices')->where("device_code='{$code}'")
+                            ->alias('d')
+                            ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
+                            ->field('admin.*,d.device_code')
+                            ->find();
+            if ($info) {
+                $binding = M('binding');
+                $map['device_id'] = $code;
+                $res = $binding->where($map)
+                                ->alias('b')
+                                ->join("__WECHAT__ w ON b.open_id=w.open_id", 'LEFT')
+                                ->field('w.*')
+                                ->select();
+                // dump($info);die;
+                if ($res) {
+                    $this->ajaxReturn($res);
+                }else{
+                    $this->ajaxReturn(array('msg'=>'该设备未被任何用户绑定','code'=>'202'));
+                }  
+
+            }else{
+                $this->ajaxReturn(array('msg'=>'设备编码错误，该设备不存在','code'=>'201'));
+            }
+            
+        }
+
+    }
+
     // 查询滤芯详情
     public function getFilterDetail($sum)
     {
