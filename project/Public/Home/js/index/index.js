@@ -41,7 +41,9 @@ var charge = new Vue({
 					return
 				}
 				// 下一步为信息录入
-				location.href = this.href + '?info&meal_id=' + this.meal_id + '&money=' + Number(this.money)/100 + '&connectid=' + this.connectid;
+				location.href = this.href + '?info&meal_id=' + this.meal_id + 
+				'&money=' + Number(this.money)/100 + '&connectid=' + this.connectid +
+				'&describe=' + this.mealList.describe + '&days=' + this.mealList.days;
 			}else if(this.mainShow == 'info'){
 				charge.buyinfo['meal_id'] = getQuery().meal_id;
 				charge.buyinfo['money'] = getQuery().money;
@@ -102,6 +104,8 @@ var charge = new Vue({
 			charge.buyinfo['openId'] = openId;
 			charge.buyinfo['money'] = getQuery().money;
 			charge.buyinfo['deviceId'] = getQuery().connectid;
+			charge.buyinfo['describe'] = getQuery().describe;
+			charge.buyinfo['days'] = getQuery().days;
 
 			// 获取支付信息, 用于 微信支付
 			prePay(charge.buyinfo, function(res){

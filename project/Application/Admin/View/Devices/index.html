@@ -69,7 +69,9 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>
-                                        <a class="btn-link detail" href="__URL__/devices_detail?code={{$data.device_code}}">{{$data.device_code}}
+                                        <!-- <a class="btn-link detail" href="__URL__/devices_detail?code={{$data.device_code}}">{{$data.device_code}}
+                                        </a> -->
+                                        <a class="btn-link detail" href="javascript:;" onclick='getUser("{{$data.device_code}}")'>{{$data.device_code}}
                                         </a>
                                     </td>
                                     
@@ -93,6 +95,51 @@
                         </empty>
                     </tbody>
                 </table>
+                <div class="usercontent fade in">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                ×
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                添加权限
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="bjy-form" class="form-inline" action="/index.php/Admin/Rule/add.html" method="post">
+                                <input type="hidden" name="pid" value="1">
+                                <table class="table table-bordered table-hover">
+                                    <tbody><tr>
+                                        <th width="15%">
+                                            权限名：
+                                        </th>
+                                        <td>
+                                            <input class="input-medium" type="text" name="title">
+                                        </td>
+                                        <td style="border-left: none"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            权限：
+                                        </th>
+                                        <td>
+                                            <input class="input-medium" type="text" name="name">
+                                            
+                                        </td>
+                                        <td style="border-left: none">
+                                            <span>
+                                                输入模块/控制器/方法即可 例如 Admin/Rule/index
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                <div class="text-right">
+                                    <input class="btn btn-success" type="submit" value="添加" style="width:20%">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <!-- 上下页，请加样式 -->
                 <div class="pagination pagination-lg pull-center">
                     <ul>
@@ -101,6 +148,29 @@
                 </div>
             </div>
             <script>
+                // 获取用户信息
+                function getUser(code){
+                    console.log('code: ',code);
+                    $.ajax({
+                        url: '{{:U("Admin/Devices/getUsers")}}',
+                        type: 'post',
+                        data: {code: code},
+                        success: function(res){
+                            var type = typeof res;
+                            if(type == 'string'){
+                                $(".usercontent").show();
+                               console.log('res: ',JSON.parse(res));
+
+                            }else{
+
+                            }
+                            
+                        },
+                        error: function(err){
+                            console.log('err: ',err);
+                        }
+                    })
+                }
                 /**************** 按时间搜索 -- 开始 ******************/
                     var newdate = new Date(),
                     year = newdate.getFullYear(),

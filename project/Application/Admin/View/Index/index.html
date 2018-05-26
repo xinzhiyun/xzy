@@ -1,27 +1,27 @@
 <include file="Public/header" />
 <!-- content part -->
-<div class="content">
+<div class="content" style='background: #ecf0f5;'>
 <include file="Public/nav" />
 	<!-- 内容顶部tab -->
 	<div id="hTop">
 		<div>
 			<span class="h1" id="allincome">0</span>
-			<span>当月总收入(元)</span>
+			<span><b>当月总收入(元)</b></span>
 			<!-- <a href="{{:U('Admin/Users/flow')}}" class="headlink">更多</a> -->
 		</div>
 		<div>
 			<span class="h1" id="count">0</span>
-			<span>订单数量(单)</span>
+			<span><b>订单数量(单)</b></span>
 			<!-- <a href="{{:U('Admin/Orders/index')}}" class="headlink">更多</a> -->
 		</div>
 		<div>
 			<span class="h1" id="usernum">0</span>
-			<span>用户数量(人)</span>
+			<span><b>用户数量(人)</b></span>
 			<!-- <a href="{{:U('Admin//Feeds/repairlist')}}" class="headlink">更多</a> -->
 		</div>
 		<div> 
 			<span class="h1" id="deviceNum">0</span>
-			<span>设备数量(台)</span>
+			<span><b>设备数量(台)</b></span>
 			<!-- <a href="{{:U('Admin/Feeds/feedslist')}}" class="headlink">更多</a> -->
 		</div>
 	</div>
@@ -29,14 +29,20 @@
 		<!-- 折线图 -->
 		<div id="bottomLeft">
 			<!-- 充值套餐 -->
-			<div id="income">
+			<div>
 				<h3>充值套餐</h3>
-				<div></div>
+				<p class='deviceT'>&emsp;</p>
+				<div id="income"></div>
+				<p class='xname'>时间（月）</p>
+				<p class='yname'>用户数量（人）</p>
 			</div>
 			<!-- 设备连接 -->
-			<div id="newMoreDevice">
+			<div>
 				<h3>设备连接</h3>
-				<div></div>
+				<p class='deviceT'>- 本周数据 -</p>
+				<div id="newMoreDevice"></div>
+				<p class='xname'>日期</p>
+				<p class='yname'>&emsp;次数</p>
 			</div>
 		</div>
 		<!-- 地图 -->
@@ -52,48 +58,87 @@
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wtDIIDonPda8nBPCAPtSqMZj3QBGVuzP"></script>
 	<script>
 		$('.content').css({height: window.innerHeight - 30 + 'px'});
-		var date = new Date().getDate();	// 当天日期
+		var date = new Date().getDay();	// 当天日期
+		var month = new Date().getMonth()+1;
 		var weekArr = [];
-		for(var i=8; i>0; i--){
-			weekArr.push({
-				[date - i] : ''
+		// 最近七天
+		// for(var i=6; i>=0; i--){
+		// 	weekArr.push(month + '.'+ (date - i));
+		// }
+
+		// 每周连接设备集合
+		var now = new Date(); 
+		var nowTime = now.getTime() ; 
+		var day = now.getDay();
+		var oneDayTime = 24*60*60*1000 ; 
+
+		//显示周一
+		var MondayTime = nowTime - (day-1)*oneDayTime ; 
+		//显示周日
+
+		var SundayTime =  nowTime + (7-day)*oneDayTime ; 
+
+		//初始化日期时间
+		var monday = new Date(MondayTime);
+		var sunday = new Date(SundayTime);
+		weekArr.push(monday.getMonth()+1 + '.' + monday.getDate());
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+1));
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+2));
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+3));
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+4));
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+5));
+		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+6));
+
+		function getData(callback){
+			// 获取统计数据
+			$.ajax({
+				url: "{{:U('Admin/Index/index')}}",
+				type: 'post',
+				success: function(res){
+					console.log('res: ',res);
+					var deviceArr = [];		// 每周新增设备
+					var mealArr = [];		// 充值套餐分类统计
+					var deviceNum = 0;
+					// 遍历每周新增设备数量
+					for(var i=1; i<8; i++){
+						if(!res.week[i]){
+							res.week[i] = {};
+							res.week[i]['count'] = 0;
+						}
+						deviceArr.push(+res.week[i].count);
+						deviceNum += res.week[i].count-0;
+					}
+					// console.log('deviceNum: ',deviceNum);
+					// 总收入
+					$("#allincome").text(Number(res.money).toFixed(2));
+					// 订单数量
+					$("#count").text(+res.count);
+					// 用户数量
+					$("#usernum").text(+res.usercount);
+					// 设备数量
+					$("#deviceNum").text(+deviceNum);
+					console.log('weekArr: ',weekArr);
+					// 每周连接设备集合
+					console.log('deviceArr: ',deviceArr);
+					// 模拟数据
+					mealArr = [{
+						type: 'A',
+						data: [12,345,76,89,36]
+					},{
+						type: 'B',
+						data: [22,45,176,589,336]
+					},{
+						type: 'C',
+						data: [82,145,726,189,236]
+					}]
+					// 回调函数
+					callback([mealArr, deviceArr]);
+				},
+				error: function(err){
+					console.log('err: ',err);
+				}
 			})
 		}
-		var series_data = [[],[]];
-		$.ajax({
-			url: "{{:U('Admin/Index/index')}}",
-			type: 'post',
-			success: function(res){
-				console.log('res: ',res);
-				var deviceArr = [];		// 每周新增设备
-				var mealArr = [];		// 充值套餐分类统计
-				var deviceNum = 0;
-				// 遍历每周新增设备数量
-				for(var i=1; i<8; i++){
-					if(!res.week[i]){
-						res.week[i] = {};
-						res.week[i]['count'] = 0;
-					}
-					deviceArr.push(+res.week[i].count);
-					deviceNum += res.week[i].count-0;
-				}
-				// console.log('deviceNum: ',deviceNum);
-				// 总收入
-				$("#allincome").text(Number(res.money).toFixed(2));
-				// 订单数量
-				$("#count").text(+res.count);
-				// 用户数量
-				$("#usernum").text(+res.usercount);
-				// 设备数量
-				$("#deviceNum").text(+deviceNum);
-				console.log('weekArr: ',weekArr);
-				// 每周连接设备集合
-				console.log('deviceArr: ',deviceArr);
-			},
-			error: function(err){
-				console.log('err: ',err);
-			}
-		})
 
 	</script>
 	<script>
@@ -103,137 +148,198 @@
 		for(var i=0; i<headlink.length; i++){
 			console.log(headlink[i])
 			$('.headlink').eq(i).click(function(){
-				console.log($(this))
+				// console.log($(this))
 				sessionStorage.setItem('nav_now', this.getAttribute("href"));
 			})
 		}
-		// 充值套餐
-		var income = echarts.init(document.querySelector('#income>div'));
-		// 设备连接
-		var newMoreDevice = echarts.init(document.querySelector('#newMoreDevice>div'));
 
-		var getOption = function(_subtext,legend_data, yAxis_data, series_data, markName){
-			return option = {
+		// echart配置(充值套餐)
+		function getOptionP(obj, callback){
+			//subtext,legend_data, yAxis_data, series_data, markName
+			callback({
 			    title: {
 			        text: '',
-			        subtext: _subtext
 			    },
-			    color: '#00c0ef',
-			    legend: {
-			        data: [legend_data]
-			    },
-			    grid: {
-			    	containLabel: true
-			    },
-			    tooltip: {
-			        trigger: 'axis',
-			        axisPointer: {
-			            type: 'cross'
-			        }
-			    },
-			    toolbox: {
-			        show: true,
-			        right: '5%',
-			        feature: {
-			            dataView: {readOnly: false},
-			            magicType: {type: ['line', 'bar']},
-			            restore: {},
-			            saveAsImage: {}
-			        }
+			    color: '#93aaff',
+			    tooltip: {		// 鼠标停顿提示
+			        trigger: 'axis'
 			    },
 			    xAxis:  {
+			    	// name: obj.xname,
+			    	nameTextStyle: {
+			    		color: '#666',
+			    		fontSize: '16'
+			    	},
 			        type: 'category',
-			        boundaryGap: false,
-			        interval: 1,
-			        axisLabel: {
-			        	align: 'left',
-			        	interval: 0
+			        data: obj.xData,	//x轴坐标数据
+			        axisLine: {	// 坐标轴箭头
+			            symbol:['none','arrow'],
+			            symbolSize: [6,9],
+			            symbolOffset: [0, 300]
 			        },
-			        data: ['01','','','','05','','','','','10','', '','','','15','', '','', '','20','','','','','25','','','','','30','']	//x轴坐标数据
+			        axisTick: {	// 刻度线朝内
+			        	inside: true,
+			        	alignWithLabel: true, 	// 刻度对齐
+			        }
 			    },
 			    yAxis: {
+			    	name: obj.yname,
+			    	nameTextStyle: {
+			    		color: '#666',
+			    		fontSize: '16'
+			    	},
 			        type: 'value',
 			        offset: 1,
 			        boundaryGap: false,
-			        data: yAxis_data,	//y轴坐标数据
 			        axisPointer: {
 			            snap: true
+			        },
+			        axisLine: {	// 坐标轴箭头
+			            symbol:['none','arrow'],
+			            symbolSize: [6,9],
+			            symbolOffset: [1300, 0]
+			        },
+			        axisTick: {	// 刻度线朝内
+			        	inside: true
+			        },
+			        splitLine:{  
+                　　　　show: false
+               　　 } 
+			    },
+			    series: [{
+		            data: obj.series_data,
+		            type:'line',
+		            name: obj.markName,
+        			// symbol: 'circle',
+        			symbolSize: 10,
+		        }],
+			})
+		}
+		// echart配置(设备连接)
+		function getOptionD(obj, callback){
+			//subtext,legend_data, yAxis_data, series_data, markName
+			callback({
+			    title: {
+			        text: '',
+			    },
+			    color: '#93aaff',
+			    tooltip: {		// 鼠标停顿提示
+			        trigger: 'axis'
+			    },
+			    xAxis:  {
+			    	// name: obj.xname,
+			    	nameTextStyle: {
+			    		color: '#666',
+			    		fontSize: '16'
+			    	},
+			        type: 'category',
+			        data: obj.xData,	//x轴坐标数据
+			        axisLine: {	// 坐标轴箭头
+			            symbol:['none','arrow'],
+			            symbolSize: [6,9],
+			            symbolOffset: [0, 300]
+			        },
+			        axisTick: {	// 刻度线朝内
+			        	inside: true,
+			        	alignWithLabel: true, 	// 刻度对齐
 			        }
 			    },
-			    visualMap: {
-			        show: false,
-			        dimension: 0,
-			        pieces: [{
-			            lte: 6,
-			            color: '#00c0ef'
-			        }, {
-			            gt: 6,
-			            lte: 8,
-			            color: '#00c0ef'
-			        }, {
-			            gt: 8,
-			            lte: 14,
-			            color: '#00c0ef'
-			        }, {
-			            gt: 14,
-			            lte: 17,
-			            color: '#00c0ef'
-			        }, {
-			            gt: 17,
-			            color: '#00c0ef'
-			        }]
+			    yAxis: {
+			    	name: obj.yname,
+			    	nameTextStyle: {
+			    		color: '#666',
+			    		fontSize: '16'
+			    	},
+			        type: 'value',
+			        offset: 1,
+			        boundaryGap: false,
+			        axisPointer: {
+			            snap: true
+			        },
+			        axisLine: {	// 坐标轴箭头
+			            symbol:['none','arrow'],
+			            symbolSize: [6,9],
+			            symbolOffset: [1300, 0]
+			        },
+			        axisTick: {	// 刻度线朝内
+			        	inside: true
+			        },
+			        splitLine:{  
+                　　　　show: false
+               　　 } 
 			    },
-			    series: [
-			        {
-			            name: markName,
-			            type:'line',
-			            data: series_data,
-			            markArea: {
-			                data: [ [{
-			                    name: '早高峰',
-			                    xAxis: '2017-12-11'
-			                }, {
-			                    xAxis: '2017-12-11'
-			                }] ]
-			            }
-			        }
-			    ]
-			};
+			    series: [{
+		            data: obj.series_data,
+		            type:'line',
+		            name: obj.markName,
+        			// symbol: 'circle',
+        			symbolSize: 10,
+		        }],
+			})
 		}
 		var legend_data = ['充值套餐','设备连接'];
-		// y轴坐标数据
-		var yAxis_data = [['','',''],[ '0台', '1台', '2台']];
-		// 要显示的数据
 
-		setTimeout(function(){
+		// 充值套餐
+		var income = echarts.init(document.querySelector('#income'));
+		// 设备连接
+		var newMoreDevice = echarts.init(document.querySelector('#newMoreDevice'));
+
+		// 获取统计数据
+		getData(function(series_data){
+			console.log('series_data: ',series_data);
+
 			if(series_data[0].length){
-
 				//充值套餐 折线图显示
-			    income.setOption(getOption('金额','充值套餐',yAxis_data[0],series_data[0], legend_data[0]));
-				//设备连接 折线图显示
-			    newMoreDevice.setOption(getOption('设备数量','设备连接',yAxis_data[1],series_data[1], legend_data[1]));
-			}else{ 
-				//充值套餐 折线图显示
-			    income.setOption(getOption('金额','充值套餐',yAxis_data[0],series_data[0], legend_data[0]));
-				//设备连接 折线图显示
-			    newMoreDevice.setOption(getOption('设备数量','设备连接',yAxis_data[1],series_data[1], legend_data[1]));
+				getOptionP({
+					legend_data: legend_data[0], 
+					series_data: series_data[0], 
+					markName: legend_data[0]
+				}, function(option){
+					console.log('option0: ',option);
+					income.setOption(option);
+				})
 			}
-			/*************************  地图  **************************/
-		
-			// 百度地图API功能
-			var map = new BMap.Map("allmap");    // 创建Map实例
-			map.centerAndZoom(new BMap.Point(113.404, 23.115), 9);  // 初始化地图,设置中心点坐标和地图级别
-			//添加地图类型控件
-			map.addControl(new BMap.MapTypeControl({
-				mapTypes:[
-			        BMAP_NORMAL_MAP,
-			        BMAP_HYBRID_MAP
-			    ]}));	  
-			map.setCurrentCity("广州");          // 设置地图显示的城市 此项是必须设置的
-			map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+			if(series_data[1].length){
+				//设备连接 折线图显示
+				getOptionD({
+					legend_data: legend_data[1], 
+					series_data: series_data[1], 
+					markName: legend_data[1],
+					xData: weekArr
+				}, function(option){
+					console.log('option1: ',option);
+					newMoreDevice.setOption(option);
+				})
+			}else{
+				series_data[1] = [0, 0, 0, 0, 0, 0, 0]
+				//设备连接 折线图显示
+				getOptionD({
+					legend_data: legend_data[1], 
+					series_data: series_data[1], 
+					markName: legend_data[1],
+					xData: weekArr
+				}, function(option){
+					console.log('option1: ',option);
+					newMoreDevice.setOption(option);
+				})
+			}
+			
+		})
+		/*************************  地图  **************************/
+	
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(113.404, 23.115), 9);  // 初始化地图,设置中心点坐标和地图级别
+		//添加地图类型控件
+		map.addControl(new BMap.MapTypeControl({
+			mapTypes:[
+		        BMAP_NORMAL_MAP,
+		        BMAP_HYBRID_MAP
+		    ]}));	  
+		map.setCurrentCity("广州");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
-			var marker = new BMap.Marker(new BMap.Point(116.404, 39.915)); // 创建点
-		},0)
+		var marker = new BMap.Marker(new BMap.Point(116.404, 39.915)); // 创建点
 	</script>
 	<script>
 		window.onresize = function() {

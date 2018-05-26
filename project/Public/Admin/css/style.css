@@ -195,7 +195,7 @@ ul li{
 #header>.logot {
     position: relative;
 	color: #44BEFE;
-	padding: 0 20px;
+	padding: 0 40px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 36px;
@@ -255,7 +255,7 @@ ul li{
 	width: 85%;
 	float: right;
     top: 0;
-    padding: 0 10px;
+    padding: 0 40px;
     margin-top: 80px;
 }
 .content #main .titleBar{font-family: "黑体"; font-size: 20px; padding: 15px 0;}
@@ -529,4 +529,21 @@ body .mbtn:hover {
 }
 .form-search .select-box {
 	margin: 6px 20px 6px 0;
+}
+
+.modal {
+	margin: auto;
+}
+.usercontent {
+	width: 50vw;
+	position: fixed;
+	display:none;
+	box-sizing:border-box;
+	padding:5px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 99999;
 }
