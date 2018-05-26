@@ -13,12 +13,14 @@
     <div class="row-fluid fl" id="main">
         <style>
             ._time {
+                height: 30px;
+                line-height: 30px;
                 margin-bottom:20px;
                 text-align: center;
             }
             ._time>div {
-                height: 30px;
-                line-height: 30px;
+                /*height: 30px;
+                line-height: 30px;*/
             }
             .content ._time>div span{
                 width: auto !important;
@@ -35,38 +37,38 @@
             <div class="titleBar">配置管理/<span>系统配置</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
             <div class="formBox">
                 <foreach name="info" item="vo" key="key">
-                <form id="form" action="__URL__/system_configedit" method="post">
+                <form id="form" action="__URL__/system_configedit" method="post" style='padding-top: 12%;'>
                     
-                    <div class="control-group _time">
-                        <span class='fl'>首页链接时间段一</span>
+                    <div class="control-group _time clearfix">
+                        <span class='fl'>首页链接时间段一：</span>
                         <div class='fr'>
                             <span>开始时间&emsp;</span>
-                            <input type="text" name="starttime1" value="{{$vo.starttime1}}">
+                            <input type="text" class='starttime1' name="starttime1" value="{{$vo.starttime1}}">
                             <span>结束时间&emsp;</span>
-                            <input type="text" name="endtime1" value="{{$vo.endtime1}}">
+                            <input type="text" class='endtime1' name="endtime1" value="{{$vo.endtime1}}">
                         </div>
                     </div>
-                    <div class="control-group _time">
-                        <span class='fl'>首页链接时间段二</span>
+                    <div class="control-group _time clearfix">
+                        <span class='fl'>首页链接时间段二：</span>
                         <div class='fr'>
                             <span>开始时间&emsp;</span>
-                            <input type="text" name="starttime2" value="{{$vo.starttime2}}">
+                            <input type="text" class='starttime2' name="starttime2" value="{{$vo.starttime2}}">
                             <span>结束时间&emsp;</span>
-                            <input type="text" name="endtime2" value="{{$vo.endtime2}}">
+                            <input type="text" class='endtime2' name="endtime2" value="{{$vo.endtime2}}">
                         </div>
                     </div>
-                    <div class="control-group _time">
-                        <span class='fl'>首页链接时间段三</span>
+                    <div class="control-group _time clearfix">
+                        <span class='fl'>首页链接时间段三：</span>
                         <div class='fr'>
                             <span>开始时间&emsp;</span>
-                            <input type="text" name="starttime3" value="{{$vo.starttime3}}">
+                            <input type="text" class='starttime3' name="starttime3" value="{{$vo.starttime3}}">
                             <span>结束时间&emsp;</span>
-                            <input type="text" name="endtime3" value="{{$vo.endtime3}}">
+                            <input type="text" class='endtime3' name="endtime3" value="{{$vo.endtime3}}">
                         </div>
                     </div>  
                     
                     <div class="btn-groups">
-                        <button class="subbtn btns btn-primary oddbtn" type="submit">确认</button>
+                        <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
                     </div>
                 </form>
                 </foreach>
@@ -78,6 +80,73 @@
 </div> 
 <script>
 $(function(){
-    
+    var starttime1, starttime2, starttime3;
+    var endtime1, endtime2, endtime3;
+    // 点击确定
+    $('.oddbtn').click(function(){
+        starttime1 = $('.starttime1').val();
+        starttime2 = $('.starttime2').val();
+        starttime3 = $('.starttime3').val();
+        endtime1 = $('.endtime1').val();
+        endtime2 = $('.endtime2').val();
+        endtime3 = $('.endtime3').val();
+        console.log('starttime1: ',Number(starttime1));
+        console.log('starttime2: ',Number(starttime2));
+        console.log('starttime3: ',Number(starttime3));
+        console.log('endtime1: ',Number(endtime1));
+        console.log('endtime2: ',Number(endtime2));
+        console.log('endtime3: ',Number(endtime3));
+        if(Number(starttime1) < 8 || Number(starttime1) > Number(endtime1)){
+            $('.starttime1').css({border: '1px solid red'});
+            alert('首页链接时间段一不能小于8点或 大于结束时间');
+            return
+        }else{
+            $('.starttime1').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime1) > 12 || Number(endtime1) < Number(starttime1)){
+            alert('首页链接时间段二不能大于12点或 小于开始时间');
+            $('.endtime1').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime1').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(starttime2) < 12 || Number(starttime2) > Number(endtime2)){
+            $('.starttime2').css({border: '1px solid red'});
+            alert('首页链接时间段一不能小于12点或 大于结束时间');
+            return
+        }else{
+            $('.starttime2').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime2) > 16 || Number(endtime2) < Number(starttime2)){
+            alert('首页链接时间段三不能小于开始时间或 大于16点');
+            $('.endtime2').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime2').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(starttime3) < 16 || Number(starttime3) > Number(endtime3)){
+            $('.starttime3').css({border: '1px solid red'});
+            alert('首页链接时间段三不能小于16点或 大于结束时间');
+            return
+        }else{
+            $('.starttime3').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime3) > 24 || Number(endtime3) < Number(starttime3)){
+            alert('首页链接时间段三不能大于24点或 小于开始时间');
+            $('.endtime3').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime3').css({border: '1px solid #ccc'});
+        }
+
+
+        // 提交数据
+        $('#form').submit();
+    })
 })
 </script>

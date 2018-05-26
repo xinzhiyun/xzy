@@ -20,6 +20,55 @@ html, body {
 	/*background-color: #6d8198;*/
 	background-color: #53657A;
 }
+.loadingdiv {
+    width: 30vmin;
+    height: 30vmin;
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    position: fixed;
+    top: -60px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    border-radius: 6px;
+    background: rgba(0,0,0,.7);
+    box-sizing: content-box;
+    z-index: 10000;
+}
+.load {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    border-right: 2px solid #eee;
+    animation: run linear 1s infinite;
+}
+@keyframes run{
+	0% {transform: rotate(0);}
+	25% {transform: rotate(90deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+.loadingdiv>p {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
 .content .nav-list>li.open>a {
     color: #fafafa;
     background-color: #53657A;
@@ -267,7 +316,11 @@ ul li{
 .content #main .titleBar span{ font-size: 16px;}
 .content .formBox{
 	width:500px;
-	margin-left: 300px;
+	left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 	font-size: 16px;
 }
 .content .formBox form div span{
@@ -535,7 +588,8 @@ body .mbtn:hover {
 	margin: auto;
 }
 .usercontent {
-	width: 50vw;
+	width: 70%;
+	height: auto;
 	position: fixed;
 	display:none;
 	box-sizing:border-box;
@@ -543,7 +597,11 @@ body .mbtn:hover {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 15%;
 	margin: auto;
 	z-index: 99999;
+}
+.usercontent>div {
+	position: relative;
+	top: 14%;
 }
