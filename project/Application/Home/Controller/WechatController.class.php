@@ -125,7 +125,7 @@ class WechatController extends Controller
             "button":[{
                 "name":"商城",
                 "type":"view",
-                "url":"https://free.modao.cc/app/zJGun4GZlAuU2FMxs7fTYfuiyGgtHef#screen=s17BEEE18DC1522732497678"
+                "url":"https://free.modao.cc/app/jqfBZUmESUSi18gaUHqB3E96H44ZUEN#screen=s4CB7DBA5E01527244778913"
             }],
 
             "button":[{
