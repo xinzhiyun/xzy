@@ -85,17 +85,17 @@ class WeixinEventController
                                 $day = $this->getday($value['device_id']);
                                 // 调用微信模板消息回复
                                 $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
-
+                                $time = date('Y-m-d H:i:s',time());
                                 $datas = '{
                                     "touser":"'.$openid.'",
-                                    "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                                    "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",         
                                     "data":{
                                             "first": {
-                                                "value":"您的设备'.$value['device_id'].'",
+                                                "value":"您好，查询成功。",
                                                 "color":"#173177"
                                             },
                                             "keyword1":{
-                                                "value":"剩余天数",
+                                                "value":"'.$value['device_id'].'",
                                                 "color":"#173177"
                                             },
                                             "keyword2": {
@@ -103,21 +103,19 @@ class WeixinEventController
                                                 "color":"#173177"
                                             },
                                             "keyword3": {
-                                                "value":"哈哈",
-                                                "color":"#173177"
-                                            },
-                                            "keyword4": {
-                                                "value":"哈哈哈",
+                                                "value":"'.$time.'",
                                                 "color":"#173177"
                                             },
                                             "remark":{
-                                                "value":"芯智云科技",
+                                                "value":"感谢您的使用。",
                                                 "color":"#173177"
                                             }
                                     }
                                 }';
 
                                 $result = $this->https_request($url, $datas);
+                                // file_put_contents('./result.txt', $result);
+
                             }
                             // $day = $this->getday($data[0]['device_id']);
                             // // file_put_contents('./result.txt', $day);
@@ -231,6 +229,28 @@ class WeixinEventController
         }else {
             echo "嗨！";
             exit;
+        }
+    }
+    
+    // 根据客户id查询该客户所有信息
+    public function getauidAll($id)
+    {
+        $info = M('adminuser')->where("id='{$id}'")->select();
+        if ($info) {
+            return $info[0];
+        }else{
+            return false;
+        }
+    }
+
+    // 根据设备编码查客户id
+    public function getauids($device_id)
+    {
+        $info = M('devices')->where("device_code='{$device_id}'")->getField('auid');
+        if ($info) {
+            return $info;
+        }else{
+            return false;
         }
     }
 
