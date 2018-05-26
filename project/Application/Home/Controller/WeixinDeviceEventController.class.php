@@ -53,12 +53,15 @@ function BinToStr($str){
                   // 根据设备编码拿到客户id
                   $WeixinEvent = new WeixinEventController;
                   $auid = $WeixinEvent->getauids($d['device_id']);
+                        file_put_contents('./auid.txt', $auid);
+
                   if ($auid) {
                     $data['device_id'] = $d['device_id'];
                     $data['device_type'] = $d['device_type'];
                     $data['create_time'] = $d['create_time'];
                     $data['open_id'] = $d['open_id'];
                     $data['auid'] = $auid;
+                        file_put_contents('./open_id.txt', $d);
 
                     $linklog = M('linklog');
                     $info = $linklog->add($data);
@@ -86,16 +89,17 @@ function BinToStr($str){
                           // 调用微信模板消息回复
                           $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$access_token;
 
+                          $time = date('Y-m-d H:i:s',time());
                           $datas = '{
                             "touser":"'.$data['open_id'].'",
-                            "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                            "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",
                             "data":{
                                 "first": {
-                                  "value":"您的设备'.$data['device_id'].'",
+                                  "value":"您好，设备已连接",
                                   "color":"#173177"
                                 },
-                                "keyword1":{
-                                  "value":"剩余天数",
+                                "keyword1": {
+                                  "value":"'.$data['device_id'].'",
                                   "color":"#173177"
                                 },
                                 "keyword2": {
@@ -103,21 +107,19 @@ function BinToStr($str){
                                   "color":"#173177"
                                 },
                                 "keyword3": {
-                                  "value":"这是设备连接上就发送的",
-                                  "color":"#173177"
-                                },
-                                "keyword4": {
-                                  "value":"哈哈哈",
+                                  "value":"'.$time.'",
                                   "color":"#173177"
                                 },
                                 "remark":{
-                                  "value":"芯智云科技",
+                                  "value":"感谢您的使用",
                                   "color":"#173177"
                                 }
                             }
                           }';
 
                           $result = $WeixinEvent->https_request($url, $datas);
+                        file_put_contents('./gangge.txt', $result);
+
                         }
                     }
                   }

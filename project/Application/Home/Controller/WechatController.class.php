@@ -45,6 +45,7 @@ class WechatController extends Controller
         $data['address'] = $userInfo['country'].' '.$userInfo['province'].' '.$userInfo['city'];
         // 根据微信openid查询数据库id字段1条数据
         $userId = M('Wechat')->field('id')->where('`open_id`="'.$data['open_id'].'"')->find();
+        file_put_contents('./openid.txt', $userInfo['openid']);
 
         // 如果数据库并未存储，将用户信息写入数据库
         if(empty($userId)){

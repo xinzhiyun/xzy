@@ -15,6 +15,8 @@ class IndexController extends CommonController {
             $week = D('Linklog')->getLinkByEveryDay();
             // 统计用户总数
             $usercount = D('Users')->getUserCount();
+            // 统计设备总数
+            $devicecount = D('Devices')->getDeviceCount();
             // 自定义时间段字段
             $fieldname = 'create_time';
             // 自定义时间段一
@@ -38,7 +40,8 @@ class IndexController extends CommonController {
                 'linkcount1' => $linkcount1,
                 'linkcount2' => $linkcount2,
                 'linkcount3' => $linkcount3,
-                'usercount'  => $usercount
+                'usercount'  => $usercount,
+                'devicecount'=> $devicecount
 	    	];
 	    	$this->ajaxReturn($data);
     	}

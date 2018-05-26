@@ -1,6 +1,8 @@
 <?php
 namespace Home\Controller;
 use Home\Controller\WechatController;
+use Think\Log;
+
 class WeixinEventController
 {
 	// 接受微信服务器下发的事件
@@ -13,7 +15,7 @@ class WeixinEventController
     	// $wechatObj->valid();
     	// 接受微信推送的事件
     	$xml=file_get_contents('php://input', 'r');
-        // file_put_contents('./xml.txt', $xml);
+        file_put_contents('./xml.txt', $xml);
 
         // $this->responseMsg($xml);
         
@@ -88,33 +90,34 @@ class WeixinEventController
                                 $time = date('Y-m-d H:i:s',time());
                                 $datas = '{
                                     "touser":"'.$openid.'",
-                                    "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",         
+                                    "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",
                                     "data":{
-                                            "first": {
-                                                "value":"您好，查询成功。",
+                                            "first":{
+                                                "value":"您好，查询成功",
                                                 "color":"#173177"
                                             },
                                             "keyword1":{
                                                 "value":"'.$value['device_id'].'",
                                                 "color":"#173177"
                                             },
-                                            "keyword2": {
+                                            "keyword2":{
                                                 "value":"'.$day.'",
                                                 "color":"#173177"
                                             },
-                                            "keyword3": {
+                                            "keyword3":{
                                                 "value":"'.$time.'",
                                                 "color":"#173177"
                                             },
                                             "remark":{
-                                                "value":"感谢您的使用。",
+                                                "value":"感谢您的使用",
                                                 "color":"#173177"
                                             }
                                     }
                                 }';
 
                                 $result = $this->https_request($url, $datas);
-                                // file_put_contents('./result.txt', $result);
+                            file_put_contents('./result.txt', $result);
+
 
                             }
                             // $day = $this->getday($data[0]['device_id']);
@@ -158,7 +161,7 @@ class WeixinEventController
 
                         }else{
                             // 没有设备
-                            $day = 'no';
+                            // $day = 'no';
                             // file_put_contents('./result.txt', $day);
 
                             return false;
@@ -190,69 +193,47 @@ class WeixinEventController
         return $result;
     }
 
-    // 消息回复
-    public function responseMsg()
-    {
-        //get post data, May be due to the different environments
-        //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
-        // 2018-5-17 潘
-        // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-        $postStr = file_get_contents("php://input");
-        //extract post data
-        if (!empty($postStr)){
-                /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
-                   the best way is to check the validity of xml by yourself */
-                libxml_disable_entity_loader(true);
-                $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-                $fromUsername = $postObj->FromUserName;
-                $toUsername = $postObj->ToUserName;
-                $keyword = trim($postObj->Content);
-                $time = time();
-                $textTpl = "<xml>
-                            <ToUserName><![CDATA[%s]]></ToUserName>
-                            <FromUserName><![CDATA[%s]]></FromUserName>
-                            <CreateTime>%s</CreateTime>
-                            <MsgType><![CDATA[%s]]></MsgType>
-                            <Content><![CDATA[%s]]></Content>
-                            <FuncFlag>0</FuncFlag>
-                            </xml>";             
-                if(!empty( $keyword ))
-                {
-                    $msgType = "text";
-                    $contentStr = "行行，DSB";
-                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-                    echo $resultStr;
-                }else{
-                    echo "Input something...";
-                }
+    // // 消息回复
+    // public function responseMsg()
+    // {
+    //     //get post data, May be due to the different environments
+    //     //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
+    //     // 2018-5-17 潘
+    //     // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+    //     $postStr = file_get_contents("php://input");
+    //     //extract post data
+    //     if (!empty($postStr)){
+    //             /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
+    //                the best way is to check the validity of xml by yourself */
+    //             libxml_disable_entity_loader(true);
+    //             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+    //             $fromUsername = $postObj->FromUserName;
+    //             $toUsername = $postObj->ToUserName;
+    //             $keyword = trim($postObj->Content);
+    //             $time = time();
+    //             $textTpl = "<xml>
+    //                         <ToUserName><![CDATA[%s]]></ToUserName>
+    //                         <FromUserName><![CDATA[%s]]></FromUserName>
+    //                         <CreateTime>%s</CreateTime>
+    //                         <MsgType><![CDATA[%s]]></MsgType>
+    //                         <Content><![CDATA[%s]]></Content>
+    //                         <FuncFlag>0</FuncFlag>
+    //                         </xml>";             
+    //             if(!empty( $keyword ))
+    //             {
+    //                 $msgType = "text";
+    //                 $contentStr = "行行，DSB";
+    //                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+    //                 echo $resultStr;
+    //             }else{
+    //                 echo "Input something...";
+    //             }
 
-        }else {
-            echo "嗨！";
-            exit;
-        }
-    }
-    
-    // 根据客户id查询该客户所有信息
-    public function getauidAll($id)
-    {
-        $info = M('adminuser')->where("id='{$id}'")->select();
-        if ($info) {
-            return $info[0];
-        }else{
-            return false;
-        }
-    }
-
-    // 根据设备编码查客户id
-    public function getauids($device_id)
-    {
-        $info = M('devices')->where("device_code='{$device_id}'")->getField('auid');
-        if ($info) {
-            return $info;
-        }else{
-            return false;
-        }
-    }
+    //     }else {
+    //         echo "嗨！";
+    //         exit;
+    //     }
+    // }
 
 
     // 根据公众号原始id到咱们的系统查客户id
@@ -277,6 +258,28 @@ class WeixinEventController
 
         return $outtime;
 
+    }
+
+    // 根据客户id查询该客户所有信息
+    public function getauidAll($id)
+    {
+        $info = M('adminuser')->where("id='{$id}'")->select();
+        if ($info) {
+            return $info[0];
+        }else{
+            return false;
+        }
+    }
+
+    // 根据设备编码查客户id
+    public function getauids($device_id)
+    {
+        $info = M('devices')->where("device_code='{$device_id}'")->getField('auid');
+        if ($info) {
+            return $info;
+        }else{
+            return false;
+        }
     }
 
     /**

@@ -26,6 +26,20 @@ class DevicesModel extends Model
         array('updatetime','time',2,'function'),
     );
 
+    // 统计设备数量
+    public function getDeviceCount()
+    {
+        // 客户id
+        $auid = $_SESSION['adminuser']['id'];
+        if ($auid == 1) {
+            $devicecount = $this->count();
+        }else{
+            $map['auid'] = $auid;
+            $devicecount = $this->where($map)->count();
+        }
+        return $devicecount;
+    }
+
     // 获取产品类型
     public function getCate()
     {
