@@ -59,30 +59,49 @@
 		        date = (newdate.getDate()+'').length == 1 
 		                  ? '0' + newdate.getDate()
 		                  : newdate.getDate();
-		    	var now = year +'-'+ month +'-'+ date;
+		    	var nowdate = year +'-'+ month +'-'+ date;
 		    	// console.log(year, month, date);
-		    	// $("#date-start").val(now);
-		    	 // 开始时间
-		        var startdate = $("#date-start").datetimepicker({  
-		            format: 'YYYY-MM-DD',  
-		            locale: moment.locale('zh-cn'),
-		        }); 
-		        
+		    	// 设置默认开始时间
+		    	$("#date-start").on('click', function(){
+		    		console.log(nowdate)
+		    		$("#date-start").val(nowdate + ' 00:00:00');
+		    	})
+		    	$("#date-end").on('click', function(){
+		    	// 设置默认结束时间
+		    		$("#date-end").val(year+'-'+month+'-'+date + ' 23:59:59');
+		    	})
+		    	// 开始时间 
+		        var startdate = $("#date-start").datetimepicker({
+			        format: "yyyy-mm-dd hh:ii:ss",
+			        autoclose: true,
+			        todayBtn: true, 
+			        language:'zh-CN',
+			        initialDate: nowdate + ' 00:00:00',
+			        endDate: nowdate + ' 23:59:59'
+			    });
 		        //结束时间
-				var enddate = $("#date-end").datetimepicker({
-		            format: 'YYYY-MM-DD',  
-		            locale: moment.locale('zh-cn')
-		        }); 
-		         //动态设置最小值  
+		        var enddate = $("#date-end").datetimepicker({
+			        format: "yyyy-mm-dd hh:ii:ss",
+			        autoclose: true,
+			        todayBtn: true, 
+			        language:'zh-CN',
+			        initialDate: year+'-'+month+'-'+date + ' 23:59:59',
+			        endDate:  year+'-'+month+'-'+date + ' 23:59:59'
+			    });
+
+			    // 有问题 ，事件变了
+		        //动态设置最小值  
 			    startdate.on('dp.change', function (e) {  
 			        enddate.data('DateTimePicker').minDate(e.date);
-			    	// $('#date-start').val(time);
+			        console.log('startdate_e: ',e);
+			    	$('#date-start').val(time);
 
 			    });  
 			    //动态设置最大值  
 			    enddate.on('dp.change', function (e) { 
 			        startdate.data('DateTimePicker').maxDate(e.date);
-			    	// $('#date-end').val(time);  
+			        console.log('enddate_e: ',e);
+			    	$('#date-end').val(time);  
 			        
 			    });
 		        // $("#date-start").datetimepicker('show');

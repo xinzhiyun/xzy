@@ -178,41 +178,47 @@ ul li{
 	font-size: 40px;
 }
 /*header part css*/
-#header{
-	height: 70px;
+#header {
+	height: 80px;
     width: 100%;
     position: fixed;
-    line-height: 70px;
+    line-height: 80px;
     background: #fff;
     font-size: 14px;
     color: #333;
     z-index: 1000000;
-    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-shadow: 0 0 18px 5px rgba(31, 20, 17, .1);
 }
 #header .welcomeText .currentAccount{
 	font-size: 20px;
 }
 #header>.logot {
-	color: #44BEFE;
-    top: 50%;
     position: relative;
-    margin-left: 4%;
+	color: #44BEFE;
+	padding: 0 20px;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 36px;
 }
 #header .headerLeft{
+	width: 15%;
+	text-align: center;
 	font-size: 25px;
-	padding: 0 30px;
 }
 #header .headerRight{
 	height: 70px;
 	line-height: 50px;
+	padding: 0 40px
 }
 #header .headerRight div{
-	line-height: 48px;
 	float: left;
-	height: 70px;
-	line-height: 70px;
+	height: 80px;
+	line-height: 80px;
+	color: #383838;
+}
+#header .headerRight div:hover {
+	cursor: pointer;
+	background: #f7f7f7;
 }
 #header .headerRight .button{
 	width:100px;
@@ -220,6 +226,28 @@ ul li{
 	cursor: pointer;
 }
 
+#header .headerRight .submenu {
+	width: 100%;
+	display: none;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 1px 6px 10px rgba(0,0,0,.1);
+}
+#header .headerRight .submenu>li {
+	padding: 10px 0;
+}
+#header .headerRight .submenu>li:hover {
+	color: #337ab7;
+	background: #eee;
+}
+#header .headerRight .submenu>li>a {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+#header .headerRight div:hover>.submenu {
+	display: block;
+}
 
 
 /*form part css*/
@@ -228,7 +256,7 @@ ul li{
 	float: right;
     top: 0;
     padding: 0 10px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 .content #main .titleBar{font-family: "黑体"; font-size: 20px; padding: 15px 0;}
 .form-search{    

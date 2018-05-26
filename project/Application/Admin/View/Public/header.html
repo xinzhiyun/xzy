@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css" media="screen" />
     <!--响应式特性 css-->
     <link href="__PUBLIC__/Admin/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="__PUBLIC__/Home/js/theme/default/laydate.css">
     <!-- layui.css -->
     <link rel="stylesheet" href="__PUBLIC__/Admin/layui/css/layui.css" />
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/ace.min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/style.css">
-    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/index/index.css">
     <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
     <script src="__PUBLIC__/Admin/js/index/moment-with-locales.min.js"></script>
-    <!-- <script src="__PUBLIC__/Admin/js/index/bootstrap-datetimepicker.js"></script> -->
-    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> 
+    <link rel="stylesheet" href="__PUBLIC__/Admin/datetimepicker/bootstrap_v3/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/datetimepicker/css/bootstrap-datetimepicker.css">
+    <script src="__PUBLIC__/Admin/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <style type="text/css">
         .logo:link {
             color: #fff;
@@ -37,15 +36,8 @@
             color: #fff;
         }
         #header a:hover {
+            text-decoration: none !important;
             color: rgb(25, 99, 170) !important;
-        }
-        .navBox {
-            width: 15%; 
-            position: fixed;
-            padding: 0;
-            top: 0;
-            margin-top: 70px;
-            background-color: #53657A !important;
         }
         div.pagel{
             margin-top: 20px;
@@ -83,7 +75,7 @@
         }*/
         #date-start,
         #date-end {
-            width: 90px !important; 
+            width: 144px !important; 
         }
         .collapse {
             height: auto !important;
@@ -109,14 +101,22 @@
         <div class='logot fl'>净水物联网云平台</div>
         <div class="headerRight fr">
             <div>
-                <span class="AccountName">{{$Think.session.adminuser.name}}</span>
-                <span>欢迎您!</span>
+                <b class="AccountName">{{$Think.session.adminuser.name}}</b>
+                <b>欢迎您!</b>
+                <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                <ul class='submenu'>
+                    <li class="modifyPassword"><a href="{{:U('adminuser/password')}}" style="color: #9d9d9d;;">修改密码</a></li>
+                    <li class="bowOut">
+                        <a href="javascript:void(0)" url="{{:U('Login/logout')}}" style="color: #9d9d9d;;" id="_exit">退出</a>
+                    </li>
+                </ul>
             </div>
-            <div class="button modifyPassword">
+
+            <!-- <div class="button modifyPassword">
                 <a href="{{:U('adminuser/password')}}" style="color: #9d9d9d;;">修改密码</a>
             </div>
             <div class="button bowOut">
                 <a href="javascript:void(0)" url="{{:U('Login/logout')}}" style="color: #9d9d9d;;" id="_exit">退出</a>
-            </div>
+            </div> -->
         </div>
     </div>
