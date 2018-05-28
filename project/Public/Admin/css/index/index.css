@@ -237,6 +237,9 @@ a {
 .desc {
 	width: 35%;
 }
+.desc h4 {
+	text-align: center;
+}
 /*地图*/
 #map>div {
 	height: 95%;

@@ -49,7 +49,9 @@ var charge = new Vue({
 				charge.buyinfo['money'] = getQuery().money;
 				charge.buyinfo['name'] = this.uname;
 				charge.buyinfo['phone'] = this.uphone;
-				charge.buyinfo['addr'] = this.uaddr;
+				charge.buyinfo['province'] = this.uaddr.split(' ')[0];
+				charge.buyinfo['city'] = this.uaddr.split(' ')[1];
+				charge.buyinfo['area'] = this.uaddr.split(' ')[2];
 				charge.buyinfo['addrdetail'] = this.uaddrdetail;
 
 				if(!this.uname){
@@ -237,6 +239,9 @@ document.onready = function(){
 		}else {
 			$(".uaddr").text('');
 			$('.areabtn').eq(1).show();
+		}
+		if(!city){
+			city = '城区';
 		}
 		charge.uaddr = province + ' ' + city + ' ' + area;
 		$(".uaddr").text( (!province && !city && !area) ? '请选择' : province + ' ' + city + ' ' + area);
