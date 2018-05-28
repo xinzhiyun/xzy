@@ -49,9 +49,19 @@
 				<h3>水机分布</h3>
 			</ul>
 			<div id="allmap" class='fl'></div>
-			<div class='desc fr'></div>
+			<div class='desc fr'>
+				<h4>水机分布省份( Top5 )</h4>
+				<ul>
+					<li>广东&emsp;<span class='top1'>115</span></li>
+					<li>浙江&emsp;<span class='top2'>89</span></li>
+					<li>四川&emsp;<span class='top3'>54</span></li>
+					<li>青海&emsp;<span class='top4'>45</span></li>
+					<li>宁夏&emsp;<span class='top5'>30</span></li>
+				</ul>
+			</div>
 		</div>
 	</div>
+	<div class='dnum'></div>
 	<script src="__PUBLIC__/Admin/js/echarts.min.js"></script>
 	<script>
 		$('.content').css({height: window.innerHeight - 30 + 'px'});
@@ -87,6 +97,111 @@
 		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+5));
 		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+6));
 
+		// 省份模拟数据
+		var provinceDevice = [{
+			name: '广东',
+			num: '115'
+		},{
+			name: '浙江',
+			num: '89'
+		},{
+			name: '四川',
+			num: '54'
+		},{
+			name: '青海',
+			num: '45'
+		},{
+			name: '宁夏',
+			num: '30'
+		},{
+			name: '台湾',
+			num: '0'
+		},{
+			name: '河北',
+			num: '0'
+		},{
+			name: '山西',
+			num: '0'
+		},{
+			name: '辽宁',
+			num: '0'
+		},{
+			name: '吉林',
+			num: '0'
+		},{
+			name: '黑龙江',
+			num: '0'
+		},{
+			name: '江苏',
+			num: '0'
+		},{
+			name: '福建',
+			num: '0'
+		},{
+			name: '安徽',
+			num: '0'
+		},{
+			name: '江西',
+			num: '0'
+		},{
+			name: '山东',
+			num: '0'
+		},{
+			name: '河南',
+			num: '0'
+		},{
+			name: '湖北',
+			num: '0'
+		},{
+			name: '湖南',
+			num: '0'
+		},{
+			name: '海南',
+			num: '0'
+		},{
+			name: '贵州',
+			num: '0'
+		},{
+			name: '云南',
+			num: '0'
+		},{
+			name: '陕西',
+			num: '0'
+		},{
+			name: '甘肃',
+			num: '0'
+		},{
+			name: '新疆',
+			num: '0'
+		},{
+			name: '广西',
+			num: '0'
+		},{
+			name: '内蒙古',
+			num: '0'
+		},{
+			name: '西藏',
+			num: '0'
+		},{
+			name: '北京',
+			num: '0'
+		},{
+			name: '天津',
+			num: '0'
+		},{
+			name: '上海',
+			num: '0'
+		},{
+			name: '重庆',
+			num: '0'
+		},{
+			name: '香港',
+			num: '0'
+		},{
+			name: '澳门',
+			num: '0'
+		}]
+
 		function getData(callback){
 			// 获取统计数据
 			$.ajax({
@@ -114,7 +229,7 @@
 					// 用户数量
 					$("#usernum").text(+res.usercount);
 					// 设备数量
-					$("#deviceNum").text(+deviceNum);
+					$("#deviceNum").text(+res.devicecount);
 					console.log('weekArr: ',weekArr);
 					// 每周连接设备集合
 					console.log('deviceArr: ',deviceArr);
@@ -355,8 +470,19 @@
 			
 		})
 		/*************************  地图  **************************/
-		
-	</script>
+		$('#allmap').on('mousemove', function(e){
+			$('.dnum').show();
+			// console.log('e: ',e);
+			$('.dnum').css({
+				left: e.pageX+20,
+				top: e.pageY-20
+			})
+		})
+		$('#allmap').on('mouseout', function(e){
+			// console.log('e: ',e);
+			$('.dnum').hide();
+		})
+	</script>	
 	<script>
 		window.onresize = function() {
             location.reload(true);

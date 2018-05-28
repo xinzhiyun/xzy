@@ -12,7 +12,7 @@
                 <form class="form-horizontal " action="__URL__/add" method="post" id="_formTable">
                     <div class="groupBox control-group">
                         <span>微信product_id<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" class="control" name="product_id" placeholder="请输入微信product_id" style="width:210px;">
+                        <input type="text" class="control product_id" name="product_id" placeholder="请输入微信product_id" style="width:210px;">
                     </div>
                     <div class="groupBox control-group">
                         <span>型号名称<sub style="color:red;margin-left: 5px;">*</sub></span>
@@ -22,7 +22,7 @@
 
                     <div class=" btn-groups">
                         <button class="btns reset btn-primary" type="reset">重置</button>
-                        <button class="subbtn btns btn-primary" type="submit">提交</button>
+                        <button class="subbtn btns btn-primary" type="button">提交</button>
                     </div>
                 </form>
             </div>
@@ -42,18 +42,25 @@
             layer.msg(text);
         });  
     }
-    $('#_formTable').submit(function(){
-        var val = $('input[name=typename]').val()
+    $('.subbtn').on('click',function(){
+        var val = $('input[name=typename]').val();
+        var product_id = $(".product_id").val();
+        if(!product_id){
+            layuiHint('product_id不能为空');
+            return
+        }else if(!/[0-9]/.test(product_id)){
+            layuiHint('product_id只能是数字');
+            return
+        }
         if(val){
             if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(val.trim())){
                 layuiHint('不能输入特殊字符')
-            }else{
-                return true
             }
         }else{
-            layuiHint('类型名称不能为空')
+            layuiHint('类型名称不能为空');
+            return
         }
-        return false
+        $('#_formTable').submit();
     })
     //添加滤芯项
     $(".selects").click(function(ev){

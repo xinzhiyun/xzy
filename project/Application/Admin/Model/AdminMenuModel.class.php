@@ -26,7 +26,7 @@ class AdminMenuModel extends BaseModel{
      * @param  string $type tree获取树形结构 level获取层级结构
      * @return array        结构数据
      */
-    public function getTreeData($type='tree',$order=''){
+    public function getTreeDatas($type='tree',$order=''){
         // 判断是否需要排序
         if(empty($order)){
             $data=$this->select();

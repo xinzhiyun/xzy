@@ -236,7 +236,43 @@ a {
 }
 .desc {
 	width: 35%;
+	position: relative;
+	padding-top: 8%;
 }
+.desc>h4 {
+	font-weight: 600;
+}
+.desc span {
+	display: inline-block;
+	margin: 8px 0;
+	color: #fff;
+}
+.top1 {
+	width: 60%;
+	background: #56aaff;
+	text-align: center;
+}
+.top2 {
+	width: 50%;
+	background: #70b2d4;
+	text-align: center;
+}
+.top3 {
+	width: 40%;
+	background: #ef81a2;
+	text-align: center;
+}
+.top4 {
+	width: 30%;
+	background: #ef81c7;
+	text-align: center;
+}
+.top5 {
+	width: 20%;
+	background: #b081ef;
+	text-align: center;
+}
+
 /*地图*/
 #map>div {
 	height: 95%;
@@ -253,4 +289,12 @@ a {
 	line-height: 2;
     vertical-align: middle;
 	text-align: center;
+}
+/*地图提示*/
+.dnum {
+	height: 20px;
+	position: fixed;
+	padding: 0 10px;
+	border-radius: 4px;
+	background: #FFC107;
 }
