@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <!-- 上下页，请加样式 -->
-                <div class="pagination pagination-lg pull-center">
+                <div class="pagination">
                     <ul>
                         {{$button}}
                     </ul>
@@ -182,6 +182,8 @@
                         },
                         error: function(err){
                             console.log('err: ',err);
+                            $('.loadingdiv').hide();
+                            alert('系统遇到错误，请稍后再试');
                         }
                     })
                 }

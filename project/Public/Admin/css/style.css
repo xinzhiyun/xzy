@@ -339,7 +339,7 @@ ul li{
 /*footer part css*/
 .content #footer{ 
 	width: 85%;
-	/*background:#F5F5F5; */
+	background:#fff; 
 	border-top:1px solid #E5E5E5; 
 	color:#999999; 
 	text-align:center; 
@@ -604,4 +604,39 @@ body .mbtn:hover {
 .usercontent>div {
 	position: relative;
 	top: 14%;
+}
+.pagination>ul,
+.pagination>ul>div {
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	/*border: 1px solid #ccc;*/
+    border-radius: 4px;
+}
+.pagination>ul>div::after {
+	content: '';
+	display: inline-block;
+	zoom: 1;
+	clear: both;
+}
+.pagination>ul .current {
+	background: #f1f1f1;
+}
+.pagination>ul .current,
+.pagination>ul .num,
+.pagination>ul .next,
+.pagination>ul .prev {
+	width: 30px;
+    height: 30px;
+    display: inline-block;
+    padding: 0;
+    line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	float: left;
+}
+.pagination>ul .next,
+.pagination>ul .prev {
+	width: 60px;
 }
