@@ -51,6 +51,13 @@ class WeixinpayController extends Controller
                     // 写入数据库
                     $msg = $model->add($data);
 
+                    //用户充值完成后更新设备跟用户的绑定关系
+                    if ($msg) {
+                        //设备编码
+                        $device_code = $data['device_code'];
+                        $devices['status'] = 1;
+                        M('devices')->where("device_code='$device_code'")->save($devices);
+                    }
 
 
                     //充值成功后给用户返回充值信息
