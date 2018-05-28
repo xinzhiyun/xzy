@@ -121,9 +121,15 @@ var option = {
     tooltip: {
         trigger: 'item',
         formatter: function (params, ticket, callback) {
-            console.log('params.name: ',params.name);
-            console.log('params.dataIndex: ',params.dataIndex);
-            console.log('params: ',params);
+            // console.log('params.name: ',params.name);
+            // console.log('params: ',params);
+            for(var i=0; i<provinceDevice.length; i++){
+                if(provinceDevice[i].name == params.name){
+                    console.log(provinceDevice[i].num);
+                    $('.dnum').text(provinceDevice[i].num + '(台)');
+
+                }
+            }
         }
     },
     // toolbox: {

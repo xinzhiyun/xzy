@@ -290,3 +290,11 @@ a {
     vertical-align: middle;
 	text-align: center;
 }
+/*地图提示*/
+.dnum {
+	height: 20px;
+	position: fixed;
+	padding: 0 10px;
+	border-radius: 4px;
+	background: #FFC107;
+}
