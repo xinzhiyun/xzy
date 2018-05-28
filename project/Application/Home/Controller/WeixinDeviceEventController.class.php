@@ -152,8 +152,30 @@ function BinToStr($str){
                         ';
 
                         $result = $WeixinEvent->https_request($url, $datas);
+                        $res = json_decode($result,true);
                         file_put_contents('./lunge.txt', $result);
 
+                        if ($res['base_resp']['errmsg'] == 'ok') {
+                          //修改设备状态
+                          M('devices')->startTrans();
+                          M('binding')->startTrans();
+                          $data['status'] = 0;
+                          $a = M('devices')->where("device_code='{$device_id}'")->save($data);
+                          //解除设备跟用户的绑定关系
+                          $b = M('binding')->where("device_code='{$device_id}' AND open_id='$open_id'")->delete();
+
+                          if ($a && $b) {
+                            M('devices')->commit();
+                            M('binding')->commit();
+                            file_put_contents('./jiebang.txt', 'ok');
+                          } else {
+                            M('devices')->rollback();
+                            M('binding')->rollback();
+                            file_put_contents('./jiebang.txt', 'ng');
+                          }
+
+                        } 
+                        
 
                       }
                     
