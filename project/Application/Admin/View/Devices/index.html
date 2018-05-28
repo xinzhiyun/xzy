@@ -29,7 +29,7 @@
                         <input type="text" id="date-start" class="input-medium form-control" name="minouttime" placeholder="请选择到期时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="date-end" class="input-medium form-control" name="maxouttime" placeholder="请选择到期时间" style="width:76px;right: 0"/ >
                     </span>
                     <span class="select-box" style="display: inline-block;position:relative">最后访问时间:
-                        <input type="text" id="lasttime" class="input-medium form-control" name="minlasttime" placeholder="请选择最后访问时间" style="width: 76px;left: 0"/ > ~ <input type="text" id="lasttimeend" class="input-medium form-control" name="maxlasttime" placeholder="请选择最后访问时间" style="width:76px;right: 0"/ >
+                        <input type="text" id="lasttime" class="input-medium form-control" name="minlasttime" placeholder="请选择最后访问时间" style="width: 144px;left: 0"/ > ~ <input type="text" id="lasttimeend" class="input-medium form-control" name="maxlasttime" placeholder="请选择最后访问时间" style="width:144px;right: 0"/ >
                     </span>
                     <span class="select-box">绑定状态:
                         <select class="select status" size="1" name="status" style="width: 100px;">
@@ -201,19 +201,26 @@
                     date = (newdate.getDate()+'').length == 1 
                               ? '0' + newdate.getDate()
                               : newdate.getDate();
-                    var now = year +'-'+ month +'-'+ date;
+                    var nowdate = year +'-'+ month +'-'+ date;
                     // console.log(year, month, date);
-                     // 开始时间
-                    var lasttime = $("#lasttime").datetimepicker({  
-                        format: 'YYYY-MM-DD',  
-                        locale: moment.locale('zh-cn'),
-                    }); 
-                    
+                    // 开始时间 
+                    var lasttime = $("#lasttime").datetimepicker({
+                        format: "yyyy-mm-dd hh:ii:ss",
+                        autoclose: true,
+                        todayBtn: true, 
+                        language:'zh-CN',
+                        initialDate: nowdate + ' 00:00:00',
+                        endDate: $("#lasttimeend").val()
+                    });
                     //结束时间
                     var lasttimeend = $("#lasttimeend").datetimepicker({
-                        format: 'YYYY-MM-DD',  
-                        locale: moment.locale('zh-cn')
-                    }); 
+                        format: "yyyy-mm-dd hh:ii:ss",
+                        autoclose: true,
+                        todayBtn: true, 
+                        language:'zh-CN',
+                        initialDate: year+'-'+month+'-'+date + ' 23:59:59',
+                        startDate:  $("#lasttime").val()
+                    });
                      //动态设置最小值  
                     lasttime.on('dp.change', function (e) {  
                         lasttimeend.data('DateTimePicker').minDate(e.date);
@@ -226,6 +233,14 @@
                         // $('#date-end').val(time);  
                         
                     });
+
+                    // 最后访问时间
+                    $("#lasttime").on("click", function(){
+                        $("#lasttime").val(nowdate + ' 00:00:00');
+                    })
+                    $("#lasttimeend").on("click", function(){
+                        $("#lasttimeend").val($("#lasttime").val().substr(0,10) + ' 23:59:59');
+                    })
                     // $("#date-start").datetimepicker('show');
                     // $("#date-end").datetimepicker('show');
 
