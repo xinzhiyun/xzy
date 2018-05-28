@@ -6,7 +6,7 @@ use Org\Util\Date;
  * Class DevicesModel
  * @package Admin\Model
  * 设备添加操作
- * @author 陈昌平 <chenchangping@foxmail.com>
+ * @author 潘宏钢 <619328391@qq.com>
  */
 class DevicesModel extends Model
 {
@@ -180,5 +180,11 @@ class DevicesModel extends Model
         $page -> setConfig('next','下一页');
         $page -> setConfig('link','indexpagenumb');//pagenumb 会替换成页码
         $page -> setConfig('theme','%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
+    }
+
+    // 根据地址检索设备数量
+    public function getDeviceCountByAddress()
+    {
+                
     }
 }

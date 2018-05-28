@@ -311,7 +311,7 @@ class WeixinEventController
         }  
         $value["seconds"] = floor($time);  
         //return (array) $value;  
-        $t=$value["years"] ."年". $value["days"] ."天"." ". $value["hours"] ."小时". $value["minutes"] ."分".$value["seconds"]."秒";  
+        $t=$value["years"] ."年". $value["days"] ."天";  
         Return $t;  
           
          }else{  

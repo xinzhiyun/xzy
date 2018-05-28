@@ -47,10 +47,10 @@ class DevicesController extends CommonController
                 $map['address']=array('like','%'.trim(I('post.address')).'%');
             }
 
-            if(I('post.status')){
-                $map['status']=array('like','%'.trim(I('post.status')).'%');
+            if(I('post.status') != ''){
+                $map['status']=I('post.status');
             }
-
+            // dump($_POST);die;
             // $map = array(
             //     'device_code' => array('like','%'.trim(I('post.device_code')).'%'),
             //     'mac' => array('like','%'.trim(I('post.mac')).'%'),
@@ -139,8 +139,8 @@ class DevicesController extends CommonController
                 $map['address']=array('like','%'.trim(I('post.address')).'%');
             }
 
-            if(I('post.status')){
-                $map['status']=array('like','%'.trim(I('post.status')).'%');
+            if(I('post.status') != ''){
+                $map['status']=I('post.status');
             }
 
             // $map = array(
