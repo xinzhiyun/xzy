@@ -33,16 +33,14 @@
 				<h3>充值套餐</h3>
 				<p class='deviceT'>&emsp;</p>
 				<div id="income"></div>
-				<p class='xname'>时间（月）</p>
-				<p class='yname'>用户数量（人）</p>
+				<!-- <p class='xname'>时间（月）</p>
+				<p class='yname'>用户数量（人）</p> -->
 			</div>
 			<!-- 设备连接 -->
 			<div>
 				<h3>设备连接</h3>
 				<p class='deviceT'>- 本周数据 -</p>
 				<div id="newMoreDevice"></div>
-				<p class='xname'>日期</p>
-				<p class='yname'>&emsp;次数</p>
 			</div>
 		</div>
 		<!-- 地图 -->
@@ -154,69 +152,87 @@
 		}
 
 		// echart配置(充值套餐)
-		function getOptionP(obj, callback){
+		function getOptionMeal(dataArr, callback){
+			console.log('dataArr: ',dataArr);
+			var colors = ['#ef8646', '#8eef46', '#58f0ee'];
 			//subtext,legend_data, yAxis_data, series_data, markName
 			callback({
-			    title: {
-			        text: '',
-			    },
-			    color: '#93aaff',
-			    tooltip: {		// 鼠标停顿提示
+			    color: colors,
+			    tooltip: {
 			        trigger: 'axis'
 			    },
-			    xAxis:  {
-			    	// name: obj.xname,
-			    	nameTextStyle: {
-			    		color: '#666',
-			    		fontSize: '16'
-			    	},
-			        type: 'category',
-			        data: obj.xData,	//x轴坐标数据
-			        axisLine: {	// 坐标轴箭头
-			            symbol:['none','arrow'],
-			            symbolSize: [6,9],
-			            symbolOffset: [0, 300]
-			        },
-			        axisTick: {	// 刻度线朝内
-			        	inside: true,
-			        	alignWithLabel: true, 	// 刻度对齐
+			    legend: {
+			        left: 'middle',
+			        data: ['A套餐', 'B套餐', 'C套餐']
+			    },
+			    xAxis: [
+			       {
+				       	type: 'category',
+				        name: '时间\n（月）',
+				    	nameTextStyle: {
+				    		color: '#666',
+				    		// fontSize: '16'
+				    	},
+				    	axisLabel: {  
+						   interval:0,  
+						   rotate:40  
+						},
+				        splitLine: {show: false},
+				        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+				        axisTick: {	// 刻度线朝内
+				        	inside: true,
+				        	alignWithLabel: true, 	// 刻度对齐
+				        },
+				        axisLine: {	// 坐标轴箭头
+				            symbol:['none','arrow'],
+				            symbolSize: [6,9],
+				            symbolOffset: [1300, 0]
+				        },
+			       }
+			    ],
+			    yAxis: [
+			        {
+			            type: 'value',
+			            name: '用户数量（人）',
+				    	nameTextStyle: {
+				    		color: '#666',
+				    		// fontSize: '16'
+				    	},
+			            splitLine:{show: false},//去除网格线,
+				        axisLine: {	// 坐标轴箭头
+				            symbol:['none','arrow'],
+				            symbolSize: [6,9],
+				            symbolOffset: [1300, 0]
+				        },
+				        axisTick: {	// 刻度线朝内
+				        	inside: true
+				        },
 			        }
-			    },
-			    yAxis: {
-			    	name: obj.yname,
-			    	nameTextStyle: {
-			    		color: '#666',
-			    		fontSize: '16'
-			    	},
-			        type: 'value',
-			        offset: 1,
-			        boundaryGap: false,
-			        axisPointer: {
-			            snap: true
+			    ],
+			    series: [
+			        {
+			            name: 'A套餐',
+			            type: 'line',
+			            smooth: true,
+			            data: dataArr.series_data[0].data
 			        },
-			        axisLine: {	// 坐标轴箭头
-			            symbol:['none','arrow'],
-			            symbolSize: [6,9],
-			            symbolOffset: [1300, 0]
+			        {
+			            name: 'B套餐',
+			            type: 'line',
+			            smooth: true,
+			            data: dataArr.series_data[1].data
 			        },
-			        axisTick: {	// 刻度线朝内
-			        	inside: true
-			        },
-			        splitLine:{  
-                　　　　show: false
-               　　 } 
-			    },
-			    series: [{
-		            data: obj.series_data,
-		            type:'line',
-		            name: obj.markName,
-        			// symbol: 'circle',
-        			symbolSize: 10,
-		        }],
+			        {
+			            name: 'C套餐',
+			            type: 'line',
+			            smooth: true,
+			            data: dataArr.series_data[2].data
+			        }
+			    ]
 			})
 		}
 		// echart配置(设备连接)
-		function getOptionD(obj, callback){
+		function getOptionDevice(obj, callback){
 			//subtext,legend_data, yAxis_data, series_data, markName
 			callback({
 			    title: {
@@ -227,10 +243,10 @@
 			        trigger: 'axis'
 			    },
 			    xAxis:  {
-			    	// name: obj.xname,
+			    	name: '日期',
 			    	nameTextStyle: {
 			    		color: '#666',
-			    		fontSize: '16'
+			    		// fontSize: '16'
 			    	},
 			        type: 'category',
 			        data: obj.xData,	//x轴坐标数据
@@ -245,10 +261,10 @@
 			        }
 			    },
 			    yAxis: {
-			    	name: obj.yname,
+			    	name: '次数',
 			    	nameTextStyle: {
 			    		color: '#666',
-			    		fontSize: '16'
+			    		// fontSize: '16'
 			    	},
 			        type: 'value',
 			        offset: 1,
@@ -290,7 +306,7 @@
 
 			if(series_data[0].length){
 				//充值套餐 折线图显示
-				getOptionP({
+				getOptionMeal({
 					legend_data: legend_data[0], 
 					series_data: series_data[0], 
 					markName: legend_data[0]
@@ -298,10 +314,22 @@
 					console.log('option0: ',option);
 					income.setOption(option);
 				})
+			}else{
+				series_data[0] = [0, 0, 0, 0, 0, 0, 0]
+				//设备连接 折线图显示
+				getOptionMeal({
+					legend_data: legend_data[0], 
+					series_data: series_data[0], 
+					markName: legend_data[0],
+					xData: weekArr
+				}, function(option){
+					console.log('option0: ',option);
+					newMoreDevice.setOption(option);
+				})
 			}
 			if(series_data[1].length){
 				//设备连接 折线图显示
-				getOptionD({
+				getOptionDevice({
 					legend_data: legend_data[1], 
 					series_data: series_data[1], 
 					markName: legend_data[1],
@@ -313,7 +341,7 @@
 			}else{
 				series_data[1] = [0, 0, 0, 0, 0, 0, 0]
 				//设备连接 折线图显示
-				getOptionD({
+				getOptionDevice({
 					legend_data: legend_data[1], 
 					series_data: series_data[1], 
 					markName: legend_data[1],
