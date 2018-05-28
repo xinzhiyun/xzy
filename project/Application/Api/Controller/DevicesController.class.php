@@ -22,10 +22,12 @@ class DevicesController extends Controller
             $device = M('devices');
             //接受mac数据
             $data['mac'] = $mac = str_replace(":","",$_POST['mac']);
-            $data['product_id'] = $_POST['id'];
+            $data['product_id'] = $product_id = $_POST['id'];
+
 
             //查看数据库是否已存在该设备
-            $info = $device->where("mac='{$mac}'")->find();
+            $info = $device->where("mac='{$mac}'"." AND product_id='{$product_id}'")->find();
+
 
             if ($info) {
                 //存在返回信息
