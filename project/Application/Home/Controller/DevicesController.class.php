@@ -75,9 +75,25 @@ class DevicesController extends Controller
         $bool = json_decode($result,true)['base_resp']['errmsg'];
 
         if ($bool == 'ok') {
-            $this->ajaxReturn(array('msg'=>'解绑成功','code'=>'200'));
-        } else {
-            $this->ajaxReturn(array('msg'=>'解绑失败','code'=>'201'));
+            //修改设备状态
+            M('devices')->startTrans();
+            M('binding')->startTrans();
+            $data['status'] = 0;
+            $a = M('devices')->where("device_code='{$device_id}'")->save($data);
+            //解除设备跟用户的绑定关系
+            $b = M('binding')->where("device_code='{$device_id}' AND open_id='$openid'")->delete();
+
+            if ($a && $b) {
+                M('devices')->commit();
+                M('binding')->commit();
+                $this->ajaxReturn(array('msg'=>'解绑成功','code'=>'200'));
+
+            } else {
+                M('devices')->rollback();
+                M('binding')->rollback();
+                $this->ajaxReturn(array('msg'=>'解绑失败','code'=>'201'));
+
+            }
 
         }
 
