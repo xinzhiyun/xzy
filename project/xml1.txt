@@ -1,7 +1,0 @@
-<xml><ToUserName><![CDATA[gh_45d2a107fdc9]]></ToUserName>
-<FromUserName><![CDATA[ofcch1hNCH9901LTNp7x8W8UAeMI]]></FromUserName>
-<CreateTime>1526612680</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[chaxunday]]></EventKey>
-</xml>

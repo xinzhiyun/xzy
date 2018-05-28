@@ -29,7 +29,7 @@
 		<!-- 折线图 -->
 		<div id="bottomLeft">
 			<!-- 充值套餐 -->
-			<div>
+			<div class='ctitle'>
 				<h3>充值套餐</h3>
 				<p class='deviceT'>&emsp;</p>
 				<div id="income"></div>
@@ -37,25 +37,25 @@
 				<p class='yname'>用户数量（人）</p> -->
 			</div>
 			<!-- 设备连接 -->
-			<div>
+			<div class='ctitle'>
 				<h3>设备连接</h3>
 				<p class='deviceT'>- 本周数据 -</p>
 				<div id="newMoreDevice"></div>
 			</div>
 		</div>
 		<!-- 地图 -->
-		<div id="map">
-			<h5>
-				<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-				水机分布图
-			</h5>
-			<div id="allmap"></div>
+		<div id="map" class='clearfix'>
+			<ul class='ctitle'>
+				<h3>水机分布</h3>
+			</ul>
+			<div id="allmap" class='fl'></div>
+			<div class='desc fr'></div>
 		</div>
 	</div>
 	<script src="__PUBLIC__/Admin/js/echarts.min.js"></script>
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wtDIIDonPda8nBPCAPtSqMZj3QBGVuzP"></script>
 	<script>
 		$('.content').css({height: window.innerHeight - 30 + 'px'});
+		var chinajsonurl = '__PUBLIC__/Admin/map/china.json';
 		var date = new Date().getDay();	// 当天日期
 		var month = new Date().getMonth()+1;
 		var weekArr = [];
@@ -139,6 +139,7 @@
 		}
 
 	</script>
+	<script src="__PUBLIC__/Admin/js/index/index.js"></script>
 	<script>
 		sessionStorage.setItem('nav_now', '');
 		var headlink = $('.headlink');
@@ -354,20 +355,7 @@
 			
 		})
 		/*************************  地图  **************************/
-	
-		// 百度地图API功能
-		var map = new BMap.Map("allmap");    // 创建Map实例
-		map.centerAndZoom(new BMap.Point(113.404, 23.115), 9);  // 初始化地图,设置中心点坐标和地图级别
-		//添加地图类型控件
-		map.addControl(new BMap.MapTypeControl({
-			mapTypes:[
-		        BMAP_NORMAL_MAP,
-		        BMAP_HYBRID_MAP
-		    ]}));	  
-		map.setCurrentCity("广州");          // 设置地图显示的城市 此项是必须设置的
-		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-
-		var marker = new BMap.Marker(new BMap.Point(116.404, 39.915)); // 创建点
+		
 	</script>
 	<script>
 		window.onresize = function() {
