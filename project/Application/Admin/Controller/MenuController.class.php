@@ -5,7 +5,7 @@ use Think\Controller;
 class MenuController extends CommonController
 {
     public function index(){
-        $data=D('AdminMenu')->getTreeData('tree','order_number,id');
+        $data=D('AdminMenu')->getTreeDatas('tree','order_number,id');
         $assign=array(
             'data'=>$data
             );

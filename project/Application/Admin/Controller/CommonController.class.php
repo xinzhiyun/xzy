@@ -33,7 +33,7 @@ class CommonController extends Controller
         }
 
         // 分配菜单权限
-        $nav_data=D('AdminMenu')->getTreeData('level','order_number,id');
+        $nav_data=D('AdminMenu')->getTreeDatas('level','order_number,id');
         $assign=array(
             'nav_data'=>$nav_data
             );

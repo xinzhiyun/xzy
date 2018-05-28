@@ -71,7 +71,7 @@ class BaseModel extends Model{
      * @param  string $order 排序方式   
      * @return array         结构数据
      */
-    public function getTreeDatas($type='tree',$order='',$name='name',$child='id',$parent='pid'){
+    public function getTreeData($type='tree',$order='',$name='name',$child='id',$parent='pid'){
         // 判断是否需要排序
         if(empty($order)){
             $data=$this->select();
