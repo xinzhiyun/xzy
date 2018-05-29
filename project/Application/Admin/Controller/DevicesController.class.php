@@ -74,8 +74,12 @@ class DevicesController extends CommonController
                 $map['outtime'] = array(array('egt',$minouttime));
             }
             // 最后访问时间
+            $minlasttime = strtotime(trim(I('post.minlasttime')))?:false;
+            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:false;
+
+
             if (is_numeric($maxlasttime)) {
-                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxouttime));
+                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
             }
             if ($maxlasttime < 0) {
                 $map['lasttime'] = array(array('egt',$minlasttime));
@@ -166,8 +170,12 @@ class DevicesController extends CommonController
                 $map['outtime'] = array(array('egt',$minouttime));
             }
             // 最后访问时间
+            $minlasttime = strtotime(trim(I('post.minlasttime')))?:false;
+            $maxlasttime = strtotime(trim(I('post.maxlasttime')))?:false;
+
+
             if (is_numeric($maxlasttime)) {
-                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxouttime));
+                $map['lasttime'] = array(array('egt',$minlasttime),array('elt',$maxlasttime));
             }
             if ($maxlasttime < 0) {
                 $map['lasttime'] = array(array('egt',$minlasttime));
