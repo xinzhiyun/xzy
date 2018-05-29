@@ -74,7 +74,17 @@ function BinToStr($str){
                       $res = $binding->where($map)->find();
                       // 没有存储，存绑定关系
                       if (!$res) {$result = $binding->add($map);}
-                      
+                      // 存库成功，发一个模板消息，但是，今天有推送过，就不发了
+                      // 今天开始的时间
+                      $start_time = mktime(0,0,0,date('m'),date('d'),date('Y'));
+                      // 当前时间
+                      $time = time()-1;
+                      $map['create_time'] = array(array('egt',$start_time),array('elt',$time)) ;
+
+                      $linkcount = $linklog->where($map)->count();
+                      file_put_contents('./linkcount.txt', $linkcount);
+
+                      if (!$linkcount) {
                       // 存库成功，发一个消息！！！！！
                         $auser = $WeixinEvent->getauidAll($auid);
                         if ($auser) {
@@ -121,6 +131,7 @@ function BinToStr($str){
                         file_put_contents('./gangge.txt', $result);
 
                         }
+                      }
                     }
                   }
             break;
