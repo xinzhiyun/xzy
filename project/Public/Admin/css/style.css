@@ -626,7 +626,8 @@ body .mbtn:hover {
 .pagination>ul .num,
 .pagination>ul .end,
 .pagination>ul .prev,
-.pagination>ul .next {
+.pagination>ul .next,
+.pagination>ul .first {
 	width: 30px;
     height: 30px;
     display: inline-block;
@@ -641,4 +642,7 @@ body .mbtn:hover {
 .pagination>ul .next {
 	width: 60px;
 	margin: 0 6px;
+}
+.pagination>ul .first {
+	width: 60px;
 }
