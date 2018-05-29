@@ -157,12 +157,18 @@ function BinToStr($str){
 
                         if ($res['base_resp']['errmsg'] == 'ok') {
                           //修改设备状态
-                          M('devices')->startTrans();
-                          M('binding')->startTrans();
-                          $data['status'] = 0;
-                          $a = M('devices')->where("device_code='{$device_id}'")->save($data);
-                          //解除设备跟用户的绑定关系
-                          $b = M('binding')->where("device_code='{$device_id}' AND open_id='$open_id'")->delete();
+                            $mes['status'] = 0;
+
+                            $info = M('devices')->where("device_code='{$device_id}'")->find();
+                            $info1 = M('binding')->where("device_id='{$device_id}'")->find();
+
+                            if ($info && $info1) {
+                                $a = M('devices')->where("device_code='{$device_id}'")->save($mes);
+                                //解除设备跟用户的绑定关系
+                                $b = M('binding')->where("device_id='{$device_id}'"." AND open_id='{$openid}'")->delete();
+                            }
+            
+
 
                           if ($a && $b) {
                             M('devices')->commit();
