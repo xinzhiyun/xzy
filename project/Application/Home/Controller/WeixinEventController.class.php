@@ -15,7 +15,7 @@ class WeixinEventController
     	// $wechatObj->valid();
     	// 接受微信推送的事件
     	$xml=file_get_contents('php://input', 'r');
-        file_put_contents('./xml.txt', $xml);
+        // file_put_contents('./xml.txt', $xml);
 
         // $this->responseMsg($xml);
         
@@ -30,6 +30,9 @@ class WeixinEventController
             // 判断如果是关注事件
             if($data['Event'] == 'subscribe'){
             // echo 2;   
+                // $a = $this->responseMsg($xml);
+                // file_put_contents('./aa.txt', $a);
+                $this->reactUser($data['FromUserName'],$data['ToUserName']);
 
                 // 实例化微信信息类型
                 $Wechat = new WechatController;
@@ -69,7 +72,7 @@ class WeixinEventController
                         $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
                         // 调用获取公众号的全局唯一接口调用凭据
                         $access_token = $wxJSSDK->getAccessToken();
-                        file_put_contents('./phg.txt', $access_token);
+                        // file_put_contents('./phg.txt', $access_token);
 
                         //调用微信接口查看用户绑定的设备
                         $url = "https://api.weixin.qq.com/device/get_bind_device?access_token=".$access_token."&openid=".$openid;
@@ -116,7 +119,7 @@ class WeixinEventController
                                 }';
 
                                 $result = $this->https_request($url, $datas);
-                            file_put_contents('./result.txt', $result);
+                            // file_put_contents('./result.txt', $result);
 
 
                             }
@@ -193,47 +196,75 @@ class WeixinEventController
         return $result;
     }
 
-    // // 消息回复
-    // public function responseMsg()
-    // {
-    //     //get post data, May be due to the different environments
-    //     //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
-    //     // 2018-5-17 潘
-    //     // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-    //     $postStr = file_get_contents("php://input");
-    //     //extract post data
-    //     if (!empty($postStr)){
-    //             /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
-    //                the best way is to check the validity of xml by yourself */
-    //             libxml_disable_entity_loader(true);
-    //             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-    //             $fromUsername = $postObj->FromUserName;
-    //             $toUsername = $postObj->ToUserName;
-    //             $keyword = trim($postObj->Content);
-    //             $time = time();
-    //             $textTpl = "<xml>
-    //                         <ToUserName><![CDATA[%s]]></ToUserName>
-    //                         <FromUserName><![CDATA[%s]]></FromUserName>
-    //                         <CreateTime>%s</CreateTime>
-    //                         <MsgType><![CDATA[%s]]></MsgType>
-    //                         <Content><![CDATA[%s]]></Content>
-    //                         <FuncFlag>0</FuncFlag>
-    //                         </xml>";             
-    //             if(!empty( $keyword ))
-    //             {
-    //                 $msgType = "text";
-    //                 $contentStr = "行行，DSB";
-    //                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-    //                 echo $resultStr;
-    //             }else{
-    //                 echo "Input something...";
-    //             }
+     public function reactUser($toUser, $fromUser)
+    {
+        $title = '欢迎您的关注';
+        $description = '点球电子，电控板的专家品牌，行业领先地位！在在线检测控制，物联网整体解决方案有着技术领先水平。
+我们专注于家、商用净水机电控板的研发、生产、销售。已经服务于国内、外近1000个的厂商，我们更懂得在各种使用环境下的产品需求，我们的专家团队能为厂商提供专业的整体解决方案，提升产品品质和使用体验，进而提升客户的品牌度。
+秉持精益求精的工匠精神，专注使得我们更专业，使得我们的客户工作更简单！';
+        $src = '';
+        $url = '';
+        $template = "<xml>
+                        <ToUserName><![CDATA[%s]]></ToUserName>
+                        <FromUserName><![CDATA[%s]]></FromUserName>
+                        <CreateTime>%s</CreateTime>
+                        <MsgType><![CDATA[%s]]></MsgType>
+                        <ArticleCount>1</ArticleCount>
+                        <Articles>
+                            <item>
+                                <Title><![CDATA[%s]]></Title> 
+                                <Description><![CDATA[%s]]></Description>
+                                <PicUrl><![CDATA[%s]]></PicUrl>
+                                <Url><![CDATA[%s]]></Url>
+                            </item>
+                        </Articles>
+                    </xml> ";
 
-    //     }else {
-    //         echo "嗨！";
-    //         exit;
-    //     }
-    // }
+        echo sprintf($template, $toUser, $fromUser, time(), 'news', $title, $description, $src, $url);
+        
+    }
+
+    // 消息回复
+    public function responseMsg()
+    {
+        //get post data, May be due to the different environments
+        //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
+        // 2018-5-17 潘
+        // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+        $postStr = file_get_contents("php://input");
+        //extract post data
+        if (!empty($postStr)){
+                /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
+                   the best way is to check the validity of xml by yourself */
+                libxml_disable_entity_loader(true);
+                $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+                $fromUsername = $postObj->FromUserName;
+                $toUsername = $postObj->ToUserName;
+                $keyword = trim($postObj->Content);
+                $time = time();
+                $textTpl = "<xml>
+                            <ToUserName><![CDATA[%s]]></ToUserName>
+                            <FromUserName><![CDATA[%s]]></FromUserName>
+                            <CreateTime>%s</CreateTime>
+                            <MsgType><![CDATA[%s]]></MsgType>
+                            <Content><![CDATA[%s]]></Content>
+                            <FuncFlag>0</FuncFlag>
+                            </xml>";             
+                if(!empty( $keyword ))
+                {
+                    $msgType = "text";
+                    $contentStr = "你好，欢迎关注碧水蓝天公众号";
+                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    echo $resultStr;
+                }else{
+                    echo "Input something...";
+                }
+
+        }else {
+            echo "嗨！";
+            exit;
+        }
+    }
 
 
     // 根据公众号原始id到咱们的系统查客户id
