@@ -155,31 +155,7 @@ class AdminuserController extends CommonController
         }
     }
 
-    /**
-     * 编辑系统配置方法
-     *
-     * @author 潘宏钢 <619328391@qq.com>
-     */
-    public function system_configedit()
-    {
-        $auid = $_SESSION['adminuser']['id'];
-        $system_config = M('system_config');
-
-        if (IS_POST) {
-            // dump($_POST);die;
-            $res = $system_config->where('auid='.$auid)->save($_POST);
-            if ($res) {
-                $this->success('修改配置成功啦！！！',U('adminuser/system_configedit'));
-            } else {
-                $this->error('修改配置失败啦！');
-            }
-        }else{
-
-            $info[] = $system_config->where('auid='.$auid)->find();
-            $this->assign('info',$info);
-            $this->display();
-        }
-    }
+    
     
     /**
      * 删除经销商方法
