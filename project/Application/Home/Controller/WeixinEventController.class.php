@@ -8,14 +8,10 @@ class WeixinEventController
 	// 接受微信服务器下发的事件
     public function getEventData()
     {
-    	// 实例化微信验证对象服务器第一次接入使用
-    	$wechatObj = new \Org\Util\WechatCallbackapiTest;
-    	// 执行验证方法
-        // 当接入成功后，请注释这段代码，否则会反复验证！！！2018-5-17 潘
-    	// $wechatObj->valid();
+    	
     	// 接受微信推送的事件
     	$xml=file_get_contents('php://input', 'r');
-        // file_put_contents('./xml.txt', $xml);
+        file_put_contents('./xml.txt', $xml);
 
         // $this->responseMsg($xml);
         
@@ -181,7 +177,13 @@ class WeixinEventController
             }
 
 
-		}
+		}else{
+            // 实例化微信验证对象服务器第一次接入使用
+            $wechatObj = new \Org\Util\WechatCallbackapiTest;
+            // 执行验证方法
+            // 当接入成功后，请注释这段代码，否则会反复验证！！！2018-5-17 潘
+            $wechatObj->valid();
+        }
 	}
 
     /**

@@ -40,6 +40,7 @@ function BinToStr($str){
     public function DeviceEvent()
     {
        // $res=$this->checkSignature();
+
        // echo $_GET["echostr"];
         $file_in = file_get_contents("php://input");
         file_put_contents('./file_in.txt', $file_in);
@@ -48,6 +49,14 @@ function BinToStr($str){
         file_put_contents('./file_in2.txt', $d);
         // 判断有无数据返回
         
+        // 修改微信公众号设备功能配置时，验证
+        if ($d == '') {
+          $res=$this->checkSignature();
+
+          echo $_GET["echostr"];
+          exit;
+        }
+
         switch ($d['msg_type']) {
           case 'device_text':
                   // 根据设备编码拿到客户id
