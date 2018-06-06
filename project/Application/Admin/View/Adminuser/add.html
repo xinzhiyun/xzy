@@ -9,7 +9,7 @@
         <div class="tableBox">
             <div class="titleBar">后台管理/<span>添加客户</span></div>
             <div class="formBox">
-                <form class="" action="__URL__/add" method="post" id="_formTable">
+                <form class="" action="__URL__/add" method="post" id="_formTable" enctype="multipart/form-data">
                     <div class="control-group">
                         <span>账户名<sub style="color:red;margin-left: 5px;">*</sub></span>
                         <input class='name' type="text" name="name" placeholder="请输入登录账号...">
@@ -42,6 +42,10 @@
                     <div class="control-group">
                         <span>微信公众号原始ID<sub style="color:red;margin-left: 5px;">*</sub></span>
                         <input class='original_id' type="text" name="original_id" placeholder="请输入微信公众号原始ID...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信网页授权域名文件<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <input type="file" name="file1" style="padding:0">
                     </div>
                     <div class="control-group">
                         <span>公司名称<sub style="color:red;margin-left: 5px;">*</sub></span>
