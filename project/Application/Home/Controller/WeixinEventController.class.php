@@ -200,10 +200,16 @@ class WeixinEventController
 
      public function reactUser($toUser, $fromUser)
     {
-        $title = '欢迎您的关注';
-        $description = '点球电子，电控板的专家品牌，行业领先地位！在在线检测控制，物联网整体解决方案有着技术领先水平。
-我们专注于家、商用净水机电控板的研发、生产、销售。已经服务于国内、外近1000个的厂商，我们更懂得在各种使用环境下的产品需求，我们的专家团队能为厂商提供专业的整体解决方案，提升产品品质和使用体验，进而提升客户的品牌度。
-秉持精益求精的工匠精神，专注使得我们更专业，使得我们的客户工作更简单！';
+        $wx_config = M('system_config');
+        $map['admin.original_id'] = $fromUser;
+        $info = $wx_config->where($map)
+                        ->alias('s')
+                        ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                        ->field("s.title,s.description,s.src,s.url,admin.original_id")
+                        ->find();
+
+        $title = $info['title'];
+        $description = $info['description'];
         $src = '';
         $url = '';
         $template = "<xml>

@@ -62,6 +62,32 @@ class ConfigController extends CommonController
 
     }
 
+    /**
+     * 微信配置方法
+     *
+     * @author 潘宏钢 <619328391@qq.com>
+     */
+    public function wx_config()
+    {
+        $auid = $_SESSION['adminuser']['id'];
+        $system_config = M('system_config');
+
+        if (IS_POST) {
+            $res = $system_config->where('auid='.$auid)->save($_POST);
+            if ($res) {
+                $this->success('修改微信配置成功啦！！！',U('Config/wx_config'));
+            } else {
+                $this->error('修改微信配置失败啦！');
+            }
+        }else{
+
+            $info[] = $system_config->where('auid='.$auid)->find();
+            $this->assign('info',$info);
+            $this->display();
+        }
+
+    }
+
 
 
 }

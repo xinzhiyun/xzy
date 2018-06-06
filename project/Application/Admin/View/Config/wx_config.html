@@ -1,0 +1,164 @@
+<!-- header part -->
+<include file="Public/header" />
+<style>
+    input[type='password'], input[type='email'] {
+        padding: 14px 5px !important;
+    }
+</style>
+<!-- content part -->
+<div class="content">
+    <!-- nav part-->
+    <include file="Public/nav" />
+    <!-- from part-->
+    <div class="row-fluid fl" id="main">
+        <style>
+            ._time {
+                height: 30px;
+                line-height: 30px;
+                margin-bottom:20px;
+                text-align: center;
+            }
+            ._time>div {
+                /*height: 30px;
+                line-height: 30px;*/
+            }
+            .content ._time>div span{
+                width: auto !important;
+                margin-right: 0 !important;
+            }
+            .content ._time input {
+                width: 50px;
+            }
+            .content ._time input:nth-of-type(1) {
+                margin-right: 20px;
+            }
+        </style>
+        <div class="tableBox">
+            <div class="titleBar">配置管理/<span>微信配置</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
+            <div class="formBox">
+                <foreach name="info" item="vo" key="key">
+                <form id="form" action="__URL__/wx_config" method="post" style='padding-top: 12%;'>
+                    <div class="control-group">
+                        <span>微信关注消息标题</span>
+                        <input type="text" name="title" value="{{$vo.title}}">
+                    </div>
+                    <div class="control-group">
+                        <span>微信关注消息描述</span>
+                        <textarea name="description" cols="30" rows="6" class="_textarea">{{$vo.description}}</textarea>
+                    </div>
+                    <!-- 暂时不做 -->
+                    <!-- <div class="control-group">
+                        <span>微信关注消息图片</span>
+                        <input type="text" name="src" value="{{$vo.src}}">
+                    </div>  
+                    <div class="control-group">
+                        <span>微信关注消息链接</span>
+                        <input type="text" name="url" value="{{$vo.url}}">
+                    </div> --> 
+                    <div class="btn-groups">
+                        <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
+                    </div>
+                </form>
+                </foreach>
+            </div>
+        </div>
+        <!-- footer part -->
+        <include file="Public/footer" />
+    </div>
+</div> 
+<script>
+$(function(){
+    var starttime1, starttime2, starttime3;
+    var endtime1, endtime2, endtime3;
+    // 点击确定
+    $('.oddbtn').click(function(){
+        starttime1 = $('.starttime1').val();
+        starttime2 = $('.starttime2').val();
+        starttime3 = $('.starttime3').val();
+        endtime1 = $('.endtime1').val();
+        endtime2 = $('.endtime2').val();
+        endtime3 = $('.endtime3').val();
+        console.log('starttime1: ',Number(starttime1));
+        console.log('starttime2: ',Number(starttime2));
+        console.log('starttime3: ',Number(starttime3));
+        console.log('endtime1: ',Number(endtime1));
+        console.log('endtime2: ',Number(endtime2));
+        console.log('endtime3: ',Number(endtime3));
+        if(Number(starttime1) < 0){
+            $('.starttime1').css({border: '1px solid red'});
+            alert('开始时间不能小于0点或 大于结束时间');
+            return
+        }else if(Number(starttime1) > Number(endtime1)){
+            alert('开始时间不能大于结束时间');
+            $('.starttime1').css({border: '1px solid red'});
+            return
+        }else{
+            $('.starttime1').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime1) > Number(starttime2)){
+            alert('时间段一结束时间不能大于时间段二开始时间');
+            $('.endtime1').css({border: '1px solid red'});
+            return
+        }else if(Number(endtime1) < Number(starttime1)){
+            alert('时间段一结束时间不能小于开始时间');
+            $('.endtime1').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime1').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(starttime2) < Number(endtime1)){
+            $('.starttime2').css({border: '1px solid red'});
+            alert('开始时间不能 小于时间段一结束时间');
+            return
+        }else if(Number(starttime2) > Number(endtime2)){
+            $('.starttime2').css({border: '1px solid red'});
+            alert('开始时间不能 大于时间段二结束时间');
+            return
+        }else{
+            $('.starttime2').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime2) > Number(starttime3)){
+            alert('首页链接时间段二不能大于 时间段三开始时间');
+            $('.endtime2').css({border: '1px solid red'});
+            return
+        }else if(Number(endtime2) < Number(starttime2)){
+            alert('首页链接时间段二不能小于开始时间');
+            $('.endtime2').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime2').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(starttime3) < Number(endtime2)){
+            $('.starttime3').css({border: '1px solid red'});
+            alert('首页链接时间段三不能小于时间段二结束时间');
+            return
+        }else if(Number(starttime3) > Number(endtime3)){
+            $('.starttime3').css({border: '1px solid red'});
+            alert('首页链接时间段三不能大于结束时间');
+            return
+        }else{
+            $('.starttime3').css({border: '1px solid #ccc'});
+        }
+
+        if(Number(endtime3) > 24){
+            alert('首页链接时间段三不能大于24点');
+            $('.endtime3').css({border: '1px solid red'});
+            return
+        }else if(Number(endtime3) < Number(starttime3)){
+            alert('首页链接时间段三不能小于开始时间');
+            $('.endtime3').css({border: '1px solid red'});
+            return
+        }else{
+            $('.endtime3').css({border: '1px solid #ccc'});
+        }
+
+
+        // 提交数据
+        $('#form').submit();
+    })
+})
+</script>
