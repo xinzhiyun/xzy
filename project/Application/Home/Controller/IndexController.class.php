@@ -122,6 +122,8 @@ class IndexController extends Controller
         //套餐id
         $meal_id = $_POST['meal_id'];
 
+
+        
         //查询该设备的剩余时间
         $outtime = M('devices')->where("device_code='{$deviceCode}'")->find()['outtime'];
 
@@ -153,6 +155,10 @@ class IndexController extends Controller
             }
             
         }
+        
+       
+        // //展会测试使用
+        // $data['outtime'] = time() + 10;
 
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
         $data['username'] = $_POST['name'];
