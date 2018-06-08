@@ -54,7 +54,7 @@ class IndexController extends Controller
     	} else {
     		//根据设备编码获取经销商id
             $auid = M('devices')->field('auid')->where("device_code='{$deviceCode}'")->find()['auid'];
-    		$product_id = M('devices')->field('auid')->where("device_code='{$deviceCode}'")->find()['product_id'];
+    		$product_id = M('devices')->field('product_id')->where("device_code='{$deviceCode}'")->find()['product_id'];
 
     		if ($auid) {
     			//在根据经销商id获取对应的充值套餐
