@@ -60,7 +60,8 @@ class SetmealController extends CommonController
             $total =$setmeal->where($map)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
-                            ->field("s.*,admin.name")
+                            ->join("__PRODUCT__ p ON s.product_id=p.id", 'LEFT')
+                            ->field("s.*,admin.name,p.typename")
                             ->count();
 
             $page  = new \Think\Page($total,8);
@@ -72,7 +73,8 @@ class SetmealController extends CommonController
                             ->limit($page->firstRow.','.$page->listRows)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
-                            ->field("s.*,admin.name")
+                            ->join("__PRODUCT__ p ON s.product_id=p.id", 'LEFT')
+                            ->field("s.*,admin.name,p.typename")
                             ->order('s.addtime desc')
                             ->select(); 
             // dump($list);die;
@@ -86,7 +88,7 @@ class SetmealController extends CommonController
                 'days' => trim(I('post.days')),
                 'describe' => trim(I('post.describe')),
                 'name' => trim(I('post.name')),
-                'auid' => $auid, // 只查自己
+                's.auid' => $auid, // 只查自己
             );
             // dump($map);die;
             if (trim(I('post.describe'))) {
@@ -119,7 +121,8 @@ class SetmealController extends CommonController
             $total =$setmeal->where($map)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
-                            ->field("s.*,admin.name")
+                            ->join("__PRODUCT__ p ON s.product_id=p.id", 'LEFT')
+                            ->field("s.*,admin.name,p.typename")
                             ->count();
 
             $page  = new \Think\Page($total,8);
@@ -131,7 +134,8 @@ class SetmealController extends CommonController
                             ->limit($page->firstRow.','.$page->listRows)
                             ->alias('s')
                             ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
-                            ->field("s.*,admin.name")
+                            ->join("__PRODUCT__ p ON s.product_id=p.id", 'LEFT')
+                            ->field("s.*,admin.name,p.typename")
                             ->order('s.addtime desc')
                             ->select();
 
@@ -146,7 +150,7 @@ class SetmealController extends CommonController
     public function add()
     {
         if (IS_POST) {
-            // dump($_SESSION);die;
+            // dump($_POST);die;
             $_POST['auid'] = $_SESSION['adminuser']['id'];
             $setmeal = D('setmeal');
             $info = $setmeal->create();
@@ -166,6 +170,9 @@ class SetmealController extends CommonController
             }
 
         }else{
+            $map['auid'] = $_SESSION['adminuser']['id'];
+            $info = M('product')->where($map)->select();
+            $this->assign('info',$info);
             $this->display();
         }
     }
