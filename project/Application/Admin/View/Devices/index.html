@@ -12,6 +12,10 @@
                         <span class="select-box">蓝牙Mac地址:
                         <input type="text" class="input-medium mac" name="mac" placeholder="请输入蓝牙Mac地址"/ >
                     </span>
+                    </span>
+                        <span class="select-box">产品型号:
+                        <input type="text" class="input-medium mac" name="typename" placeholder="请输入产品型号"/ >
+                    </span>
                     <span class="select-box">运营人:
                         <input type="text" class="input-medium name" name="name" placeholder="请输入运营人"/  style="width: 120px;">
                     </span>
@@ -50,6 +54,7 @@
                             <td>序号</td>
                             <td>设备编码</td>
                             <td>蓝牙Mac地址</td>
+                            <td>产品型号</td>
                             <td>到期时间</td>
                             <td>用户姓名</td>
                             <td>用户电话</td>
@@ -76,6 +81,7 @@
                                     </td>
                                     
                                     <td>{{$data.mac}}</td>
+                                    <td>{{$data.typename}}</td>
                                     <td>{{$data.outtime|date='Y-m-d H:i:s', ###}}</td>
                                     <td>{{$data.username}}</td>
                                     <td>{{$data.phone}}</td>
