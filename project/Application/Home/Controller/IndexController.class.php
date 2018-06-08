@@ -117,48 +117,54 @@ class IndexController extends Controller
         // dump($_POST);die;
         
         //获取要充值的设备id
+        
         $deviceCode = $_POST['deviceId'];
+
+
 
         //套餐id
         $meal_id = $_POST['meal_id'];
 
+        $days = M('setmeal')->where("id='{$meal_id}'")->find()['days'];
 
-        
-        //查询该设备的剩余时间
-        $outtime = M('devices')->where("device_code='{$deviceCode}'")->find()['outtime'];
-
-        //设备初始化时间
-        $inittime = M('devices')->where("device_code='{$deviceCode}'")->find()['inittime'];
-
-        // M('setmeal')->where("id='{$meal_id}'")->find()['days'];
-
-        // Log::write(M('setmeal')->where("id='{$meal_id}'")->find()['days'],'伦哥哥');
-        // Log::write(M()->getLastSql(),'伦哥哥SQL');
-
-        if (is_null($outtime)) {
-            //如果为空则将  当前时间戳+充值套餐时间+初始化时间
-            //获取充值天数
-            $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $inittime;
+        //测试使用
+        if ($days == 0) {
+            //展会测试使用
+            $data['outtime'] = time() + 10;
 
         } else {
-            //如果不为空  充值套餐时间戳+设备剩余时间
-            
-            if ($outtime < time()) {
-                //如果到期时间小于当前时间戳，当前时间戳+充值秒数
-                $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + time();
-                
+            //查询该设备的剩余时间    
+            $outtime = M('devices')->where("device_code='{$deviceCode}'")->find()['outtime'];
+
+            //设备初始化时间
+            $inittime = M('devices')->where("device_code='{$deviceCode}'")->find()['inittime'];
+
+            // M('setmeal')->where("id='{$meal_id}'")->find()['days'];
+
+            // Log::write(M('setmeal')->where("id='{$meal_id}'")->find()['days'],'伦哥哥');
+            // Log::write(M()->getLastSql(),'伦哥哥SQL');
+
+            if (is_null($outtime)) {
+                //如果为空则将  当前时间戳+充值套餐时间+初始化时间
+                //获取充值天数
+                $data['outtime'] = time() + (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $inittime;
 
             } else {
-                //如果还有有效期  到期时间戳+充值秒数
-                $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $outtime;
+                //如果不为空  充值套餐时间戳+设备剩余时间
+                
+                if ($outtime < time()) {
+                    //如果到期时间小于当前时间戳，当前时间戳+充值秒数
+                    $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + time();
+                    
 
+                } else {
+                    //如果还有有效期  到期时间戳+充值秒数
+                    $data['outtime'] = (M('setmeal')->where("id='{$meal_id}'")->find()['days']) * 3600 * 24 + $outtime;
+
+                }
+                
             }
-            
         }
-        
-       
-        // //展会测试使用
-        // $data['outtime'] = time() + 10;
 
         $data['address'] = $_POST['addr'].$_POST['addrdetail'];
         $data['username'] = $_POST['name'];
@@ -207,6 +213,9 @@ class IndexController extends Controller
 
 
     }
+
+
+
 
     /**
      * [getNum 分配查询需要的微信公众号新]
