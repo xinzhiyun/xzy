@@ -91,12 +91,19 @@ class FlowModel extends Model
     // 统计历史订单总数量
     public function getOrderCount()
     {
-        $info = $this->count();
-        if ($info) {
-            return $info;
+        // 客户id
+        $auid = $_SESSION['adminuser']['id'];
+        if ($auid == 1) {
+            $info = $this->count();
         }else{
-            return false;
+            $map['d.auid'] = $auid;
+            $info = $this->where($map)
+                              ->alias('f')
+                              ->join("__DEVICES__ d ON f.device_code=d.device_code",'LEFT')
+                              ->field("f.*")
+                              ->count();
         }
+        return $info;
     }
 
 

@@ -8,7 +8,7 @@ class IndexController extends CommonController {
     		// 本月每天充值次数及金额
 	    	$flows = D('Flow')->getTotalByEveryDay();
             // 历史订单总金额
-            $money = D('Flow')->getOrderMoneyAll();
+            // $money = D('Flow')->getOrderMoneyAll();
             // 历史订单总次数
             $count = D('Flow')->getOrderCount();
             // 本周每一天连接次数
@@ -17,6 +17,7 @@ class IndexController extends CommonController {
             $usercount = D('Users')->getUserCount();
             // 统计设备总数
             $devicecount = D('Devices')->getDeviceCount();
+
             // 自定义时间段字段
             $fieldname = 'create_time';
             // 自定义时间段一
@@ -34,7 +35,7 @@ class IndexController extends CommonController {
 
 	    	$data = [
 				'flows'      => $flows,
-				'money'      => $money,
+				// 'money'      => $money,
 	    		'count'      => $count,
 	    		'week'       => $week,
                 'linkcount1' => $linkcount1,
@@ -43,6 +44,7 @@ class IndexController extends CommonController {
                 'usercount'  => $usercount,
                 'devicecount'=> $devicecount
 	    	];
+            // dump($data);
 	    	$this->ajaxReturn($data);
     	}
         
