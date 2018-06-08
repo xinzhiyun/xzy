@@ -178,14 +178,25 @@ class ProductController extends CommonController
     }
 
     /**
-     * 删除类型方法（废除）
-     * 不做删除，只做隐藏，如果要做删除产品类型，请确保产品类型没有被设备所用 
+     * 删除产品型号 方法
+     * 不做删除，只做隐藏，如果要做删除产品型号，请确保产品型号没有被设备所用 
      *
      * @author 潘宏钢 <619328391@qq.com>
      */
-    public function del()
+    public function del($id)
     {
-
+        $devices = M('devices')->where("product_id=".$id)->find();
+        if(!empty($devices)){
+            $this->error('该产品型号正在使用，不可删除');
+            return false;
+        }   
+        $res = D('Product')->delete($id);
+        if($res){
+            $this->success('删除成功',U('index'));
+        }else{
+            $this->error('删除失败');
+        }
+        
     }
 
     /**

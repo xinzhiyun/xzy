@@ -46,7 +46,10 @@
                             <td>{{$vo.typename}}</td>
                             <td>{{$vo.name}}</td>
                             <td>{{$vo.time|date='Y-m-d H:i:s',###}}</td>
-                            <td><a href="{{:U('Admin/product/edit',array('id'=>$vo['id']))}}">编辑</a></td>
+                            <td>
+                                <a href="{{:U('Admin/product/edit',array('id'=>$vo['id']))}}">编辑</a>
+                                <a href="{{:U('Admin/product/del',array('id'=>$vo['id']))}}">删除</a>
+                            </td>
                         </tr>
                         </foreach>
                     <else />
