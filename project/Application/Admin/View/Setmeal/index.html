@@ -37,6 +37,7 @@
                     <th>套餐金额（元）</th>
                     <th>套餐量（天）</th>
                     <th>套餐名称</th>
+                    <th>产品型号</th>
                     <th>设置人</th>
                     <th>设置时间</th>
                     <th>操作</th>
@@ -50,6 +51,7 @@
                         <td>{{$vo['money']/100}}</td>
                         <td>{{$vo.days}}</td>
                         <td>{{$vo.describe}}</td>
+                        <td>{{$vo.typename}}</td>
                         <td>{{$vo.name}}</td>
                         <td>{{$vo.addtime|date='Y-m-d H:i:s',###}}</td>
                         <td><a class="deletBnt" ruleId="{{$vo['id']}}" href="javascript:;">删除</a></td>
