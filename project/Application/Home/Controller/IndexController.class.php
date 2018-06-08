@@ -58,7 +58,7 @@ class IndexController extends Controller
 
     		if ($auid) {
     			//在根据经销商id获取对应的充值套餐
-    			$setmeal = M('setmeal')->where('auid='.$auid . ' AND product_id='.$product_id)->select();
+    			$setmeal = M('setmeal')->where('auid='.$auid.' AND product_id='.$product_id)->select();
             	$this->ajaxReturn(array('msg'=>$setmeal,'code'=>'200'));
 
 
