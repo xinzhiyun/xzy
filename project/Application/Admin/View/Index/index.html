@@ -216,8 +216,11 @@
 						deviceArr.push(+res.week[i].count);
 						deviceNum += res.week[i].count-0;
 					}
+					var num = 0;
+					for(var j=0; j<res.flows.length; i++){
+						num += res.flows[i].money;
+					}
 					// console.log('deviceNum: ',deviceNum);
-					var num = Number(res.money).toFixed(2)/100;
 					// 总收入
 					$("#allincome").text(numFomat(num));
 					// 订单数量

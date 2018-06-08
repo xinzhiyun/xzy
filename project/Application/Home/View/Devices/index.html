@@ -114,6 +114,7 @@
 										// 移除元素
 										el.parentNode.removeChild(el);
 									});
+									location.reload();
 
 								}else if(res.status == 'fail'){
 									noticeFn({text: '操作失败：'});
