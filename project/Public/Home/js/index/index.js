@@ -222,6 +222,17 @@ var charge = new Vue({
 })
 document.onready = function(){
 	
+    $('#areaChoose').citys({
+    	required: false,
+    	nodata: 'disabled',
+        onChange:function(info){
+        	// townFormat(info);
+        }
+    },function(api){
+        var info = api.getInfo();
+        // townFormat(info);
+    });
+    
 	// 选择地区
 	$(".areabtn").on("click", function(){
 		$("#areaChoose").fadeIn('fast');
@@ -277,16 +288,6 @@ document.onready = function(){
 		$('.ctext').text('');
 		$('.atext').text('');
 
-	    $('#areaChoose').citys({
-	    	required: false,
-	    	nodata: 'disabled',
-	        onChange:function(info){
-	        	// townFormat(info);
-	        }
-	    },function(api){
-	        var info = api.getInfo();
-	        // townFormat(info);
-	    });
 	})
 	// 选择城市的时候判断有没有区县
 	$('.city').on('click', 'p', function(){

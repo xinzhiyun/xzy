@@ -68,34 +68,27 @@
 		var chinajsonurl = '__PUBLIC__/Admin/map/china.json';
 		var date = new Date().getDay();	// 当天日期
 		var month = new Date().getMonth()+1;
-		var weekArr = [];
-		// 最近七天
-		// for(var i=6; i>=0; i--){
-		// 	weekArr.push(month + '.'+ (date - i));
-		// }
-
-		// 每周连接设备集合
-		var now = new Date(); 
-		var nowTime = now.getTime() ; 
-		var day = now.getDay();
-		var oneDayTime = 24*60*60*1000 ; 
-
-		//显示周一
-		var MondayTime = nowTime - (day-1)*oneDayTime ; 
-		//显示周日
-
-		var SundayTime =  nowTime + (7-day)*oneDayTime ; 
-
-		//初始化日期时间
-		var monday = new Date(MondayTime);
-		var sunday = new Date(SundayTime);
-		weekArr.push(monday.getMonth()+1 + '.' + monday.getDate());
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+1));
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+2));
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+3));
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+4));
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+5));
-		weekArr.push(monday.getMonth()+1 + '.' + (monday.getDate()+6));
+		var weekArr = getWeek();
+		
+		// 获取一周时间
+		function getWeek(){
+			// 一周
+			var arr = [];	// 周一开始
+			var newdate = new Date();
+			var now = newdate.getTime();
+			var day = newdate.getDay();		// 星期
+			var oneDayTime = 60*60*24*1000;
+			for(var i=1; i<8; i++){
+				if(day >= i){
+					var dd = new Date(now - (day - i)*oneDayTime).getDate();
+					arr.push(dd < 10 ? '0' + dd : dd + '');
+				}else{
+					var aa = new Date(now + (i - day)*oneDayTime).getDate();
+					arr.push(aa < 10 ? '0' + aa : aa + '');
+				}
+			}
+			return arr
+		}
 
 		// 省份模拟数据
 		var provinceDevice = [
@@ -224,8 +217,9 @@
 						deviceNum += res.week[i].count-0;
 					}
 					// console.log('deviceNum: ',deviceNum);
+					var num = Number(res.money).toFixed(2)/100;
 					// 总收入
-					$("#allincome").text(Number(res.money).toFixed(2)/100);
+					$("#allincome").text(numFomat(num));
 					// 订单数量
 					$("#count").text(+res.count);
 					// 用户数量
@@ -255,6 +249,21 @@
 			})
 		}
 
+		// 金额格式化
+		function numFomat(num) {
+			var dot;
+			num += '';
+			if(num.indexOf('.') > 0){
+				// 带小数
+				dot = num.substr(num.indexOf('.'));
+				num = num.substr(0, num.indexOf('.'));
+			}
+			num = num.replace(/(\d)(?=(?:\d{3})+$)/g,'$1,');
+			if(dot){
+				num += dot;
+			}
+			return num
+		}
 	</script>
 	<script src="__PUBLIC__/Admin/js/index/index.js"></script>
 	<script>

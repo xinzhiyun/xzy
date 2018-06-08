@@ -31,6 +31,10 @@ class DevicesController extends CommonController
                 $map['mac']=array('like','%'.trim(I('post.mac')).'%');
             }
 
+            if(I('post.typename')){
+                $map['typename']=array('like','%'.trim(I('post.typename')).'%');
+            }
+
             if(I('post.name')){
                 $map['name']=array('like','%'.trim(I('post.name')).'%');
             }
@@ -96,7 +100,8 @@ class DevicesController extends CommonController
             $total =$devices->where($map)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
-                            ->field("d.*,admin.name")
+                            ->join("__PRODUCT__ p ON d.product_id=p.id", 'LEFT')
+                            ->field("d.*,admin.name,p.typename")
                             ->count();
 
             $page  = new \Think\Page($total,8);
@@ -107,7 +112,8 @@ class DevicesController extends CommonController
             $list = $devices->where($map)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
-                            ->field("d.*,admin.name")
+                            ->join("__PRODUCT__ p ON d.product_id=p.id", 'LEFT')
+                            ->field("d.*,admin.name,p.typename")
                             ->order('d.outtime desc')
                             ->limit($page->firstRow.','.$page->listRows)
                             ->select(); 
@@ -125,6 +131,10 @@ class DevicesController extends CommonController
 
             if(I('post.mac')){
                 $map['mac']=array('like','%'.trim(I('post.mac')).'%');
+            }
+
+            if(I('post.typename')){
+                $map['typename']=array('like','%'.trim(I('post.typename')).'%');
             }
 
             if(I('post.name')){
@@ -192,7 +202,8 @@ class DevicesController extends CommonController
             $total =$devices->where($map)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
-                            ->field("d.*,admin.name")
+                            ->join("__PRODUCT__ p ON d.product_id=p.id", 'LEFT')
+                            ->field("d.*,admin.name,p.typename")
                             ->count();
 
             $page  = new \Think\Page($total,8);
@@ -203,7 +214,8 @@ class DevicesController extends CommonController
             $list = $devices->where($map)
                             ->alias('d')
                             ->join("__ADMINUSER__ admin ON d.auid=admin.id", 'LEFT')
-                            ->field("d.*,admin.name")
+                            ->join("__PRODUCT__ p ON d.product_id=p.id", 'LEFT')
+                            ->field("d.*,admin.name,p.typename")
                             ->order('d.outtime desc')
                             ->limit($page->firstRow.','.$page->listRows)
                             ->select(); 

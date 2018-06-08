@@ -8,11 +8,7 @@ class WeixinEventController
 	// 接受微信服务器下发的事件
     public function getEventData()
     {
-    	// 实例化微信验证对象服务器第一次接入使用
-    	$wechatObj = new \Org\Util\WechatCallbackapiTest;
-    	// 执行验证方法
-        // 当接入成功后，请注释这段代码，否则会反复验证！！！2018-5-17 潘
-    	// $wechatObj->valid();
+    	
     	// 接受微信推送的事件
     	$xml=file_get_contents('php://input', 'r');
         file_put_contents('./xml.txt', $xml);
@@ -30,6 +26,9 @@ class WeixinEventController
             // 判断如果是关注事件
             if($data['Event'] == 'subscribe'){
             // echo 2;   
+                // $a = $this->responseMsg($xml);
+                // file_put_contents('./aa.txt', $a);
+                $this->reactUser($data['FromUserName'],$data['ToUserName']);
 
                 // 实例化微信信息类型
                 $Wechat = new WechatController;
@@ -69,7 +68,7 @@ class WeixinEventController
                         $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
                         // 调用获取公众号的全局唯一接口调用凭据
                         $access_token = $wxJSSDK->getAccessToken();
-                        file_put_contents('./phg.txt', $access_token);
+                        // file_put_contents('./phg.txt', $access_token);
 
                         //调用微信接口查看用户绑定的设备
                         $url = "https://api.weixin.qq.com/device/get_bind_device?access_token=".$access_token."&openid=".$openid;
@@ -116,7 +115,7 @@ class WeixinEventController
                                 }';
 
                                 $result = $this->https_request($url, $datas);
-                            file_put_contents('./result.txt', $result);
+                            // file_put_contents('./result.txt', $result);
 
 
                             }
@@ -178,7 +177,13 @@ class WeixinEventController
             }
 
 
-		}
+		}else{
+            // 实例化微信验证对象服务器第一次接入使用
+            $wechatObj = new \Org\Util\WechatCallbackapiTest;
+            // 执行验证方法
+            // 当接入成功后，请注释这段代码，否则会反复验证！！！2018-5-17 潘
+            $wechatObj->valid();
+        }
 	}
 
     /**
@@ -193,47 +198,81 @@ class WeixinEventController
         return $result;
     }
 
-    // // 消息回复
-    // public function responseMsg()
-    // {
-    //     //get post data, May be due to the different environments
-    //     //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
-    //     // 2018-5-17 潘
-    //     // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-    //     $postStr = file_get_contents("php://input");
-    //     //extract post data
-    //     if (!empty($postStr)){
-    //             /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
-    //                the best way is to check the validity of xml by yourself */
-    //             libxml_disable_entity_loader(true);
-    //             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-    //             $fromUsername = $postObj->FromUserName;
-    //             $toUsername = $postObj->ToUserName;
-    //             $keyword = trim($postObj->Content);
-    //             $time = time();
-    //             $textTpl = "<xml>
-    //                         <ToUserName><![CDATA[%s]]></ToUserName>
-    //                         <FromUserName><![CDATA[%s]]></FromUserName>
-    //                         <CreateTime>%s</CreateTime>
-    //                         <MsgType><![CDATA[%s]]></MsgType>
-    //                         <Content><![CDATA[%s]]></Content>
-    //                         <FuncFlag>0</FuncFlag>
-    //                         </xml>";             
-    //             if(!empty( $keyword ))
-    //             {
-    //                 $msgType = "text";
-    //                 $contentStr = "行行，DSB";
-    //                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-    //                 echo $resultStr;
-    //             }else{
-    //                 echo "Input something...";
-    //             }
+     public function reactUser($toUser, $fromUser)
+    {
+        $wx_config = M('system_config');
+        $map['admin.original_id'] = $fromUser;
+        $info = $wx_config->where($map)
+                        ->alias('s')
+                        ->join("__ADMINUSER__ admin ON s.auid=admin.id", 'LEFT')
+                        ->field("s.title,s.description,s.src,s.url,admin.original_id")
+                        ->find();
 
-    //     }else {
-    //         echo "嗨！";
-    //         exit;
-    //     }
-    // }
+        $title = $info['title'];
+        $description = $info['description'];
+        $src = '';
+        $url = '';
+        $template = "<xml>
+                        <ToUserName><![CDATA[%s]]></ToUserName>
+                        <FromUserName><![CDATA[%s]]></FromUserName>
+                        <CreateTime>%s</CreateTime>
+                        <MsgType><![CDATA[%s]]></MsgType>
+                        <ArticleCount>1</ArticleCount>
+                        <Articles>
+                            <item>
+                                <Title><![CDATA[%s]]></Title> 
+                                <Description><![CDATA[%s]]></Description>
+                                <PicUrl><![CDATA[%s]]></PicUrl>
+                                <Url><![CDATA[%s]]></Url>
+                            </item>
+                        </Articles>
+                    </xml> ";
+
+        echo sprintf($template, $toUser, $fromUser, time(), 'news', $title, $description, $src, $url);
+        
+    }
+
+    // 消息回复
+    public function responseMsg()
+    {
+        //get post data, May be due to the different environments
+        //设置了register_globals禁止,不能用$GLOBALS["HTTP_RAW_POST_DATA"];
+        // 2018-5-17 潘
+        // $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+        $postStr = file_get_contents("php://input");
+        //extract post data
+        if (!empty($postStr)){
+                /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
+                   the best way is to check the validity of xml by yourself */
+                libxml_disable_entity_loader(true);
+                $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+                $fromUsername = $postObj->FromUserName;
+                $toUsername = $postObj->ToUserName;
+                $keyword = trim($postObj->Content);
+                $time = time();
+                $textTpl = "<xml>
+                            <ToUserName><![CDATA[%s]]></ToUserName>
+                            <FromUserName><![CDATA[%s]]></FromUserName>
+                            <CreateTime>%s</CreateTime>
+                            <MsgType><![CDATA[%s]]></MsgType>
+                            <Content><![CDATA[%s]]></Content>
+                            <FuncFlag>0</FuncFlag>
+                            </xml>";             
+                if(!empty( $keyword ))
+                {
+                    $msgType = "text";
+                    $contentStr = "你好，欢迎关注碧水蓝天公众号";
+                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    echo $resultStr;
+                }else{
+                    echo "Input something...";
+                }
+
+        }else {
+            echo "嗨！";
+            exit;
+        }
+    }
 
 
     // 根据公众号原始id到咱们的系统查客户id

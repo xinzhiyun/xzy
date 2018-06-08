@@ -34,39 +34,27 @@
             }
         </style>
         <div class="tableBox">
-            <div class="titleBar">配置管理/<span>系统配置</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
+            <div class="titleBar">配置管理/<span>微信配置</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn btn-info">&lt;&lt;返回</a></div>
             <div class="formBox">
                 <foreach name="info" item="vo" key="key">
-                <form id="form" action="__URL__/system_configedit" method="post" style='padding-top: 12%;'>
-                    
-                    <div class="control-group _time clearfix">
-                        <span class='fl'>首页链接时间段一：</span>
-                        <div class='fr'>
-                            <span>开始时间&emsp;</span>
-                            <input type="text" class='starttime1' name="starttime1" value="{{$vo.starttime1}}">
-                            <span>结束时间&emsp;</span>
-                            <input type="text" class='endtime1' name="endtime1" value="{{$vo.endtime1}}">
-                        </div>
+                <form id="form" action="__URL__/wx_config" method="post" style='padding-top: 12%;'>
+                    <div class="control-group">
+                        <span>微信关注消息标题</span>
+                        <input type="text" name="title" value="{{$vo.title}}">
                     </div>
-                    <div class="control-group _time clearfix">
-                        <span class='fl'>首页链接时间段二：</span>
-                        <div class='fr'>
-                            <span>开始时间&emsp;</span>
-                            <input type="text" class='starttime2' name="starttime2" value="{{$vo.starttime2}}">
-                            <span>结束时间&emsp;</span>
-                            <input type="text" class='endtime2' name="endtime2" value="{{$vo.endtime2}}">
-                        </div>
+                    <div class="control-group">
+                        <span>微信关注消息描述</span>
+                        <textarea name="description" cols="30" rows="6" class="_textarea">{{$vo.description}}</textarea>
                     </div>
-                    <div class="control-group _time clearfix">
-                        <span class='fl'>首页链接时间段三：</span>
-                        <div class='fr'>
-                            <span>开始时间&emsp;</span>
-                            <input type="text" class='starttime3' name="starttime3" value="{{$vo.starttime3}}">
-                            <span>结束时间&emsp;</span>
-                            <input type="text" class='endtime3' name="endtime3" value="{{$vo.endtime3}}">
-                        </div>
+                    <!-- 暂时不做 -->
+                    <!-- <div class="control-group">
+                        <span>微信关注消息图片</span>
+                        <input type="text" name="src" value="{{$vo.src}}">
                     </div>  
-                    
+                    <div class="control-group">
+                        <span>微信关注消息链接</span>
+                        <input type="text" name="url" value="{{$vo.url}}">
+                    </div> --> 
                     <div class="btn-groups">
                         <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
                     </div>

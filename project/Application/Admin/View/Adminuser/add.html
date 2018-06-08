@@ -9,51 +9,55 @@
         <div class="tableBox">
             <div class="titleBar">后台管理/<span>添加客户</span></div>
             <div class="formBox">
-                <form class="" action="__URL__/add" method="post" id="_formTable">
+                <form class="" action="__URL__/add" method="post" id="_formTable" enctype="multipart/form-data">
                     <div class="control-group">
                         <span>账户名<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="name" placeholder="请输入登录账号...">
+                        <input class='name' type="text" name="name" placeholder="请输入登录账号...">
                         <div style="font-size: 12px;text-indent: 38%;margin-top:-10px;color: red">(账户名将不可修改，请确认后再提交)</div>
                     </div>
                     <div class="control-group">
                         <span>密码<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="password" name="password" placeholder="请输入登录密码...">
+                        <input class='pwd' type="password" name="password" placeholder="请输入登录密码...">
                     </div>
                     <div class="control-group">
                         <span>确认密码<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="password" name="repassword" placeholder="请再次输入密码...">
+                        <input class='repwd' type="password" name="repassword" placeholder="请再次输入密码...">
                     </div>
                     <div class="control-group">
                         <span>微信APPID<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="appid" placeholder="请输入微信APPID称...">
+                        <input class='appid' type="text" name="appid" placeholder="请输入微信APPID称...">
                     </div>
                     <div class="control-group">
                         <span>微信APPsecret<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="appsecret" placeholder="请输入微信APPsecret...">
+                        <input class='appsecret' type="text" name="appsecret" placeholder="请输入微信APPsecret...">
                     </div>
                     <div class="control-group">
                         <span>微信商户号<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="shopnum" placeholder="请输入微信商户号...">
+                        <input class='shopnum' type="text" name="shopnum" placeholder="请输入微信商户号...">
                     </div>
                     <div class="control-group">
                         <span>微信商户号密码<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="shoppwd" placeholder="请输入微信商户号密码...">
+                        <input class='shoppwd' type="text" name="shoppwd" placeholder="请输入微信商户号密码...">
                     </div>
                     <div class="control-group">
                         <span>微信公众号原始ID<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="original_id" placeholder="请输入微信公众号原始ID...">
+                        <input class='original_id' type="text" name="original_id" placeholder="请输入微信公众号原始ID...">
+                    </div>
+                    <div class="control-group">
+                        <span>微信网页授权域名文件<sub style="color:red;margin-left: 5px;">*</sub></span>
+                        <span><input type="file" name="file1" style="padding:0"></span>
                     </div>
                     <div class="control-group">
                         <span>公司名称<sub style="color:red;margin-left: 5px;">*</sub></span>
-                        <input type="text" name="company" placeholder="请输入公司名称...">
+                        <input class='company' type="text" name="company" placeholder="请输入公司名称...">
                     </div>
                     
                     
                     <!-- <div class="btn-groups">
                         <button class="subbtn btns btn-primary oddbtn" type="button">确认</button>
                     </div> -->
-                    <div>
-                        <input type="submit" name="">
+                    <div style='text-align: center;margin: 50px 0;'>
+                        <input class='btn formsubmit oddbtn' type="button" name="" value='提交' style='width:100px;'>
                     </div>
                 </form>
             </div>
@@ -62,93 +66,112 @@
     </div>
 </div>
 <!-- <script src="__PUBLIC__/Home/js/public.js"></script>  -->
-<!-- <script>
-$(function(){
-    //验证
-    $('.oddbtn').on('click',function(){
-        var user = $('input[name=user]').val().trim();
-        var name = $('input[name=name]').val().trim();
-        var phone = $('input[name=phone]').val().trim();
-        var csphone = $('input[name="csphone"]').val().trim();
-        var email = $('input[name=email]').val().trim();
-        var address = $('textarea[name="detail"]').val().trim();
-        var idcard = $('input[name=idcard]').val().trim();
+<script>
+    $(function(){
+        //验证
+        $('.oddbtn').on('click',function(){
+            var name = $('.name');
+            var pwd = $('.pwd');
+            var repwd = $('.repwd');
+            var appid = $('.appid');
+            var appsecret = $('.appsecret');
+            var shopnum = $('.shopnum');
+            var shoppwd = $('.shoppwd');
+            var original_id = $('.original_id');
+            var company = $('.company');
 
-        if(!user.trim()){
-            layuiHint('请输入登录账号');
-            return
+            if(!name.val().trim()){
+                layuiHint('请输入昵称');
+                name.css({border: '1px solid red'});
+                return
 
-        }else if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(user)){
-            layuiHint('账户名不能输入特殊字符');
-            return
-        }
+            }else if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(name.val().trim())){
+                layuiHint('用户昵称不能输入特殊字符');
+                name.css({border: '1px solid red'});
+                return
+            }else{
+                name.css({border: '1px solid #ccc'});
+            }
 
-        if(!name){
-            layuiHint('请输入昵称');
-            return
+            if(!pwd.val().trim()){
+                layuiHint('请输入密码');
+                pwd.css({border: '1px solid red'});
+                return
 
-        }else if(/[`~!@#$^&*()=|{}':;',\[\].<>/?~！@#￥……&*（）——|{}【】\s‘；：”“'。，、？]/.test(name)){
-            layuiHint('用户昵称不能输入特殊字符');
-            return
-        }
+            }else{
+                pwd.css({border: '1px solid #ccc'});
+            }
 
-        if(!phone){
-            layuiHint('请输入手机号');
-            return
+            if(!repwd.val().trim()){
+                layuiHint('请输入确认密码');
+                return
 
-        }else if(!/^1[3,4,5,6,7,8]\d{9}$/.test(phone)){
-            layuiHint('请输入正确的手机号码');
-            return
-        }
+            }else if(pwd.val().trim() != repwd.val().trim()){
+                layuiHint('两次密码输入不一致');
+                pwd.css({border: '1px solid red'});
+                repwd.css({border: '1px solid red'});
+                return
+            }else{
+                repwd.css({border: '1px solid #ccc'});
+                pwd.css({border: '1px solid #ccc'});
+            }
 
-        if(!csphone){
-            layuiHint('请输入客服电话');
-            return
+            if(!appid.val().trim()){
+                layuiHint('请输入appid');
+                appid.css({border: '1px solid red'});
+                return
 
-        }else if(!/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(csphone)){
-            layuiHint('请输入正确的客服电话');
-            return
-        }
+            }else{
+                appid.css({border: '1px solid #ccc'});
+            }
 
-        if(!email){
-            layuiHint('请输入邮箱');
-            return
+            if(!appsecret.val().trim()){
+                layuiHint('请输入appsecret！');
+                appsecret.css({border: '1px solid red'});
+                return
 
-        }else if(!/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(email.trim())){
-            layuiHint('请输入正确的email');
-            return
-        }
+            }else{
+                appsecret.css({border: '1px solid #ccc'});
+            }
 
-        if($('#s_province').val()==""||$('#s_city').val()==""||$('#s_county').val()==""){
-            layuiHint('请把地址填写完整');    
-            return
+            if(!shopnum.val().trim()){
+                layuiHint('请输入商户号！');
+                shopnum.css({border: '1px solid red'});
+                return
 
-        }else{
-            $(".addressValue").val($('#s_province').val() + " " + $('#s_city').val() + " " + $('#s_county').val());
-        }
+            }else{
+                shopnum.css({border: '1px solid #ccc'});
+            }
 
-        if(!address){
-            layuiHint('请输入详细地址！');
-            return
+            if(!shoppwd.val().trim()){
+                layuiHint('请输入商户号密码！');
+                shoppwd.css({border: '1px solid red'});
+                return
 
-        }else if(!/^[\w\-\u4e00-\u9fa5]{2,255}$/u.test(address.replace(/^(\s)|(\s*)/g,''))){
-            layuiHint('地址只能由中文、英文、数字组成！');
-            return
-        }
+            }else{
+                shoppwd.css({border: '1px solid #ccc'});
+            }
 
-        if(!idcard){
-            layuiHint('请输入身份证号码');
-            return
+            if(!original_id.val().trim()){
+                layuiHint('请输入公众号原始id！');
+                original_id.css({border: '1px solid red'});
+                return
 
-        }else if(!/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|[xX])$/.test(idcard.trim())){
-            layuiHint('请输入正确的身份证号码');
-            return
-        }
+            }else{
+                original_id.css({border: '1px solid #ccc'});
+            }
 
-        $('#_formTable').submit();
+            if(!company.val().trim()){
+                layuiHint('请输入appsecret！');
+                company.css({border: '1px solid red'});
+                return
+
+            }else{
+                company.css({border: '1px solid #ccc'});
+            }
+
+            $('#_formTable').submit();
+        })
+
     })
-    //城市三级联动
-    _init_area();
-
-})
-</script> -->
+</script>

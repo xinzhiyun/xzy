@@ -84,25 +84,32 @@ class AdminuserController extends CommonController
 
             //将三级联动地址拼接具体地址再写入数据库
             // $_POST['address'] = $_POST['address'].$_POST['detail'];
-            
-            $user = D('adminuser');
-            $info = $user->create();
+            // 先处理图片
+            $picpath = $this->uploadtxt();
+            if ($picpath) {
+                $_POST['file1'] = $picpath[0];
+                // dump($data);die;
+                $user = D('adminuser');
+                $info = $user->create();
 
-            if($info){
+                if($info){
 
-                $res = $user->add();
+                    $res = $user->add();
 
-                if ($res) {
-                    $data['auid'] = $res;
-                    $system_config = M('system_config')->add($data);
-                    $this->success('添加客户成功啦！！！',U('adminuser/index'));
+                    if ($res) {
+                        $data['auid'] = $res;
+                        $system_config = M('system_config')->add($data);
+                        $this->success('添加客户成功啦！！！',U('adminuser/index'));
+                    } else {
+                        $this->error('添加客户失败啦！');
+                    }
+                
                 } else {
-                    $this->error('添加客户失败啦！');
+                    // getError是在数据创建验证时调用，提示的是验证失败的错误信息
+                    $this->error($user->getError());
                 }
-            
-            } else {
-                // getError是在数据创建验证时调用，提示的是验证失败的错误信息
-                $this->error($user->getError());
+            }else{
+                return $picpath;
             }
         }else{
             $this->display();
@@ -155,31 +162,7 @@ class AdminuserController extends CommonController
         }
     }
 
-    /**
-     * 编辑系统配置方法
-     *
-     * @author 潘宏钢 <619328391@qq.com>
-     */
-    public function system_configedit()
-    {
-        $auid = $_SESSION['adminuser']['id'];
-        $system_config = M('system_config');
-
-        if (IS_POST) {
-            // dump($_POST);die;
-            $res = $system_config->where('auid='.$auid)->save($_POST);
-            if ($res) {
-                $this->success('修改配置成功啦！！！',U('adminuser/system_configedit'));
-            } else {
-                $this->error('修改配置失败啦！');
-            }
-        }else{
-
-            $info[] = $system_config->where('auid='.$auid)->find();
-            $this->assign('info',$info);
-            $this->display();
-        }
-    }
+    
     
     /**
      * 删除经销商方法
@@ -189,6 +172,7 @@ class AdminuserController extends CommonController
     public function del($id)
     {
         $userinfo = M('adminuser')->where("id=".$id)->select();
+
 
         if ($userinfo[0]['name'] == 'admin' ) {
             $this->error('不能删除超级管理员！');
@@ -202,6 +186,8 @@ class AdminuserController extends CommonController
             $res = D('adminuser')->delete($id);
             if($res){
                 $this->success('删除成功',U('index'));
+                $txt = './'.$userinfo[0]['file1'];
+                unlink($txt);
             }else{
                 $this->error('删除失败');
             }
@@ -573,5 +559,31 @@ class AdminuserController extends CommonController
             }
         }
         $this->save_import($data);
+    }
+
+    // 上传文件到根目录，请勿乱用此方法
+    public function uploadtxt()
+    {
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg', 'txt');// 设置附件上传类型
+        $upload->rootPath  =     './'; // 设置附件上传根目录
+        // $upload->savePath  =     '/upload/'; // 设置附件上传（子）目录
+        $upload->saveName = false;
+        $upload->subName  = false;
+        // 上传文件 
+        $info   =   $upload->upload();
+        if(!$info) {// 上传错误提示错误信息
+            // return false;
+            $this->error($upload->getError());
+        }else{
+            // 上传成功
+            foreach ($info as $file) {
+                // dump($info);die;
+                $res[] = $file['savename'];
+            }
+            // $this->success('上传成功！');
+            return $res;
+        }
     }
 }
