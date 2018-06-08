@@ -88,7 +88,7 @@ class SetmealController extends CommonController
                 'days' => trim(I('post.days')),
                 'describe' => trim(I('post.describe')),
                 'name' => trim(I('post.name')),
-                'auid' => $auid, // 只查自己
+                's.auid' => $auid, // 只查自己
             );
             // dump($map);die;
             if (trim(I('post.describe'))) {

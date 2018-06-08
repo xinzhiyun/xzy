@@ -122,7 +122,7 @@ class DevicesController extends CommonController
 
         } else {
             // 只查自己
-            $map['auid'] = $auid;
+            $map['d.auid'] = $auid;
 
             // 搜索功能
             if(I('post.device_code')){
