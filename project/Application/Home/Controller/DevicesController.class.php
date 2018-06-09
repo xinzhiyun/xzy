@@ -27,9 +27,10 @@ class DevicesController extends Controller
         $openId_ifno = $weixin->getSignPackage();
         
 
-        $openid = $weixin->GetOpenid();
+        
 
         if (empty($_SESSION['openid'])) {
+            $openid = $weixin->GetOpenid();
             $_SESSION['openid'] = $openid;
         }
 
