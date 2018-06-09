@@ -217,8 +217,12 @@
 						deviceNum += res.week[i].count-0;
 					}
 					var num = 0;
-					for(var j=0; j<res.flows.length; i++){
-						num += res.flows[i].money;
+					for(var j=1; j<32; j++){
+						// console.log('j: ',j);
+						if(res.flows[j]){
+							// console.log('res.flows[j].money: ',res.flows[j].money);
+							num += res.flows[j].money;
+						}
 					}
 					// console.log('deviceNum: ',deviceNum);
 					// 总收入
