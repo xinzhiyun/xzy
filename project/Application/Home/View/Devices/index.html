@@ -26,13 +26,13 @@
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
 	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
-		// var vconsole = new VConsole();
+		var vconsole = new VConsole();
 		var wxinfo = JSON.parse('{{$weixin|json_encode}}');
 		// console.log(wxinfo);
 		//微信接口
 		wx.config({
 			beta: true,
-			debug: false,
+			debug: true,
 			appId: wxinfo.appId,
 			timestamp: wxinfo.timestamp,
 			nonceStr: wxinfo.nonceStr,
@@ -113,8 +113,8 @@
 										noticeFn({text: '解绑成功!'});
 										// 移除元素
 										el.parentNode.removeChild(el);
+										location.reload();
 									});
-									location.reload();
 
 								}else if(res.status == 'fail'){
 									noticeFn({text: '操作失败：'});
