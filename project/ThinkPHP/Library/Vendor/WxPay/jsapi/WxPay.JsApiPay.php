@@ -298,7 +298,7 @@ class JsApiPay
 
 		$data = array();
 
-		$data["appid"] = WxPayConfig::APPID;
+		$data["appid"] = WxPayConfig::$APPID;
 
 		$data["url"] = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
@@ -326,7 +326,7 @@ class JsApiPay
 
 			"scope" => "jsapi_address",
 
-			"appId" => WxPayConfig::APPID,
+			"appId" => WxPayConfig::$APPID,
 
 			"timeStamp" => $data["timestamp"],
 
@@ -360,7 +360,7 @@ class JsApiPay
 
 	{
 
-		$urlObj["appid"] = WxPayConfig::APPID;
+		$urlObj["appid"] = WxPayConfig::$APPID;
 
 		$urlObj["redirect_uri"] = "$redirectUrl";
 
@@ -396,9 +396,9 @@ class JsApiPay
 
 	{
 
-		$urlObj["appid"] = WxPayConfig::APPID;
+		$urlObj["appid"] = WxPayConfig::$APPID;
 
-		$urlObj["secret"] = WxPayConfig::APPSECRET;
+		$urlObj["secret"] = WxPayConfig::$APPSECRET;
 
 		$urlObj["code"] = $code;
 

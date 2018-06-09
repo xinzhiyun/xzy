@@ -18,7 +18,7 @@ class IndexController extends Controller
         }
         
         // 根据客户id获取客户微信公众号信息
-        $info = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+        $info = $_SESSION['adminuser'] = M('adminuser')->where('id='.$_SESSION['auid'])->find();
 
         $appid = $info['appid'];
         $appsecret = $info['appsecret'];
@@ -338,12 +338,14 @@ class IndexController extends Controller
         $openId = I('post.openId');
         //微信examle的WxPay.JsApiPay.php
         vendor('WxPay.jsapi.WxPay#JsApiPay');
+
+        new \WxPayConfig($_SESSION['adminuser']['appid'], $_SESSION['adminuser']['shopnum'], $_SESSION['adminuser']['shoppwd'], $_SESSION['adminuser']['appsecret']);
+
         $tools = new \JsApiPay();
         //②、统一下单
-        vendor('WxPay.jsapi.WxPay#JsApiPay');
+        // vendor('WxPay.jsapi.WxPay#JsApiPay');
 
         // dump($_SESSION['adminuser']);
-        new \WxPayConfig($_SESSION['adminuser']['appid'], $_SESSION['adminuser']['shopnum'], $_SESSION['adminuser']['shoppwd'], $_SESSION['adminuser']['appsecret']);
 
         $input = new \WxPayUnifiedOrder();
         // 产品内容
@@ -352,7 +354,7 @@ class IndexController extends Controller
         $input->SetAttach(I('post.deviceId'));
 
         //设置商品详情信息
-        $input->SetDetail("就是牛逼");
+        // $input->SetDetail("就是牛逼");
 
         // 设置商户系统内部的订单号,32个字符内、可包含字母, 其他说明见商户订单号
         $input->SetOut_trade_no(date("YmdHis").mt_rand(0,9999));
