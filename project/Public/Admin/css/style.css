@@ -607,7 +607,7 @@ body .mbtn:hover {
 }
 .usercontent>div {
 	position: relative;
-	top: 14%;
+	margin-top: 14%;
 }
 .pagination>ul,
 .pagination>ul>div {
