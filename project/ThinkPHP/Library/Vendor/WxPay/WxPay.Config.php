@@ -22,10 +22,17 @@ class WxPayConfig
 	 * 获取地址：https://mp.weixin.qq.com/advanced/advanced?action=dev&t=advanced/dev&token=2005451881&lang=zh_CN
 	 * @var string
 	 */
-	const APPID = 'wx57d57fb99d6d838d';
-	const MCHID = '1502983261';
-	const KEY = 'CAA5EAE2CE5AC44A3F8930E6F127B423';
-	const APPSECRET = 'ec36152955830ec4191507724f3377a6';
+	
+	public static $APPID;
+	public static $MCHID;
+	public static $KEY;
+	public static $APPSECRET;
+
+
+	// const APPID = 'wx57d57fb99d6d838d';
+	// const MCHID = '1502983261';
+	// const KEY = 'CAA5EAE2CE5AC44A3F8930E6F127B423';
+	// const APPSECRET = 'ec36152955830ec4191507724f3377a6';
 	
 	//=======【证书路径设置】=====================================
 	/**
@@ -56,4 +63,12 @@ class WxPayConfig
 	 * @var int
 	 */
 	const REPORT_LEVENL = 1;
+
+	public function __construct($APPID, $MCHID, $KEY, $APPSECRET)
+	{
+		self::$APPID = $APPID;
+		self::$MCHID = $MCHID;
+		self::$KEY = $KEY;
+		self::$APPSECRET = $APPSECRET;
+	}
 }

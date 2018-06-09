@@ -341,9 +341,13 @@ class IndexController extends Controller
         $tools = new \JsApiPay();
         //②、统一下单
         vendor('WxPay.jsapi.WxPay#JsApiPay');
+
+        // dump($_SESSION['adminuser']);
+        new \WxPayConfig($_SESSION['adminuser']['appid'], $_SESSION['adminuser']['shopnum'], $_SESSION['adminuser']['shoppwd'], $_SESSION['adminuser']['appsecret']);
+
         $input = new \WxPayUnifiedOrder();
         // 产品内容
-        $input->SetBody("碧水蓝天设备-充值");
+        $input->SetBody("蓝牙设备-充值");
         // 设备id
         $input->SetAttach(I('post.deviceId'));
 
@@ -351,7 +355,7 @@ class IndexController extends Controller
         $input->SetDetail("就是牛逼");
 
         // 设置商户系统内部的订单号,32个字符内、可包含字母, 其他说明见商户订单号
-        $input->SetOut_trade_no(\WxPayConfig::MCHID.date("YmdHis").mt_rand(0,9999));
+        $input->SetOut_trade_no(date("YmdHis").mt_rand(0,9999));
         // 产品金额单位为分
         $input->SetTotal_fee($money);
         // 设置订单生成时间
