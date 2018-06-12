@@ -123,11 +123,7 @@ class WechatController extends Controller
                 ]
             }],
 
-            "button":[{
-                "name":"商城",
-                "type":"view",
-                "url":"https://free.modao.cc/app/jqfBZUmESUSi18gaUHqB3E96H44ZUEN#screen=s4CB7DBA5E01527244778913"
-            }],
+            
 
             "button":[{
                 "name":"我的设备",
@@ -137,7 +133,12 @@ class WechatController extends Controller
            
         }';
 
-
+        // 商城菜单
+        // "button":[{
+        //         "name":"商城",
+        //         "type":"view",
+        //         "url":"https://free.modao.cc/app/jqfBZUmESUSi18gaUHqB3E96H44ZUEN#screen=s4CB7DBA5E01527244778913"
+        //     }],
         $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
 
 
