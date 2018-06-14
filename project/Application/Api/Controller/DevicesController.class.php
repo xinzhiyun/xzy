@@ -28,10 +28,12 @@ class DevicesController extends Controller
             //查看数据库是否已存在该设备
             $info = $device->where("mac='{$mac}'"." AND product_id='{$product_id}'")->find();
 
+            $productid = M('product')->where('id='.$info['product_id'])->find()['product_id'];
 
+            
             if ($info) {
                 //存在返回信息
-                $this->ajaxReturn(array('msg'=>'该设备已经录入系统','code'=>'201'));
+                $this->ajaxReturn(array('msg'=>'该设备已经录入系统','code'=>'201','productid'=>$productid));
             } else {
 
                     //不存在则入库
