@@ -51,3 +51,7 @@ body {
 .unbind:active {
 	background: #eee;
 }
+.notice {
+	margin-top: 30vh;
+	text-align: center;
+}
