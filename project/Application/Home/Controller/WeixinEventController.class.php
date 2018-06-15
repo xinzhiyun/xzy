@@ -43,9 +43,9 @@ class WeixinEventController
             if($data['Event'] == 'unsubscribe'){
                 //file_put_contents('./del.txt', $xml);
                 // 实例化微信信息类型
-                $Wechat = new WechatController;
+                // $Wechat = new WechatController;
                 // 调用删除微信信息的方法
-                $Wechat->delete($data['FromUserName']);
+                // $Wechat->delete($data['FromUserName']);
                 exit;
             }
 
