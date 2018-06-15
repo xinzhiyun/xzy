@@ -24,7 +24,7 @@
 	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
-	<script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
+	<!-- <script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script> -->
 	<script>
 		// var vconsole = new VConsole();
 		var wxinfo = JSON.parse('{{$weixin|json_encode}}');
@@ -113,12 +113,14 @@
 										noticeFn({text: '解绑成功!'});
 										// 移除元素
 										el.parentNode.removeChild(el);
-										location.reload();
 									});
 
 								}else if(res.status == 'fail'){
 									noticeFn({text: '操作失败：'});
 									console.log('操作失败：', res);
+
+								}else{
+									// noticeFn({text: '操作失败：'});
 								}
 							});
 							
@@ -140,10 +142,13 @@
 							console.log('res: ',res);
 							if(res.code == 200){
 								callback();
+							}else{
+								noticeFn({text: res.msg});
 							}
 						},
 						error: function(err){
 							console.log('err: ',err);
+							noticeFn({text: '系统遇到问题，请稍后再试'});
 						}
 					})
 				}
