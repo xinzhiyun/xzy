@@ -68,7 +68,8 @@ class WeixinpayController extends Controller
                     $info = M('adminuser')->where('id='.$auid)->find();
                     $appid = $info['appid'];
                     $appsecret = $info['appsecret'];
-                    
+                    // 查询模板消息ID
+                    $recharge_template = $info['recharge_template'];
                     // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
                     $wxJSSDK = new \Org\Util\WeixinJssdk($appid, $appsecret);
                     // 调用获取公众号的全局唯一接口调用凭据
@@ -82,7 +83,7 @@ class WeixinpayController extends Controller
 
                     $datas = '{
                         "touser":"'.$data['open_id'].'",
-                        "template_id":"VeFWpHWetPOZNNL2RWXGQHz_RPgueIwx73GGNZqmt_s",         
+                        "template_id":"'.$recharge_template.'",         
                         "data":{
                                 "first": {
                                     "value":"您的充值成功啦",

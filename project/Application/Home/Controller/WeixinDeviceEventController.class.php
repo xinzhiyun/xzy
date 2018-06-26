@@ -99,6 +99,8 @@ function BinToStr($str){
                         if ($auser) {
                           $appId = $auser['appid'];
                           $appSecret = $auser['appsecret'];
+                          // 查询模板消息ID
+                          $query_template = $info['query_template'];
                           // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
                           $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
                           // 调用获取公众号的全局唯一接口调用凭据
@@ -111,7 +113,7 @@ function BinToStr($str){
                           $time = date('Y-m-d H:i:s',time());
                           $datas = '{
                             "touser":"'.$data['open_id'].'",
-                            "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",
+                            "template_id":"'.$query_template.'",
                             "data":{
                                 "first": {
                                   "value":"您好，设备已连接",

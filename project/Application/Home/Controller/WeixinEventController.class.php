@@ -63,6 +63,8 @@ class WeixinEventController
 
                         $appId = $info['appid'];
                         $appSecret = $info['appsecret'];
+                        // 查询模板消息ID
+                        $query_template = $info['query_template'];
                         // 调接口查询该用户绑定的设备
                         // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
                         $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
@@ -89,7 +91,7 @@ class WeixinEventController
                                 $time = date('Y-m-d H:i:s',time());
                                 $datas = '{
                                     "touser":"'.$openid.'",
-                                    "template_id":"HZtL8sn3Vn7dvGn3acHxowiZELdrLvFr026SnArtXKk",
+                                    "template_id":"'.$query_template.'",
                                     "data":{
                                             "first":{
                                                 "value":"您好，查询成功",
