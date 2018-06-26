@@ -33,7 +33,7 @@ class WeixinEventController
                 // 实例化微信信息类型
                 $Wechat = new WechatController;
                 // 调用填写微信信息的方法
-                $Wechat->add($data['FromUserName']);
+                $Wechat->add($data['FromUserName'],$data['ToUserName']);
                 
                 // file_put_contents('./add.txt', $xml);
                 exit;
@@ -198,7 +198,7 @@ class WeixinEventController
         return $result;
     }
 
-     public function reactUser($toUser, $fromUser)
+    public function reactUser($toUser, $fromUser)
     {
         $wx_config = M('system_config');
         $map['admin.original_id'] = $fromUser;

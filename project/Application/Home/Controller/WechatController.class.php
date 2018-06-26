@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 use \Org\Util\WeixinJssdk;
 use Think\Log;
+use Home\Controller\WeixinEventController;
 
 // 引入微信事件接收类
 // use Home\Controller\WeixinEventController;
@@ -13,13 +14,18 @@ class WechatController extends Controller
      * [index 微信关注事件-填写微信信息表]
      * @return [type] [description]
      */
-    public function add($openid)
+    public function add($openid,$ToUserName)
     {
         // 获取用户openid
         $openid = $openid;
+        // 根据公众号原始id获取客户信息，拿APPID
+        $info = $this->getauid($ToUserName);
+        
+        $appId = $info['appid'];
+        $appSecret = $info['appsecret'];
 
         // 实例化微信JSSDK类对象
-        $wxJSSDK = new \Org\Util\WeixinJssdk('wx57d57fb99d6d838d', 'ec36152955830ec4191507724f3377a6');
+        $wxJSSDK = new \Org\Util\WeixinJssdk($appId, $appSecret);
         // 调用获取公众号的全局唯一接口调用凭据
         $accessToken = $wxJSSDK->getAccessToken();
         //show($accessToken);die;
