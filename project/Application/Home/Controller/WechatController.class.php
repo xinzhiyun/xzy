@@ -19,7 +19,8 @@ class WechatController extends Controller
         // 获取用户openid
         $openid = $openid;
         // 根据公众号原始id获取客户信息，拿APPID
-        $info = $this->getauid($ToUserName);
+        $WeixinEvent = new WeixinEventController;
+        $info = $WeixinEvent->getauid($ToUserName);
         
         $appId = $info['appid'];
         $appSecret = $info['appsecret'];
