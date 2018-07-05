@@ -19,10 +19,12 @@ class WeixinpayController extends Controller
         if($xml){
         	//解析微信返回数据数组格式
         	$result = $this->notifyData($xml);
-            // file_put_contents('./xml.txt',$xml."\r\n", FILE_APPEND);
+            // file_put_contents('./abc.txt',$xml."\r\n", FILE_APPEND);
+            // file_put_contents('./caocaocao.txt',json_encode($result));
+            // file_put_contents('./caonima.txt',$xml);
 	    	// 如果订单号不为空
         	if(!empty($result['out_trade_no'])){
-        		file_put_contents('./wx_notifyNOnull.txt','不为空', FILE_APPEND);
+        		// file_put_contents('./lun.txt','不为空', FILE_APPEND);
 
                 //返回的随机订单号
                 $orderid = $result['out_trade_no'];
@@ -42,14 +44,15 @@ class WeixinpayController extends Controller
                     $data['money'] = $result['total_fee'];
 
                     //商品详情信息
-                    $data['detail'] = $result['detail'];
-                    file_put_contents('./detail.txt', json_encode($data['detail']));
+                    // $data['detail'] = $result['detail'];
+                    // file_put_contents('./detail.txt', json_encode($data['detail']));
 
 
                     // 充值时间
                     $data['addtime'] = time();
                     // 写入数据库
                     $msg = $model->add($data);
+                    file_put_contents('./1.txt', 1);
 
                     //用户充值完成后更新设备跟用户的绑定关系
                     if ($msg) {
@@ -121,8 +124,8 @@ class WeixinpayController extends Controller
 	
 
 	    		}else{
-	    		 	//file_put_contents('./wx_notifyres.txt','订单已经存在', FILE_APPEND);
-	    		 	//echo '订单已经存在';
+	    		 	file_put_contents('./wx_notifyres.txt','订单已经存在', FILE_APPEND);
+	    		 	// echo '订单已经存在';
 	    		}
         	}
         }
@@ -136,13 +139,13 @@ class WeixinpayController extends Controller
     public function notifyData($xml)
     {
         // 获取微信服务器返回的xml文档
-        // $xml=file_get_contents('php://input', 'r');
+        $xml=file_get_contents('php://input', 'r');
         // file_put_contents('./wx_notify.txt',$xml, FILE_APPEND);
 
         // 转成php数组
         $data=$this->toArray($xml);
 
-        // file_put_contents('./wx_notify1.txt','data:'.$data, FILE_APPEND);	
+        // file_put_contents('./wx_notify123.txt','data:'.$data, FILE_APPEND);	
         // file_put_contents('./wx_notify2.txt','123:'.$data['out_trade_no'], FILE_APPEND);
         // file_put_contents('./wx_notify3.txt','456:'.$data['sign'], FILE_APPEND);	
 
@@ -154,7 +157,7 @@ class WeixinpayController extends Controller
 
         // 生成签名
         $sign=$this->makeSign($data);
-        // file_put_contents('./wx_notify.txt','原签: '.$dataSign.'现签：'.$sign, FILE_APPEND);	
+        file_put_contents('./wx_notify.txt','原签: '.$dataSign.'现签：'.$sign, FILE_APPEND);	
         // 判断签名是否正确  判断支付状态
         if ($sign==$dataSign && $data['return_code']=='SUCCESS' && $data['result_code']=='SUCCESS') {
 
@@ -162,6 +165,8 @@ class WeixinpayController extends Controller
             echo '<xml><return_code><![CDATA[SUCCESS]]></return_code><return_msg><![CDATA[OK]]></return_msg></xml>';
 
             // 返回数据给回调函数进行插入操作
+        file_put_contents('./wx_notify456.txt','456:'.json_encode($data), FILE_APPEND); 
+            
             return $data;
         }else{
   			// 签名错误 或 支付未成功 
