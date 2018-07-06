@@ -25,6 +25,7 @@ class WeixinpayController extends Controller
 	    	// 如果订单号不为空
         	if(!empty($result['out_trade_no'])){
         		// file_put_contents('./lun.txt','不为空', FILE_APPEND);
+                Log::write('lungege:',$result['out_trade_no']);
 
                 //返回的随机订单号
                 $orderid = $result['out_trade_no'];
@@ -74,6 +75,8 @@ class WeixinpayController extends Controller
                     $appsecret = $info['appsecret'];
                     // 查询模板消息ID
                     $recharge_template = $info['recharge_template'];
+                    $company = $info['company'];
+
                     // 实例化微信JSSDK类对象  需要传对用的经销商的Appid跟appSecret
                     $wxJSSDK = new \Org\Util\WeixinJssdk($appid, $appsecret);
                     // 调用获取公众号的全局唯一接口调用凭据
@@ -110,7 +113,7 @@ class WeixinpayController extends Controller
                                     "color":"#173177"
                                 },
                                 "remark":{
-                                    "value":"芯智云科技",
+                                    "value":"'.$company.'",
                                     "color":"#173177"
                                 }
                         }
