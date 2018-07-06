@@ -19,8 +19,8 @@ class WeixinpayController extends Controller
         if($xml){
         	//解析微信返回数据数组格式
         	$result = $this->notifyData($xml);
-            // file_put_contents('./abc.txt',$xml."\r\n", FILE_APPEND);
-            // file_put_contents('./caocaocao.txt',json_encode($result));
+            file_put_contents('./abc.txt',$xml."\r\n", FILE_APPEND);
+            file_put_contents('./caocaocao.txt',json_encode($result));
             // file_put_contents('./caonima.txt',$xml);
 	    	// 如果订单号不为空
         	if(!empty($result['out_trade_no'])){
@@ -38,6 +38,7 @@ class WeixinpayController extends Controller
                     $model = M('flow');
                     // 用户ID号
                     $data['open_id'] = $result['openid'];
+                    $data['appid'] = $result['appid'];
                     $data['device_code'] = $device_code = $result['attach'];
                     $data['orderid'] = $orderid;
                     // 金额
@@ -130,7 +131,10 @@ class WeixinpayController extends Controller
         	}
         }
 
-    
+    public function getshoppwd()
+    {
+
+    }
 
     /**
      * 验证服务器返回支付成功订单
@@ -145,8 +149,11 @@ class WeixinpayController extends Controller
         // 转成php数组
         $data=$this->toArray($xml);
 
-        // file_put_contents('./wx_notify123.txt','data:'.$data, FILE_APPEND);	
-        // file_put_contents('./wx_notify2.txt','123:'.$data['out_trade_no'], FILE_APPEND);
+        $appid = $data['appid'];
+
+        $data['shoppwd'] = M("adminuser")->where("appid='{$appid}'")->find()['shoppwd'];
+
+        file_put_contents('./wx_notifylun.txt','datalun:'.json_encode($data), FILE_APPEND);	
         // file_put_contents('./wx_notify3.txt','456:'.$data['sign'], FILE_APPEND);	
 
         // 保存原sign
@@ -184,7 +191,9 @@ class WeixinpayController extends Controller
     public function toArray($xml){   
         //禁止引用外部xml实体
         libxml_disable_entity_loader(true);
-        $result= json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);        
+        $result= json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+        Log::write('lunge：',json_encode($result));
+
         return $result;
     }
 
@@ -194,6 +203,8 @@ class WeixinpayController extends Controller
      */
     public function makeSign($data){
         // 去空
+        $shoppwd = $data['shoppwd'];
+        unset($data['shoppwd']);
         $data=array_filter($data);
         //签名步骤一：按字典序排序参数
         ksort($data);
@@ -201,7 +212,7 @@ class WeixinpayController extends Controller
         $string_a=urldecode($string_a);
         //签名步骤二：在string后加入KEY
         $config=$this->config;
-        $string_sign_temp=$string_a."&key=CAA5EAE2CE5AC44A3F8930E6F127B423";
+        $string_sign_temp=$string_a."&key=".$shoppwd;
         //签名步骤三：MD5加密
         $sign = md5($string_sign_temp);
         // 签名步骤四：所有字符转为大写

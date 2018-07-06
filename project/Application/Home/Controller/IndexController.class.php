@@ -336,6 +336,7 @@ class IndexController extends Controller
         // $openId = $this->getWeixin();
         // $openId = $this->getWeixin();
         $openId = I('post.openId');
+        // $appId = $_SESSION['adminuser']['appid'];
         //微信examle的WxPay.JsApiPay.php
         vendor('WxPay.jsapi.WxPay#JsApiPay');
 
@@ -365,7 +366,6 @@ class IndexController extends Controller
         // 设置订单失效时间
         // $input->SetTime_expire(date("YmdHis", time() + 300));
         // $input->SetGoods_tag("test");
-        // 支付成功的回调地址xinpin.dianqiukj.com
         $input->SetNotify_url("http://blue.dianqiukj.com/index.php/Home/Weixinpay/notify.html");
         // $input->SetNotify_url("http://wuzhibin.cn/Home/Weixinpay/notify.html");
         // 支付方式 JS-SDK 类型是：JSAPI
