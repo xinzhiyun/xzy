@@ -330,7 +330,7 @@ class IndexController extends Controller
         // 将金额强转换整数
         $money = I('post.money') * 100;
         // 冲值测试额1分钱
-        $money = 1;
+        // $money = 1;
         // 用户在公众号的唯一ID
         // $openId = $this->getWeixin();
         // $openId = $this->getWeixin();
