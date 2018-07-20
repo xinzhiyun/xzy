@@ -222,6 +222,22 @@ class UsersController extends CommonController
     }
 
     /**
+     * 设置测试人方法
+     * @author 潘宏钢 <619328391@qq.com>
+     */
+    public function edittest($id)
+    {
+        $users = M("wechat");
+        $data['test'] = 1;
+        $res = $users->where('id='.$id)->save($data); 
+        if ($res) {
+            $this->success('设置测试人成功啦！！！',U('Users/index'));
+        } else {
+            $this->error('修改失败啦！');
+        }
+    }
+
+    /**
      * 用户充值流水列表
      * @author 潘宏钢 <619328391@qq.com>
      */

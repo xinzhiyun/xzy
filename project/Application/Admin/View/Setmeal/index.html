@@ -40,6 +40,7 @@
                     <th>产品型号</th>
                     <th>设置人</th>
                     <th>设置时间</th>
+                    <th>测试套餐</th>
                     <th>操作</th>
                 </tr>
                 </thead>
@@ -54,6 +55,13 @@
                         <td>{{$vo.typename}}</td>
                         <td>{{$vo.name}}</td>
                         <td>{{$vo.addtime|date='Y-m-d H:i:s',###}}</td>
+                        <td>
+                            <switch name="vo.status">
+                                <case value="0">否</case>
+                                <case value="1">是</case>
+                                <default />
+                            </switch>
+                        </td>
                         <td><a class="deletBnt" ruleId="{{$vo['id']}}" href="javascript:;">删除</a></td>
                     </tr>
                     </foreach>

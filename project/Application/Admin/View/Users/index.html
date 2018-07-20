@@ -43,6 +43,8 @@
                     <th>绑定日期</th>
                     <th>状态</th>
                     <th>操作</th> -->
+                    <th>测试人员</th>
+                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,6 +64,21 @@
                             </switch>
                         </td>
                         <td>{{$vo.address}}</td>
+                        <td>
+                            <switch name="vo.test">
+                                <case value="0">否</case>
+                                <case value="1">是</case>
+                                <default />
+                            </switch>
+                        </td>
+                        <td>
+                            <switch name="vo.test">
+                                <case value="0">
+                                    <a href="__URL__/edittest/id/{{$vo.id}}">设置为测试人</a>
+                                </case>
+                                <default />
+                            </switch>
+                        </td>
                         <!-- <td>{{$vo.login_time|date='Y-m-d H:i:s',###}}</td>
                         <td>{{$vo.login_ip}}</td>
                         <td>
