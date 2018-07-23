@@ -34,6 +34,7 @@ class DevicesController extends Controller
             $_SESSION['openid'] = $openid;
         }
 
+
         $this->assign('weixin',$openId_ifno);
         $this->display();
     }

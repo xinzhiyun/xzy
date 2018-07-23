@@ -12,34 +12,47 @@ class IndexController extends Controller
 	 */
     public function index()
     {
-        //在充值处获取客户id
-        if (empty($_SESSION['auid'])) {
-            $auid = $_SESSION['auid'] = $_GET['auid'];
+        $au_id = M('adminuser')->where(['id'=>$_GET['auid']])->find();
+        if ($au_id) {
+            //在充值处获取客户id
+            if (empty($_SESSION[$au_id['name'].'auid'])) {
+
+                $auid = $_GET['auid'];
+                $_SESSION[$au_id['name'].'auid']= $au_id['id'];
+            }
+        } else {
+            exit;
         }
-        
+
+        // dump($au_id);
+
         // 根据客户id获取客户微信公众号信息
-        $info = $_SESSION['adminuser'] = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+        $info = $_SESSION['adminuser'] = M('adminuser')->where('id='.$_SESSION[$au_id['name'].'auid'])->find();
+        // $info = $_SESSION['adminuser'] = M('adminuser')->where(['id'=>$_GET['auid']])->find();
 
         $appid = $info['appid'];
         $appsecret = $info['appsecret'];
 
+
         $weixin  = new WeixinJssdk($appid, $appsecret);
 
         $openId_ifno = $weixin->getSignPackage();
-        
 
-        if (empty($_SESSION['openid'])) {
+        // $_SESSION[$_SESSION['auid'].'openid'] = null;
+        if (empty( $_SESSION[$au_id['name'].'openid'])) {
+
             $openid = $weixin->GetOpenid();
-            $_SESSION['openid'] = $openid;
+
+            $_SESSION[$au_id['name'].'openid'] = $openid;
         }
 
-        // dump($openId_ifno);
-
-
+        // dump($_SESSION['openid']);
+        // dump( $_SESSION[$au_id['name'].'openid']);
         $this->assign('weixin',$openId_ifno);
-    	$this->assign('openid',$_SESSION['openid']);
+        $this->assign('openid',$_SESSION[$au_id['name'].'openid']);
         $this->display();
     }
+
 
     /**
      * [getSetmeal 获取充值套餐]
@@ -335,7 +348,8 @@ class IndexController extends Controller
         // $openId = $this->getWeixin();
         // $openId = $this->getWeixin();
         // $openId = $this->getWeixin();
-        $openId = I('post.openId');
+//        $openId = I('post.openId');
+        $openId = 'oCNIDwzRjifZgQCGncJm_v-CCl6g';
         // $appId = $_SESSION['adminuser']['appid'];
         //微信examle的WxPay.JsApiPay.php
         vendor('WxPay.jsapi.WxPay#JsApiPay');
