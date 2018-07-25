@@ -25,10 +25,11 @@
 	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/Home/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="__PUBLIC__/Home/js/jweixin-1.2.0.js"></script>
-	<!-- <script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script> -->
+	 <script src="__PUBLIC__/Home/vConsole-3.1.0/dist/vconsole.min.js"></script>
 	<script>
-		// var vconsole = new VConsole();
+		 var vconsole = new VConsole();
 		var wxinfo = JSON.parse('{{$weixin|json_encode}}');
+		var auid = {{$auid}};
 		// console.log(wxinfo);
 		//微信接口
 		wx.config({
@@ -145,7 +146,7 @@
 					$.ajax({
 						url: '{{:U("Home/Devices/unbind")}}',
 						type: 'post',
-						data: {ticket: ticket, device_id: device_id},
+						data: {ticket: ticket, device_id: device_id,auid:auid},
 						success: function(res){
 							console.log('res: ',res);
 							if(res.code == 200){

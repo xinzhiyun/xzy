@@ -12,6 +12,7 @@ class IndexController extends Controller
 	 */
     public function index()
     {
+
         $au_id = M('adminuser')->where(['id'=>$_GET['auid']])->find();
         if ($au_id) {
             //在充值处获取客户id
@@ -60,6 +61,7 @@ class IndexController extends Controller
      */
     public function getSetmeal()
     {
+
     	//先接收前端的device_code
     	$deviceCode = $_POST['device_code'];
 

@@ -3,21 +3,34 @@ namespace Home\Controller;
 use Think\Controller;
 use \Org\Util\WeixinJssdk;
 
-class DevicesController extends Controller 
+class DevicesController extends Controller
 {
-	/**
-	 * [index 我的设备]
-	 * @return [type] [description]
-	 */
+    /**
+     * [index 我的设备]
+     * @return [type] [description]
+     */
     public function index()
     {
-    	//在充值处获取客户id
-        if (empty($_SESSION['auid'])) {
-            $auid = $_SESSION['auid'] = $_GET['auid'];
+
+        //在充值处获取客户id
+        // if (empty($_SESSION['auid'])) {
+        //     $auid = $_SESSION['auid'] = $_GET['auid'];
+        // }
+        $au_id = M('adminuser')->where(['id'=>$_GET['auid']])->find();
+        if ($au_id) {
+            //在充值处获取客户id
+            if (empty($_SESSION[$au_id['name'].'auid'])) {
+
+                $auid = $_GET['auid'];
+                $_SESSION[$au_id['name'].'auid']= $au_id['id'];
+            }
+        } else {
+            exit;
         }
-        
+
+
         // 根据客户id获取客户微信公众号信息
-        $info = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+        $info = M('adminuser')->where('id='.$_SESSION[$au_id['name'].'auid'])->find();
 
         $appid = $info['appid'];
         $appsecret = $info['appsecret'];
@@ -25,16 +38,15 @@ class DevicesController extends Controller
         $weixin  = new WeixinJssdk($appid, $appsecret);
 
         $openId_ifno = $weixin->getSignPackage();
-        
 
-        
 
-        if (empty($_SESSION['openid'])) {
+
+
+        if (empty( $_SESSION[$au_id['name'].'openid'])) {
             $openid = $weixin->GetOpenid();
-            $_SESSION['openid'] = $openid;
+            $_SESSION[$au_id['name'].'openid'] = $openid;
         }
-
-
+        $this->assign('auid',$au_id['id']);
         $this->assign('weixin',$openId_ifno);
         $this->display();
     }
@@ -46,13 +58,22 @@ class DevicesController extends Controller
      */
     public function unbind()
     {
+        $auid= I('post.auid');
+
+        $info = M('adminuser')->where('id='.$auid)->find();
+
         $ticket = $_POST['ticket'];
         $device_id = $_POST['device_id'];
-        $openid = $_SESSION['openid'];
+        $openid =    $_SESSION[$info['name'].'openid'];
+
+
+
+        // dump($openid);exit;
 
 
         // 根据客户id获取客户微信公众号信息
-        $info = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+        // $info = M('adminuser')->where('id='.$_SESSION['auid'])->find();
+        // $info = M('adminuser')->where('id='.$au_id['id'])->find();
 
         $appid = $info['appid'];
         $appsecret = $info['appsecret'];
@@ -86,19 +107,22 @@ class DevicesController extends Controller
             $info1 = M('binding')->where("device_id='{$device_id}'")->find();
 
             if ($info && $info1) {
-                $a = M('devices')->where("device_code='{$device_id}'")->save($mes);
+                // $map['open_id'] = $openid;
+                // $map['device_code'] = $device_id;
+                // $a = M('devices')->where($map)->save($mes);
                 //解除设备跟用户的绑定关系
                 $b = M('binding')->where("device_id='{$device_id}'"." AND open_id='{$openid}'")->delete();
-            }
-            
 
-            if ($a && $b) {
-                M('devices')->commit();
+            }
+
+
+            if ( $b) {
+                // M('devices')->commit();
                 M('binding')->commit();
                 $this->ajaxReturn(array('msg'=>'解绑成功','code'=>'200'));
 
             } else {
-                M('devices')->rollback();
+                // M('devices')->rollback();
                 M('binding')->rollback();
                 $this->ajaxReturn(array('msg'=>'解绑失败','code'=>'201'));
 
@@ -128,5 +152,5 @@ class DevicesController extends Controller
         $output = curl_exec($curl);
         curl_close($curl);
         return $output;
-    } 
+    }
 }
